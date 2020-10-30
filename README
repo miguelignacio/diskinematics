@@ -35,3 +35,22 @@ A simple start is obtained by:
     $ ../bin/x86_64-centos7-gcc9-opt/EventShapes -f Steering/es.ep0304dis.steer -n 10000 -o test.root -c DjangoEplus0304_1
     ```
 
+Quck start
+----------
+A complete set of control plots with a limited set of MCs, but with all 0304 data is obtained by running
+
+  * `cd Analysis`, make analysis: `make all`
+
+  * run a few jobs locally: `run_test_ep0304.sh`
+
+  * wait for about 2 minutes
+
+  * Merge files: `hadd -f merged.root Test0304Out/*.root`
+
+  * plot files: `root -b -q plot_all.cxx`
+
+.. note: H1 MC's include run-specific information. In this example, the MCs have only a few 
+   selected runs, but not the entire run period. Therefore, correct control plots are only obtained
+   when processing all MCs for a given runperiod (or alternatively performing a corresponding data selection).
+
+
