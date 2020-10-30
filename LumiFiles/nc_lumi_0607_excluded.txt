@@ -1,0 +1,2081 @@
+ Run 468530 excluded run quality poor - reject
+ Run 468531 excluded trigger phase below limit - reject
+ Run 468533 excluded lumi only 0.127210 < 0.200000 - reject!
+ Run 468534 excluded lumi only 0.146094 < 0.200000 - reject!
+ Run 468535 excluded lumi only 0.096734 < 0.200000 - reject!
+ Run 468536 excluded lumi only 0.162400 < 0.200000 - reject!
+ Run 468537 excluded lumi only 0.167901 < 0.200000 - reject!
+ Run 468540 excluded run quality poor - reject
+ Run 468543 excluded lumi only 0.099770 < 0.200000 - reject!
+ Run 468544 excluded lumi only 0.038894 < 0.200000 - reject!
+ Run 468547 excluded lumi only 0.063585 < 0.200000 - reject!
+ Run 468601 excluded run quality poor - reject
+ Run 468606 excluded run quality poor - reject
+ Run 468607 excluded run quality poor - reject
+ Run 468608 excluded trigger phase below limit - reject
+ Run 468610 excluded lumi only 0.185708 < 0.200000 - reject!
+ Run 468613 excluded run quality poor - reject
+ Run 468614 excluded lumi only 0.145872 < 0.200000 - reject!
+ Run 468615 excluded run quality poor - reject
+ Run 468618 excluded run quality poor - reject
+ Run 468619 excluded lumi only 0.066083 < 0.200000 - reject!
+ Run 468621 excluded run quality poor - reject
+ Run 468622 excluded lumi only 0.095319 < 0.200000 - reject!
+ Run 468625 excluded lumi only 0.064734 < 0.200000 - reject!
+ Run 468627 excluded lumi only 0.129386 < 0.200000 - reject!
+ Run 468628 excluded lumi only 0.194720 < 0.200000 - reject!
+ Run 468629 excluded lumi only 0.091370 < 0.200000 - reject!
+ Run 468633 excluded lumi only 0.076408 < 0.200000 - reject!
+ Run 468636 excluded run quality poor - reject
+ Run 468639 excluded lumi only 0.143698 < 0.200000 - reject!
+ Run 468640 excluded lumi only 0.145748 < 0.200000 - reject!
+ Run 468641 excluded lumi only 0.121560 < 0.200000 - reject!
+ Run 468715 excluded run quality poor - reject
+ Run 468716 excluded run quality poor - reject
+ Run 468718 excluded run quality poor - reject
+ Run 468720 excluded run quality poor - reject
+ Run 468721 excluded trigger phase below limit - reject
+ Run 468722 excluded run quality poor - reject
+ Run 468724 excluded lumi only 0.131776 < 0.200000 - reject!
+ Run 468726 excluded lumi only 0.156627 < 0.200000 - reject!
+ Run 468727 excluded run quality poor - reject
+ Run 468730 excluded lumi only 0.161811 < 0.200000 - reject!
+ Run 468773 excluded run quality poor - reject
+ Run 468780 excluded run quality poor - reject
+ Run 468781 excluded trigger phase below limit - reject
+ Run 468790 excluded run quality poor - reject
+ Run 468791 excluded run quality poor - reject
+ Run 468801 excluded run quality poor - reject
+ Run 468802 excluded trigger phase below limit - reject
+ Run 468826 excluded lumi only 0.164354 < 0.200000 - reject!
+ Run 468860 excluded run quality poor - reject
+ Run 468861 excluded run quality poor - reject
+ Run 468862 excluded trigger phase below limit - reject
+ Run 468878 excluded run quality poor - reject
+ Run 468879 excluded run quality poor - reject
+ Run 468880 excluded run quality poor - reject
+ Run 468886 excluded run quality poor - reject
+ Run 468889 excluded run quality poor - reject
+ Run 468914 excluded run quality poor - reject
+ Run 468923 excluded lumi only 0.178158 < 0.200000 - reject!
+ Run 468931 excluded run quality poor - reject
+ Run 468934 excluded run quality poor - reject
+ Run 468991 excluded run quality poor - reject
+ Run 468992 excluded trigger phase below limit - reject
+ Run 468996 excluded lumi only 0.000000 < 0.200000 - reject!
+ Run 468999 excluded lumi only 0.000000 < 0.200000 - reject!
+ Run 469026 excluded lumi only 0.179066 < 0.200000 - reject!
+ Run 469079 excluded run quality poor - reject
+ Run 469082 excluded run quality poor - reject
+ Run 469083 excluded lumi only 0.184334 < 0.200000 - reject!
+ Run 469090 excluded lumi only 0.157163 < 0.200000 - reject!
+ Run 469097 excluded run quality poor - reject
+ Run 469126 excluded run quality poor - reject
+ Run 469141 excluded run quality poor - reject
+ Run 469142 excluded run quality poor - reject
+ Run 469145 excluded run quality poor - reject
+ Run 469146 excluded run quality poor - reject
+ Run 469147 excluded run quality poor - reject
+ Run 469148 excluded run quality poor - reject
+ Run 469149 excluded run quality poor - reject
+ Run 469150 excluded run quality poor - reject
+ Run 469151 excluded run quality poor - reject
+ Run 469152 excluded run quality poor - reject
+ Run 469153 excluded run quality poor - reject
+ Run 469164 excluded run quality poor - reject
+ Run 469194 excluded run quality poor - reject
+ Run 469195 excluded run quality poor - reject
+ Run 469196 excluded trigger phase below limit - reject
+ Run 469198 excluded run quality poor - reject
+ Run 469199 excluded trigger phase below limit - reject
+ Run 469201 excluded trigger phase below limit - reject
+ Run 469214 excluded lumi only 0.000000 < 0.200000 - reject!
+ Run 469215 excluded run quality poor - reject
+ Run 469226 excluded run quality poor - reject
+ Run 469272 excluded run quality poor - reject
+ Run 469275 excluded run quality poor - reject
+ Run 469280 excluded run quality poor - reject
+ Run 469301 excluded trigger phase below limit - reject
+ Run 469317 excluded run quality poor - reject
+ Run 469320 excluded run quality poor - reject
+ Run 469321 excluded run quality poor - reject
+ Run 469322 excluded run quality poor - reject
+ Run 469323 excluded run quality poor - reject
+ Run 469324 excluded run quality poor - reject
+ Run 469325 excluded run quality poor - reject
+ Run 469326 excluded run quality poor - reject
+ Run 469327 excluded run quality poor - reject
+ Run 469329 excluded run quality poor - reject
+ Run 469332 excluded run quality poor - reject
+ Run 469333 excluded run quality poor - reject
+ Run 469413 excluded trigger phase below limit - reject
+ Run 469449 excluded run quality poor - reject
+ Run 469462 excluded run quality poor - reject
+ Run 469463 excluded run quality poor - reject
+ Run 469465 excluded run quality poor - reject
+ Run 469483 excluded run quality poor - reject
+ Run 469640 excluded run quality poor - reject
+ Run 469641 excluded run quality poor - reject
+ Run 469647 excluded run quality poor - reject
+ Run 469648 excluded trigger phase below limit - reject
+ Run 469651 excluded run quality poor - reject
+ Run 469654 excluded run quality poor - reject
+ Run 469673 excluded run quality poor - reject
+ Run 469674 excluded run quality poor - reject
+ Run 469676 excluded run quality poor - reject
+ Run 469678 excluded run quality poor - reject
+ Run 469680 excluded run quality poor - reject
+ Run 469707 excluded run quality poor - reject
+ Run 469708 excluded run quality poor - reject
+ Run 469709 excluded run quality poor - reject
+ Run 469713 excluded run quality poor - reject
+ Run 469722 excluded run quality poor - reject
+ Run 469723 excluded run quality poor - reject
+ Run 469725 excluded lumi only 0.112721 < 0.200000 - reject!
+ Run 469728 excluded lumi only 0.174935 < 0.200000 - reject!
+ Run 469732 excluded run quality poor - reject
+ Run 469733 excluded run quality poor - reject
+ Run 469734 excluded run quality poor - reject
+ Run 469735 excluded run quality poor - reject
+ Run 469736 excluded run quality poor - reject
+ Run 469737 excluded run quality poor - reject
+ Run 469741 excluded run quality poor - reject
+ Run 469755 excluded run quality poor - reject
+ Run 469759 excluded run quality poor - reject
+ Run 469770 excluded run quality poor - reject
+ Run 469779 excluded run quality poor - reject
+ Run 469919 excluded run quality poor - reject
+ Run 469920 excluded run quality poor - reject
+ Run 469924 excluded run quality poor - reject
+ Run 469925 excluded trigger phase below limit - reject
+ Run 469926 excluded run quality poor - reject
+ Run 469949 excluded run quality poor - reject
+ Run 469968 excluded trigger phase below limit - reject
+ Run 470008 excluded run quality poor - reject
+ Run 470009 excluded trigger phase below limit - reject
+ Run 470084 excluded run quality poor - reject
+ Run 470086 excluded trigger phase below limit - reject
+ Run 470087 excluded run quality poor - reject
+ Run 470109 excluded run quality poor - reject
+ Run 470113 excluded run quality poor - reject
+ Run 470122 excluded det not in trigger or readout- reject
+ Run 470134 excluded run quality poor - reject
+ Run 470149 excluded run quality poor - reject
+ Run 470181 excluded run quality poor - reject
+ Run 470188 excluded trigger phase below limit - reject
+ Run 470194 excluded run quality poor - reject
+ Run 470197 excluded run quality poor - reject
+ Run 470324 excluded run quality poor - reject
+ Run 470325 excluded run quality poor - reject
+ Run 470327 excluded run quality poor - reject
+ Run 470331 excluded run quality poor - reject
+ Run 470332 excluded run quality poor - reject
+ Run 470333 excluded run quality poor - reject
+ Run 470334 excluded run quality poor - reject
+ Run 470335 excluded run quality poor - reject
+ Run 470336 excluded run quality poor - reject
+ Run 470337 excluded run quality poor - reject
+ Run 470338 excluded run quality poor - reject
+ Run 470339 excluded run quality poor - reject
+ Run 470342 excluded run quality poor - reject
+ Run 470343 excluded run quality poor - reject
+ Run 470346 excluded run quality poor - reject
+ Run 470347 excluded run quality poor - reject
+ Run 470352 excluded run quality poor - reject
+ Run 470353 excluded run quality poor - reject
+ Run 470356 excluded run quality poor - reject
+ Run 470360 excluded run quality poor - reject
+ Run 470361 excluded run quality poor - reject
+ Run 470364 excluded run quality poor - reject
+ Run 470365 excluded run quality poor - reject
+ Run 470370 excluded run quality poor - reject
+ Run 470423 excluded trigger phase below limit - reject
+ Run 470455 excluded run quality poor - reject
+ Run 470495 excluded run quality poor - reject
+ Run 470497 excluded run quality poor - reject
+ Run 470560 excluded run quality poor - reject
+ Run 470562 excluded run quality poor - reject
+ Run 470563 excluded run quality poor - reject
+ Run 470566 excluded run quality poor - reject
+ Run 470567 excluded run quality poor - reject
+ Run 470576 excluded run quality poor - reject
+ Run 470577 excluded run quality poor - reject
+ Run 470592 excluded run quality poor - reject
+ Run 470604 excluded run quality poor - reject
+ Run 470606 excluded run quality poor - reject
+ Run 470610 excluded high selected subtrigger prescale - reject
+ Run 470612 excluded high selected subtrigger prescale - reject
+ Run 470613 excluded high selected subtrigger prescale - reject
+ Run 470732 excluded run quality poor - reject
+ Run 470733 excluded run quality poor - reject
+ Run 470740 excluded run quality poor - reject
+ Run 470742 excluded trigger phase below limit - reject
+ Run 470761 excluded lumi only 0.191512 < 0.200000 - reject!
+ Run 470818 excluded run quality poor - reject
+ Run 470891 excluded run quality poor - reject
+ Run 470893 excluded run quality poor - reject
+ Run 470897 excluded run quality poor - reject
+ Run 470899 excluded run quality poor - reject
+ Run 470907 excluded lumi only 0.000000 < 0.200000 - reject!
+ Run 471026 excluded trigger phase below limit - reject
+ Run 471048 excluded trigger phase below limit - reject
+ Run 471060 excluded run quality poor - reject
+ Run 471067 excluded run quality poor - reject
+ Run 471158 excluded run quality poor - reject
+ Run 471167 excluded run quality poor - reject
+ Run 471173 excluded run quality poor - reject
+ Run 471174 excluded trigger phase below limit - reject
+ Run 471197 excluded run quality poor - reject
+ Run 471208 excluded run quality poor - reject
+ Run 471211 excluded trigger phase below limit - reject
+ Run 471213 excluded run quality poor - reject
+ Run 471260 excluded trigger phase below limit - reject
+ Run 471278 excluded run quality poor - reject
+ Run 471325 excluded run quality poor - reject
+ Run 471326 excluded trigger phase below limit - reject
+ Run 471337 excluded trigger phase below limit - reject
+ Run 471438 excluded trigger phase below limit - reject
+ Run 471473 excluded run quality poor - reject
+ Run 471479 excluded run quality poor - reject
+ Run 471886 excluded run quality poor - reject
+ Run 471924 excluded run quality poor - reject
+ Run 471981 excluded run quality poor - reject
+ Run 471982 excluded run quality poor - reject
+ Run 471983 excluded trigger phase below limit - reject
+ Run 471986 excluded run quality poor - reject
+ Run 471992 excluded run quality poor - reject
+ Run 472000 excluded run quality poor - reject
+ Run 472020 excluded run quality poor - reject
+ Run 472034 excluded trigger phase below limit - reject
+ Run 472046 excluded run quality poor - reject
+ Run 472047 excluded trigger phase below limit - reject
+ Run 472049 excluded run quality poor - reject
+ Run 472064 excluded run quality poor - reject
+ Run 472078 excluded run quality poor - reject
+ Run 472088 excluded run quality poor - reject
+ Run 472097 excluded run quality poor - reject
+ Run 472109 excluded run quality poor - reject
+ Run 472121 excluded run quality poor - reject
+ Run 472399 excluded run quality poor - reject
+ Run 472411 excluded trigger phase below limit - reject
+ Run 472419 excluded run quality poor - reject
+ Run 472423 excluded high selected subtrigger prescale - reject
+ Run 472426 excluded high selected subtrigger prescale - reject
+ Run 472445 excluded run quality poor - reject
+ Run 472448 excluded run quality poor - reject
+ Run 472452 excluded run quality poor - reject
+ Run 472462 excluded run quality poor - reject
+ Run 472482 excluded run quality poor - reject
+ Run 472511 excluded trigger phase below limit - reject
+ Run 472546 excluded run quality poor - reject
+ Run 472557 excluded run quality poor - reject
+ Run 472563 excluded run quality poor - reject
+ Run 472564 excluded run quality poor - reject
+ Run 472566 excluded lumi only 0.000000 < 0.200000 - reject!
+ Run 472641 excluded run quality poor - reject
+ Run 472642 excluded run quality poor - reject
+ Run 472643 excluded run quality poor - reject
+ Run 472644 excluded trigger phase below limit - reject
+ Run 472654 excluded run quality poor - reject
+ Run 472660 excluded run quality poor - reject
+ Run 472676 excluded run quality poor - reject
+ Run 472683 excluded run quality poor - reject
+ Run 472706 excluded run quality poor - reject
+ Run 472720 excluded run quality poor - reject
+ Run 472729 excluded run quality poor - reject
+ Run 472755 excluded trigger phase below limit - reject
+ Run 472786 excluded high selected subtrigger prescale - reject
+ Run 472860 excluded trigger phase below limit - reject
+ Run 472864 excluded run quality poor - reject
+ Run 472867 excluded run quality poor - reject
+ Run 472873 excluded run quality poor - reject
+ Run 472876 excluded run quality poor - reject
+ Run 472885 excluded run quality poor - reject
+ Run 472889 excluded run quality poor - reject
+ Run 472897 excluded run quality poor - reject
+ Run 472929 excluded run quality poor - reject
+ Run 472937 excluded run quality poor - reject
+ Run 472948 excluded run quality poor - reject
+ Run 472953 excluded run quality poor - reject
+ Run 473045 excluded trigger phase below limit - reject
+ Run 473047 excluded run quality poor - reject
+ Run 473068 excluded run quality poor - reject
+ Run 473069 excluded run quality poor - reject
+ Run 473071 excluded run quality poor - reject
+ Run 473075 excluded run quality poor - reject
+ Run 473081 excluded run quality poor - reject
+ Run 473116 excluded lumi only 0.190401 < 0.200000 - reject!
+ Run 473130 excluded lumi only 0.000000 < 0.200000 - reject!
+ Run 473180 excluded trigger phase below limit - reject
+ Run 473181 excluded trigger phase below limit - reject
+ Run 473183 excluded run quality poor - reject
+ Run 473187 excluded run quality poor - reject
+ Run 473293 excluded run quality poor - reject
+ Run 473297 excluded trigger phase below limit - reject
+ Run 473304 excluded run quality poor - reject
+ Run 473327 excluded run quality poor - reject
+ Run 473343 excluded run quality poor - reject
+ Run 473399 excluded run quality poor - reject
+ Run 473402 excluded run quality poor - reject
+ Run 473434 excluded run quality poor - reject
+ Run 473445 excluded run quality poor - reject
+ Run 473446 excluded trigger phase below limit - reject
+ Run 473450 excluded run quality poor - reject
+ Run 473454 excluded run quality poor - reject
+ Run 473456 excluded lumi only 0.000000 < 0.200000 - reject!
+ Run 473457 excluded lumi only 0.000000 < 0.200000 - reject!
+ Run 473458 excluded lumi only 0.000000 < 0.200000 - reject!
+ Run 473459 excluded run quality poor - reject
+ Run 473478 excluded run quality poor - reject
+ Run 473490 excluded run quality poor - reject
+ Run 473494 excluded run quality poor - reject
+ Run 473521 excluded run quality poor - reject
+ Run 473540 excluded run quality poor - reject
+ Run 473541 excluded run quality poor - reject
+ Run 473542 excluded run quality poor - reject
+ Run 473571 excluded trigger phase below limit - reject
+ Run 473573 excluded lumi only 0.000000 < 0.200000 - reject!
+ Run 473575 excluded run quality poor - reject
+ Run 473579 excluded run quality poor - reject
+ Run 473582 excluded lumi only 0.000000 < 0.200000 - reject!
+ Run 473583 excluded lumi only 0.067426 < 0.200000 - reject!
+ Run 473585 excluded lumi only 0.000000 < 0.200000 - reject!
+ Run 473586 excluded lumi only 0.000000 < 0.200000 - reject!
+ Run 473587 excluded run quality poor - reject
+ Run 473713 excluded trigger phase below limit - reject
+ Run 473714 excluded run quality poor - reject
+ Run 473729 excluded run quality poor - reject
+ Run 473750 excluded run quality poor - reject
+ Run 473759 excluded run quality poor - reject
+ Run 473805 excluded run quality poor - reject
+ Run 473808 excluded run quality poor - reject
+ Run 473811 excluded run quality poor - reject
+ Run 473812 excluded run quality poor - reject
+ Run 473817 excluded run quality poor - reject
+ Run 473818 excluded run quality poor - reject
+ Run 473851 excluded run quality poor - reject
+ Run 473852 excluded trigger phase below limit - reject
+ Run 473855 excluded run quality poor - reject
+ Run 473857 excluded trigger phase below limit - reject
+ Run 473863 excluded run quality poor - reject
+ Run 473886 excluded run quality poor - reject
+ Run 473887 excluded run quality poor - reject
+ Run 473888 excluded trigger phase below limit - reject
+ Run 473908 excluded run quality poor - reject
+ Run 473930 excluded run quality poor - reject
+ Run 473944 excluded run quality poor - reject
+ Run 474006 excluded trigger phase below limit - reject
+ Run 474011 excluded run quality poor - reject
+ Run 474013 excluded run quality poor - reject
+ Run 474015 excluded run quality poor - reject
+ Run 474022 excluded run quality poor - reject
+ Run 474077 excluded run quality poor - reject
+ Run 474088 excluded run quality poor - reject
+ Run 474099 excluded lumi only 0.000000 < 0.200000 - reject!
+ Run 474115 excluded run quality poor - reject
+ Run 474141 excluded run quality poor - reject
+ Run 474152 excluded run quality poor - reject
+ Run 474157 excluded run quality poor - reject
+ Run 474171 excluded run quality poor - reject
+ Run 474176 excluded high selected subtrigger prescale - reject
+ Run 474177 excluded run quality poor - reject
+ Run 474180 excluded run quality poor - reject
+ Run 474237 excluded run quality poor - reject
+ Run 474241 excluded run quality poor - reject
+ Run 474242 excluded run quality poor - reject
+ Run 474243 excluded run quality poor - reject
+ Run 474245 excluded run quality poor - reject
+ Run 474246 excluded run quality poor - reject
+ Run 474247 excluded run quality poor - reject
+ Run 474248 excluded run quality poor - reject
+ Run 474249 excluded run quality poor - reject
+ Run 474250 excluded run quality poor - reject
+ Run 474251 excluded run quality poor - reject
+ Run 474252 excluded run quality poor - reject
+ Run 474263 excluded run quality poor - reject
+ Run 474267 excluded lumi only 0.000000 < 0.200000 - reject!
+ Run 474278 excluded run quality poor - reject
+ Run 474280 excluded trigger phase below limit - reject
+ Run 474288 excluded run quality poor - reject
+ Run 474296 excluded run quality poor - reject
+ Run 474297 excluded run quality poor - reject
+ Run 474298 excluded run quality poor - reject
+ Run 474299 excluded run quality poor - reject
+ Run 474300 excluded run quality poor - reject
+ Run 474313 excluded run quality poor - reject
+ Run 474321 excluded run quality poor - reject
+ Run 474322 excluded run quality poor - reject
+ Run 474323 excluded run quality poor - reject
+ Run 474325 excluded run quality poor - reject
+ Run 474326 excluded run quality poor - reject
+ Run 474334 excluded run quality poor - reject
+ Run 474354 excluded lumi only 0.000000 < 0.200000 - reject!
+ Run 474393 excluded trigger phase below limit - reject
+ Run 474409 excluded run quality poor - reject
+ Run 474411 excluded run quality poor - reject
+ Run 474415 excluded high selected subtrigger prescale - reject
+ Run 474433 excluded run quality poor - reject
+ Run 474454 excluded run quality poor - reject
+ Run 474455 excluded run quality poor - reject
+ Run 474476 excluded run quality poor - reject
+ Run 474481 excluded run quality poor - reject
+ Run 474529 excluded trigger phase below limit - reject
+ Run 474533 excluded run quality poor - reject
+ Run 474555 excluded run quality poor - reject
+ Run 474558 excluded run quality poor - reject
+ Run 474560 excluded run quality poor - reject
+ Run 474562 excluded run quality poor - reject
+ Run 474563 excluded run quality poor - reject
+ Run 474565 excluded run quality poor - reject
+ Run 474576 excluded run quality poor - reject
+ Run 474580 excluded run quality poor - reject
+ Run 474581 excluded run quality poor - reject
+ Run 474582 excluded run quality poor - reject
+ Run 474591 excluded run quality poor - reject
+ Run 474595 excluded run quality poor - reject
+ Run 474621 excluded run quality poor - reject
+ Run 474637 excluded high selected subtrigger prescale - reject
+ Run 474638 excluded high selected subtrigger prescale - reject
+ Run 474639 excluded high selected subtrigger prescale - reject
+ Run 474640 excluded high selected subtrigger prescale - reject
+ Run 474643 excluded high selected subtrigger prescale - reject
+ Run 474690 excluded run quality poor - reject
+ Run 474691 excluded run quality poor - reject
+ Run 474725 excluded trigger phase below limit - reject
+ Run 474734 excluded run quality poor - reject
+ Run 474738 excluded run quality poor - reject
+ Run 474743 excluded run quality poor - reject
+ Run 474747 excluded run quality poor - reject
+ Run 474749 excluded lumi only 0.000000 < 0.200000 - reject!
+ Run 474762 excluded run quality poor - reject
+ Run 474764 excluded run quality poor - reject
+ Run 474765 excluded run quality poor - reject
+ Run 474768 excluded run quality poor - reject
+ Run 474770 excluded run quality poor - reject
+ Run 474772 excluded run quality poor - reject
+ Run 474778 excluded run quality poor - reject
+ Run 474781 excluded run quality poor - reject
+ Run 474785 excluded run quality poor - reject
+ Run 474814 excluded run quality poor - reject
+ Run 474819 excluded run quality poor - reject
+ Run 474846 excluded run quality poor - reject
+ Run 474870 excluded run quality poor - reject
+ Run 474876 excluded run quality poor - reject
+ Run 474892 excluded run quality poor - reject
+ Run 474914 excluded run quality poor - reject
+ Run 474917 excluded trigger phase below limit - reject
+ Run 474935 excluded run quality poor - reject
+ Run 474945 excluded run quality poor - reject
+ Run 474951 excluded run quality poor - reject
+ Run 474953 excluded run quality poor - reject
+ Run 474954 excluded run quality poor - reject
+ Run 474959 excluded run quality poor - reject
+ Run 474962 excluded run quality poor - reject
+ Run 474968 excluded run quality poor - reject
+ Run 474969 excluded run quality poor - reject
+ Run 474974 excluded run quality poor - reject
+ Run 474982 excluded run quality poor - reject
+ Run 474991 excluded run quality poor - reject
+ Run 475053 excluded run quality poor - reject
+ Run 475092 excluded run quality poor - reject
+ Run 475099 excluded trigger phase below limit - reject
+ Run 475108 excluded run quality poor - reject
+ Run 475133 excluded run quality poor - reject
+ Run 475178 excluded run quality poor - reject
+ Run 475238 excluded trigger phase below limit - reject
+ Run 475239 excluded trigger phase below limit - reject
+ Run 475270 excluded run quality poor - reject
+ Run 475273 excluded run quality poor - reject
+ Run 475276 excluded run quality poor - reject
+ Run 475279 excluded run quality poor - reject
+ Run 475282 excluded run quality poor - reject
+ Run 475285 excluded run quality poor - reject
+ Run 475289 excluded run quality poor - reject
+ Run 475292 excluded lumi only 0.000000 < 0.200000 - reject!
+ Run 475296 excluded run quality poor - reject
+ Run 475300 excluded run quality poor - reject
+ Run 475314 excluded run quality poor - reject
+ Run 475317 excluded run quality poor - reject
+ Run 475319 excluded trigger phase below limit - reject
+ Run 475440 excluded trigger phase below limit - reject
+ Run 475457 excluded run quality poor - reject
+ Run 475523 excluded trigger phase below limit - reject
+ Run 475524 excluded run quality poor - reject
+ Run 475532 excluded run quality poor - reject
+ Run 475539 excluded run quality poor - reject
+ Run 475541 excluded run quality poor - reject
+ Run 475543 excluded run quality poor - reject
+ Run 475544 excluded run quality poor - reject
+ Run 475545 excluded run quality poor - reject
+ Run 475546 excluded run quality poor - reject
+ Run 475556 excluded run quality poor - reject
+ Run 475559 excluded run quality poor - reject
+ Run 475576 excluded run quality poor - reject
+ Run 475580 excluded run quality poor - reject
+ Run 475582 excluded run quality poor - reject
+ Run 475586 excluded run quality poor - reject
+ Run 475591 excluded run quality poor - reject
+ Run 475593 excluded run quality poor - reject
+ Run 475606 excluded run quality poor - reject
+ Run 475624 excluded run quality poor - reject
+ Run 475733 excluded trigger phase below limit - reject
+ Run 475735 excluded run quality poor - reject
+ Run 475740 excluded run quality poor - reject
+ Run 475758 excluded run quality poor - reject
+ Run 475824 excluded run quality poor - reject
+ Run 475829 excluded run quality poor - reject
+ Run 475855 excluded run quality poor - reject
+ Run 475861 excluded run quality poor - reject
+ Run 475864 excluded run quality poor - reject
+ Run 475869 excluded run quality poor - reject
+ Run 475870 excluded run quality poor - reject
+ Run 475871 excluded run quality poor - reject
+ Run 475872 excluded run quality poor - reject
+ Run 475874 excluded run quality poor - reject
+ Run 475878 excluded run quality poor - reject
+ Run 475881 excluded run quality poor - reject
+ Run 475896 excluded run quality poor - reject
+ Run 475930 excluded trigger phase below limit - reject
+ Run 476009 excluded run quality poor - reject
+ Run 476012 excluded trigger phase below limit - reject
+ Run 476018 excluded run quality poor - reject
+ Run 476021 excluded trigger phase below limit - reject
+ Run 476026 excluded trigger phase below limit - reject
+ Run 476027 excluded trigger phase below limit - reject
+ Run 476028 excluded trigger phase below limit - reject
+ Run 476029 excluded trigger phase below limit - reject
+ Run 476063 excluded run quality poor - reject
+ Run 476064 excluded run quality poor - reject
+ Run 476067 excluded run quality poor - reject
+ Run 476069 excluded run quality poor - reject
+ Run 476071 excluded run quality poor - reject
+ Run 476077 excluded run quality poor - reject
+ Run 476096 excluded run quality poor - reject
+ Run 476098 excluded trigger phase below limit - reject
+ Run 476151 excluded run quality poor - reject
+ Run 476152 excluded run quality poor - reject
+ Run 476153 excluded run quality poor - reject
+ Run 476154 excluded run quality poor - reject
+ Run 476170 excluded high selected subtrigger prescale - reject
+ Run 476186 excluded run quality poor - reject
+ Run 476188 excluded run quality poor - reject
+ Run 476189 excluded run quality poor - reject
+ Run 476200 excluded run quality poor - reject
+ Run 476212 excluded run quality poor - reject
+ Run 476219 excluded det not in trigger or readout- reject
+ Run 476247 excluded trigger phase below limit - reject
+ Run 476262 excluded run quality poor - reject
+ Run 476288 excluded run quality poor - reject
+ Run 476320 excluded trigger phase below limit - reject
+ Run 476323 excluded run quality poor - reject
+ Run 476382 excluded run quality poor - reject
+ Run 476388 excluded run quality poor - reject
+ Run 476391 excluded run quality poor - reject
+ Run 476392 excluded trigger phase below limit - reject
+ Run 476395 excluded run quality poor - reject
+ Run 476429 excluded run quality poor - reject
+ Run 476454 excluded run quality poor - reject
+ Run 476470 excluded run quality poor - reject
+ Run 476499 excluded run quality poor - reject
+ Run 476579 excluded trigger phase below limit - reject
+ Run 476632 excluded run quality poor - reject
+ Run 476637 excluded run quality poor - reject
+ Run 476649 excluded run quality poor - reject
+ Run 476650 excluded run quality poor - reject
+ Run 476657 excluded run quality poor - reject
+ Run 476664 excluded run quality poor - reject
+ Run 476667 excluded run quality poor - reject
+ Run 476669 excluded run quality poor - reject
+ Run 476672 excluded high selected subtrigger prescale - reject
+ Run 476673 excluded run quality poor - reject
+ Run 476674 excluded run quality poor - reject
+ Run 476676 excluded run quality poor - reject
+ Run 476677 excluded high selected subtrigger prescale - reject
+ Run 476707 excluded trigger phase below limit - reject
+ Run 476761 excluded run quality poor - reject
+ Run 476775 excluded run quality poor - reject
+ Run 477137 excluded trigger phase below limit - reject
+ Run 477143 excluded run quality poor - reject
+ Run 477161 excluded run quality poor - reject
+ Run 477182 excluded run quality poor - reject
+ Run 477203 excluded run quality poor - reject
+ Run 477227 excluded run quality poor - reject
+ Run 477229 excluded run quality poor - reject
+ Run 477231 excluded run quality poor - reject
+ Run 477232 excluded run quality poor - reject
+ Run 477234 excluded run quality poor - reject
+ Run 477259 excluded run quality poor - reject
+ Run 477261 excluded run quality poor - reject
+ Run 477285 excluded trigger phase below limit - reject
+ Run 477292 excluded trigger phase below limit - reject
+ Run 477346 excluded run quality poor - reject
+ Run 477375 excluded trigger phase below limit - reject
+ Run 477390 excluded run quality poor - reject
+ Run 477409 excluded run quality poor - reject
+ Run 477460 excluded trigger phase below limit - reject
+ Run 477463 excluded run quality poor - reject
+ Run 477476 excluded det not in trigger or readout- reject
+ Run 477496 excluded run quality poor - reject
+ Run 477519 excluded run quality poor - reject
+ Run 477533 excluded lumi only 0.000000 < 0.200000 - reject!
+ Run 477552 excluded trigger phase below limit - reject
+ Run 477555 excluded run quality poor - reject
+ Run 477556 excluded run quality poor - reject
+ Run 477558 excluded run quality poor - reject
+ Run 477559 excluded run quality poor - reject
+ Run 477560 excluded run quality poor - reject
+ Run 477561 excluded run quality poor - reject
+ Run 477562 excluded run quality poor - reject
+ Run 477565 excluded run quality poor - reject
+ Run 477566 excluded run quality poor - reject
+ Run 477568 excluded run quality poor - reject
+ Run 477569 excluded run quality poor - reject
+ Run 477572 excluded run quality poor - reject
+ Run 477573 excluded run quality poor - reject
+ Run 477613 excluded run quality poor - reject
+ Run 477617 excluded run quality poor - reject
+ Run 477618 excluded run quality poor - reject
+ Run 477641 excluded run quality poor - reject
+ Run 477644 excluded trigger phase below limit - reject
+ Run 477657 excluded run quality poor - reject
+ Run 477674 excluded run quality poor - reject
+ Run 477684 excluded run quality poor - reject
+ Run 477689 excluded run quality poor - reject
+ Run 477707 excluded run quality poor - reject
+ Run 477716 excluded run quality poor - reject
+ Run 477717 excluded run quality poor - reject
+ Run 477773 excluded run quality poor - reject
+ Run 477774 excluded trigger phase below limit - reject
+ Run 477793 excluded run quality poor - reject
+ Run 477835 excluded run quality poor - reject
+ Run 477849 excluded run quality poor - reject
+ Run 477869 excluded run quality poor - reject
+ Run 477880 excluded run quality poor - reject
+ Run 477895 excluded run quality poor - reject
+ Run 477897 excluded run quality poor - reject
+ Run 477903 excluded run quality poor - reject
+ Run 477905 excluded run quality poor - reject
+ Run 477911 excluded run quality poor - reject
+ Run 477914 excluded run quality poor - reject
+ Run 477917 excluded run quality poor - reject
+ Run 477920 excluded run quality poor - reject
+ Run 477922 excluded run quality poor - reject
+ Run 477942 excluded lumi only 0.193715 < 0.200000 - reject!
+ Run 478091 excluded trigger phase below limit - reject
+ Run 478104 excluded run quality poor - reject
+ Run 478105 excluded run quality poor - reject
+ Run 478111 excluded run quality poor - reject
+ Run 478128 excluded lumi only 0.000000 < 0.200000 - reject!
+ Run 478153 excluded run quality poor - reject
+ Run 478154 excluded trigger phase below limit - reject
+ Run 478168 excluded run quality poor - reject
+ Run 478187 excluded run quality poor - reject
+ Run 478189 excluded run quality poor - reject
+ Run 478201 excluded run quality poor - reject
+ Run 478207 excluded run quality poor - reject
+ Run 478225 excluded run quality poor - reject
+ Run 478237 excluded run quality poor - reject
+ Run 478243 excluded run quality poor - reject
+ Run 478256 excluded lumi only 0.096133 < 0.200000 - reject!
+ Run 478262 excluded run quality poor - reject
+ Run 478282 excluded run quality poor - reject
+ Run 478291 excluded run quality poor - reject
+ Run 478332 excluded trigger phase below limit - reject
+ Run 478354 excluded run quality poor - reject
+ Run 478359 excluded run quality poor - reject
+ Run 478376 excluded run quality poor - reject
+ Run 478383 excluded det not in trigger or readout- reject
+ Run 478386 excluded run quality poor - reject
+ Run 478388 excluded det not in trigger or readout- reject
+ Run 478389 excluded det not in trigger or readout- reject
+ Run 478390 excluded run quality poor - reject
+ Run 478399 excluded run quality poor - reject
+ Run 478418 excluded run quality poor - reject
+ Run 478420 excluded run quality poor - reject
+ Run 478430 excluded run quality poor - reject
+ Run 478458 excluded trigger phase below limit - reject
+ Run 478476 excluded run quality poor - reject
+ Run 478477 excluded run quality poor - reject
+ Run 478555 excluded run quality poor - reject
+ Run 478557 excluded trigger phase below limit - reject
+ Run 478567 excluded run quality poor - reject
+ Run 478581 excluded run quality poor - reject
+ Run 478591 excluded run quality poor - reject
+ Run 478600 excluded run quality poor - reject
+ Run 478622 excluded run quality poor - reject
+ Run 478631 excluded run quality poor - reject
+ Run 478689 excluded run quality poor - reject
+ Run 478695 excluded run quality poor - reject
+ Run 478728 excluded run quality poor - reject
+ Run 478755 excluded run quality poor - reject
+ Run 478775 excluded run quality poor - reject
+ Run 478776 excluded run quality poor - reject
+ Run 478797 excluded trigger phase below limit - reject
+ Run 478824 excluded run quality poor - reject
+ Run 478825 excluded trigger phase below limit - reject
+ Run 478836 excluded run quality poor - reject
+ Run 478840 excluded run quality poor - reject
+ Run 478904 excluded trigger phase below limit - reject
+ Run 478909 excluded run quality poor - reject
+ Run 478911 excluded run quality poor - reject
+ Run 478954 excluded run quality poor - reject
+ Run 478957 excluded lumi only 0.113418 < 0.200000 - reject!
+ Run 478958 excluded high selected subtrigger prescale - reject
+ Run 478959 excluded high selected subtrigger prescale - reject
+ Run 478960 excluded run quality poor - reject
+ Run 478966 excluded run quality poor - reject
+ Run 478999 excluded run quality poor - reject
+ Run 479003 excluded trigger phase below limit - reject
+ Run 479011 excluded run quality poor - reject
+ Run 479023 excluded run quality poor - reject
+ Run 479024 excluded run quality poor - reject
+ Run 479030 excluded run quality poor - reject
+ Run 479041 excluded run quality poor - reject
+ Run 479067 excluded run quality poor - reject
+ Run 479078 excluded run quality poor - reject
+ Run 479086 excluded run quality poor - reject
+ Run 479113 excluded trigger phase below limit - reject
+ Run 479114 excluded lumi only 0.000000 < 0.200000 - reject!
+ Run 479138 excluded run quality poor - reject
+ Run 479156 excluded run quality poor - reject
+ Run 479167 excluded run quality poor - reject
+ Run 479174 excluded run quality poor - reject
+ Run 479192 excluded trigger phase below limit - reject
+ Run 479200 excluded run quality poor - reject
+ Run 479223 excluded run quality poor - reject
+ Run 479227 excluded lumi only 0.058912 < 0.200000 - reject!
+ Run 479228 excluded lumi only 0.039147 < 0.200000 - reject!
+ Run 479232 excluded lumi only 0.082454 < 0.200000 - reject!
+ Run 479236 excluded high selected subtrigger prescale - reject
+ Run 479237 excluded high selected subtrigger prescale - reject
+ Run 479238 excluded high selected subtrigger prescale - reject
+ Run 479239 excluded high selected subtrigger prescale - reject
+ Run 479240 excluded high selected subtrigger prescale - reject
+ Run 479241 excluded high selected subtrigger prescale - reject
+ Run 479242 excluded high selected subtrigger prescale - reject
+ Run 479246 excluded high selected subtrigger prescale - reject
+ Run 479247 excluded high selected subtrigger prescale - reject
+ Run 479248 excluded run quality poor - reject
+ Run 479251 excluded run quality poor - reject
+ Run 479252 excluded high selected subtrigger prescale - reject
+ Run 479259 excluded run quality poor - reject
+ Run 479292 excluded trigger phase below limit - reject
+ Run 479293 excluded run quality poor - reject
+ Run 479346 excluded run quality poor - reject
+ Run 479349 excluded run quality poor - reject
+ Run 479351 excluded trigger phase below limit - reject
+ Run 479354 excluded trigger phase below limit - reject
+ Run 479359 excluded run quality poor - reject
+ Run 479374 excluded run quality poor - reject
+ Run 479375 excluded run quality poor - reject
+ Run 479395 excluded run quality poor - reject
+ Run 479399 excluded run quality poor - reject
+ Run 479410 excluded run quality poor - reject
+ Run 479439 excluded trigger phase below limit - reject
+ Run 479465 excluded det not in trigger or readout- reject
+ Run 479466 excluded lumi only 0.000000 < 0.200000 - reject!
+ Run 479467 excluded lumi only 0.000000 < 0.200000 - reject!
+ Run 479468 excluded det not in trigger or readout- reject
+ Run 479469 excluded det not in trigger or readout- reject
+ Run 479473 excluded run quality poor - reject
+ Run 479479 excluded run quality poor - reject
+ Run 479491 excluded run quality poor - reject
+ Run 479538 excluded run quality poor - reject
+ Run 479540 excluded trigger phase below limit - reject
+ Run 479572 excluded run quality poor - reject
+ Run 479591 excluded run quality poor - reject
+ Run 479610 excluded run quality poor - reject
+ Run 479614 excluded trigger phase below limit - reject
+ Run 479625 excluded run quality poor - reject
+ Run 479627 excluded run quality poor - reject
+ Run 479642 excluded run quality poor - reject
+ Run 479702 excluded run quality poor - reject
+ Run 479847 excluded run quality poor - reject
+ Run 479875 excluded run quality poor - reject
+ Run 479901 excluded run quality poor - reject
+ Run 479926 excluded run quality poor - reject
+ Run 479964 excluded run quality poor - reject
+ Run 479966 excluded run quality poor - reject
+ Run 479967 excluded trigger phase below limit - reject
+ Run 479973 excluded run quality poor - reject
+ Run 479996 excluded run quality poor - reject
+ Run 480023 excluded run quality poor - reject
+ Run 480083 excluded run quality poor - reject
+ Run 480087 excluded high selected subtrigger prescale - reject
+ Run 480090 excluded high selected subtrigger prescale - reject
+ Run 480091 excluded high selected subtrigger prescale - reject
+ Run 480093 excluded high selected subtrigger prescale - reject
+ Run 480096 excluded high selected subtrigger prescale - reject
+ Run 480098 excluded high selected subtrigger prescale - reject
+ Run 480099 excluded run quality poor - reject
+ Run 480114 excluded run quality poor - reject
+ Run 480191 excluded trigger phase below limit - reject
+ Run 480199 excluded run quality poor - reject
+ Run 480200 excluded run quality poor - reject
+ Run 480207 excluded run quality poor - reject
+ Run 480227 excluded lumi only 0.000460 < 0.200000 - reject!
+ Run 480230 excluded run quality poor - reject
+ Run 480273 excluded trigger phase below limit - reject
+ Run 480274 excluded run quality poor - reject
+ Run 480282 excluded run quality poor - reject
+ Run 480305 excluded run quality poor - reject
+ Run 480307 excluded run quality poor - reject
+ Run 480326 excluded run quality poor - reject
+ Run 480349 excluded trigger phase below limit - reject
+ Run 480358 excluded run quality poor - reject
+ Run 480377 excluded run quality poor - reject
+ Run 480380 excluded lumi only 0.039426 < 0.200000 - reject!
+ Run 480382 excluded high selected subtrigger prescale - reject
+ Run 480384 excluded high selected subtrigger prescale - reject
+ Run 480385 excluded high selected subtrigger prescale - reject
+ Run 480386 excluded high selected subtrigger prescale - reject
+ Run 480387 excluded high selected subtrigger prescale - reject
+ Run 480388 excluded high selected subtrigger prescale - reject
+ Run 480389 excluded high selected subtrigger prescale - reject
+ Run 480390 excluded high selected subtrigger prescale - reject
+ Run 480392 excluded run quality poor - reject
+ Run 480400 excluded lumi only 0.080094 < 0.200000 - reject!
+ Run 480401 excluded high selected subtrigger prescale - reject
+ Run 480402 excluded high selected subtrigger prescale - reject
+ Run 480403 excluded high selected subtrigger prescale - reject
+ Run 480404 excluded high selected subtrigger prescale - reject
+ Run 480405 excluded high selected subtrigger prescale - reject
+ Run 480406 excluded high selected subtrigger prescale - reject
+ Run 480407 excluded high selected subtrigger prescale - reject
+ Run 480408 excluded high selected subtrigger prescale - reject
+ Run 480428 excluded trigger phase below limit - reject
+ Run 480429 excluded excluded by input steering
+ Run 480430 excluded excluded by input steering
+ Run 480431 excluded excluded by input steering
+ Run 480432 excluded excluded by input steering
+ Run 480450 excluded run quality poor - reject
+ Run 480463 excluded run quality poor - reject
+ Run 480467 excluded lumi only 0.013772 < 0.200000 - reject!
+ Run 480468 excluded high selected subtrigger prescale - reject
+ Run 480472 excluded high selected subtrigger prescale - reject
+ Run 480473 excluded high selected subtrigger prescale - reject
+ Run 480474 excluded high selected subtrigger prescale - reject
+ Run 480476 excluded high selected subtrigger prescale - reject
+ Run 480477 excluded high selected subtrigger prescale - reject
+ Run 480479 excluded high selected subtrigger prescale - reject
+ Run 480480 excluded high selected subtrigger prescale - reject
+ Run 480481 excluded high selected subtrigger prescale - reject
+ Run 480482 excluded high selected subtrigger prescale - reject
+ Run 480483 excluded run quality poor - reject
+ Run 480489 excluded high selected subtrigger prescale - reject
+ Run 480490 excluded high selected subtrigger prescale - reject
+ Run 480494 excluded high selected subtrigger prescale - reject
+ Run 480495 excluded high selected subtrigger prescale - reject
+ Run 480496 excluded high selected subtrigger prescale - reject
+ Run 480497 excluded high selected subtrigger prescale - reject
+ Run 480498 excluded high selected subtrigger prescale - reject
+ Run 480500 excluded high selected subtrigger prescale - reject
+ Run 480504 excluded high selected subtrigger prescale - reject
+ Run 480545 excluded trigger phase below limit - reject
+ Run 480553 excluded run quality poor - reject
+ Run 480557 excluded run quality poor - reject
+ Run 480565 excluded run quality poor - reject
+ Run 480568 excluded run quality poor - reject
+ Run 480571 excluded run quality poor - reject
+ Run 480573 excluded run quality poor - reject
+ Run 480589 excluded run quality poor - reject
+ Run 480601 excluded run quality poor - reject
+ Run 480629 excluded trigger phase below limit - reject
+ Run 480631 excluded run quality poor - reject
+ Run 480719 excluded run quality poor - reject
+ Run 480720 excluded run quality poor - reject
+ Run 480721 excluded run quality poor - reject
+ Run 480727 excluded trigger phase below limit - reject
+ Run 480733 excluded run quality poor - reject
+ Run 480741 excluded lumi only 0.000000 < 0.200000 - reject!
+ Run 480750 excluded high selected subtrigger prescale - reject
+ Run 480751 excluded high selected subtrigger prescale - reject
+ Run 480772 excluded run quality poor - reject
+ Run 480831 excluded trigger phase below limit - reject
+ Run 480838 excluded det not in trigger or readout- reject
+ Run 480846 excluded run quality poor - reject
+ Run 480863 excluded run quality poor - reject
+ Run 480872 excluded trigger phase below limit - reject
+ Run 480929 excluded run quality poor - reject
+ Run 480930 excluded run quality poor - reject
+ Run 480932 excluded lumi only 0.108576 < 0.200000 - reject!
+ Run 480936 excluded high selected subtrigger prescale - reject
+ Run 480937 excluded run quality poor - reject
+ Run 480940 excluded high selected subtrigger prescale - reject
+ Run 480941 excluded run quality poor - reject
+ Run 480944 excluded run quality poor - reject
+ Run 480945 excluded run quality poor - reject
+ Run 480946 excluded run quality poor - reject
+ Run 480948 excluded high selected subtrigger prescale - reject
+ Run 480949 excluded high selected subtrigger prescale - reject
+ Run 480951 excluded high selected subtrigger prescale - reject
+ Run 480952 excluded high selected subtrigger prescale - reject
+ Run 480953 excluded high selected subtrigger prescale - reject
+ Run 480954 excluded high selected subtrigger prescale - reject
+ Run 480955 excluded high selected subtrigger prescale - reject
+ Run 480956 excluded high selected subtrigger prescale - reject
+ Run 480959 excluded high selected subtrigger prescale - reject
+ Run 480960 excluded run quality poor - reject
+ Run 480962 excluded high selected subtrigger prescale - reject
+ Run 480963 excluded high selected subtrigger prescale - reject
+ Run 480964 excluded high selected subtrigger prescale - reject
+ Run 480966 excluded run quality poor - reject
+ Run 480967 excluded high selected subtrigger prescale - reject
+ Run 480968 excluded run quality poor - reject
+ Run 480969 excluded run quality poor - reject
+ Run 481013 excluded run quality poor - reject
+ Run 481014 excluded trigger phase below limit - reject
+ Run 481191 excluded trigger phase below limit - reject
+ Run 481222 excluded run quality poor - reject
+ Run 481224 excluded run quality poor - reject
+ Run 481228 excluded run quality poor - reject
+ Run 481332 excluded trigger phase below limit - reject
+ Run 481333 excluded trigger phase below limit - reject
+ Run 481334 excluded trigger phase below limit - reject
+ Run 481335 excluded run quality poor - reject
+ Run 481373 excluded run quality poor - reject
+ Run 481376 excluded trigger phase below limit - reject
+ Run 481379 excluded run quality poor - reject
+ Run 481396 excluded lumi only 0.000000 < 0.200000 - reject!
+ Run 481399 excluded run quality poor - reject
+ Run 481423 excluded run quality poor - reject
+ Run 481433 excluded run quality poor - reject
+ Run 481434 excluded run quality poor - reject
+ Run 481458 excluded trigger phase below limit - reject
+ Run 481479 excluded run quality poor - reject
+ Run 481503 excluded run quality poor - reject
+ Run 481543 excluded trigger phase below limit - reject
+ Run 481594 excluded run quality poor - reject
+ Run 481595 excluded run quality poor - reject
+ Run 481614 excluded run quality poor - reject
+ Run 481616 excluded run quality poor - reject
+ Run 481618 excluded run quality poor - reject
+ Run 481643 excluded run quality poor - reject
+ Run 481645 excluded run quality poor - reject
+ Run 481657 excluded excluded by input steering
+ Run 481669 excluded run quality poor - reject
+ Run 481683 excluded run quality poor - reject
+ Run 481701 excluded run quality poor - reject
+ Run 481703 excluded run quality poor - reject
+ Run 481712 excluded run quality poor - reject
+ Run 481714 excluded run quality poor - reject
+ Run 481723 excluded run quality poor - reject
+ Run 481724 excluded run quality poor - reject
+ Run 481727 excluded run quality poor - reject
+ Run 481730 excluded run quality poor - reject
+ Run 481733 excluded run quality poor - reject
+ Run 481734 excluded run quality poor - reject
+ Run 481735 excluded run quality poor - reject
+ Run 481736 excluded run quality poor - reject
+ Run 481737 excluded run quality poor - reject
+ Run 481741 excluded run quality poor - reject
+ Run 481742 excluded run quality poor - reject
+ Run 481746 excluded run quality poor - reject
+ Run 481749 excluded run quality poor - reject
+ Run 481754 excluded run quality poor - reject
+ Run 481755 excluded run quality poor - reject
+ Run 481757 excluded run quality poor - reject
+ Run 481758 excluded run quality poor - reject
+ Run 481777 excluded run quality poor - reject
+ Run 481779 excluded trigger phase below limit - reject
+ Run 481790 excluded run quality poor - reject
+ Run 481831 excluded run quality poor - reject
+ Run 482002 excluded run quality poor - reject
+ Run 482003 excluded trigger phase below limit - reject
+ Run 482021 excluded run quality poor - reject
+ Run 482028 excluded run quality poor - reject
+ Run 482158 excluded run quality poor - reject
+ Run 482159 excluded trigger phase below limit - reject
+ Run 482160 excluded lumi only 0.156148 < 0.200000 - reject!
+ Run 482162 excluded run quality poor - reject
+ Run 482168 excluded run quality poor - reject
+ Run 482176 excluded run quality poor - reject
+ Run 482246 excluded run quality poor - reject
+ Run 482271 excluded trigger phase below limit - reject
+ Run 482277 excluded run quality poor - reject
+ Run 482384 excluded run quality poor - reject
+ Run 482388 excluded run quality poor - reject
+ Run 482389 excluded excluded by input steering
+ Run 482390 excluded run quality poor - reject
+ Run 482391 excluded excluded by input steering
+ Run 482392 excluded run quality poor - reject
+ Run 482417 excluded run quality poor - reject
+ Run 482426 excluded run quality poor - reject
+ Run 482448 excluded run quality poor - reject
+ Run 482450 excluded lumi only 0.153326 < 0.200000 - reject!
+ Run 482453 excluded lumi only 0.081928 < 0.200000 - reject!
+ Run 482461 excluded run quality poor - reject
+ Run 482537 excluded trigger phase below limit - reject
+ Run 482554 excluded run quality poor - reject
+ Run 482555 excluded run quality poor - reject
+ Run 482585 excluded trigger phase below limit - reject
+ Run 482597 excluded trigger phase below limit - reject
+ Run 482601 excluded run quality poor - reject
+ Run 482627 excluded trigger phase below limit - reject
+ Run 482629 excluded run quality poor - reject
+ Run 482653 excluded run quality poor - reject
+ Run 482660 excluded run quality poor - reject
+ Run 482665 excluded run quality poor - reject
+ Run 482671 excluded run quality poor - reject
+ Run 482825 excluded trigger phase below limit - reject
+ Run 482851 excluded run quality poor - reject
+ Run 482867 excluded run quality poor - reject
+ Run 482885 excluded run quality poor - reject
+ Run 482975 excluded run quality poor - reject
+ Run 482992 excluded trigger phase below limit - reject
+ Run 483021 excluded run quality poor - reject
+ Run 483045 excluded run quality poor - reject
+ Run 483051 excluded excluded by input steering
+ Run 483068 excluded trigger phase below limit - reject
+ Run 483087 excluded trigger phase below limit - reject
+ Run 483105 excluded run quality poor - reject
+ Run 483107 excluded run quality poor - reject
+ Run 483113 excluded excluded by input steering
+ Run 483128 excluded run quality poor - reject
+ Run 483132 excluded run quality poor - reject
+ Run 483258 excluded run quality poor - reject
+ Run 483264 excluded run quality poor - reject
+ Run 483270 excluded run quality poor - reject
+ Run 483275 excluded run quality poor - reject
+ Run 483280 excluded run quality poor - reject
+ Run 483285 excluded run quality poor - reject
+ Run 483286 excluded run quality poor - reject
+ Run 483298 excluded run quality poor - reject
+ Run 483302 excluded run quality poor - reject
+ Run 483304 excluded run quality poor - reject
+ Run 483318 excluded run quality poor - reject
+ Run 483328 excluded run quality poor - reject
+ Run 483331 excluded run quality poor - reject
+ Run 483335 excluded run quality poor - reject
+ Run 483398 excluded trigger phase below limit - reject
+ Run 483404 excluded run quality poor - reject
+ Run 483406 excluded run quality poor - reject
+ Run 483410 excluded trigger phase below limit - reject
+ Run 483430 excluded run quality poor - reject
+ Run 483439 excluded run quality poor - reject
+ Run 483469 excluded trigger phase below limit - reject
+ Run 483488 excluded lumi only 0.000000 < 0.200000 - reject!
+ Run 483501 excluded run quality poor - reject
+ Run 483516 excluded run quality poor - reject
+ Run 483522 excluded run quality poor - reject
+ Run 483527 excluded run quality poor - reject
+ Run 483546 excluded run quality poor - reject
+ Run 483568 excluded run quality poor - reject
+ Run 483570 excluded run quality poor - reject
+ Run 483573 excluded run quality poor - reject
+ Run 483576 excluded run quality poor - reject
+ Run 483584 excluded trigger phase below limit - reject
+ Run 483597 excluded run quality poor - reject
+ Run 483599 excluded run quality poor - reject
+ Run 483610 excluded run quality poor - reject
+ Run 483616 excluded run quality poor - reject
+ Run 483620 excluded lumi only 0.000000 < 0.200000 - reject!
+ Run 483706 excluded run quality poor - reject
+ Run 483728 excluded run quality poor - reject
+ Run 483741 excluded run quality poor - reject
+ Run 483744 excluded run quality poor - reject
+ Run 483745 excluded run quality poor - reject
+ Run 483746 excluded run quality poor - reject
+ Run 483761 excluded run quality poor - reject
+ Run 483762 excluded run quality poor - reject
+ Run 483765 excluded run quality poor - reject
+ Run 483767 excluded run quality poor - reject
+ Run 483769 excluded run quality poor - reject
+ Run 483777 excluded run quality poor - reject
+ Run 483779 excluded run quality poor - reject
+ Run 483783 excluded run quality poor - reject
+ Run 483787 excluded run quality poor - reject
+ Run 483789 excluded run quality poor - reject
+ Run 483791 excluded lumi only 0.000000 < 0.200000 - reject!
+ Run 483794 excluded run quality poor - reject
+ Run 483796 excluded run quality poor - reject
+ Run 483798 excluded run quality poor - reject
+ Run 483800 excluded run quality poor - reject
+ Run 483801 excluded run quality poor - reject
+ Run 483816 excluded run quality poor - reject
+ Run 483819 excluded run quality poor - reject
+ Run 483840 excluded run quality poor - reject
+ Run 483842 excluded run quality poor - reject
+ Run 483869 excluded run quality poor - reject
+ Run 483884 excluded run quality poor - reject
+ Run 483888 excluded run quality poor - reject
+ Run 483905 excluded lumi only 0.000000 < 0.200000 - reject!
+ Run 483910 excluded run quality poor - reject
+ Run 483952 excluded run quality poor - reject
+ Run 483953 excluded run quality poor - reject
+ Run 483955 excluded run quality poor - reject
+ Run 483957 excluded run quality poor - reject
+ Run 483958 excluded run quality poor - reject
+ Run 483960 excluded run quality poor - reject
+ Run 483967 excluded run quality poor - reject
+ Run 483968 excluded run quality poor - reject
+ Run 483977 excluded run quality poor - reject
+ Run 483985 excluded run quality poor - reject
+ Run 484009 excluded run quality poor - reject
+ Run 484023 excluded run quality poor - reject
+ Run 484031 excluded run quality poor - reject
+ Run 484035 excluded trigger phase below limit - reject
+ Run 484053 excluded run quality poor - reject
+ Run 484065 excluded run quality poor - reject
+ Run 484083 excluded run quality poor - reject
+ Run 484086 excluded run quality poor - reject
+ Run 484090 excluded lumi only 0.000000 < 0.200000 - reject!
+ Run 484091 excluded lumi only 0.000000 < 0.200000 - reject!
+ Run 484106 excluded run quality poor - reject
+ Run 484147 excluded run quality poor - reject
+ Run 484167 excluded run quality poor - reject
+ Run 484180 excluded run quality poor - reject
+ Run 484187 excluded lumi only 0.000000 < 0.200000 - reject!
+ Run 484230 excluded run quality poor - reject
+ Run 484269 excluded run quality poor - reject
+ Run 484271 excluded run quality poor - reject
+ Run 484274 excluded run quality poor - reject
+ Run 484292 excluded run quality poor - reject
+ Run 484317 excluded run quality poor - reject
+ Run 484325 excluded trigger phase below limit - reject
+ Run 484330 excluded run quality poor - reject
+ Run 484350 excluded run quality poor - reject
+ Run 484351 excluded run quality poor - reject
+ Run 484352 excluded run quality poor - reject
+ Run 484358 excluded run quality poor - reject
+ Run 484384 excluded run quality poor - reject
+ Run 484681 excluded trigger phase below limit - reject
+ Run 484688 excluded run quality poor - reject
+ Run 484693 excluded run quality poor - reject
+ Run 484728 excluded run quality poor - reject
+ Run 484776 excluded run quality poor - reject
+ Run 484780 excluded run quality poor - reject
+ Run 484796 excluded run quality poor - reject
+ Run 484816 excluded run quality poor - reject
+ Run 484823 excluded run quality poor - reject
+ Run 484836 excluded trigger phase below limit - reject
+ Run 484852 excluded run quality poor - reject
+ Run 484859 excluded run quality poor - reject
+ Run 484881 excluded run quality poor - reject
+ Run 484885 excluded run quality poor - reject
+ Run 484891 excluded run quality poor - reject
+ Run 484899 excluded run quality poor - reject
+ Run 484952 excluded trigger phase below limit - reject
+ Run 485004 excluded lumi only 0.000000 < 0.200000 - reject!
+ Run 485008 excluded lumi only 0.000000 < 0.200000 - reject!
+ Run 485048 excluded run quality poor - reject
+ Run 485050 excluded run quality poor - reject
+ Run 485052 excluded run quality poor - reject
+ Run 485054 excluded run quality poor - reject
+ Run 485056 excluded trigger phase below limit - reject
+ Run 485057 excluded run quality poor - reject
+ Run 485108 excluded trigger phase below limit - reject
+ Run 485125 excluded run quality poor - reject
+ Run 485156 excluded run quality poor - reject
+ Run 485158 excluded run quality poor - reject
+ Run 485160 excluded run quality poor - reject
+ Run 485203 excluded trigger phase below limit - reject
+ Run 485214 excluded run quality poor - reject
+ Run 485215 excluded run quality poor - reject
+ Run 485223 excluded run quality poor - reject
+ Run 485314 excluded run quality poor - reject
+ Run 485316 excluded run quality poor - reject
+ Run 485318 excluded run quality poor - reject
+ Run 485324 excluded run quality poor - reject
+ Run 485325 excluded run quality poor - reject
+ Run 485327 excluded run quality poor - reject
+ Run 485331 excluded run quality poor - reject
+ Run 485332 excluded run quality poor - reject
+ Run 485333 excluded run quality poor - reject
+ Run 485334 excluded run quality poor - reject
+ Run 485336 excluded run quality poor - reject
+ Run 485340 excluded run quality poor - reject
+ Run 485341 excluded run quality poor - reject
+ Run 485342 excluded run quality poor - reject
+ Run 485343 excluded run quality poor - reject
+ Run 485345 excluded run quality poor - reject
+ Run 485346 excluded run quality poor - reject
+ Run 485348 excluded run quality poor - reject
+ Run 485356 excluded run quality poor - reject
+ Run 485380 excluded run quality poor - reject
+ Run 485400 excluded run quality poor - reject
+ Run 485431 excluded run quality poor - reject
+ Run 485432 excluded trigger phase below limit - reject
+ Run 485434 excluded run quality poor - reject
+ Run 485447 excluded run quality poor - reject
+ Run 485549 excluded run quality poor - reject
+ Run 485553 excluded run quality poor - reject
+ Run 485554 excluded run quality poor - reject
+ Run 485561 excluded run quality poor - reject
+ Run 485642 excluded run quality poor - reject
+ Run 485672 excluded run quality poor - reject
+ Run 485729 excluded run quality poor - reject
+ Run 485750 excluded run quality poor - reject
+ Run 485754 excluded lumi only 0.120397 < 0.200000 - reject!
+ Run 485769 excluded trigger phase below limit - reject
+ Run 485779 excluded run quality poor - reject
+ Run 485783 excluded run quality poor - reject
+ Run 485821 excluded trigger phase below limit - reject
+ Run 485832 excluded run quality poor - reject
+ Run 486073 excluded trigger phase below limit - reject
+ Run 486075 excluded run quality poor - reject
+ Run 486101 excluded trigger phase below limit - reject
+ Run 486168 excluded run quality poor - reject
+ Run 486170 excluded trigger phase below limit - reject
+ Run 486175 excluded run quality poor - reject
+ Run 486186 excluded trigger phase below limit - reject
+ Run 486214 excluded trigger phase below limit - reject
+ Run 486225 excluded run quality poor - reject
+ Run 486307 excluded run quality poor - reject
+ Run 486309 excluded trigger phase below limit - reject
+ Run 486314 excluded run quality poor - reject
+ Run 486382 excluded trigger phase below limit - reject
+ Run 486385 excluded run quality poor - reject
+ Run 486422 excluded run quality poor - reject
+ Run 486424 excluded trigger phase below limit - reject
+ Run 486459 excluded high selected subtrigger prescale - reject
+ Run 486464 excluded run quality poor - reject
+ Run 486482 excluded run quality poor - reject
+ Run 486484 excluded trigger phase below limit - reject
+ Run 486489 excluded run quality poor - reject
+ Run 486539 excluded run quality poor - reject
+ Run 486542 excluded run quality poor - reject
+ Run 486568 excluded run quality poor - reject
+ Run 486590 excluded run quality poor - reject
+ Run 486619 excluded run quality poor - reject
+ Run 486621 excluded trigger phase below limit - reject
+ Run 486638 excluded det not in trigger or readout- reject
+ Run 486649 excluded run quality poor - reject
+ Run 486668 excluded run quality poor - reject
+ Run 486697 excluded run quality poor - reject
+ Run 486699 excluded trigger phase below limit - reject
+ Run 486717 excluded run quality poor - reject
+ Run 486738 excluded run quality poor - reject
+ Run 486740 excluded lumi only 0.000000 < 0.200000 - reject!
+ Run 486741 excluded lumi only 0.000000 < 0.200000 - reject!
+ Run 486742 excluded lumi only 0.000000 < 0.200000 - reject!
+ Run 486764 excluded run quality poor - reject
+ Run 486765 excluded lumi only 0.000000 < 0.200000 - reject!
+ Run 486766 excluded lumi only 0.000000 < 0.200000 - reject!
+ Run 486767 excluded lumi only 0.000000 < 0.200000 - reject!
+ Run 486778 excluded run quality poor - reject
+ Run 486788 excluded run quality poor - reject
+ Run 486810 excluded run quality poor - reject
+ Run 486824 excluded lumi only 0.000000 < 0.200000 - reject!
+ Run 486825 excluded lumi only 0.000000 < 0.200000 - reject!
+ Run 486826 excluded lumi only 0.000000 < 0.200000 - reject!
+ Run 486827 excluded lumi only 0.000000 < 0.200000 - reject!
+ Run 486833 excluded run quality poor - reject
+ Run 486835 excluded lumi only 0.045657 < 0.200000 - reject!
+ Run 486866 excluded trigger phase below limit - reject
+ Run 486873 excluded run quality poor - reject
+ Run 486876 excluded lumi only 0.000000 < 0.200000 - reject!
+ Run 486877 excluded lumi only 0.000000 < 0.200000 - reject!
+ Run 486882 excluded run quality poor - reject
+ Run 486886 excluded lumi only 0.000000 < 0.200000 - reject!
+ Run 486893 excluded lumi only 0.000000 < 0.200000 - reject!
+ Run 486894 excluded run quality poor - reject
+ Run 486896 excluded lumi only 0.000000 < 0.200000 - reject!
+ Run 486897 excluded lumi only 0.000000 < 0.200000 - reject!
+ Run 486898 excluded lumi only 0.000000 < 0.200000 - reject!
+ Run 486899 excluded lumi only 0.000000 < 0.200000 - reject!
+ Run 486900 excluded lumi only 0.000000 < 0.200000 - reject!
+ Run 486902 excluded lumi only 0.000000 < 0.200000 - reject!
+ Run 486912 excluded run quality poor - reject
+ Run 486941 excluded run quality poor - reject
+ Run 486943 excluded run quality poor - reject
+ Run 486945 excluded trigger phase below limit - reject
+ Run 486974 excluded run quality poor - reject
+ Run 486975 excluded run quality poor - reject
+ Run 486976 excluded run quality poor - reject
+ Run 486978 excluded run quality poor - reject
+ Run 486979 excluded run quality poor - reject
+ Run 486981 excluded run quality poor - reject
+ Run 486982 excluded run quality poor - reject
+ Run 487149 excluded run quality poor - reject
+ Run 487167 excluded trigger phase below limit - reject
+ Run 487212 excluded trigger phase below limit - reject
+ Run 487225 excluded run quality poor - reject
+ Run 487294 excluded run quality poor - reject
+ Run 487322 excluded run quality poor - reject
+ Run 487324 excluded run quality poor - reject
+ Run 487326 excluded run quality poor - reject
+ Run 487329 excluded run quality poor - reject
+ Run 487337 excluded run quality poor - reject
+ Run 487356 excluded run quality poor - reject
+ Run 487381 excluded run quality poor - reject
+ Run 487395 excluded run quality poor - reject
+ Run 487467 excluded run quality poor - reject
+ Run 487470 excluded trigger phase below limit - reject
+ Run 487477 excluded run quality poor - reject
+ Run 487478 excluded run quality poor - reject
+ Run 487486 excluded trigger phase below limit - reject
+ Run 487498 excluded run quality poor - reject
+ Run 487526 excluded run quality poor - reject
+ Run 487548 excluded run quality poor - reject
+ Run 487560 excluded run quality poor - reject
+ Run 487567 excluded run quality poor - reject
+ Run 487598 excluded run quality poor - reject
+ Run 487600 excluded trigger phase below limit - reject
+ Run 487611 excluded run quality poor - reject
+ Run 487616 excluded lumi only 0.000000 < 0.200000 - reject!
+ Run 487629 excluded run quality poor - reject
+ Run 487664 excluded trigger phase below limit - reject
+ Run 487667 excluded high selected subtrigger prescale - reject
+ Run 487676 excluded run quality poor - reject
+ Run 487683 excluded run quality poor - reject
+ Run 487694 excluded run quality poor - reject
+ Run 487696 excluded run quality poor - reject
+ Run 487728 excluded run quality poor - reject
+ Run 487729 excluded trigger phase below limit - reject
+ Run 487737 excluded run quality poor - reject
+ Run 487755 excluded run quality poor - reject
+ Run 487784 excluded run quality poor - reject
+ Run 487794 excluded run quality poor - reject
+ Run 487799 excluded run quality poor - reject
+ Run 487805 excluded run quality poor - reject
+ Run 487817 excluded lumi only 0.000000 < 0.200000 - reject!
+ Run 487838 excluded lumi only 0.000000 < 0.200000 - reject!
+ Run 487839 excluded lumi only 0.000000 < 0.200000 - reject!
+ Run 487840 excluded lumi only 0.000000 < 0.200000 - reject!
+ Run 487914 excluded run quality poor - reject
+ Run 487916 excluded run quality poor - reject
+ Run 487923 excluded lumi only 0.000000 < 0.200000 - reject!
+ Run 487924 excluded run quality poor - reject
+ Run 487942 excluded run quality poor - reject
+ Run 487947 excluded run quality poor - reject
+ Run 487960 excluded run quality poor - reject
+ Run 487998 excluded run quality poor - reject
+ Run 487999 excluded run quality poor - reject
+ Run 488032 excluded trigger phase below limit - reject
+ Run 488050 excluded run quality poor - reject
+ Run 488054 excluded run quality poor - reject
+ Run 488070 excluded run quality poor - reject
+ Run 488073 excluded run quality poor - reject
+ Run 488143 excluded trigger phase below limit - reject
+ Run 488144 excluded run quality poor - reject
+ Run 488145 excluded trigger phase below limit - reject
+ Run 488200 excluded run quality poor - reject
+ Run 488202 excluded run quality poor - reject
+ Run 488203 excluded trigger phase below limit - reject
+ Run 488211 excluded run quality poor - reject
+ Run 488214 excluded run quality poor - reject
+ Run 488216 excluded high selected subtrigger prescale - reject
+ Run 488233 excluded run quality poor - reject
+ Run 488236 excluded high selected subtrigger prescale - reject
+ Run 488237 excluded high selected subtrigger prescale - reject
+ Run 488278 excluded run quality poor - reject
+ Run 488288 excluded run quality poor - reject
+ Run 488289 excluded trigger phase below limit - reject
+ Run 488292 excluded run quality poor - reject
+ Run 488299 excluded run quality poor - reject
+ Run 488302 excluded trigger phase below limit - reject
+ Run 488307 excluded run quality poor - reject
+ Run 488313 excluded run quality poor - reject
+ Run 488331 excluded run quality poor - reject
+ Run 488360 excluded trigger phase below limit - reject
+ Run 488363 excluded lumi only 0.000000 < 0.200000 - reject!
+ Run 488398 excluded run quality poor - reject
+ Run 488439 excluded run quality poor - reject
+ Run 488441 excluded run quality poor - reject
+ Run 488447 excluded run quality poor - reject
+ Run 488458 excluded run quality poor - reject
+ Run 488483 excluded run quality poor - reject
+ Run 488486 excluded run quality poor - reject
+ Run 488521 excluded run quality poor - reject
+ Run 488522 excluded run quality poor - reject
+ Run 488524 excluded run quality poor - reject
+ Run 488529 excluded run quality poor - reject
+ Run 488548 excluded run quality poor - reject
+ Run 488560 excluded run quality poor - reject
+ Run 488598 excluded trigger phase below limit - reject
+ Run 488612 excluded run quality poor - reject
+ Run 488625 excluded run quality poor - reject
+ Run 488643 excluded run quality poor - reject
+ Run 488672 excluded trigger phase below limit - reject
+ Run 488680 excluded trigger phase below limit - reject
+ Run 488695 excluded run quality poor - reject
+ Run 488730 excluded run quality poor - reject
+ Run 488732 excluded trigger phase below limit - reject
+ Run 488748 excluded run quality poor - reject
+ Run 488751 excluded run quality poor - reject
+ Run 488803 excluded run quality poor - reject
+ Run 488804 excluded run quality poor - reject
+ Run 488806 excluded run quality poor - reject
+ Run 488823 excluded run quality poor - reject
+ Run 488865 excluded lumi only 0.000000 < 0.200000 - reject!
+ Run 488876 excluded run quality poor - reject
+ Run 488920 excluded run quality poor - reject
+ Run 488930 excluded run quality poor - reject
+ Run 488973 excluded trigger phase below limit - reject
+ Run 488979 excluded run quality poor - reject
+ Run 489010 excluded run quality poor - reject
+ Run 489011 excluded run quality poor - reject
+ Run 489024 excluded run quality poor - reject
+ Run 489038 excluded run quality poor - reject
+ Run 489046 excluded run quality poor - reject
+ Run 489050 excluded run quality poor - reject
+ Run 489128 excluded trigger phase below limit - reject
+ Run 489137 excluded run quality poor - reject
+ Run 489147 excluded run quality poor - reject
+ Run 489150 excluded det not in trigger or readout- reject
+ Run 489162 excluded run quality poor - reject
+ Run 489207 excluded trigger phase below limit - reject
+ Run 489225 excluded run quality poor - reject
+ Run 489243 excluded run quality poor - reject
+ Run 489244 excluded run quality poor - reject
+ Run 489283 excluded trigger phase below limit - reject
+ Run 489293 excluded run quality poor - reject
+ Run 489314 excluded run quality poor - reject
+ Run 489317 excluded run quality poor - reject
+ Run 489324 excluded trigger phase below limit - reject
+ Run 489410 excluded run quality poor - reject
+ Run 489426 excluded run quality poor - reject
+ Run 489452 excluded run quality poor - reject
+ Run 489466 excluded run quality poor - reject
+ Run 489471 excluded run quality poor - reject
+ Run 489507 excluded trigger phase below limit - reject
+ Run 489525 excluded run quality poor - reject
+ Run 489534 excluded high selected subtrigger prescale - reject
+ Run 489536 excluded high selected subtrigger prescale - reject
+ Run 489545 excluded run quality poor - reject
+ Run 489557 excluded run quality poor - reject
+ Run 489562 excluded run quality poor - reject
+ Run 489568 excluded lumi only 0.000000 < 0.200000 - reject!
+ Run 489569 excluded lumi only 0.000000 < 0.200000 - reject!
+ Run 489570 excluded run quality poor - reject
+ Run 489603 excluded trigger phase below limit - reject
+ Run 489613 excluded run quality poor - reject
+ Run 489633 excluded run quality poor - reject
+ Run 489634 excluded run quality poor - reject
+ Run 489662 excluded run quality poor - reject
+ Run 489665 excluded run quality poor - reject
+ Run 489688 excluded trigger phase below limit - reject
+ Run 489697 excluded high selected subtrigger prescale - reject
+ Run 489698 excluded high selected subtrigger prescale - reject
+ Run 489722 excluded run quality poor - reject
+ Run 489801 excluded run quality poor - reject
+ Run 489802 excluded run quality poor - reject
+ Run 489803 excluded trigger phase below limit - reject
+ Run 489807 excluded run quality poor - reject
+ Run 489821 excluded run quality poor - reject
+ Run 489831 excluded det not in trigger or readout- reject
+ Run 489834 excluded run quality poor - reject
+ Run 489836 excluded run quality poor - reject
+ Run 490135 excluded run quality poor - reject
+ Run 490162 excluded trigger phase below limit - reject
+ Run 490165 excluded run quality poor - reject
+ Run 490167 excluded trigger phase below limit - reject
+ Run 490237 excluded run quality poor - reject
+ Run 490246 excluded trigger phase below limit - reject
+ Run 490252 excluded run quality poor - reject
+ Run 490270 excluded run quality poor - reject
+ Run 490271 excluded run quality poor - reject
+ Run 490273 excluded run quality poor - reject
+ Run 490276 excluded run quality poor - reject
+ Run 490284 excluded run quality poor - reject
+ Run 490285 excluded run quality poor - reject
+ Run 490286 excluded run quality poor - reject
+ Run 490292 excluded run quality poor - reject
+ Run 490293 excluded run quality poor - reject
+ Run 490300 excluded run quality poor - reject
+ Run 490301 excluded run quality poor - reject
+ Run 490363 excluded run quality poor - reject
+ Run 490365 excluded trigger phase below limit - reject
+ Run 490372 excluded run quality poor - reject
+ Run 490374 excluded run quality poor - reject
+ Run 490375 excluded trigger phase below limit - reject
+ Run 490382 excluded run quality poor - reject
+ Run 490391 excluded run quality poor - reject
+ Run 490397 excluded run quality poor - reject
+ Run 490405 excluded run quality poor - reject
+ Run 490459 excluded run quality poor - reject
+ Run 490466 excluded trigger phase below limit - reject
+ Run 490468 excluded run quality poor - reject
+ Run 490482 excluded lumi only 0.182993 < 0.200000 - reject!
+ Run 490483 excluded run quality poor - reject
+ Run 490492 excluded det not in trigger or readout- reject
+ Run 490493 excluded det not in trigger or readout- reject
+ Run 490582 excluded trigger phase below limit - reject
+ Run 490708 excluded run quality poor - reject
+ Run 490710 excluded trigger phase below limit - reject
+ Run 490721 excluded run quality poor - reject
+ Run 490743 excluded high selected subtrigger prescale - reject
+ Run 490753 excluded trigger phase below limit - reject
+ Run 490773 excluded run quality poor - reject
+ Run 490787 excluded run quality poor - reject
+ Run 490836 excluded run quality poor - reject
+ Run 490838 excluded run quality poor - reject
+ Run 490860 excluded run quality poor - reject
+ Run 490867 excluded run quality poor - reject
+ Run 490869 excluded run quality poor - reject
+ Run 490870 excluded lumi only 0.002388 < 0.200000 - reject!
+ Run 490872 excluded run quality poor - reject
+ Run 490873 excluded run quality poor - reject
+ Run 490874 excluded run quality poor - reject
+ Run 490875 excluded run quality poor - reject
+ Run 490877 excluded run quality poor - reject
+ Run 490879 excluded run quality poor - reject
+ Run 490881 excluded run quality poor - reject
+ Run 490915 excluded trigger phase below limit - reject
+ Run 490957 excluded run quality poor - reject
+ Run 491019 excluded run quality poor - reject
+ Run 491020 excluded run quality poor - reject
+ Run 491021 excluded run quality poor - reject
+ Run 491030 excluded trigger phase below limit - reject
+ Run 491090 excluded trigger phase below limit - reject
+ Run 491115 excluded run quality poor - reject
+ Run 491124 excluded run quality poor - reject
+ Run 491135 excluded run quality poor - reject
+ Run 491149 excluded run quality poor - reject
+ Run 491159 excluded run quality poor - reject
+ Run 491183 excluded run quality poor - reject
+ Run 491188 excluded run quality poor - reject
+ Run 491189 excluded run quality poor - reject
+ Run 491193 excluded run quality poor - reject
+ Run 491210 excluded det not in trigger or readout- reject
+ Run 491223 excluded run quality poor - reject
+ Run 491234 excluded trigger phase below limit - reject
+ Run 491235 excluded trigger phase below limit - reject
+ Run 491256 excluded lumi only 0.000000 < 0.200000 - reject!
+ Run 491290 excluded run quality poor - reject
+ Run 491292 excluded trigger phase below limit - reject
+ Run 491296 excluded run quality poor - reject
+ Run 491369 excluded run quality poor - reject
+ Run 491374 excluded run quality poor - reject
+ Run 491375 excluded run quality poor - reject
+ Run 491376 excluded run quality poor - reject
+ Run 491386 excluded run quality poor - reject
+ Run 491401 excluded run quality poor - reject
+ Run 491461 excluded run quality poor - reject
+ Run 491463 excluded trigger phase below limit - reject
+ Run 491465 excluded trigger phase below limit - reject
+ Run 491466 excluded run quality poor - reject
+ Run 491520 excluded run quality poor - reject
+ Run 491523 excluded run quality poor - reject
+ Run 491525 excluded run quality poor - reject
+ Run 491527 excluded trigger phase below limit - reject
+ Run 491555 excluded run quality poor - reject
+ Run 491557 excluded run quality poor - reject
+ Run 491561 excluded run quality poor - reject
+ Run 491590 excluded run quality poor - reject
+ Run 491592 excluded trigger phase below limit - reject
+ Run 491606 excluded run quality poor - reject
+ Run 491609 excluded run quality poor - reject
+ Run 491649 excluded trigger phase below limit - reject
+ Run 491653 excluded run quality poor - reject
+ Run 491658 excluded run quality poor - reject
+ Run 491665 excluded run quality poor - reject
+ Run 491666 excluded run quality poor - reject
+ Run 491752 excluded trigger phase below limit - reject
+ Run 491753 excluded run quality poor - reject
+ Run 491767 excluded run quality poor - reject
+ Run 491774 excluded trigger phase below limit - reject
+ Run 491778 excluded run quality poor - reject
+ Run 491787 excluded run quality poor - reject
+ Run 491802 excluded run quality poor - reject
+ Run 491811 excluded lumi only 0.115610 < 0.200000 - reject!
+ Run 491812 excluded high selected subtrigger prescale - reject
+ Run 491814 excluded high selected subtrigger prescale - reject
+ Run 491916 excluded run quality poor - reject
+ Run 491917 excluded run quality poor - reject
+ Run 491919 excluded high selected subtrigger prescale - reject
+ Run 491921 excluded high selected subtrigger prescale - reject
+ Run 491922 excluded high selected subtrigger prescale - reject
+ Run 491955 excluded run quality poor - reject
+ Run 491958 excluded run quality poor - reject
+ Run 491961 excluded trigger phase below limit - reject
+ Run 491981 excluded run quality poor - reject
+ Run 492022 excluded trigger phase below limit - reject
+ Run 492053 excluded lumi only 0.117016 < 0.200000 - reject!
+ Run 492054 excluded lumi only 0.142047 < 0.200000 - reject!
+ Run 492056 excluded run quality poor - reject
+ Run 492062 excluded high selected subtrigger prescale - reject
+ Run 492063 excluded selected subtrigs not enabled - reject
+ Run 492064 excluded high selected subtrigger prescale - reject
+ Run 492065 excluded high selected subtrigger prescale - reject
+ Run 492066 excluded high selected subtrigger prescale - reject
+ Run 492087 excluded trigger phase below limit - reject
+ Run 492093 excluded run quality poor - reject
+ Run 492094 excluded trigger phase below limit - reject
+ Run 492095 excluded run quality poor - reject
+ Run 492160 excluded run quality poor - reject
+ Run 492161 excluded run quality poor - reject
+ Run 492163 excluded trigger phase below limit - reject
+ Run 492184 excluded run quality poor - reject
+ Run 492187 excluded run quality poor - reject
+ Run 492200 excluded run quality poor - reject
+ Run 492213 excluded run quality poor - reject
+ Run 492217 excluded run quality poor - reject
+ Run 492223 excluded run quality poor - reject
+ Run 492246 excluded run quality poor - reject
+ Run 492248 excluded trigger phase below limit - reject
+ Run 492252 excluded high selected subtrigger prescale - reject
+ Run 492253 excluded high selected subtrigger prescale - reject
+ Run 492254 excluded high selected subtrigger prescale - reject
+ Run 492257 excluded high selected subtrigger prescale - reject
+ Run 492258 excluded high selected subtrigger prescale - reject
+ Run 492260 excluded run quality poor - reject
+ Run 492262 excluded high selected subtrigger prescale - reject
+ Run 492264 excluded high selected subtrigger prescale - reject
+ Run 492265 excluded high selected subtrigger prescale - reject
+ Run 492266 excluded high selected subtrigger prescale - reject
+ Run 492268 excluded high selected subtrigger prescale - reject
+ Run 492271 excluded high selected subtrigger prescale - reject
+ Run 492273 excluded high selected subtrigger prescale - reject
+ Run 492274 excluded high selected subtrigger prescale - reject
+ Run 492276 excluded high selected subtrigger prescale - reject
+ Run 492278 excluded high selected subtrigger prescale - reject
+ Run 492279 excluded high selected subtrigger prescale - reject
+ Run 492281 excluded high selected subtrigger prescale - reject
+ Run 492283 excluded high selected subtrigger prescale - reject
+ Run 492285 excluded high selected subtrigger prescale - reject
+ Run 492292 excluded high selected subtrigger prescale - reject
+ Run 492318 excluded run quality poor - reject
+ Run 492320 excluded run quality poor - reject
+ Run 492327 excluded run quality poor - reject
+ Run 492345 excluded run quality poor - reject
+ Run 492351 excluded run quality poor - reject
+ Run 492354 excluded run quality poor - reject
+ Run 492357 excluded run quality poor - reject
+ Run 492360 excluded run quality poor - reject
+ Run 492396 excluded trigger phase below limit - reject
+ Run 492409 excluded run quality poor - reject
+ Run 492411 excluded trigger phase below limit - reject
+ Run 492416 excluded high selected subtrigger prescale - reject
+ Run 492417 excluded high selected subtrigger prescale - reject
+ Run 492419 excluded run quality poor - reject
+ Run 492447 excluded run quality poor - reject
+ Run 492485 excluded trigger phase below limit - reject
+ Run 492508 excluded run quality poor - reject
+ Run 492509 excluded trigger phase below limit - reject
+ Run 492559 excluded trigger phase below limit - reject
+ Run 492621 excluded run quality poor - reject
+ Run 492622 excluded run quality poor - reject
+ Run 492624 excluded trigger phase below limit - reject
+ Run 492625 excluded trigger phase below limit - reject
+ Run 492629 excluded run quality poor - reject
+ Run 492632 excluded run quality poor - reject
+ Run 492655 excluded trigger phase below limit - reject
+ Run 492688 excluded trigger phase below limit - reject
+ Run 492700 excluded run quality poor - reject
+ Run 492778 excluded run quality poor - reject
+ Run 492803 excluded run quality poor - reject
+ Run 492805 excluded run quality poor - reject
+ Run 492807 excluded trigger phase below limit - reject
+ Run 492810 excluded run quality poor - reject
+ Run 492917 excluded run quality poor - reject
+ Run 492919 excluded trigger phase below limit - reject
+ Run 492922 excluded run quality poor - reject
+ Run 492967 excluded trigger phase below limit - reject
+ Run 492988 excluded run quality poor - reject
+ Run 493013 excluded trigger phase below limit - reject
+ Run 493018 excluded run quality poor - reject
+ Run 493057 excluded run quality poor - reject
+ Run 493069 excluded run quality poor - reject
+ Run 493072 excluded run quality poor - reject
+ Run 493088 excluded run quality poor - reject
+ Run 493094 excluded run quality poor - reject
+ Run 493097 excluded run quality poor - reject
+ Run 493100 excluded run quality poor - reject
+ Run 493115 excluded run quality poor - reject
+ Run 493129 excluded run quality poor - reject
+ Run 493151 excluded run quality poor - reject
+ Run 493177 excluded trigger phase below limit - reject
+ Run 493185 excluded run quality poor - reject
+ Run 493220 excluded run quality poor - reject
+ Run 493221 excluded trigger phase below limit - reject
+ Run 493225 excluded run quality poor - reject
+ Run 493283 excluded run quality poor - reject
+ Run 493290 excluded run quality poor - reject
+ Run 493323 excluded run quality poor - reject
+ Run 493325 excluded trigger phase below limit - reject
+ Run 493326 excluded run quality poor - reject
+ Run 493348 excluded run quality poor - reject
+ Run 493360 excluded run quality poor - reject
+ Run 493390 excluded run quality poor - reject
+ Run 493391 excluded run quality poor - reject
+ Run 493397 excluded run quality poor - reject
+ Run 493451 excluded trigger phase below limit - reject
+ Run 493469 excluded run quality poor - reject
+ Run 493557 excluded run quality poor - reject
+ Run 493564 excluded run quality poor - reject
+ Run 493566 excluded trigger phase below limit - reject
+ Run 493598 excluded run quality poor - reject
+ Run 493613 excluded run quality poor - reject
+ Run 493642 excluded run quality poor - reject
+ Run 493647 excluded run quality poor - reject
+ Run 493649 excluded trigger phase below limit - reject
+ Run 493666 excluded high selected subtrigger prescale - reject
+ Run 493667 excluded high selected subtrigger prescale - reject
+ Run 493671 excluded high selected subtrigger prescale - reject
+ Run 493676 excluded run quality poor - reject
+ Run 493700 excluded run quality poor - reject
+ Run 493713 excluded run quality poor - reject
+ Run 493720 excluded run quality poor - reject
+ Run 493749 excluded trigger phase below limit - reject
+ Run 493765 excluded trigger phase below limit - reject
+ Run 493825 excluded trigger phase below limit - reject
+ Run 493864 excluded trigger phase below limit - reject
+ Run 493874 excluded run quality poor - reject
+ Run 493909 excluded run quality poor - reject
+ Run 493911 excluded trigger phase below limit - reject
+ Run 493939 excluded run quality poor - reject
+ Run 493982 excluded run quality poor - reject
+ Run 493983 excluded run quality poor - reject
+ Run 493984 excluded trigger phase below limit - reject
+ Run 493997 excluded run quality poor - reject
+ Run 493998 excluded run quality poor - reject
+ Run 494001 excluded run quality poor - reject
+ Run 494041 excluded run quality poor - reject
+ Run 494044 excluded lumi only 0.086102 < 0.200000 - reject!
+ Run 494084 excluded trigger phase below limit - reject
+ Run 494100 excluded run quality poor - reject
+ Run 494136 excluded run quality poor - reject
+ Run 494138 excluded run quality poor - reject
+ Run 494139 excluded run quality poor - reject
+ Run 494142 excluded run quality poor - reject
+ Run 494143 excluded run quality poor - reject
+ Run 494144 excluded trigger phase below limit - reject
+ Run 494145 excluded trigger phase below limit - reject
+ Run 494146 excluded run quality poor - reject
+ Run 494148 excluded trigger phase below limit - reject
+ Run 494214 excluded trigger phase below limit - reject
+ Run 494255 excluded trigger phase below limit - reject
+ Run 494265 excluded run quality poor - reject
+ Run 494290 excluded trigger phase below limit - reject
+ Run 494311 excluded run quality poor - reject
+ Run 494343 excluded trigger phase below limit - reject
+ Run 494344 excluded run quality poor - reject
+ Run 494357 excluded lumi only 0.101643 < 0.200000 - reject!
+ Run 494358 excluded high selected subtrigger prescale - reject
+ Run 494359 excluded run quality poor - reject
+ Run 494362 excluded high selected subtrigger prescale - reject
+ Run 494363 excluded high selected subtrigger prescale - reject
+ Run 494364 excluded high selected subtrigger prescale - reject
+ Run 494369 excluded high selected subtrigger prescale - reject
+ Run 494374 excluded high selected subtrigger prescale - reject
+ Run 494375 excluded high selected subtrigger prescale - reject
+ Run 494376 excluded high selected subtrigger prescale - reject
+ Run 494377 excluded high selected subtrigger prescale - reject
+ Run 494378 excluded high selected subtrigger prescale - reject
+ Run 494386 excluded run quality poor - reject
+ Run 494387 excluded run quality poor - reject
+ Run 494388 excluded run quality poor - reject
+ Run 494391 excluded high selected subtrigger prescale - reject
+ Run 494396 excluded run quality poor - reject
+ Run 494403 excluded run quality poor - reject
+ Run 494429 excluded trigger phase below limit - reject
+ Run 494430 excluded run quality poor - reject
+ Run 494435 excluded run quality poor - reject
+ Run 494436 excluded run quality poor - reject
+ Run 494438 excluded run quality poor - reject
+ Run 494446 excluded run quality poor - reject
+ Run 494506 excluded run quality poor - reject
+ Run 494522 excluded run quality poor - reject
+ Run 494635 excluded run quality poor - reject
+ Run 494636 excluded run quality poor - reject
+ Run 494637 excluded run quality poor - reject
+ Run 494640 excluded run quality poor - reject
+ Run 494642 excluded run quality poor - reject
+ Run 494643 excluded run quality poor - reject
+ Run 494644 excluded run quality poor - reject
+ Run 494645 excluded run quality poor - reject
+ Run 494646 excluded run quality poor - reject
+ Run 494664 excluded run quality poor - reject
+ Run 494696 excluded run quality poor - reject
+ Run 494707 excluded run quality poor - reject
+ Run 494716 excluded run quality poor - reject
+ Run 494749 excluded trigger phase below limit - reject
+ Run 494758 excluded run quality poor - reject
+ Run 494762 excluded run quality poor - reject
+ Run 494764 excluded trigger phase below limit - reject
+ Run 494766 excluded run quality poor - reject
+ Run 494776 excluded lumi only 0.000000 < 0.200000 - reject!
+ Run 494790 excluded run quality poor - reject
+ Run 494806 excluded run quality poor - reject
+ Run 494836 excluded trigger phase below limit - reject
+ Run 494854 excluded run quality poor - reject
+ Run 494872 excluded run quality poor - reject
+ Run 494874 excluded trigger phase below limit - reject
+ Run 494891 excluded run quality poor - reject
+ Run 494896 excluded run quality poor - reject
+ Run 494897 excluded run quality poor - reject
+ Run 494905 excluded run quality poor - reject
+ Run 494964 excluded run quality poor - reject
+ Run 494965 excluded trigger phase below limit - reject
+ Run 495019 excluded run quality poor - reject
+ Run 495068 excluded run quality poor - reject
+ Run 495070 excluded trigger phase below limit - reject
+ Run 495073 excluded run quality poor - reject
+ Run 495093 excluded run quality poor - reject
+ Run 495100 excluded run quality poor - reject
+ Run 495158 excluded trigger phase below limit - reject
+ Run 495166 excluded run quality poor - reject
+ Run 495176 excluded run quality poor - reject
+ Run 495186 excluded run quality poor - reject
+ Run 495190 excluded run quality poor - reject
+ Run 495234 excluded trigger phase below limit - reject
+ Run 495235 excluded excluded by input steering
+ Run 495236 excluded excluded by input steering
+ Run 495242 excluded excluded by input steering
+ Run 495243 excluded excluded by input steering
+ Run 495245 excluded excluded by input steering
+ Run 495247 excluded excluded by input steering
+ Run 495248 excluded excluded by input steering
+ Run 495249 excluded excluded by input steering
+ Run 495250 excluded excluded by input steering
+ Run 495252 excluded excluded by input steering
+ Run 495253 excluded excluded by input steering
+ Run 495255 excluded excluded by input steering
+ Run 495256 excluded excluded by input steering
+ Run 495258 excluded excluded by input steering
+ Run 495259 excluded excluded by input steering
+ Run 495260 excluded excluded by input steering
+ Run 495380 excluded trigger phase below limit - reject
+ Run 495411 excluded run quality poor - reject
+ Run 495412 excluded run quality poor - reject
+ Run 495414 excluded run quality poor - reject
+ Run 495428 excluded run quality poor - reject
+ Run 495486 excluded trigger phase below limit - reject
+ Run 495498 excluded run quality poor - reject
+ Run 495533 excluded run quality poor - reject
+ Run 495591 excluded trigger phase below limit - reject
+ Run 495619 excluded run quality poor - reject
+ Run 495648 excluded trigger phase below limit - reject
+ Run 495655 excluded run quality poor - reject
+ Run 495659 excluded lumi only 0.000000 < 0.200000 - reject!
+ Run 495679 excluded run quality poor - reject
+ Run 496317 excluded run quality poor - reject
+ Run 496320 excluded run quality poor - reject
+ Run 496321 excluded run quality poor - reject
+ Run 496322 excluded run quality poor - reject
+ Run 496323 excluded run quality poor - reject
+ Run 496325 excluded run quality poor - reject
+ Run 496326 excluded run quality poor - reject
+ Run 496327 excluded run quality poor - reject
+ Run 496328 excluded run quality poor - reject
+ Run 496330 excluded run quality poor - reject
+ Run 496332 excluded run quality poor - reject
+ Run 496333 excluded run quality poor - reject
+ Run 496334 excluded run quality poor - reject
+ Run 496335 excluded run quality poor - reject
+ Run 496336 excluded run quality poor - reject
+ Run 496354 excluded trigger phase below limit - reject
+ Run 496370 excluded run quality poor - reject
+ Run 496409 excluded trigger phase below limit - reject
+ Run 496439 excluded trigger phase below limit - reject
+ Run 496474 excluded trigger phase below limit - reject
+ Run 496488 excluded run quality poor - reject
+ Run 496508 excluded trigger phase below limit - reject
+ Run 496512 excluded run quality poor - reject
+ Run 496547 excluded run quality poor - reject
+ Run 496609 excluded run quality poor - reject
+ Run 496610 excluded run quality poor - reject
+ Run 496631 excluded run quality poor - reject
+ Run 496632 excluded high selected subtrigger prescale - reject
+ Run 496645 excluded run quality poor - reject
+ Run 496655 excluded run quality poor - reject
+ Run 496684 excluded run quality poor - reject
+ Run 496685 excluded trigger phase below limit - reject
+ Run 496827 excluded trigger phase below limit - reject
+ Run 496885 excluded trigger phase below limit - reject
+ Run 496887 excluded run quality poor - reject
+ Run 496930 excluded trigger phase below limit - reject
+ Run 496955 excluded trigger phase below limit - reject
+ Run 496961 excluded run quality poor - reject
+ Run 497006 excluded run quality poor - reject
+ Run 497024 excluded run quality poor - reject
+ Run 497026 excluded run quality poor - reject
+ Run 497060 excluded run quality poor - reject
+ Run 497091 excluded trigger phase below limit - reject
+ Run 497114 excluded trigger phase below limit - reject
+ Run 497115 excluded lumi only 0.000000 < 0.200000 - reject!
+ Run 497116 excluded lumi only 0.000000 < 0.200000 - reject!
+ Run 497136 excluded run quality poor - reject
+ Run 497149 excluded run quality poor - reject
+ Run 497163 excluded run quality poor - reject
+ Run 497175 excluded run quality poor - reject
+ Run 497185 excluded run quality poor - reject
+ Run 497189 excluded run quality poor - reject
+ Run 497233 excluded run quality poor - reject
+ Run 497234 excluded run quality poor - reject
+ Run 497235 excluded run quality poor - reject
+ Run 497236 excluded run quality poor - reject
+ Run 497237 excluded run quality poor - reject
+ Run 497238 excluded run quality poor - reject
+ Run 497240 excluded run quality poor - reject
+ Run 497242 excluded trigger phase below limit - reject
+ Run 497244 excluded trigger phase below limit - reject
+ Run 497257 excluded lumi only 0.000000 < 0.200000 - reject!
+ Run 497258 excluded lumi only 0.000000 < 0.200000 - reject!
+ Run 497325 excluded trigger phase below limit - reject
+ Run 497368 excluded trigger phase below limit - reject
+ Run 497387 excluded run quality poor - reject
+ Run 497471 excluded trigger phase below limit - reject
+ Run 497474 excluded run quality poor - reject
+ Run 497488 excluded run quality poor - reject
+ Run 497528 excluded trigger phase below limit - reject
+ Run 497543 excluded run quality poor - reject
+ Run 497563 excluded run quality poor - reject
+ Run 497586 excluded trigger phase below limit - reject
+ Run 497590 excluded run quality poor - reject
+ Run 497592 excluded trigger phase below limit - reject
+ Run 497629 excluded run quality poor - reject
+ Run 497657 excluded trigger phase below limit - reject
+ Run 497672 excluded run quality poor - reject
+ Run 497692 excluded run quality poor - reject
+ Run 497717 excluded trigger phase below limit - reject
+ Run 497747 excluded run quality poor - reject
+ Run 497790 excluded trigger phase below limit - reject
+ Run 497810 excluded run quality poor - reject
+ Run 497856 excluded trigger phase below limit - reject
+ Run 497890 excluded lumi only 0.174859 < 0.200000 - reject!
+ Run 497891 excluded lumi only 0.000000 < 0.200000 - reject!
+ Run 497938 excluded trigger phase below limit - reject
+ Run 497939 excluded run quality poor - reject
+ Run 497946 excluded run quality poor - reject
+ Run 497992 excluded trigger phase below limit - reject
+ Run 497993 excluded trigger phase below limit - reject
+ Run 497994 excluded trigger phase below limit - reject
+ Run 497995 excluded trigger phase below limit - reject
+ Run 497996 excluded lumi only 0.000000 < 0.200000 - reject!
+ Run 498005 excluded run quality poor - reject
+ Run 498045 excluded trigger phase below limit - reject
+ Run 498082 excluded run quality poor - reject
+ Run 498084 excluded run quality poor - reject
+ Run 498143 excluded trigger phase below limit - reject
+ Run 498204 excluded run quality poor - reject
+ Run 498206 excluded trigger phase below limit - reject
+ Run 498220 excluded run quality poor - reject
+ Run 498238 excluded run quality poor - reject
+ Run 498284 excluded trigger phase below limit - reject
+ Run 498302 excluded trigger phase below limit - reject
+ Run 498317 excluded run quality poor - reject
+ Run 498465 excluded trigger phase below limit - reject
+ Run 498479 excluded run quality poor - reject
+ Run 498497 excluded trigger phase below limit - reject
+ Run 498513 excluded run quality poor - reject
+ Run 498535 excluded run quality poor - reject
+ Run 498566 excluded trigger phase below limit - reject
+ Run 498568 excluded run quality poor - reject
+ Run 498588 excluded run quality poor - reject
+ Run 498628 excluded trigger phase below limit - reject
+ Run 498630 excluded run quality poor - reject
+ Run 498631 excluded run quality poor - reject
+ Run 498632 excluded run quality poor - reject
+ Run 498660 excluded run quality poor - reject
+ Run 498661 excluded run quality poor - reject
+ Run 498662 excluded trigger phase below limit - reject
+ Run 498668 excluded run quality poor - reject
+ Run 498671 excluded trigger phase below limit - reject
+ Run 498674 excluded trigger phase below limit - reject
+ Run 498687 excluded lumi only 0.000000 < 0.200000 - reject!
+ Run 498721 excluded run quality poor - reject
+ Run 498722 excluded run quality poor - reject
+ Run 498734 excluded trigger phase below limit - reject
+ Run 498746 excluded run quality poor - reject
+ Run 498804 excluded trigger phase below limit - reject
+ Run 498817 excluded run quality poor - reject
+ Run 498877 excluded trigger phase below limit - reject
+ Run 498881 excluded run quality poor - reject
+ Run 498898 excluded run quality poor - reject
+ Run 498939 excluded trigger phase below limit - reject
+ Run 498960 excluded run quality poor - reject
+ Run 498980 excluded lumi only 0.000000 < 0.200000 - reject!
+ Run 498983 excluded run quality poor - reject
+ Run 498986 excluded lumi only 0.000000 < 0.200000 - reject!
+ Run 498987 excluded lumi only 0.000000 < 0.200000 - reject!
+ Run 499006 excluded run quality poor - reject
+ Run 499020 excluded run quality poor - reject
+ Run 499027 excluded lumi only 0.000000 < 0.200000 - reject!
+ Run 499065 excluded trigger phase below limit - reject
+ Run 499077 excluded run quality poor - reject
+ Run 499108 excluded run quality poor - reject
+ Run 499109 excluded trigger phase below limit - reject
+ Run 499110 excluded run quality poor - reject
+ Run 499148 excluded trigger phase below limit - reject
+ Run 499162 excluded run quality poor - reject
+ Run 499230 excluded trigger phase below limit - reject
+ Run 499256 excluded run quality poor - reject
+ Run 499291 excluded run quality poor - reject
+ Run 499292 excluded trigger phase below limit - reject
+ Run 499307 excluded run quality poor - reject
+ Run 499329 excluded trigger phase below limit - reject
+ Run 499357 excluded lumi only 0.000000 < 0.200000 - reject!
+ Run 499360 excluded lumi only 0.000000 < 0.200000 - reject!
+ Run 499416 excluded run quality poor - reject
+ Run 499417 excluded run quality poor - reject
+ Run 499453 excluded trigger phase below limit - reject
+ Run 499498 excluded trigger phase below limit - reject
+ Run 499500 excluded run quality poor - reject
+ Run 499532 excluded trigger phase below limit - reject
+ Run 499554 excluded trigger phase below limit - reject
+ Run 499572 excluded run quality poor - reject
+ Run 499624 excluded trigger phase below limit - reject
+ Run 499633 excluded run quality poor - reject
+ Run 499640 excluded lumi only 0.000000 < 0.200000 - reject!
+ Run 499662 excluded run quality poor - reject
+ Run 499673 excluded run quality poor - reject
+ Run 499683 excluded run quality poor - reject
+ Run 499684 excluded run quality poor - reject
+ Run 499685 excluded run quality poor - reject
+ Run 499686 excluded run quality poor - reject
+ Run 499690 excluded run quality poor - reject
+ Run 499691 excluded high selected subtrigger prescale - reject
+ Run 499692 excluded high selected subtrigger prescale - reject
+ Run 499693 excluded high selected subtrigger prescale - reject
+ Run 499694 excluded high selected subtrigger prescale - reject
+ Run 499695 excluded high selected subtrigger prescale - reject
+ Run 499709 excluded run quality poor - reject
+ Run 499710 excluded run quality poor - reject
+ Run 499712 excluded run quality poor - reject
+ Run 499713 excluded run quality poor - reject
+ Run 499716 excluded run quality poor - reject
+ Run 499717 excluded run quality poor - reject
+ Run 499718 excluded run quality poor - reject
+ Run 499719 excluded selected subtrigs not enabled - reject
+ Run 499720 excluded selected subtrigs not enabled - reject
+ Run 499746 excluded run quality poor - reject
+ Run 499759 excluded trigger phase below limit - reject
+ Run 499761 excluded run quality poor - reject
+ Run 499793 excluded trigger phase below limit - reject
+ Run 499805 excluded run quality poor - reject
+ Run 499837 excluded trigger phase below limit - reject
+ Run 499849 excluded run quality poor - reject
+ Run 499862 excluded run quality poor - reject
+ Run 499863 excluded run quality poor - reject
+ Run 499864 excluded run quality poor - reject
+ Run 499866 excluded run quality poor - reject
+ Run 499867 excluded run quality poor - reject
+ Run 499868 excluded run quality poor - reject
+ Run 499869 excluded selected subtrigs not enabled - reject
+ Run 499872 excluded run quality poor - reject
+ Run 499874 excluded selected subtrigs not enabled - reject
+ Run 499903 excluded run quality poor - reject
+ Run 499929 excluded trigger phase below limit - reject
+ Run 499965 excluded trigger phase below limit - reject
+ Run 499974 excluded trigger phase below limit - reject
+ Run 499975 excluded trigger phase below limit - reject
+ Run 500072 excluded run quality poor - reject
+ Run 500075 excluded trigger phase below limit - reject
+ Run 500091 excluded run quality poor - reject
+ Run 500161 excluded trigger phase below limit - reject
+ Run 500174 excluded run quality poor - reject
+ Run 500190 excluded trigger phase below limit - reject
+ Run 500219 excluded lumi only 0.000000 < 0.200000 - reject!
+ Run 500251 excluded trigger phase below limit - reject
+ Run 500275 excluded det not in trigger or readout- reject
+ Run 500286 excluded trigger phase below limit - reject
+ Run 500290 excluded run quality poor - reject
+ Run 500310 excluded run quality poor - reject
+ Run 500338 excluded trigger phase below limit - reject
+ Run 500342 excluded run quality poor - reject
+ Run 500370 excluded run quality poor - reject
+ Run 500423 excluded run quality poor - reject
+ Run 500447 excluded trigger phase below limit - reject
+ Run 500454 excluded trigger phase below limit - reject
+ Run 500490 excluded trigger phase below limit - reject
+ Run 500524 excluded run quality poor - reject
+ Run 500527 excluded run quality poor - reject
+ Run 500545 excluded run quality poor - reject
+ Run 500563 excluded run quality poor - reject
+ Run 500564 excluded trigger phase below limit - reject
+ Run 500567 excluded run quality poor - reject
+ Run 500568 excluded run quality poor - reject
+ Run 500582 excluded run quality poor - reject

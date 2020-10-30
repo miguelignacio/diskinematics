@@ -1,0 +1,2799 @@
+ Run 357073 excluded run quality poor - reject
+ Run 357075 excluded run quality poor - reject
+ Run 357076 excluded run quality poor - reject
+ Run 357078 excluded run quality poor - reject
+ Run 357081 excluded run quality poor - reject
+ Run 357082 excluded run quality poor - reject
+ Run 357083 excluded run quality poor - reject
+ Run 357084 excluded run quality poor - reject
+ Run 357085 excluded run quality poor - reject
+ Run 357086 excluded run quality poor - reject
+ Run 357088 excluded run quality poor - reject
+ Run 357107 excluded run quality poor - reject
+ Run 357109 excluded run quality poor - reject
+ Run 357112 excluded run quality poor - reject
+ Run 357113 excluded run quality poor - reject
+ Run 357114 excluded run quality poor - reject
+ Run 357119 excluded run quality poor - reject
+ Run 357120 excluded run quality poor - reject
+ Run 357126 excluded run quality poor - reject
+ Run 357127 excluded run quality poor - reject
+ Run 357128 excluded run quality poor - reject
+ Run 357134 excluded run quality poor - reject
+ Run 357135 excluded run quality poor - reject
+ Run 357139 excluded run quality poor - reject
+ Run 357141 excluded run quality poor - reject
+ Run 357142 excluded run quality poor - reject
+ Run 357144 excluded run quality poor - reject
+ Run 357145 excluded run quality poor - reject
+ Run 357148 excluded run quality poor - reject
+ Run 357149 excluded lumi only 0.000000 < 0.200000 - reject!
+ Run 357151 excluded lumi only 0.000000 < 0.200000 - reject!
+ Run 357152 excluded lumi only 0.000000 < 0.200000 - reject!
+ Run 357155 excluded high selected subtrigger prescale - reject
+ Run 357157 excluded high selected subtrigger prescale - reject
+ Run 357158 excluded high selected subtrigger prescale - reject
+ Run 357165 excluded lumi only 0.105988 < 0.200000 - reject!
+ Run 357174 excluded run quality poor - reject
+ Run 357189 excluded run quality poor - reject
+ Run 357195 excluded run quality poor - reject
+ Run 357196 excluded run quality poor - reject
+ Run 357197 excluded run quality poor - reject
+ Run 357199 excluded run quality poor - reject
+ Run 357202 excluded lumi only 0.000000 < 0.200000 - reject!
+ Run 357206 excluded lumi only 0.137042 < 0.200000 - reject!
+ Run 357207 excluded lumi only 0.180272 < 0.200000 - reject!
+ Run 357210 excluded run quality poor - reject
+ Run 357211 excluded lumi only 0.053109 < 0.200000 - reject!
+ Run 357215 excluded lumi only 0.115033 < 0.200000 - reject!
+ Run 357216 excluded lumi only 0.005386 < 0.200000 - reject!
+ Run 357218 excluded lumi only 0.000000 < 0.200000 - reject!
+ Run 357219 excluded run quality poor - reject
+ Run 357225 excluded run quality poor - reject
+ Run 357228 excluded run quality poor - reject
+ Run 357230 excluded run quality poor - reject
+ Run 357232 excluded lumi only 0.048341 < 0.200000 - reject!
+ Run 357238 excluded lumi only 0.100782 < 0.200000 - reject!
+ Run 357239 excluded lumi only 0.069893 < 0.200000 - reject!
+ Run 357244 excluded lumi only 0.146083 < 0.200000 - reject!
+ Run 357247 excluded lumi only 0.019682 < 0.200000 - reject!
+ Run 357251 excluded lumi only 0.081208 < 0.200000 - reject!
+ Run 357252 excluded trigger phase below limit - reject
+ Run 357256 excluded lumi only 0.028782 < 0.200000 - reject!
+ Run 357264 excluded trigger phase below limit - reject
+ Run 357271 excluded lumi only 0.000000 < 0.200000 - reject!
+ Run 357273 excluded lumi only 0.124764 < 0.200000 - reject!
+ Run 357274 excluded lumi only 0.066657 < 0.200000 - reject!
+ Run 357285 excluded run quality poor - reject
+ Run 357287 excluded run quality poor - reject
+ Run 357304 excluded run quality poor - reject
+ Run 357305 excluded lumi only 0.028694 < 0.200000 - reject!
+ Run 357306 excluded lumi only 0.016778 < 0.200000 - reject!
+ Run 357307 excluded lumi only 0.089237 < 0.200000 - reject!
+ Run 357405 excluded run quality poor - reject
+ Run 357406 excluded run quality poor - reject
+ Run 357411 excluded run quality poor - reject
+ Run 357436 excluded run quality poor - reject
+ Run 357437 excluded run quality poor - reject
+ Run 357462 excluded run quality poor - reject
+ Run 357464 excluded run quality poor - reject
+ Run 357465 excluded run quality poor - reject
+ Run 357467 excluded lumi only 0.074764 < 0.200000 - reject!
+ Run 357469 excluded lumi only 0.000000 < 0.200000 - reject!
+ Run 357471 excluded run quality poor - reject
+ Run 357474 excluded lumi only 0.018488 < 0.200000 - reject!
+ Run 357477 excluded lumi only 0.000000 < 0.200000 - reject!
+ Run 357479 excluded run quality poor - reject
+ Run 357485 excluded run quality poor - reject
+ Run 357488 excluded run quality poor - reject
+ Run 357489 excluded trigger phase below limit - reject
+ Run 357490 excluded lumi only 0.000000 < 0.200000 - reject!
+ Run 357501 excluded run quality poor - reject
+ Run 357512 excluded lumi only 0.178876 < 0.200000 - reject!
+ Run 357515 excluded lumi only 0.110810 < 0.200000 - reject!
+ Run 357516 excluded lumi only 0.124058 < 0.200000 - reject!
+ Run 357521 excluded lumi only 0.127507 < 0.200000 - reject!
+ Run 357547 excluded run quality poor - reject
+ Run 357550 excluded run quality poor - reject
+ Run 357551 excluded run quality poor - reject
+ Run 357555 excluded run quality poor - reject
+ Run 357556 excluded lumi only 0.127640 < 0.200000 - reject!
+ Run 357594 excluded lumi only 0.025839 < 0.200000 - reject!
+ Run 357601 excluded run quality poor - reject
+ Run 357616 excluded run quality poor - reject
+ Run 357618 excluded run quality poor - reject
+ Run 357620 excluded run quality poor - reject
+ Run 357719 excluded run quality poor - reject
+ Run 357721 excluded run quality poor - reject
+ Run 357722 excluded trigger phase below limit - reject
+ Run 357723 excluded trigger phase below limit - reject
+ Run 357725 excluded lumi only 0.000000 < 0.200000 - reject!
+ Run 357726 excluded lumi only 0.056754 < 0.200000 - reject!
+ Run 357729 excluded selected subtrigs not enabled - reject
+ Run 357740 excluded selected subtrigs not enabled - reject
+ Run 357741 excluded selected subtrigs not enabled - reject
+ Run 357743 excluded selected subtrigs not enabled - reject
+ Run 357745 excluded selected subtrigs not enabled - reject
+ Run 357746 excluded selected subtrigs not enabled - reject
+ Run 357748 excluded selected subtrigs not enabled - reject
+ Run 357755 excluded run quality poor - reject
+ Run 357758 excluded run quality poor - reject
+ Run 357760 excluded run quality poor - reject
+ Run 357764 excluded run quality poor - reject
+ Run 357766 excluded run quality poor - reject
+ Run 357767 excluded run quality poor - reject
+ Run 357769 excluded run quality poor - reject
+ Run 357773 excluded run quality poor - reject
+ Run 357786 excluded selected subtrigs not enabled - reject
+ Run 357787 excluded selected subtrigs not enabled - reject
+ Run 357788 excluded selected subtrigs not enabled - reject
+ Run 357791 excluded selected subtrigs not enabled - reject
+ Run 357792 excluded selected subtrigs not enabled - reject
+ Run 357795 excluded selected subtrigs not enabled - reject
+ Run 357798 excluded selected subtrigs not enabled - reject
+ Run 357800 excluded selected subtrigs not enabled - reject
+ Run 357801 excluded selected subtrigs not enabled - reject
+ Run 357802 excluded selected subtrigs not enabled - reject
+ Run 357806 excluded selected subtrigs not enabled - reject
+ Run 357813 excluded selected subtrigs not enabled - reject
+ Run 357818 excluded selected subtrigs not enabled - reject
+ Run 357820 excluded selected subtrigs not enabled - reject
+ Run 357823 excluded selected subtrigs not enabled - reject
+ Run 357827 excluded selected subtrigs not enabled - reject
+ Run 357831 excluded run quality poor - reject
+ Run 357832 excluded run quality poor - reject
+ Run 357834 excluded selected subtrigs not enabled - reject
+ Run 357836 excluded selected subtrigs not enabled - reject
+ Run 357837 excluded selected subtrigs not enabled - reject
+ Run 357839 excluded selected subtrigs not enabled - reject
+ Run 357843 excluded selected subtrigs not enabled - reject
+ Run 357844 excluded selected subtrigs not enabled - reject
+ Run 357846 excluded selected subtrigs not enabled - reject
+ Run 357847 excluded selected subtrigs not enabled - reject
+ Run 357849 excluded selected subtrigs not enabled - reject
+ Run 357850 excluded selected subtrigs not enabled - reject
+ Run 357851 excluded selected subtrigs not enabled - reject
+ Run 357852 excluded run quality poor - reject
+ Run 357854 excluded selected subtrigs not enabled - reject
+ Run 357858 excluded selected subtrigs not enabled - reject
+ Run 357860 excluded selected subtrigs not enabled - reject
+ Run 357861 excluded selected subtrigs not enabled - reject
+ Run 357862 excluded selected subtrigs not enabled - reject
+ Run 357863 excluded selected subtrigs not enabled - reject
+ Run 357866 excluded selected subtrigs not enabled - reject
+ Run 357869 excluded selected subtrigs not enabled - reject
+ Run 357870 excluded selected subtrigs not enabled - reject
+ Run 357873 excluded selected subtrigs not enabled - reject
+ Run 357874 excluded selected subtrigs not enabled - reject
+ Run 357991 excluded run quality poor - reject
+ Run 357998 excluded run quality poor - reject
+ Run 358000 excluded run quality poor - reject
+ Run 358001 excluded run quality poor - reject
+ Run 358002 excluded run quality poor - reject
+ Run 358009 excluded run quality poor - reject
+ Run 358010 excluded lumi only 0.000000 < 0.200000 - reject!
+ Run 358012 excluded lumi only 0.000000 < 0.200000 - reject!
+ Run 358015 excluded run quality poor - reject
+ Run 358019 excluded lumi only 0.062776 < 0.200000 - reject!
+ Run 358022 excluded run quality poor - reject
+ Run 358028 excluded lumi only 0.196737 < 0.200000 - reject!
+ Run 358029 excluded lumi only 0.130882 < 0.200000 - reject!
+ Run 358031 excluded lumi only 0.137815 < 0.200000 - reject!
+ Run 358049 excluded trigger phase below limit - reject
+ Run 358051 excluded lumi only 0.000000 < 0.200000 - reject!
+ Run 358069 excluded lumi only 0.112987 < 0.200000 - reject!
+ Run 358087 excluded run quality poor - reject
+ Run 358088 excluded run quality poor - reject
+ Run 358089 excluded run quality poor - reject
+ Run 358107 excluded run quality poor - reject
+ Run 358109 excluded run quality poor - reject
+ Run 358110 excluded run quality poor - reject
+ Run 358111 excluded run quality poor - reject
+ Run 358112 excluded run quality poor - reject
+ Run 358117 excluded run quality poor - reject
+ Run 358118 excluded lumi only 0.158415 < 0.200000 - reject!
+ Run 358240 excluded run quality poor - reject
+ Run 358241 excluded run quality poor - reject
+ Run 358242 excluded run quality poor - reject
+ Run 358243 excluded run quality poor - reject
+ Run 358245 excluded run quality poor - reject
+ Run 358246 excluded run quality poor - reject
+ Run 358247 excluded run quality poor - reject
+ Run 358248 excluded run quality poor - reject
+ Run 358249 excluded run quality poor - reject
+ Run 358250 excluded run quality poor - reject
+ Run 358251 excluded lumi only 0.000000 < 0.200000 - reject!
+ Run 358252 excluded lumi only 0.000000 < 0.200000 - reject!
+ Run 358255 excluded lumi only 0.000000 < 0.200000 - reject!
+ Run 358256 excluded lumi only 0.000000 < 0.200000 - reject!
+ Run 358262 excluded run quality poor - reject
+ Run 358264 excluded run quality poor - reject
+ Run 358290 excluded run quality poor - reject
+ Run 358294 excluded run quality poor - reject
+ Run 358296 excluded run quality poor - reject
+ Run 358298 excluded run quality poor - reject
+ Run 358303 excluded run quality poor - reject
+ Run 358307 excluded run quality poor - reject
+ Run 358312 excluded run quality poor - reject
+ Run 358318 excluded run quality poor - reject
+ Run 358324 excluded run quality poor - reject
+ Run 358325 excluded lumi only 0.182875 < 0.200000 - reject!
+ Run 358327 excluded lumi only 0.000000 < 0.200000 - reject!
+ Run 358330 excluded lumi only 0.000000 < 0.200000 - reject!
+ Run 358332 excluded lumi only 0.000000 < 0.200000 - reject!
+ Run 358387 excluded run quality poor - reject
+ Run 358404 excluded lumi only 0.000000 < 0.200000 - reject!
+ Run 358416 excluded lumi only 0.150658 < 0.200000 - reject!
+ Run 358425 excluded run quality poor - reject
+ Run 358431 excluded run quality poor - reject
+ Run 358432 excluded run quality poor - reject
+ Run 358433 excluded run quality poor - reject
+ Run 358435 excluded run quality poor - reject
+ Run 358437 excluded run quality poor - reject
+ Run 358438 excluded run quality poor - reject
+ Run 358443 excluded run quality poor - reject
+ Run 358445 excluded trigger phase below limit - reject
+ Run 358453 excluded lumi only 0.191008 < 0.200000 - reject!
+ Run 358461 excluded run quality poor - reject
+ Run 358462 excluded run quality poor - reject
+ Run 358463 excluded run quality poor - reject
+ Run 358464 excluded run quality poor - reject
+ Run 358465 excluded run quality poor - reject
+ Run 358466 excluded run quality poor - reject
+ Run 358467 excluded run quality poor - reject
+ Run 358468 excluded run quality poor - reject
+ Run 358469 excluded run quality poor - reject
+ Run 358471 excluded run quality poor - reject
+ Run 358475 excluded run quality poor - reject
+ Run 358477 excluded run quality poor - reject
+ Run 358478 excluded run quality poor - reject
+ Run 358479 excluded run quality poor - reject
+ Run 358480 excluded run quality poor - reject
+ Run 358482 excluded run quality poor - reject
+ Run 358484 excluded run quality poor - reject
+ Run 358486 excluded run quality poor - reject
+ Run 358487 excluded run quality poor - reject
+ Run 358490 excluded run quality poor - reject
+ Run 358491 excluded det not in trigger or readout- reject
+ Run 358493 excluded det not in trigger or readout- reject
+ Run 358496 excluded det not in trigger or readout- reject
+ Run 358498 excluded det not in trigger or readout- reject
+ Run 358501 excluded det not in trigger or readout- reject
+ Run 358502 excluded det not in trigger or readout- reject
+ Run 358504 excluded run quality poor - reject
+ Run 358507 excluded run quality poor - reject
+ Run 358513 excluded run quality poor - reject
+ Run 358516 excluded run quality poor - reject
+ Run 358517 excluded run quality poor - reject
+ Run 358520 excluded run quality poor - reject
+ Run 358523 excluded run quality poor - reject
+ Run 358524 excluded run quality poor - reject
+ Run 358663 excluded run quality poor - reject
+ Run 358691 excluded run quality poor - reject
+ Run 358699 excluded run quality poor - reject
+ Run 358701 excluded run quality poor - reject
+ Run 358714 excluded run quality poor - reject
+ Run 358722 excluded run quality poor - reject
+ Run 358729 excluded run quality poor - reject
+ Run 358730 excluded run quality poor - reject
+ Run 358735 excluded run quality poor - reject
+ Run 358751 excluded run quality poor - reject
+ Run 358752 excluded run quality poor - reject
+ Run 358753 excluded run quality poor - reject
+ Run 358756 excluded run quality poor - reject
+ Run 358758 excluded run quality poor - reject
+ Run 358759 excluded run quality poor - reject
+ Run 358760 excluded run quality poor - reject
+ Run 358761 excluded run quality poor - reject
+ Run 358891 excluded run quality poor - reject
+ Run 358894 excluded run quality poor - reject
+ Run 358930 excluded run quality poor - reject
+ Run 358945 excluded run quality poor - reject
+ Run 358947 excluded run quality poor - reject
+ Run 358948 excluded run quality poor - reject
+ Run 358949 excluded run quality poor - reject
+ Run 358955 excluded run quality poor - reject
+ Run 358964 excluded run quality poor - reject
+ Run 358966 excluded trigger phase below limit - reject
+ Run 358986 excluded run quality poor - reject
+ Run 358987 excluded run quality poor - reject
+ Run 358994 excluded run quality poor - reject
+ Run 359724 excluded run quality poor - reject
+ Run 359725 excluded run quality poor - reject
+ Run 359726 excluded run quality poor - reject
+ Run 359734 excluded run quality poor - reject
+ Run 359881 excluded run quality poor - reject
+ Run 359883 excluded run quality poor - reject
+ Run 359885 excluded run quality poor - reject
+ Run 359887 excluded run quality poor - reject
+ Run 359890 excluded run quality poor - reject
+ Run 359891 excluded run quality poor - reject
+ Run 359892 excluded run quality poor - reject
+ Run 359894 excluded run quality poor - reject
+ Run 359898 excluded run quality poor - reject
+ Run 359899 excluded run quality poor - reject
+ Run 359901 excluded run quality poor - reject
+ Run 359902 excluded run quality poor - reject
+ Run 359903 excluded run quality poor - reject
+ Run 359904 excluded run quality poor - reject
+ Run 359905 excluded run quality poor - reject
+ Run 359906 excluded run quality poor - reject
+ Run 359907 excluded run quality poor - reject
+ Run 359908 excluded run quality poor - reject
+ Run 359909 excluded run quality poor - reject
+ Run 359910 excluded run quality poor - reject
+ Run 359914 excluded run quality poor - reject
+ Run 359915 excluded run quality poor - reject
+ Run 359916 excluded run quality poor - reject
+ Run 359918 excluded run quality poor - reject
+ Run 359919 excluded run quality poor - reject
+ Run 359920 excluded run quality poor - reject
+ Run 359921 excluded run quality poor - reject
+ Run 359922 excluded run quality poor - reject
+ Run 359923 excluded run quality poor - reject
+ Run 359924 excluded run quality poor - reject
+ Run 359925 excluded run quality poor - reject
+ Run 359930 excluded lumi only 0.191925 < 0.200000 - reject!
+ Run 359942 excluded lumi only 0.035721 < 0.200000 - reject!
+ Run 359951 excluded run quality poor - reject
+ Run 359952 excluded run quality poor - reject
+ Run 359953 excluded run quality poor - reject
+ Run 359956 excluded run quality poor - reject
+ Run 359961 excluded run quality poor - reject
+ Run 359962 excluded run quality poor - reject
+ Run 359963 excluded run quality poor - reject
+ Run 359964 excluded run quality poor - reject
+ Run 359965 excluded run quality poor - reject
+ Run 359967 excluded run quality poor - reject
+ Run 359975 excluded run quality poor - reject
+ Run 359976 excluded run quality poor - reject
+ Run 359977 excluded run quality poor - reject
+ Run 359978 excluded run quality poor - reject
+ Run 359979 excluded run quality poor - reject
+ Run 359981 excluded run quality poor - reject
+ Run 359982 excluded run quality poor - reject
+ Run 360083 excluded run quality poor - reject
+ Run 360084 excluded run quality poor - reject
+ Run 360085 excluded run quality poor - reject
+ Run 360086 excluded run quality poor - reject
+ Run 360088 excluded run quality poor - reject
+ Run 360089 excluded run quality poor - reject
+ Run 360090 excluded run quality poor - reject
+ Run 360102 excluded run quality poor - reject
+ Run 360120 excluded run quality poor - reject
+ Run 360127 excluded run quality poor - reject
+ Run 360133 excluded run quality poor - reject
+ Run 360137 excluded run quality poor - reject
+ Run 360138 excluded run quality poor - reject
+ Run 360139 excluded run quality poor - reject
+ Run 360140 excluded lumi only 0.000000 < 0.200000 - reject!
+ Run 360151 excluded run quality poor - reject
+ Run 360154 excluded run quality poor - reject
+ Run 360156 excluded run quality poor - reject
+ Run 360168 excluded run quality poor - reject
+ Run 360173 excluded run quality poor - reject
+ Run 360177 excluded excluded by input steering
+ Run 360178 excluded excluded by input steering
+ Run 360180 excluded excluded by input steering
+ Run 360181 excluded excluded by input steering
+ Run 360182 excluded excluded by input steering
+ Run 360191 excluded excluded by input steering
+ Run 360197 excluded excluded by input steering
+ Run 360202 excluded excluded by input steering
+ Run 360205 excluded excluded by input steering
+ Run 360208 excluded excluded by input steering
+ Run 360209 excluded excluded by input steering
+ Run 360212 excluded excluded by input steering
+ Run 360213 excluded excluded by input steering
+ Run 360223 excluded excluded by input steering
+ Run 360224 excluded excluded by input steering
+ Run 360225 excluded excluded by input steering
+ Run 360226 excluded excluded by input steering
+ Run 360227 excluded excluded by input steering
+ Run 360228 excluded excluded by input steering
+ Run 360229 excluded excluded by input steering
+ Run 360231 excluded excluded by input steering
+ Run 360236 excluded excluded by input steering
+ Run 360248 excluded excluded by input steering
+ Run 360250 excluded excluded by input steering
+ Run 360254 excluded excluded by input steering
+ Run 360256 excluded excluded by input steering
+ Run 360257 excluded excluded by input steering
+ Run 360258 excluded excluded by input steering
+ Run 360260 excluded excluded by input steering
+ Run 360263 excluded excluded by input steering
+ Run 360276 excluded excluded by input steering
+ Run 360278 excluded excluded by input steering
+ Run 360280 excluded excluded by input steering
+ Run 360281 excluded excluded by input steering
+ Run 360291 excluded run quality poor - reject
+ Run 360293 excluded run quality poor - reject
+ Run 360405 excluded lumi only 0.041898 < 0.200000 - reject!
+ Run 360412 excluded run quality poor - reject
+ Run 360415 excluded run quality poor - reject
+ Run 360424 excluded run quality poor - reject
+ Run 360587 excluded run quality poor - reject
+ Run 360602 excluded run quality poor - reject
+ Run 360603 excluded run quality poor - reject
+ Run 360613 excluded run quality poor - reject
+ Run 360620 excluded run quality poor - reject
+ Run 360621 excluded trigger phase below limit - reject
+ Run 360625 excluded run quality poor - reject
+ Run 360631 excluded run quality poor - reject
+ Run 360633 excluded lumi only 0.175031 < 0.200000 - reject!
+ Run 360635 excluded run quality poor - reject
+ Run 360636 excluded run quality poor - reject
+ Run 360637 excluded run quality poor - reject
+ Run 360638 excluded run quality poor - reject
+ Run 360639 excluded run quality poor - reject
+ Run 360643 excluded run quality poor - reject
+ Run 361023 excluded run quality poor - reject
+ Run 361032 excluded run quality poor - reject
+ Run 361034 excluded run quality poor - reject
+ Run 361040 excluded run quality poor - reject
+ Run 361055 excluded run quality poor - reject
+ Run 361057 excluded run quality poor - reject
+ Run 361072 excluded run quality poor - reject
+ Run 361076 excluded run quality poor - reject
+ Run 361077 excluded run quality poor - reject
+ Run 361078 excluded run quality poor - reject
+ Run 361080 excluded run quality poor - reject
+ Run 361090 excluded run quality poor - reject
+ Run 361093 excluded run quality poor - reject
+ Run 361094 excluded run quality poor - reject
+ Run 361096 excluded run quality poor - reject
+ Run 361124 excluded run quality poor - reject
+ Run 361126 excluded run quality poor - reject
+ Run 361134 excluded run quality poor - reject
+ Run 361136 excluded run quality poor - reject
+ Run 361137 excluded run quality poor - reject
+ Run 361141 excluded run quality poor - reject
+ Run 361142 excluded run quality poor - reject
+ Run 361158 excluded run quality poor - reject
+ Run 361160 excluded run quality poor - reject
+ Run 361163 excluded run quality poor - reject
+ Run 361164 excluded run quality poor - reject
+ Run 361167 excluded run quality poor - reject
+ Run 361169 excluded run quality poor - reject
+ Run 361172 excluded run quality poor - reject
+ Run 361184 excluded det not in trigger or readout- reject
+ Run 361185 excluded det not in trigger or readout- reject
+ Run 361186 excluded det not in trigger or readout- reject
+ Run 361188 excluded run quality poor - reject
+ Run 361189 excluded run quality poor - reject
+ Run 361191 excluded run quality poor - reject
+ Run 361193 excluded run quality poor - reject
+ Run 361196 excluded det not in trigger or readout- reject
+ Run 361200 excluded lumi only 0.134199 < 0.200000 - reject!
+ Run 361203 excluded run quality poor - reject
+ Run 361207 excluded det not in trigger or readout- reject
+ Run 361219 excluded run quality poor - reject
+ Run 361221 excluded run quality poor - reject
+ Run 361223 excluded run quality poor - reject
+ Run 361226 excluded run quality poor - reject
+ Run 361227 excluded run quality poor - reject
+ Run 361233 excluded run quality poor - reject
+ Run 361237 excluded run quality poor - reject
+ Run 361298 excluded run quality poor - reject
+ Run 361304 excluded run quality poor - reject
+ Run 361422 excluded run quality poor - reject
+ Run 361426 excluded run quality poor - reject
+ Run 361429 excluded run quality poor - reject
+ Run 361431 excluded run quality poor - reject
+ Run 361433 excluded run quality poor - reject
+ Run 361434 excluded run quality poor - reject
+ Run 361436 excluded run quality poor - reject
+ Run 361437 excluded run quality poor - reject
+ Run 361438 excluded run quality poor - reject
+ Run 361441 excluded run quality poor - reject
+ Run 361444 excluded run quality poor - reject
+ Run 361447 excluded run quality poor - reject
+ Run 361449 excluded run quality poor - reject
+ Run 361450 excluded run quality poor - reject
+ Run 361453 excluded run quality poor - reject
+ Run 361455 excluded run quality poor - reject
+ Run 361577 excluded run quality poor - reject
+ Run 361581 excluded run quality poor - reject
+ Run 361582 excluded run quality poor - reject
+ Run 361586 excluded run quality poor - reject
+ Run 361702 excluded run quality poor - reject
+ Run 361783 excluded run quality poor - reject
+ Run 361809 excluded lumi only 0.089728 < 0.200000 - reject!
+ Run 361819 excluded lumi only 0.000000 < 0.200000 - reject!
+ Run 361823 excluded run quality poor - reject
+ Run 361828 excluded run quality poor - reject
+ Run 361830 excluded run quality poor - reject
+ Run 361850 excluded lumi only 0.034782 < 0.200000 - reject!
+ Run 361851 excluded lumi only 0.163909 < 0.200000 - reject!
+ Run 361860 excluded lumi only 0.167404 < 0.200000 - reject!
+ Run 361876 excluded lumi only 0.052006 < 0.200000 - reject!
+ Run 361897 excluded excluded by input steering
+ Run 361900 excluded excluded by input steering
+ Run 361903 excluded excluded by input steering
+ Run 361906 excluded excluded by input steering
+ Run 361911 excluded excluded by input steering
+ Run 361914 excluded excluded by input steering
+ Run 361925 excluded excluded by input steering
+ Run 361927 excluded excluded by input steering
+ Run 361930 excluded excluded by input steering
+ Run 361932 excluded excluded by input steering
+ Run 361938 excluded excluded by input steering
+ Run 361939 excluded excluded by input steering
+ Run 361941 excluded excluded by input steering
+ Run 361943 excluded excluded by input steering
+ Run 361945 excluded excluded by input steering
+ Run 361956 excluded excluded by input steering
+ Run 361958 excluded excluded by input steering
+ Run 361961 excluded excluded by input steering
+ Run 361962 excluded excluded by input steering
+ Run 361964 excluded excluded by input steering
+ Run 361965 excluded excluded by input steering
+ Run 361969 excluded excluded by input steering
+ Run 361970 excluded excluded by input steering
+ Run 361972 excluded excluded by input steering
+ Run 361973 excluded excluded by input steering
+ Run 361975 excluded excluded by input steering
+ Run 361976 excluded excluded by input steering
+ Run 361977 excluded excluded by input steering
+ Run 361982 excluded excluded by input steering
+ Run 361983 excluded excluded by input steering
+ Run 361985 excluded excluded by input steering
+ Run 361986 excluded excluded by input steering
+ Run 361988 excluded excluded by input steering
+ Run 362024 excluded excluded by input steering
+ Run 362026 excluded excluded by input steering
+ Run 362027 excluded excluded by input steering
+ Run 362031 excluded excluded by input steering
+ Run 362036 excluded excluded by input steering
+ Run 362037 excluded excluded by input steering
+ Run 362038 excluded excluded by input steering
+ Run 362042 excluded excluded by input steering
+ Run 362045 excluded excluded by input steering
+ Run 362047 excluded excluded by input steering
+ Run 362053 excluded excluded by input steering
+ Run 362058 excluded excluded by input steering
+ Run 362062 excluded excluded by input steering
+ Run 362064 excluded excluded by input steering
+ Run 362086 excluded excluded by input steering
+ Run 362092 excluded excluded by input steering
+ Run 362098 excluded excluded by input steering
+ Run 362113 excluded excluded by input steering
+ Run 362116 excluded excluded by input steering
+ Run 362139 excluded excluded by input steering
+ Run 362142 excluded excluded by input steering
+ Run 362144 excluded excluded by input steering
+ Run 362145 excluded excluded by input steering
+ Run 362146 excluded excluded by input steering
+ Run 362147 excluded excluded by input steering
+ Run 362149 excluded excluded by input steering
+ Run 362162 excluded excluded by input steering
+ Run 362164 excluded excluded by input steering
+ Run 362166 excluded excluded by input steering
+ Run 362168 excluded excluded by input steering
+ Run 362170 excluded excluded by input steering
+ Run 362175 excluded excluded by input steering
+ Run 362177 excluded excluded by input steering
+ Run 362188 excluded excluded by input steering
+ Run 362190 excluded excluded by input steering
+ Run 362192 excluded excluded by input steering
+ Run 362223 excluded excluded by input steering
+ Run 362224 excluded excluded by input steering
+ Run 362230 excluded excluded by input steering
+ Run 362232 excluded excluded by input steering
+ Run 362234 excluded excluded by input steering
+ Run 362238 excluded excluded by input steering
+ Run 362240 excluded excluded by input steering
+ Run 362243 excluded excluded by input steering
+ Run 362246 excluded excluded by input steering
+ Run 362253 excluded excluded by input steering
+ Run 362266 excluded excluded by input steering
+ Run 362269 excluded excluded by input steering
+ Run 362270 excluded excluded by input steering
+ Run 362272 excluded excluded by input steering
+ Run 362274 excluded excluded by input steering
+ Run 362281 excluded excluded by input steering
+ Run 362283 excluded excluded by input steering
+ Run 362285 excluded excluded by input steering
+ Run 362290 excluded excluded by input steering
+ Run 362292 excluded excluded by input steering
+ Run 362294 excluded excluded by input steering
+ Run 362296 excluded excluded by input steering
+ Run 362297 excluded excluded by input steering
+ Run 362298 excluded excluded by input steering
+ Run 362305 excluded excluded by input steering
+ Run 362309 excluded excluded by input steering
+ Run 362310 excluded excluded by input steering
+ Run 362311 excluded excluded by input steering
+ Run 362315 excluded excluded by input steering
+ Run 362317 excluded excluded by input steering
+ Run 362319 excluded excluded by input steering
+ Run 362320 excluded excluded by input steering
+ Run 362322 excluded excluded by input steering
+ Run 362323 excluded excluded by input steering
+ Run 362329 excluded excluded by input steering
+ Run 362344 excluded excluded by input steering
+ Run 362346 excluded excluded by input steering
+ Run 362349 excluded excluded by input steering
+ Run 362350 excluded excluded by input steering
+ Run 362352 excluded excluded by input steering
+ Run 362358 excluded excluded by input steering
+ Run 362359 excluded excluded by input steering
+ Run 362363 excluded excluded by input steering
+ Run 362368 excluded excluded by input steering
+ Run 362370 excluded excluded by input steering
+ Run 362373 excluded excluded by input steering
+ Run 362374 excluded excluded by input steering
+ Run 362375 excluded excluded by input steering
+ Run 362379 excluded excluded by input steering
+ Run 362383 excluded excluded by input steering
+ Run 362384 excluded excluded by input steering
+ Run 362386 excluded excluded by input steering
+ Run 362388 excluded excluded by input steering
+ Run 362389 excluded excluded by input steering
+ Run 362390 excluded excluded by input steering
+ Run 362391 excluded excluded by input steering
+ Run 362395 excluded excluded by input steering
+ Run 362396 excluded excluded by input steering
+ Run 362397 excluded excluded by input steering
+ Run 362398 excluded excluded by input steering
+ Run 362399 excluded excluded by input steering
+ Run 362400 excluded excluded by input steering
+ Run 362401 excluded excluded by input steering
+ Run 362404 excluded excluded by input steering
+ Run 362405 excluded excluded by input steering
+ Run 362408 excluded excluded by input steering
+ Run 362412 excluded excluded by input steering
+ Run 362413 excluded excluded by input steering
+ Run 362414 excluded excluded by input steering
+ Run 362418 excluded excluded by input steering
+ Run 362419 excluded excluded by input steering
+ Run 362420 excluded excluded by input steering
+ Run 362421 excluded excluded by input steering
+ Run 362423 excluded excluded by input steering
+ Run 362432 excluded excluded by input steering
+ Run 362435 excluded excluded by input steering
+ Run 362437 excluded excluded by input steering
+ Run 362440 excluded excluded by input steering
+ Run 362441 excluded excluded by input steering
+ Run 362442 excluded excluded by input steering
+ Run 362443 excluded excluded by input steering
+ Run 362446 excluded excluded by input steering
+ Run 362449 excluded excluded by input steering
+ Run 362450 excluded excluded by input steering
+ Run 362452 excluded excluded by input steering
+ Run 362453 excluded excluded by input steering
+ Run 362454 excluded excluded by input steering
+ Run 362457 excluded excluded by input steering
+ Run 362460 excluded excluded by input steering
+ Run 362461 excluded excluded by input steering
+ Run 362464 excluded excluded by input steering
+ Run 362468 excluded excluded by input steering
+ Run 362469 excluded excluded by input steering
+ Run 362470 excluded excluded by input steering
+ Run 362471 excluded excluded by input steering
+ Run 362472 excluded excluded by input steering
+ Run 362502 excluded run quality poor - reject
+ Run 362507 excluded run quality poor - reject
+ Run 362509 excluded run quality poor - reject
+ Run 362519 excluded run quality poor - reject
+ Run 362550 excluded lumi only 0.179430 < 0.200000 - reject!
+ Run 362580 excluded lumi only 0.105771 < 0.200000 - reject!
+ Run 362608 excluded lumi only 0.098703 < 0.200000 - reject!
+ Run 362609 excluded lumi only 0.059691 < 0.200000 - reject!
+ Run 362611 excluded run quality poor - reject
+ Run 362662 excluded run quality poor - reject
+ Run 362663 excluded run quality poor - reject
+ Run 362665 excluded run quality poor - reject
+ Run 362670 excluded run quality poor - reject
+ Run 362671 excluded run quality poor - reject
+ Run 362680 excluded run quality poor - reject
+ Run 362739 excluded run quality poor - reject
+ Run 362743 excluded run quality poor - reject
+ Run 362785 excluded run quality poor - reject
+ Run 363057 excluded run quality poor - reject
+ Run 363062 excluded lumi only 0.192794 < 0.200000 - reject!
+ Run 363096 excluded run quality poor - reject
+ Run 363102 excluded run quality poor - reject
+ Run 363115 excluded run quality poor - reject
+ Run 363117 excluded run quality poor - reject
+ Run 363151 excluded run quality poor - reject
+ Run 363153 excluded lumi only 0.167484 < 0.200000 - reject!
+ Run 363160 excluded run quality poor - reject
+ Run 363161 excluded run quality poor - reject
+ Run 363167 excluded run quality poor - reject
+ Run 363169 excluded run quality poor - reject
+ Run 363171 excluded run quality poor - reject
+ Run 363172 excluded run quality poor - reject
+ Run 363191 excluded run quality poor - reject
+ Run 363193 excluded run quality poor - reject
+ Run 363198 excluded run quality poor - reject
+ Run 363202 excluded run quality poor - reject
+ Run 363204 excluded run quality poor - reject
+ Run 363206 excluded run quality poor - reject
+ Run 363207 excluded run quality poor - reject
+ Run 363212 excluded run quality poor - reject
+ Run 363214 excluded run quality poor - reject
+ Run 363282 excluded run quality poor - reject
+ Run 363283 excluded run quality poor - reject
+ Run 363284 excluded run quality poor - reject
+ Run 363286 excluded high selected subtrigger prescale - reject
+ Run 363287 excluded high selected subtrigger prescale - reject
+ Run 363289 excluded high selected subtrigger prescale - reject
+ Run 363290 excluded high selected subtrigger prescale - reject
+ Run 363292 excluded high selected subtrigger prescale - reject
+ Run 363305 excluded lumi only 0.144173 < 0.200000 - reject!
+ Run 363312 excluded run quality poor - reject
+ Run 363333 excluded run quality poor - reject
+ Run 363334 excluded trigger phase below limit - reject
+ Run 363396 excluded lumi only 0.191686 < 0.200000 - reject!
+ Run 363399 excluded lumi only 0.139300 < 0.200000 - reject!
+ Run 363449 excluded run quality poor - reject
+ Run 363450 excluded trigger phase below limit - reject
+ Run 363456 excluded lumi only 0.000000 < 0.200000 - reject!
+ Run 363459 excluded trigger phase below limit - reject
+ Run 363467 excluded run quality poor - reject
+ Run 363560 excluded run quality poor - reject
+ Run 363563 excluded run quality poor - reject
+ Run 363564 excluded run quality poor - reject
+ Run 363565 excluded run quality poor - reject
+ Run 363567 excluded run quality poor - reject
+ Run 363571 excluded run quality poor - reject
+ Run 363572 excluded run quality poor - reject
+ Run 363574 excluded run quality poor - reject
+ Run 363578 excluded lumi only 0.000000 < 0.200000 - reject!
+ Run 363594 excluded lumi only 0.000000 < 0.200000 - reject!
+ Run 363595 excluded lumi only 0.000000 < 0.200000 - reject!
+ Run 363636 excluded trigger phase below limit - reject
+ Run 363638 excluded trigger phase below limit - reject
+ Run 363651 excluded run quality poor - reject
+ Run 363682 excluded lumi only 0.155700 < 0.200000 - reject!
+ Run 363688 excluded det not in trigger or readout- reject
+ Run 363692 excluded det not in trigger or readout- reject
+ Run 363756 excluded run quality poor - reject
+ Run 363759 excluded run quality poor - reject
+ Run 363793 excluded lumi only 0.079235 < 0.200000 - reject!
+ Run 363794 excluded run quality poor - reject
+ Run 363795 excluded lumi only 0.083742 < 0.200000 - reject!
+ Run 363808 excluded lumi only 0.164716 < 0.200000 - reject!
+ Run 363811 excluded run quality poor - reject
+ Run 363813 excluded lumi only 0.076077 < 0.200000 - reject!
+ Run 363814 excluded lumi only 0.172840 < 0.200000 - reject!
+ Run 363846 excluded run quality poor - reject
+ Run 363847 excluded run quality poor - reject
+ Run 363850 excluded run quality poor - reject
+ Run 363859 excluded run quality poor - reject
+ Run 363861 excluded run quality poor - reject
+ Run 363900 excluded run quality poor - reject
+ Run 363902 excluded run quality poor - reject
+ Run 363920 excluded run quality poor - reject
+ Run 363947 excluded run quality poor - reject
+ Run 363986 excluded run quality poor - reject
+ Run 363993 excluded run quality poor - reject
+ Run 363996 excluded run quality poor - reject
+ Run 364029 excluded run quality poor - reject
+ Run 364031 excluded lumi only 0.162630 < 0.200000 - reject!
+ Run 364111 excluded run quality poor - reject
+ Run 364113 excluded run quality poor - reject
+ Run 364412 excluded run quality poor - reject
+ Run 364414 excluded run quality poor - reject
+ Run 364415 excluded run quality poor - reject
+ Run 364416 excluded lumi only 0.182585 < 0.200000 - reject!
+ Run 364433 excluded lumi only 0.197669 < 0.200000 - reject!
+ Run 364435 excluded run quality poor - reject
+ Run 364436 excluded run quality poor - reject
+ Run 364450 excluded run quality poor - reject
+ Run 364451 excluded run quality poor - reject
+ Run 364452 excluded run quality poor - reject
+ Run 364453 excluded run quality poor - reject
+ Run 364468 excluded run quality poor - reject
+ Run 364478 excluded run quality poor - reject
+ Run 364479 excluded run quality poor - reject
+ Run 364480 excluded run quality poor - reject
+ Run 364481 excluded run quality poor - reject
+ Run 364483 excluded det not in trigger or readout- reject
+ Run 364494 excluded run quality poor - reject
+ Run 364498 excluded lumi only 0.004094 < 0.200000 - reject!
+ Run 364525 excluded run quality poor - reject
+ Run 364532 excluded run quality poor - reject
+ Run 364553 excluded run quality poor - reject
+ Run 364555 excluded run quality poor - reject
+ Run 364558 excluded run quality poor - reject
+ Run 364559 excluded run quality poor - reject
+ Run 364560 excluded run quality poor - reject
+ Run 364561 excluded run quality poor - reject
+ Run 364562 excluded trigger phase below limit - reject
+ Run 364563 excluded lumi only 0.122844 < 0.200000 - reject!
+ Run 364581 excluded run quality poor - reject
+ Run 364583 excluded run quality poor - reject
+ Run 364590 excluded run quality poor - reject
+ Run 364601 excluded lumi only 0.170696 < 0.200000 - reject!
+ Run 364607 excluded lumi only 0.180453 < 0.200000 - reject!
+ Run 364609 excluded run quality poor - reject
+ Run 364614 excluded lumi only 0.187356 < 0.200000 - reject!
+ Run 364680 excluded run quality poor - reject
+ Run 364681 excluded trigger phase below limit - reject
+ Run 364684 excluded run quality poor - reject
+ Run 364685 excluded run quality poor - reject
+ Run 364689 excluded run quality poor - reject
+ Run 364728 excluded lumi only 0.085835 < 0.200000 - reject!
+ Run 364730 excluded lumi only 0.081648 < 0.200000 - reject!
+ Run 364955 excluded run quality poor - reject
+ Run 364956 excluded run quality poor - reject
+ Run 364959 excluded run quality poor - reject
+ Run 364990 excluded run quality poor - reject
+ Run 364993 excluded run quality poor - reject
+ Run 364998 excluded lumi only 0.000000 < 0.200000 - reject!
+ Run 365004 excluded lumi only 0.183657 < 0.200000 - reject!
+ Run 365048 excluded run quality poor - reject
+ Run 365075 excluded run quality poor - reject
+ Run 365076 excluded run quality poor - reject
+ Run 365085 excluded lumi only 0.051669 < 0.200000 - reject!
+ Run 365099 excluded run quality poor - reject
+ Run 365104 excluded run quality poor - reject
+ Run 365105 excluded lumi only 0.035180 < 0.200000 - reject!
+ Run 365120 excluded run quality poor - reject
+ Run 365125 excluded run quality poor - reject
+ Run 365126 excluded run quality poor - reject
+ Run 365127 excluded run quality poor - reject
+ Run 365131 excluded trigger phase below limit - reject
+ Run 365135 excluded lumi only 0.086565 < 0.200000 - reject!
+ Run 365136 excluded selected subtrigs not enabled - reject
+ Run 365137 excluded selected subtrigs not enabled - reject
+ Run 365138 excluded selected subtrigs not enabled - reject
+ Run 365139 excluded selected subtrigs not enabled - reject
+ Run 365140 excluded selected subtrigs not enabled - reject
+ Run 365141 excluded selected subtrigs not enabled - reject
+ Run 365142 excluded selected subtrigs not enabled - reject
+ Run 365143 excluded selected subtrigs not enabled - reject
+ Run 365144 excluded selected subtrigs not enabled - reject
+ Run 365145 excluded selected subtrigs not enabled - reject
+ Run 365146 excluded selected subtrigs not enabled - reject
+ Run 365147 excluded selected subtrigs not enabled - reject
+ Run 365148 excluded selected subtrigs not enabled - reject
+ Run 365149 excluded run quality poor - reject
+ Run 365155 excluded run quality poor - reject
+ Run 365161 excluded run quality poor - reject
+ Run 365169 excluded run quality poor - reject
+ Run 365172 excluded run quality poor - reject
+ Run 365177 excluded run quality poor - reject
+ Run 365183 excluded lumi only 0.000000 < 0.200000 - reject!
+ Run 365193 excluded run quality poor - reject
+ Run 365194 excluded run quality poor - reject
+ Run 365195 excluded run quality poor - reject
+ Run 365199 excluded trigger phase below limit - reject
+ Run 365297 excluded run quality poor - reject
+ Run 365310 excluded run quality poor - reject
+ Run 365313 excluded run quality poor - reject
+ Run 365314 excluded trigger phase below limit - reject
+ Run 365315 excluded lumi only 0.000000 < 0.200000 - reject!
+ Run 365321 excluded run quality poor - reject
+ Run 365334 excluded run quality poor - reject
+ Run 365341 excluded run quality poor - reject
+ Run 365344 excluded run quality poor - reject
+ Run 365356 excluded run quality poor - reject
+ Run 365359 excluded run quality poor - reject
+ Run 365363 excluded lumi only 0.097149 < 0.200000 - reject!
+ Run 365385 excluded run quality poor - reject
+ Run 365394 excluded run quality poor - reject
+ Run 365397 excluded run quality poor - reject
+ Run 365402 excluded run quality poor - reject
+ Run 365403 excluded lumi only 0.095423 < 0.200000 - reject!
+ Run 365404 excluded lumi only 0.078441 < 0.200000 - reject!
+ Run 365412 excluded run quality poor - reject
+ Run 365413 excluded lumi only 0.180250 < 0.200000 - reject!
+ Run 365452 excluded run quality poor - reject
+ Run 365453 excluded run quality poor - reject
+ Run 365455 excluded run quality poor - reject
+ Run 365457 excluded run quality poor - reject
+ Run 365458 excluded lumi only 0.000000 < 0.200000 - reject!
+ Run 365459 excluded lumi only 0.000000 < 0.200000 - reject!
+ Run 365491 excluded lumi only 0.182714 < 0.200000 - reject!
+ Run 365493 excluded run quality poor - reject
+ Run 365497 excluded run quality poor - reject
+ Run 365499 excluded run quality poor - reject
+ Run 365502 excluded run quality poor - reject
+ Run 365513 excluded run quality poor - reject
+ Run 365778 excluded run quality poor - reject
+ Run 366171 excluded run quality poor - reject
+ Run 366183 excluded run quality poor - reject
+ Run 366184 excluded run quality poor - reject
+ Run 366185 excluded run quality poor - reject
+ Run 366186 excluded lumi only 0.000000 < 0.200000 - reject!
+ Run 366201 excluded run quality poor - reject
+ Run 366202 excluded lumi only 0.000000 < 0.200000 - reject!
+ Run 366203 excluded run quality poor - reject
+ Run 366204 excluded run quality poor - reject
+ Run 366205 excluded lumi only 0.043015 < 0.200000 - reject!
+ Run 366219 excluded lumi only 0.000000 < 0.200000 - reject!
+ Run 366320 excluded run quality poor - reject
+ Run 366341 excluded run quality poor - reject
+ Run 366342 excluded run quality poor - reject
+ Run 366362 excluded run quality poor - reject
+ Run 366363 excluded run quality poor - reject
+ Run 366365 excluded run quality poor - reject
+ Run 366376 excluded run quality poor - reject
+ Run 366381 excluded lumi only 0.000000 < 0.200000 - reject!
+ Run 366382 excluded lumi only 0.040452 < 0.200000 - reject!
+ Run 366390 excluded run quality poor - reject
+ Run 366402 excluded run quality poor - reject
+ Run 366407 excluded run quality poor - reject
+ Run 366414 excluded run quality poor - reject
+ Run 366420 excluded run quality poor - reject
+ Run 366421 excluded run quality poor - reject
+ Run 366424 excluded run quality poor - reject
+ Run 366426 excluded run quality poor - reject
+ Run 366429 excluded det not in trigger or readout- reject
+ Run 366431 excluded run quality poor - reject
+ Run 366432 excluded run quality poor - reject
+ Run 366441 excluded run quality poor - reject
+ Run 366444 excluded run quality poor - reject
+ Run 366445 excluded run quality poor - reject
+ Run 366448 excluded run quality poor - reject
+ Run 366459 excluded run quality poor - reject
+ Run 366462 excluded run quality poor - reject
+ Run 366464 excluded run quality poor - reject
+ Run 366466 excluded run quality poor - reject
+ Run 366467 excluded run quality poor - reject
+ Run 366468 excluded run quality poor - reject
+ Run 366469 excluded run quality poor - reject
+ Run 366470 excluded run quality poor - reject
+ Run 366474 excluded run quality poor - reject
+ Run 366510 excluded trigger phase below limit - reject
+ Run 366511 excluded lumi only 0.000000 < 0.200000 - reject!
+ Run 366579 excluded run quality poor - reject
+ Run 366712 excluded run quality poor - reject
+ Run 366714 excluded trigger phase below limit - reject
+ Run 366715 excluded trigger phase below limit - reject
+ Run 366716 excluded trigger phase below limit - reject
+ Run 366717 excluded trigger phase below limit - reject
+ Run 366718 excluded trigger phase below limit - reject
+ Run 366898 excluded run quality poor - reject
+ Run 366899 excluded run quality poor - reject
+ Run 366905 excluded run quality poor - reject
+ Run 366913 excluded run quality poor - reject
+ Run 366918 excluded run quality poor - reject
+ Run 366979 excluded run quality poor - reject
+ Run 366981 excluded run quality poor - reject
+ Run 367022 excluded run quality poor - reject
+ Run 367023 excluded run quality poor - reject
+ Run 367024 excluded run quality poor - reject
+ Run 367025 excluded run quality poor - reject
+ Run 367026 excluded run quality poor - reject
+ Run 367027 excluded run quality poor - reject
+ Run 367029 excluded run quality poor - reject
+ Run 367030 excluded lumi only 0.000000 < 0.200000 - reject!
+ Run 367032 excluded lumi only 0.151022 < 0.200000 - reject!
+ Run 367043 excluded run quality poor - reject
+ Run 367095 excluded run quality poor - reject
+ Run 367107 excluded run quality poor - reject
+ Run 367127 excluded run quality poor - reject
+ Run 367129 excluded run quality poor - reject
+ Run 367131 excluded run quality poor - reject
+ Run 367140 excluded run quality poor - reject
+ Run 367142 excluded run quality poor - reject
+ Run 367161 excluded run quality poor - reject
+ Run 367169 excluded run quality poor - reject
+ Run 367184 excluded run quality poor - reject
+ Run 367195 excluded run quality poor - reject
+ Run 367196 excluded run quality poor - reject
+ Run 367197 excluded run quality poor - reject
+ Run 367198 excluded run quality poor - reject
+ Run 367199 excluded run quality poor - reject
+ Run 367201 excluded run quality poor - reject
+ Run 367202 excluded run quality poor - reject
+ Run 367203 excluded run quality poor - reject
+ Run 367204 excluded run quality poor - reject
+ Run 367208 excluded run quality poor - reject
+ Run 367214 excluded run quality poor - reject
+ Run 367227 excluded excluded by input steering
+ Run 367228 excluded run quality poor - reject
+ Run 367229 excluded run quality poor - reject
+ Run 367230 excluded run quality poor - reject
+ Run 367257 excluded run quality poor - reject
+ Run 367258 excluded run quality poor - reject
+ Run 367259 excluded run quality poor - reject
+ Run 367260 excluded run quality poor - reject
+ Run 367261 excluded run quality poor - reject
+ Run 367262 excluded run quality poor - reject
+ Run 367263 excluded run quality poor - reject
+ Run 367264 excluded run quality poor - reject
+ Run 367265 excluded run quality poor - reject
+ Run 367266 excluded run quality poor - reject
+ Run 367267 excluded run quality poor - reject
+ Run 367268 excluded run quality poor - reject
+ Run 367269 excluded run quality poor - reject
+ Run 367270 excluded run quality poor - reject
+ Run 367271 excluded run quality poor - reject
+ Run 367272 excluded run quality poor - reject
+ Run 367279 excluded run quality poor - reject
+ Run 367281 excluded run quality poor - reject
+ Run 367282 excluded run quality poor - reject
+ Run 367283 excluded run quality poor - reject
+ Run 367312 excluded run quality poor - reject
+ Run 367313 excluded trigger phase below limit - reject
+ Run 367340 excluded run quality poor - reject
+ Run 367391 excluded run quality poor - reject
+ Run 367392 excluded run quality poor - reject
+ Run 367393 excluded run quality poor - reject
+ Run 367397 excluded run quality poor - reject
+ Run 367403 excluded run quality poor - reject
+ Run 367415 excluded run quality poor - reject
+ Run 367455 excluded run quality poor - reject
+ Run 367462 excluded run quality poor - reject
+ Run 367486 excluded run quality poor - reject
+ Run 367509 excluded det not in trigger or readout- reject
+ Run 367510 excluded det not in trigger or readout- reject
+ Run 367512 excluded run quality poor - reject
+ Run 367523 excluded excluded by input steering
+ Run 367524 excluded run quality poor - reject
+ Run 367617 excluded run quality poor - reject
+ Run 367730 excluded run quality poor - reject
+ Run 367731 excluded run quality poor - reject
+ Run 367737 excluded run quality poor - reject
+ Run 367738 excluded run quality poor - reject
+ Run 367739 excluded run quality poor - reject
+ Run 367740 excluded run quality poor - reject
+ Run 367741 excluded run quality poor - reject
+ Run 367742 excluded run quality poor - reject
+ Run 367744 excluded run quality poor - reject
+ Run 367745 excluded run quality poor - reject
+ Run 367747 excluded lumi only 0.119894 < 0.200000 - reject!
+ Run 367749 excluded run quality poor - reject
+ Run 367750 excluded run quality poor - reject
+ Run 367753 excluded lumi only 0.070429 < 0.200000 - reject!
+ Run 367760 excluded run quality poor - reject
+ Run 367763 excluded run quality poor - reject
+ Run 367765 excluded run quality poor - reject
+ Run 367766 excluded run quality poor - reject
+ Run 367767 excluded run quality poor - reject
+ Run 367768 excluded run quality poor - reject
+ Run 367772 excluded run quality poor - reject
+ Run 367810 excluded run quality poor - reject
+ Run 367853 excluded run quality poor - reject
+ Run 367918 excluded run quality poor - reject
+ Run 367921 excluded run quality poor - reject
+ Run 367943 excluded run quality poor - reject
+ Run 367944 excluded run quality poor - reject
+ Run 367945 excluded run quality poor - reject
+ Run 367946 excluded run quality poor - reject
+ Run 367947 excluded run quality poor - reject
+ Run 367948 excluded run quality poor - reject
+ Run 367949 excluded run quality poor - reject
+ Run 367950 excluded run quality poor - reject
+ Run 367953 excluded run quality poor - reject
+ Run 367954 excluded run quality poor - reject
+ Run 367967 excluded run quality poor - reject
+ Run 367976 excluded run quality poor - reject
+ Run 367977 excluded run quality poor - reject
+ Run 367978 excluded run quality poor - reject
+ Run 367979 excluded run quality poor - reject
+ Run 367983 excluded run quality poor - reject
+ Run 368003 excluded run quality poor - reject
+ Run 368014 excluded run quality poor - reject
+ Run 368015 excluded run quality poor - reject
+ Run 368016 excluded run quality poor - reject
+ Run 368237 excluded run quality poor - reject
+ Run 368240 excluded run quality poor - reject
+ Run 368249 excluded run quality poor - reject
+ Run 368250 excluded trigger phase below limit - reject
+ Run 368254 excluded run quality poor - reject
+ Run 368271 excluded run quality poor - reject
+ Run 368276 excluded run quality poor - reject
+ Run 368281 excluded run quality poor - reject
+ Run 368282 excluded run quality poor - reject
+ Run 368283 excluded run quality poor - reject
+ Run 368284 excluded run quality poor - reject
+ Run 368285 excluded run quality poor - reject
+ Run 368288 excluded run quality poor - reject
+ Run 368289 excluded run quality poor - reject
+ Run 368291 excluded run quality poor - reject
+ Run 368292 excluded run quality poor - reject
+ Run 368294 excluded run quality poor - reject
+ Run 368295 excluded run quality poor - reject
+ Run 368296 excluded run quality poor - reject
+ Run 368309 excluded run quality poor - reject
+ Run 368312 excluded run quality poor - reject
+ Run 368313 excluded run quality poor - reject
+ Run 368399 excluded run quality poor - reject
+ Run 368400 excluded run quality poor - reject
+ Run 368401 excluded run quality poor - reject
+ Run 368402 excluded lumi only 0.000000 < 0.200000 - reject!
+ Run 368404 excluded run quality poor - reject
+ Run 368470 excluded run quality poor - reject
+ Run 368471 excluded run quality poor - reject
+ Run 368491 excluded run quality poor - reject
+ Run 368494 excluded run quality poor - reject
+ Run 368495 excluded lumi only 0.000000 < 0.200000 - reject!
+ Run 368499 excluded run quality poor - reject
+ Run 368509 excluded run quality poor - reject
+ Run 368510 excluded run quality poor - reject
+ Run 368874 excluded run quality poor - reject
+ Run 368876 excluded run quality poor - reject
+ Run 368880 excluded run quality poor - reject
+ Run 368881 excluded run quality poor - reject
+ Run 368883 excluded run quality poor - reject
+ Run 368934 excluded run quality poor - reject
+ Run 368949 excluded run quality poor - reject
+ Run 368951 excluded run quality poor - reject
+ Run 368952 excluded run quality poor - reject
+ Run 368957 excluded run quality poor - reject
+ Run 368959 excluded run quality poor - reject
+ Run 368964 excluded run quality poor - reject
+ Run 368976 excluded run quality poor - reject
+ Run 368977 excluded run quality poor - reject
+ Run 368985 excluded run quality poor - reject
+ Run 368986 excluded run quality poor - reject
+ Run 368987 excluded run quality poor - reject
+ Run 368988 excluded run quality poor - reject
+ Run 368989 excluded run quality poor - reject
+ Run 368990 excluded run quality poor - reject
+ Run 369036 excluded run quality poor - reject
+ Run 369038 excluded high selected subtrigger prescale - reject
+ Run 369051 excluded run quality poor - reject
+ Run 369053 excluded run quality poor - reject
+ Run 369056 excluded run quality poor - reject
+ Run 369140 excluded run quality poor - reject
+ Run 369144 excluded run quality poor - reject
+ Run 369152 excluded lumi only 0.000000 < 0.200000 - reject!
+ Run 369159 excluded run quality poor - reject
+ Run 369160 excluded run quality poor - reject
+ Run 369162 excluded run quality poor - reject
+ Run 369192 excluded run quality poor - reject
+ Run 369209 excluded run quality poor - reject
+ Run 369221 excluded run quality poor - reject
+ Run 369225 excluded run quality poor - reject
+ Run 369226 excluded run quality poor - reject
+ Run 369237 excluded run quality poor - reject
+ Run 369239 excluded run quality poor - reject
+ Run 369248 excluded run quality poor - reject
+ Run 369252 excluded run quality poor - reject
+ Run 369254 excluded det not in trigger or readout- reject
+ Run 369255 excluded det not in trigger or readout- reject
+ Run 369265 excluded run quality poor - reject
+ Run 369271 excluded lumi only 0.193522 < 0.200000 - reject!
+ Run 369277 excluded run quality poor - reject
+ Run 369278 excluded run quality poor - reject
+ Run 369280 excluded run quality poor - reject
+ Run 369310 excluded run quality poor - reject
+ Run 369317 excluded run quality poor - reject
+ Run 369318 excluded lumi only 0.020914 < 0.200000 - reject!
+ Run 369329 excluded run quality poor - reject
+ Run 369332 excluded det not in trigger or readout- reject
+ Run 369359 excluded run quality poor - reject
+ Run 369363 excluded trigger phase below limit - reject
+ Run 369364 excluded run quality poor - reject
+ Run 369365 excluded run quality poor - reject
+ Run 369367 excluded run quality poor - reject
+ Run 369368 excluded run quality poor - reject
+ Run 369371 excluded excluded by input steering
+ Run 369372 excluded run quality poor - reject
+ Run 369373 excluded run quality poor - reject
+ Run 369403 excluded run quality poor - reject
+ Run 369418 excluded run quality poor - reject
+ Run 369421 excluded run quality poor - reject
+ Run 369423 excluded run quality poor - reject
+ Run 369424 excluded run quality poor - reject
+ Run 369460 excluded run quality poor - reject
+ Run 369463 excluded lumi only 0.077632 < 0.200000 - reject!
+ Run 369468 excluded run quality poor - reject
+ Run 369474 excluded det not in trigger or readout- reject
+ Run 369475 excluded run quality poor - reject
+ Run 369486 excluded run quality poor - reject
+ Run 369487 excluded run quality poor - reject
+ Run 369501 excluded run quality poor - reject
+ Run 369505 excluded run quality poor - reject
+ Run 369506 excluded run quality poor - reject
+ Run 369507 excluded lumi only 0.061881 < 0.200000 - reject!
+ Run 369518 excluded run quality poor - reject
+ Run 369554 excluded run quality poor - reject
+ Run 369557 excluded run quality poor - reject
+ Run 369560 excluded lumi only 0.000000 < 0.200000 - reject!
+ Run 369561 excluded run quality poor - reject
+ Run 369562 excluded run quality poor - reject
+ Run 369567 excluded run quality poor - reject
+ Run 369571 excluded run quality poor - reject
+ Run 369572 excluded run quality poor - reject
+ Run 369580 excluded run quality poor - reject
+ Run 369590 excluded run quality poor - reject
+ Run 369591 excluded lumi only 0.132196 < 0.200000 - reject!
+ Run 369595 excluded run quality poor - reject
+ Run 369641 excluded run quality poor - reject
+ Run 369664 excluded run quality poor - reject
+ Run 369665 excluded run quality poor - reject
+ Run 369666 excluded run quality poor - reject
+ Run 369689 excluded run quality poor - reject
+ Run 369734 excluded run quality poor - reject
+ Run 369735 excluded run quality poor - reject
+ Run 369764 excluded run quality poor - reject
+ Run 369768 excluded run quality poor - reject
+ Run 369779 excluded run quality poor - reject
+ Run 369791 excluded run quality poor - reject
+ Run 369792 excluded run quality poor - reject
+ Run 369793 excluded run quality poor - reject
+ Run 369797 excluded run quality poor - reject
+ Run 369798 excluded lumi only 0.000000 < 0.200000 - reject!
+ Run 369801 excluded run quality poor - reject
+ Run 369811 excluded run quality poor - reject
+ Run 369858 excluded run quality poor - reject
+ Run 369862 excluded run quality poor - reject
+ Run 369892 excluded lumi only 0.000000 < 0.200000 - reject!
+ Run 369895 excluded run quality poor - reject
+ Run 369958 excluded run quality poor - reject
+ Run 369959 excluded run quality poor - reject
+ Run 369960 excluded run quality poor - reject
+ Run 369961 excluded run quality poor - reject
+ Run 369990 excluded run quality poor - reject
+ Run 369992 excluded run quality poor - reject
+ Run 369996 excluded run quality poor - reject
+ Run 369999 excluded run quality poor - reject
+ Run 370075 excluded run quality poor - reject
+ Run 370080 excluded lumi only 0.000000 < 0.200000 - reject!
+ Run 370088 excluded run quality poor - reject
+ Run 370092 excluded run quality poor - reject
+ Run 370093 excluded run quality poor - reject
+ Run 370102 excluded run quality poor - reject
+ Run 370103 excluded run quality poor - reject
+ Run 370298 excluded run quality poor - reject
+ Run 370300 excluded run quality poor - reject
+ Run 370301 excluded run quality poor - reject
+ Run 370302 excluded run quality poor - reject
+ Run 370303 excluded lumi only 0.011936 < 0.200000 - reject!
+ Run 370307 excluded lumi only 0.000000 < 0.200000 - reject!
+ Run 370315 excluded det not in trigger or readout- reject
+ Run 370381 excluded run quality poor - reject
+ Run 370382 excluded run quality poor - reject
+ Run 370388 excluded run quality poor - reject
+ Run 370389 excluded trigger phase below limit - reject
+ Run 370390 excluded trigger phase below limit - reject
+ Run 370405 excluded lumi only 0.000000 < 0.200000 - reject!
+ Run 370406 excluded lumi only 0.000000 < 0.200000 - reject!
+ Run 370407 excluded run quality poor - reject
+ Run 370408 excluded run quality poor - reject
+ Run 370439 excluded run quality poor - reject
+ Run 370470 excluded run quality poor - reject
+ Run 370471 excluded run quality poor - reject
+ Run 370473 excluded run quality poor - reject
+ Run 370474 excluded run quality poor - reject
+ Run 370476 excluded run quality poor - reject
+ Run 370477 excluded run quality poor - reject
+ Run 370512 excluded run quality poor - reject
+ Run 370513 excluded run quality poor - reject
+ Run 370515 excluded run quality poor - reject
+ Run 370518 excluded det not in trigger or readout- reject
+ Run 370523 excluded run quality poor - reject
+ Run 370525 excluded run quality poor - reject
+ Run 370526 excluded det not in trigger or readout- reject
+ Run 370533 excluded run quality poor - reject
+ Run 370537 excluded run quality poor - reject
+ Run 370538 excluded trigger phase below limit - reject
+ Run 370570 excluded run quality poor - reject
+ Run 370578 excluded run quality poor - reject
+ Run 370579 excluded trigger phase below limit - reject
+ Run 370580 excluded lumi only 0.141700 < 0.200000 - reject!
+ Run 370588 excluded run quality poor - reject
+ Run 370591 excluded run quality poor - reject
+ Run 370619 excluded run quality poor - reject
+ Run 370620 excluded run quality poor - reject
+ Run 370621 excluded lumi only 0.000000 < 0.200000 - reject!
+ Run 370622 excluded lumi only 0.000000 < 0.200000 - reject!
+ Run 370625 excluded lumi only 0.000000 < 0.200000 - reject!
+ Run 370640 excluded run quality poor - reject
+ Run 370643 excluded trigger phase below limit - reject
+ Run 370644 excluded run quality poor - reject
+ Run 370654 excluded run quality poor - reject
+ Run 370661 excluded run quality poor - reject
+ Run 370662 excluded run quality poor - reject
+ Run 370694 excluded run quality poor - reject
+ Run 370695 excluded run quality poor - reject
+ Run 370696 excluded run quality poor - reject
+ Run 370697 excluded run quality poor - reject
+ Run 370702 excluded run quality poor - reject
+ Run 370703 excluded run quality poor - reject
+ Run 370704 excluded run quality poor - reject
+ Run 370705 excluded run quality poor - reject
+ Run 370706 excluded run quality poor - reject
+ Run 370713 excluded run quality poor - reject
+ Run 370714 excluded lumi only 0.000000 < 0.200000 - reject!
+ Run 370845 excluded run quality poor - reject
+ Run 370846 excluded run quality poor - reject
+ Run 370847 excluded trigger phase below limit - reject
+ Run 370935 excluded run quality poor - reject
+ Run 370936 excluded run quality poor - reject
+ Run 370937 excluded run quality poor - reject
+ Run 370939 excluded run quality poor - reject
+ Run 370940 excluded run quality poor - reject
+ Run 370943 excluded lumi only 0.000000 < 0.200000 - reject!
+ Run 370944 excluded run quality poor - reject
+ Run 370945 excluded lumi only 0.000000 < 0.200000 - reject!
+ Run 370947 excluded lumi only 0.000000 < 0.200000 - reject!
+ Run 370948 excluded lumi only 0.000000 < 0.200000 - reject!
+ Run 370949 excluded run quality poor - reject
+ Run 370950 excluded run quality poor - reject
+ Run 370951 excluded run quality poor - reject
+ Run 370952 excluded run quality poor - reject
+ Run 370953 excluded run quality poor - reject
+ Run 370956 excluded run quality poor - reject
+ Run 370964 excluded run quality poor - reject
+ Run 370974 excluded run quality poor - reject
+ Run 371217 excluded run quality poor - reject
+ Run 371218 excluded run quality poor - reject
+ Run 371221 excluded run quality poor - reject
+ Run 371243 excluded run quality poor - reject
+ Run 371277 excluded run quality poor - reject
+ Run 371291 excluded run quality poor - reject
+ Run 371301 excluded run quality poor - reject
+ Run 371312 excluded run quality poor - reject
+ Run 371313 excluded run quality poor - reject
+ Run 371319 excluded run quality poor - reject
+ Run 371320 excluded run quality poor - reject
+ Run 371323 excluded run quality poor - reject
+ Run 371400 excluded run quality poor - reject
+ Run 371401 excluded run quality poor - reject
+ Run 371408 excluded lumi only 0.000000 < 0.200000 - reject!
+ Run 371458 excluded run quality poor - reject
+ Run 371476 excluded run quality poor - reject
+ Run 371477 excluded excluded by input steering
+ Run 371482 excluded run quality poor - reject
+ Run 371489 excluded run quality poor - reject
+ Run 371495 excluded run quality poor - reject
+ Run 371502 excluded run quality poor - reject
+ Run 371517 excluded run quality poor - reject
+ Run 371522 excluded run quality poor - reject
+ Run 371524 excluded run quality poor - reject
+ Run 371530 excluded run quality poor - reject
+ Run 371533 excluded run quality poor - reject
+ Run 371545 excluded run quality poor - reject
+ Run 371548 excluded run quality poor - reject
+ Run 371563 excluded run quality poor - reject
+ Run 371571 excluded lumi only 0.151289 < 0.200000 - reject!
+ Run 371579 excluded lumi only 0.058610 < 0.200000 - reject!
+ Run 371583 excluded lumi only 0.165836 < 0.200000 - reject!
+ Run 371590 excluded run quality poor - reject
+ Run 371704 excluded run quality poor - reject
+ Run 371750 excluded run quality poor - reject
+ Run 371763 excluded run quality poor - reject
+ Run 371776 excluded run quality poor - reject
+ Run 371794 excluded run quality poor - reject
+ Run 371800 excluded run quality poor - reject
+ Run 371810 excluded det not in trigger or readout- reject
+ Run 371823 excluded run quality poor - reject
+ Run 371885 excluded run quality poor - reject
+ Run 371887 excluded run quality poor - reject
+ Run 371908 excluded run quality poor - reject
+ Run 371957 excluded run quality poor - reject
+ Run 371958 excluded run quality poor - reject
+ Run 371970 excluded run quality poor - reject
+ Run 372007 excluded run quality poor - reject
+ Run 372008 excluded lumi only 0.000000 < 0.200000 - reject!
+ Run 372010 excluded run quality poor - reject
+ Run 372012 excluded run quality poor - reject
+ Run 372014 excluded run quality poor - reject
+ Run 372047 excluded run quality poor - reject
+ Run 372072 excluded run quality poor - reject
+ Run 372080 excluded run quality poor - reject
+ Run 372084 excluded run quality poor - reject
+ Run 372097 excluded run quality poor - reject
+ Run 372114 excluded run quality poor - reject
+ Run 372160 excluded run quality poor - reject
+ Run 372161 excluded run quality poor - reject
+ Run 372162 excluded trigger phase below limit - reject
+ Run 372189 excluded run quality poor - reject
+ Run 372276 excluded run quality poor - reject
+ Run 372616 excluded excluded by input steering
+ Run 372617 excluded excluded by input steering
+ Run 372618 excluded excluded by input steering
+ Run 372619 excluded excluded by input steering
+ Run 372674 excluded run quality poor - reject
+ Run 372679 excluded run quality poor - reject
+ Run 372681 excluded run quality poor - reject
+ Run 372682 excluded run quality poor - reject
+ Run 372709 excluded run quality poor - reject
+ Run 372710 excluded run quality poor - reject
+ Run 372712 excluded run quality poor - reject
+ Run 372713 excluded run quality poor - reject
+ Run 372714 excluded run quality poor - reject
+ Run 372717 excluded run quality poor - reject
+ Run 372718 excluded trigger phase below limit - reject
+ Run 372722 excluded run quality poor - reject
+ Run 372729 excluded run quality poor - reject
+ Run 372734 excluded lumi only 0.000000 < 0.200000 - reject!
+ Run 372735 excluded lumi only 0.000000 < 0.200000 - reject!
+ Run 372760 excluded run quality poor - reject
+ Run 372769 excluded run quality poor - reject
+ Run 372772 excluded run quality poor - reject
+ Run 372773 excluded run quality poor - reject
+ Run 372778 excluded run quality poor - reject
+ Run 372842 excluded run quality poor - reject
+ Run 372844 excluded run quality poor - reject
+ Run 372848 excluded run quality poor - reject
+ Run 372861 excluded run quality poor - reject
+ Run 372867 excluded trigger phase below limit - reject
+ Run 373016 excluded run quality poor - reject
+ Run 373017 excluded run quality poor - reject
+ Run 373036 excluded run quality poor - reject
+ Run 373039 excluded lumi only 0.074831 < 0.200000 - reject!
+ Run 373049 excluded run quality poor - reject
+ Run 373072 excluded run quality poor - reject
+ Run 373073 excluded run quality poor - reject
+ Run 373074 excluded lumi only 0.000000 < 0.200000 - reject!
+ Run 373093 excluded run quality poor - reject
+ Run 373095 excluded run quality poor - reject
+ Run 373104 excluded lumi only 0.000000 < 0.200000 - reject!
+ Run 373117 excluded run quality poor - reject
+ Run 373125 excluded run quality poor - reject
+ Run 373126 excluded run quality poor - reject
+ Run 373127 excluded run quality poor - reject
+ Run 373128 excluded run quality poor - reject
+ Run 373129 excluded run quality poor - reject
+ Run 373130 excluded run quality poor - reject
+ Run 373131 excluded run quality poor - reject
+ Run 373132 excluded run quality poor - reject
+ Run 373135 excluded run quality poor - reject
+ Run 373137 excluded run quality poor - reject
+ Run 373138 excluded run quality poor - reject
+ Run 373139 excluded run quality poor - reject
+ Run 373140 excluded run quality poor - reject
+ Run 373141 excluded run quality poor - reject
+ Run 373154 excluded run quality poor - reject
+ Run 373160 excluded run quality poor - reject
+ Run 373166 excluded run quality poor - reject
+ Run 373180 excluded run quality poor - reject
+ Run 373195 excluded run quality poor - reject
+ Run 373196 excluded run quality poor - reject
+ Run 373253 excluded run quality poor - reject
+ Run 373276 excluded lumi only 0.000000 < 0.200000 - reject!
+ Run 373277 excluded lumi only 0.000000 < 0.200000 - reject!
+ Run 373278 excluded lumi only 0.000000 < 0.200000 - reject!
+ Run 373311 excluded run quality poor - reject
+ Run 373327 excluded run quality poor - reject
+ Run 373328 excluded trigger phase below limit - reject
+ Run 373333 excluded run quality poor - reject
+ Run 373335 excluded run quality poor - reject
+ Run 373336 excluded run quality poor - reject
+ Run 373339 excluded run quality poor - reject
+ Run 373340 excluded run quality poor - reject
+ Run 373346 excluded run quality poor - reject
+ Run 373353 excluded run quality poor - reject
+ Run 373354 excluded lumi only 0.000000 < 0.200000 - reject!
+ Run 373393 excluded run quality poor - reject
+ Run 373413 excluded run quality poor - reject
+ Run 373419 excluded run quality poor - reject
+ Run 373422 excluded run quality poor - reject
+ Run 373423 excluded run quality poor - reject
+ Run 373424 excluded run quality poor - reject
+ Run 373426 excluded lumi only 0.000000 < 0.200000 - reject!
+ Run 373431 excluded lumi only 0.123255 < 0.200000 - reject!
+ Run 373433 excluded run quality poor - reject
+ Run 373454 excluded run quality poor - reject
+ Run 373456 excluded run quality poor - reject
+ Run 373459 excluded run quality poor - reject
+ Run 373460 excluded run quality poor - reject
+ Run 373464 excluded run quality poor - reject
+ Run 373507 excluded run quality poor - reject
+ Run 373512 excluded run quality poor - reject
+ Run 373517 excluded run quality poor - reject
+ Run 373549 excluded run quality poor - reject
+ Run 373553 excluded run quality poor - reject
+ Run 373555 excluded run quality poor - reject
+ Run 373557 excluded run quality poor - reject
+ Run 373559 excluded run quality poor - reject
+ Run 373562 excluded trigger phase below limit - reject
+ Run 373649 excluded run quality poor - reject
+ Run 374071 excluded run quality poor - reject
+ Run 374072 excluded run quality poor - reject
+ Run 374075 excluded run quality poor - reject
+ Run 374076 excluded run quality poor - reject
+ Run 374245 excluded run quality poor - reject
+ Run 374246 excluded run quality poor - reject
+ Run 374258 excluded run quality poor - reject
+ Run 374262 excluded run quality poor - reject
+ Run 374263 excluded run quality poor - reject
+ Run 374266 excluded run quality poor - reject
+ Run 374267 excluded run quality poor - reject
+ Run 374268 excluded run quality poor - reject
+ Run 374269 excluded run quality poor - reject
+ Run 374270 excluded run quality poor - reject
+ Run 374271 excluded run quality poor - reject
+ Run 374274 excluded run quality poor - reject
+ Run 374277 excluded run quality poor - reject
+ Run 374282 excluded run quality poor - reject
+ Run 374283 excluded run quality poor - reject
+ Run 374294 excluded run quality poor - reject
+ Run 374296 excluded run quality poor - reject
+ Run 374298 excluded det not in trigger or readout- reject
+ Run 374300 excluded det not in trigger or readout- reject
+ Run 374301 excluded det not in trigger or readout- reject
+ Run 374302 excluded det not in trigger or readout- reject
+ Run 374303 excluded det not in trigger or readout- reject
+ Run 374309 excluded run quality poor - reject
+ Run 374310 excluded trigger phase below limit - reject
+ Run 374322 excluded lumi only 0.138467 < 0.200000 - reject!
+ Run 374328 excluded lumi only 0.064868 < 0.200000 - reject!
+ Run 374330 excluded run quality poor - reject
+ Run 374335 excluded run quality poor - reject
+ Run 374336 excluded run quality poor - reject
+ Run 374347 excluded run quality poor - reject
+ Run 374367 excluded run quality poor - reject
+ Run 374368 excluded trigger phase below limit - reject
+ Run 374378 excluded lumi only 0.000000 < 0.200000 - reject!
+ Run 374379 excluded lumi only 0.000000 < 0.200000 - reject!
+ Run 374380 excluded lumi only 0.000000 < 0.200000 - reject!
+ Run 374381 excluded lumi only 0.000000 < 0.200000 - reject!
+ Run 374382 excluded lumi only 0.000000 < 0.200000 - reject!
+ Run 374383 excluded run quality poor - reject
+ Run 374388 excluded lumi only 0.000000 < 0.200000 - reject!
+ Run 374390 excluded run quality poor - reject
+ Run 374392 excluded run quality poor - reject
+ Run 374393 excluded run quality poor - reject
+ Run 374401 excluded run quality poor - reject
+ Run 374509 excluded run quality poor - reject
+ Run 374510 excluded run quality poor - reject
+ Run 374513 excluded run quality poor - reject
+ Run 374543 excluded run quality poor - reject
+ Run 374557 excluded run quality poor - reject
+ Run 374583 excluded run quality poor - reject
+ Run 374584 excluded run quality poor - reject
+ Run 374585 excluded run quality poor - reject
+ Run 374586 excluded run quality poor - reject
+ Run 374594 excluded run quality poor - reject
+ Run 374602 excluded run quality poor - reject
+ Run 374605 excluded run quality poor - reject
+ Run 374673 excluded run quality poor - reject
+ Run 374674 excluded run quality poor - reject
+ Run 374675 excluded run quality poor - reject
+ Run 374676 excluded run quality poor - reject
+ Run 374682 excluded run quality poor - reject
+ Run 374683 excluded run quality poor - reject
+ Run 374684 excluded run quality poor - reject
+ Run 374685 excluded run quality poor - reject
+ Run 374686 excluded run quality poor - reject
+ Run 374687 excluded run quality poor - reject
+ Run 374688 excluded run quality poor - reject
+ Run 374689 excluded run quality poor - reject
+ Run 374692 excluded run quality poor - reject
+ Run 374693 excluded run quality poor - reject
+ Run 374694 excluded run quality poor - reject
+ Run 374695 excluded run quality poor - reject
+ Run 374696 excluded run quality poor - reject
+ Run 374697 excluded run quality poor - reject
+ Run 374702 excluded run quality poor - reject
+ Run 374703 excluded run quality poor - reject
+ Run 374704 excluded run quality poor - reject
+ Run 374705 excluded run quality poor - reject
+ Run 374706 excluded run quality poor - reject
+ Run 374715 excluded run quality poor - reject
+ Run 374717 excluded run quality poor - reject
+ Run 374718 excluded run quality poor - reject
+ Run 374722 excluded run quality poor - reject
+ Run 374724 excluded run quality poor - reject
+ Run 374726 excluded run quality poor - reject
+ Run 374770 excluded run quality poor - reject
+ Run 374771 excluded trigger phase below limit - reject
+ Run 374790 excluded run quality poor - reject
+ Run 374887 excluded run quality poor - reject
+ Run 374892 excluded run quality poor - reject
+ Run 374961 excluded run quality poor - reject
+ Run 374963 excluded run quality poor - reject
+ Run 374977 excluded run quality poor - reject
+ Run 374980 excluded lumi only 0.000000 < 0.200000 - reject!
+ Run 374984 excluded run quality poor - reject
+ Run 374985 excluded run quality poor - reject
+ Run 375002 excluded run quality poor - reject
+ Run 375017 excluded run quality poor - reject
+ Run 375077 excluded run quality poor - reject
+ Run 375078 excluded run quality poor - reject
+ Run 375079 excluded run quality poor - reject
+ Run 375081 excluded run quality poor - reject
+ Run 375082 excluded run quality poor - reject
+ Run 375083 excluded run quality poor - reject
+ Run 375084 excluded run quality poor - reject
+ Run 375086 excluded run quality poor - reject
+ Run 375112 excluded run quality poor - reject
+ Run 375157 excluded run quality poor - reject
+ Run 375158 excluded run quality poor - reject
+ Run 375159 excluded run quality poor - reject
+ Run 375188 excluded run quality poor - reject
+ Run 375255 excluded run quality poor - reject
+ Run 375256 excluded run quality poor - reject
+ Run 375376 excluded run quality poor - reject
+ Run 375398 excluded run quality poor - reject
+ Run 375408 excluded run quality poor - reject
+ Run 375409 excluded run quality poor - reject
+ Run 375413 excluded run quality poor - reject
+ Run 375414 excluded run quality poor - reject
+ Run 375421 excluded run quality poor - reject
+ Run 375431 excluded run quality poor - reject
+ Run 375437 excluded run quality poor - reject
+ Run 375438 excluded run quality poor - reject
+ Run 375448 excluded run quality poor - reject
+ Run 375452 excluded run quality poor - reject
+ Run 375453 excluded run quality poor - reject
+ Run 375455 excluded lumi only 0.171729 < 0.200000 - reject!
+ Run 375484 excluded run quality poor - reject
+ Run 375486 excluded run quality poor - reject
+ Run 375488 excluded run quality poor - reject
+ Run 375490 excluded run quality poor - reject
+ Run 375491 excluded lumi only 0.000000 < 0.200000 - reject!
+ Run 375514 excluded run quality poor - reject
+ Run 375520 excluded run quality poor - reject
+ Run 375521 excluded run quality poor - reject
+ Run 375544 excluded run quality poor - reject
+ Run 375750 excluded run quality poor - reject
+ Run 375751 excluded run quality poor - reject
+ Run 375752 excluded run quality poor - reject
+ Run 375756 excluded run quality poor - reject
+ Run 375760 excluded run quality poor - reject
+ Run 375762 excluded run quality poor - reject
+ Run 375763 excluded run quality poor - reject
+ Run 375766 excluded run quality poor - reject
+ Run 375767 excluded run quality poor - reject
+ Run 375768 excluded run quality poor - reject
+ Run 375822 excluded run quality poor - reject
+ Run 375854 excluded run quality poor - reject
+ Run 375856 excluded run quality poor - reject
+ Run 375857 excluded run quality poor - reject
+ Run 375885 excluded run quality poor - reject
+ Run 375886 excluded run quality poor - reject
+ Run 375900 excluded run quality poor - reject
+ Run 375940 excluded run quality poor - reject
+ Run 375949 excluded run quality poor - reject
+ Run 375963 excluded run quality poor - reject
+ Run 375964 excluded run quality poor - reject
+ Run 375965 excluded run quality poor - reject
+ Run 375966 excluded run quality poor - reject
+ Run 375969 excluded run quality poor - reject
+ Run 376002 excluded run quality poor - reject
+ Run 376003 excluded run quality poor - reject
+ Run 376004 excluded lumi only 0.000000 < 0.200000 - reject!
+ Run 376037 excluded run quality poor - reject
+ Run 376038 excluded run quality poor - reject
+ Run 376039 excluded run quality poor - reject
+ Run 376040 excluded run quality poor - reject
+ Run 376047 excluded run quality poor - reject
+ Run 376051 excluded run quality poor - reject
+ Run 376063 excluded run quality poor - reject
+ Run 376082 excluded lumi only 0.114005 < 0.200000 - reject!
+ Run 376110 excluded run quality poor - reject
+ Run 376115 excluded run quality poor - reject
+ Run 376124 excluded errors during lumi calculation - reject
+ Run 376140 excluded run quality poor - reject
+ Run 376270 excluded run quality poor - reject
+ Run 376274 excluded run quality poor - reject
+ Run 376327 excluded run quality poor - reject
+ Run 376362 excluded run quality poor - reject
+ Run 376365 excluded run quality poor - reject
+ Run 376400 excluded run quality poor - reject
+ Run 376414 excluded run quality poor - reject
+ Run 376417 excluded run quality poor - reject
+ Run 376432 excluded run quality poor - reject
+ Run 376436 excluded run quality poor - reject
+ Run 376437 excluded run quality poor - reject
+ Run 376532 excluded run quality poor - reject
+ Run 376535 excluded run quality poor - reject
+ Run 376536 excluded run quality poor - reject
+ Run 376547 excluded run quality poor - reject
+ Run 376810 excluded run quality poor - reject
+ Run 376824 excluded run quality poor - reject
+ Run 376827 excluded run quality poor - reject
+ Run 376829 excluded run quality poor - reject
+ Run 376832 excluded run quality poor - reject
+ Run 376833 excluded run quality poor - reject
+ Run 376834 excluded run quality poor - reject
+ Run 376835 excluded run quality poor - reject
+ Run 376848 excluded run quality poor - reject
+ Run 376884 excluded run quality poor - reject
+ Run 376885 excluded run quality poor - reject
+ Run 376886 excluded trigger phase below limit - reject
+ Run 376887 excluded trigger phase below limit - reject
+ Run 376895 excluded run quality poor - reject
+ Run 376914 excluded run quality poor - reject
+ Run 376915 excluded run quality poor - reject
+ Run 376917 excluded run quality poor - reject
+ Run 376923 excluded run quality poor - reject
+ Run 377180 excluded run quality poor - reject
+ Run 377181 excluded run quality poor - reject
+ Run 377193 excluded run quality poor - reject
+ Run 377200 excluded run quality poor - reject
+ Run 377201 excluded run quality poor - reject
+ Run 377202 excluded run quality poor - reject
+ Run 377203 excluded trigger phase below limit - reject
+ Run 377207 excluded run quality poor - reject
+ Run 377209 excluded trigger phase below limit - reject
+ Run 377219 excluded lumi only 0.067239 < 0.200000 - reject!
+ Run 377221 excluded run quality poor - reject
+ Run 377222 excluded run quality poor - reject
+ Run 377224 excluded run quality poor - reject
+ Run 377226 excluded run quality poor - reject
+ Run 377229 excluded run quality poor - reject
+ Run 377240 excluded run quality poor - reject
+ Run 377303 excluded run quality poor - reject
+ Run 377304 excluded run quality poor - reject
+ Run 377306 excluded run quality poor - reject
+ Run 377312 excluded lumi only 0.000000 < 0.200000 - reject!
+ Run 377313 excluded run quality poor - reject
+ Run 377362 excluded run quality poor - reject
+ Run 377363 excluded run quality poor - reject
+ Run 377364 excluded run quality poor - reject
+ Run 377365 excluded run quality poor - reject
+ Run 377370 excluded run quality poor - reject
+ Run 377374 excluded run quality poor - reject
+ Run 377383 excluded run quality poor - reject
+ Run 377385 excluded run quality poor - reject
+ Run 377389 excluded run quality poor - reject
+ Run 377499 excluded run quality poor - reject
+ Run 377500 excluded run quality poor - reject
+ Run 377501 excluded trigger phase below limit - reject
+ Run 377514 excluded run quality poor - reject
+ Run 377515 excluded run quality poor - reject
+ Run 377540 excluded run quality poor - reject
+ Run 377572 excluded run quality poor - reject
+ Run 377574 excluded run quality poor - reject
+ Run 377578 excluded run quality poor - reject
+ Run 377580 excluded run quality poor - reject
+ Run 377602 excluded run quality poor - reject
+ Run 377629 excluded run quality poor - reject
+ Run 378063 excluded run quality poor - reject
+ Run 378084 excluded run quality poor - reject
+ Run 378085 excluded run quality poor - reject
+ Run 378094 excluded run quality poor - reject
+ Run 378113 excluded run quality poor - reject
+ Run 378114 excluded run quality poor - reject
+ Run 378192 excluded run quality poor - reject
+ Run 378221 excluded det not in trigger or readout- reject
+ Run 378222 excluded det not in trigger or readout- reject
+ Run 378238 excluded det not in trigger or readout- reject
+ Run 378245 excluded run quality poor - reject
+ Run 378260 excluded run quality poor - reject
+ Run 378261 excluded run quality poor - reject
+ Run 378262 excluded run quality poor - reject
+ Run 378273 excluded run quality poor - reject
+ Run 378279 excluded run quality poor - reject
+ Run 378791 excluded run quality poor - reject
+ Run 378792 excluded run quality poor - reject
+ Run 378899 excluded run quality poor - reject
+ Run 378902 excluded run quality poor - reject
+ Run 378905 excluded run quality poor - reject
+ Run 378906 excluded run quality poor - reject
+ Run 378907 excluded run quality poor - reject
+ Run 378909 excluded run quality poor - reject
+ Run 378919 excluded run quality poor - reject
+ Run 378955 excluded run quality poor - reject
+ Run 379135 excluded run quality poor - reject
+ Run 379137 excluded run quality poor - reject
+ Run 379138 excluded run quality poor - reject
+ Run 379139 excluded run quality poor - reject
+ Run 379140 excluded run quality poor - reject
+ Run 379141 excluded run quality poor - reject
+ Run 379143 excluded run quality poor - reject
+ Run 379144 excluded run quality poor - reject
+ Run 379146 excluded run quality poor - reject
+ Run 379152 excluded run quality poor - reject
+ Run 379155 excluded run quality poor - reject
+ Run 379156 excluded run quality poor - reject
+ Run 379164 excluded lumi only 0.000000 < 0.200000 - reject!
+ Run 379168 excluded run quality poor - reject
+ Run 379173 excluded lumi only 0.023160 < 0.200000 - reject!
+ Run 379244 excluded run quality poor - reject
+ Run 379254 excluded run quality poor - reject
+ Run 379266 excluded run quality poor - reject
+ Run 379272 excluded run quality poor - reject
+ Run 379284 excluded run quality poor - reject
+ Run 379292 excluded run quality poor - reject
+ Run 379295 excluded run quality poor - reject
+ Run 379297 excluded run quality poor - reject
+ Run 379298 excluded run quality poor - reject
+ Run 379299 excluded run quality poor - reject
+ Run 379301 excluded lumi only 0.000000 < 0.200000 - reject!
+ Run 379302 excluded lumi only 0.000000 < 0.200000 - reject!
+ Run 379309 excluded run quality poor - reject
+ Run 379312 excluded run quality poor - reject
+ Run 379313 excluded run quality poor - reject
+ Run 379314 excluded lumi only 0.000000 < 0.200000 - reject!
+ Run 379317 excluded run quality poor - reject
+ Run 379320 excluded run quality poor - reject
+ Run 379322 excluded run quality poor - reject
+ Run 379330 excluded run quality poor - reject
+ Run 379331 excluded run quality poor - reject
+ Run 379332 excluded run quality poor - reject
+ Run 379334 excluded run quality poor - reject
+ Run 379335 excluded run quality poor - reject
+ Run 379336 excluded lumi only 0.147769 < 0.200000 - reject!
+ Run 379338 excluded run quality poor - reject
+ Run 379340 excluded run quality poor - reject
+ Run 379422 excluded run quality poor - reject
+ Run 379447 excluded run quality poor - reject
+ Run 379487 excluded lumi only 0.000000 < 0.200000 - reject!
+ Run 379489 excluded lumi only 0.000000 < 0.200000 - reject!
+ Run 379563 excluded run quality poor - reject
+ Run 379570 excluded run quality poor - reject
+ Run 379572 excluded run quality poor - reject
+ Run 379586 excluded run quality poor - reject
+ Run 379598 excluded run quality poor - reject
+ Run 379599 excluded run quality poor - reject
+ Run 379601 excluded run quality poor - reject
+ Run 379602 excluded run quality poor - reject
+ Run 379604 excluded run quality poor - reject
+ Run 379605 excluded run quality poor - reject
+ Run 379674 excluded run quality poor - reject
+ Run 379703 excluded run quality poor - reject
+ Run 379705 excluded run quality poor - reject
+ Run 379709 excluded excluded by input steering
+ Run 379714 excluded run quality poor - reject
+ Run 379720 excluded excluded by input steering
+ Run 379741 excluded run quality poor - reject
+ Run 379756 excluded run quality poor - reject
+ Run 379764 excluded run quality poor - reject
+ Run 379772 excluded run quality poor - reject
+ Run 379798 excluded run quality poor - reject
+ Run 379799 excluded run quality poor - reject
+ Run 379802 excluded run quality poor - reject
+ Run 379803 excluded run quality poor - reject
+ Run 379807 excluded selected subtrigs not enabled - reject
+ Run 379808 excluded selected subtrigs not enabled - reject
+ Run 379823 excluded run quality poor - reject
+ Run 379824 excluded run quality poor - reject
+ Run 379825 excluded run quality poor - reject
+ Run 379898 excluded run quality poor - reject
+ Run 379936 excluded run quality poor - reject
+ Run 379947 excluded run quality poor - reject
+ Run 379966 excluded run quality poor - reject
+ Run 379967 excluded run quality poor - reject
+ Run 379988 excluded run quality poor - reject
+ Run 380012 excluded run quality poor - reject
+ Run 380068 excluded run quality poor - reject
+ Run 380073 excluded run quality poor - reject
+ Run 380074 excluded run quality poor - reject
+ Run 380081 excluded run quality poor - reject
+ Run 380084 excluded run quality poor - reject
+ Run 380124 excluded run quality poor - reject
+ Run 380125 excluded run quality poor - reject
+ Run 380149 excluded run quality poor - reject
+ Run 380156 excluded run quality poor - reject
+ Run 380157 excluded run quality poor - reject
+ Run 380176 excluded run quality poor - reject
+ Run 380234 excluded run quality poor - reject
+ Run 380239 excluded run quality poor - reject
+ Run 380242 excluded lumi only 0.000000 < 0.200000 - reject!
+ Run 380250 excluded lumi only 0.000000 < 0.200000 - reject!
+ Run 380255 excluded lumi only 0.000000 < 0.200000 - reject!
+ Run 380257 excluded run quality poor - reject
+ Run 380258 excluded lumi only 0.000000 < 0.200000 - reject!
+ Run 380276 excluded run quality poor - reject
+ Run 380277 excluded trigger phase below limit - reject
+ Run 380278 excluded run quality poor - reject
+ Run 380279 excluded run quality poor - reject
+ Run 380280 excluded lumi only 0.000000 < 0.200000 - reject!
+ Run 380281 excluded run quality poor - reject
+ Run 380314 excluded run quality poor - reject
+ Run 380315 excluded run quality poor - reject
+ Run 380317 excluded lumi only 0.000000 < 0.200000 - reject!
+ Run 380333 excluded run quality poor - reject
+ Run 380334 excluded run quality poor - reject
+ Run 380353 excluded run quality poor - reject
+ Run 380356 excluded trigger phase below limit - reject
+ Run 380357 excluded trigger phase below limit - reject
+ Run 380358 excluded trigger phase below limit - reject
+ Run 380359 excluded trigger phase below limit - reject
+ Run 380360 excluded trigger phase below limit - reject
+ Run 380361 excluded run quality poor - reject
+ Run 380364 excluded trigger phase below limit - reject
+ Run 380365 excluded trigger phase below limit - reject
+ Run 380366 excluded lumi only 0.000000 < 0.200000 - reject!
+ Run 380367 excluded lumi only 0.000000 < 0.200000 - reject!
+ Run 380368 excluded lumi only 0.000000 < 0.200000 - reject!
+ Run 380388 excluded run quality poor - reject
+ Run 380398 excluded run quality poor - reject
+ Run 380412 excluded lumi only 0.089949 < 0.200000 - reject!
+ Run 380499 excluded run quality poor - reject
+ Run 380564 excluded run quality poor - reject
+ Run 380610 excluded run quality poor - reject
+ Run 380611 excluded run quality poor - reject
+ Run 380612 excluded run quality poor - reject
+ Run 380614 excluded run quality poor - reject
+ Run 380617 excluded run quality poor - reject
+ Run 380618 excluded run quality poor - reject
+ Run 380619 excluded run quality poor - reject
+ Run 380620 excluded run quality poor - reject
+ Run 380621 excluded run quality poor - reject
+ Run 380622 excluded run quality poor - reject
+ Run 380623 excluded selected subtrigs not enabled - reject
+ Run 380627 excluded run quality poor - reject
+ Run 380650 excluded lumi only 0.101067 < 0.200000 - reject!
+ Run 380668 excluded run quality poor - reject
+ Run 380691 excluded run quality poor - reject
+ Run 380692 excluded run quality poor - reject
+ Run 380693 excluded run quality poor - reject
+ Run 380711 excluded run quality poor - reject
+ Run 380713 excluded run quality poor - reject
+ Run 380715 excluded lumi only 0.000000 < 0.200000 - reject!
+ Run 380793 excluded run quality poor - reject
+ Run 380821 excluded run quality poor - reject
+ Run 380827 excluded run quality poor - reject
+ Run 381212 excluded run quality poor - reject
+ Run 381214 excluded run quality poor - reject
+ Run 381240 excluded run quality poor - reject
+ Run 381315 excluded run quality poor - reject
+ Run 381336 excluded run quality poor - reject
+ Run 381338 excluded run quality poor - reject
+ Run 381339 excluded run quality poor - reject
+ Run 381341 excluded run quality poor - reject
+ Run 381343 excluded run quality poor - reject
+ Run 381348 excluded run quality poor - reject
+ Run 381352 excluded det not in trigger or readout- reject
+ Run 381353 excluded run quality poor - reject
+ Run 381354 excluded det not in trigger or readout- reject
+ Run 381356 excluded run quality poor - reject
+ Run 381357 excluded run quality poor - reject
+ Run 381358 excluded run quality poor - reject
+ Run 381367 excluded run quality poor - reject
+ Run 381377 excluded lumi only 0.000000 < 0.200000 - reject!
+ Run 381382 excluded run quality poor - reject
+ Run 381384 excluded lumi only 0.000000 < 0.200000 - reject!
+ Run 381389 excluded run quality poor - reject
+ Run 381390 excluded run quality poor - reject
+ Run 381411 excluded run quality poor - reject
+ Run 381418 excluded run quality poor - reject
+ Run 381420 excluded run quality poor - reject
+ Run 381438 excluded run quality poor - reject
+ Run 381439 excluded run quality poor - reject
+ Run 381440 excluded run quality poor - reject
+ Run 381500 excluded run quality poor - reject
+ Run 381503 excluded run quality poor - reject
+ Run 381511 excluded run quality poor - reject
+ Run 381527 excluded run quality poor - reject
+ Run 381528 excluded run quality poor - reject
+ Run 381529 excluded run quality poor - reject
+ Run 381530 excluded run quality poor - reject
+ Run 381532 excluded run quality poor - reject
+ Run 381541 excluded run quality poor - reject
+ Run 381545 excluded run quality poor - reject
+ Run 381546 excluded run quality poor - reject
+ Run 381625 excluded run quality poor - reject
+ Run 381629 excluded run quality poor - reject
+ Run 381645 excluded run quality poor - reject
+ Run 381654 excluded run quality poor - reject
+ Run 381655 excluded run quality poor - reject
+ Run 381656 excluded det not in trigger or readout- reject
+ Run 381657 excluded det not in trigger or readout- reject
+ Run 381658 excluded run quality poor - reject
+ Run 381661 excluded run quality poor - reject
+ Run 381674 excluded run quality poor - reject
+ Run 381703 excluded run quality poor - reject
+ Run 381705 excluded trigger phase below limit - reject
+ Run 381714 excluded run quality poor - reject
+ Run 381731 excluded run quality poor - reject
+ Run 381732 excluded run quality poor - reject
+ Run 381734 excluded run quality poor - reject
+ Run 381735 excluded run quality poor - reject
+ Run 381740 excluded run quality poor - reject
+ Run 381804 excluded run quality poor - reject
+ Run 381822 excluded run quality poor - reject
+ Run 381848 excluded run quality poor - reject
+ Run 381910 excluded run quality poor - reject
+ Run 381911 excluded run quality poor - reject
+ Run 381917 excluded run quality poor - reject
+ Run 381918 excluded run quality poor - reject
+ Run 381919 excluded run quality poor - reject
+ Run 381947 excluded run quality poor - reject
+ Run 381948 excluded run quality poor - reject
+ Run 381949 excluded trigger phase below limit - reject
+ Run 382124 excluded run quality poor - reject
+ Run 382131 excluded run quality poor - reject
+ Run 382138 excluded trigger phase below limit - reject
+ Run 382142 excluded trigger phase below limit - reject
+ Run 382150 excluded run quality poor - reject
+ Run 382151 excluded run quality poor - reject
+ Run 382162 excluded run quality poor - reject
+ Run 382163 excluded run quality poor - reject
+ Run 382164 excluded lumi only 0.000000 < 0.200000 - reject!
+ Run 382180 excluded run quality poor - reject
+ Run 382288 excluded run quality poor - reject
+ Run 382290 excluded run quality poor - reject
+ Run 382313 excluded run quality poor - reject
+ Run 382391 excluded run quality poor - reject
+ Run 382398 excluded run quality poor - reject
+ Run 382402 excluded run quality poor - reject
+ Run 382407 excluded run quality poor - reject
+ Run 382416 excluded run quality poor - reject
+ Run 382440 excluded run quality poor - reject
+ Run 382453 excluded lumi only 0.000000 < 0.200000 - reject!
+ Run 382472 excluded run quality poor - reject
+ Run 382473 excluded run quality poor - reject
+ Run 382474 excluded run quality poor - reject
+ Run 382475 excluded run quality poor - reject
+ Run 382476 excluded errors during lumi calculation - reject
+ Run 382483 excluded run quality poor - reject
+ Run 382496 excluded run quality poor - reject
+ Run 382507 excluded run quality poor - reject
+ Run 382508 excluded run quality poor - reject
+ Run 382525 excluded run quality poor - reject
+ Run 382552 excluded run quality poor - reject
+ Run 382577 excluded run quality poor - reject
+ Run 382580 excluded run quality poor - reject
+ Run 382600 excluded run quality poor - reject
+ Run 382652 excluded run quality poor - reject
+ Run 382664 excluded run quality poor - reject
+ Run 382670 excluded run quality poor - reject
+ Run 382688 excluded run quality poor - reject
+ Run 382702 excluded run quality poor - reject
+ Run 382714 excluded run quality poor - reject
+ Run 382716 excluded run quality poor - reject
+ Run 382761 excluded run quality poor - reject
+ Run 382771 excluded run quality poor - reject
+ Run 382782 excluded run quality poor - reject
+ Run 382824 excluded run quality poor - reject
+ Run 382838 excluded run quality poor - reject
+ Run 382843 excluded run quality poor - reject
+ Run 382850 excluded run quality poor - reject
+ Run 382851 excluded run quality poor - reject
+ Run 382852 excluded trigger phase below limit - reject
+ Run 382867 excluded run quality poor - reject
+ Run 382872 excluded run quality poor - reject
+ Run 382894 excluded run quality poor - reject
+ Run 382897 excluded run quality poor - reject
+ Run 382902 excluded run quality poor - reject
+ Run 382922 excluded run quality poor - reject
+ Run 382926 excluded run quality poor - reject
+ Run 382961 excluded run quality poor - reject
+ Run 382964 excluded run quality poor - reject
+ Run 382968 excluded run quality poor - reject
+ Run 383016 excluded run quality poor - reject
+ Run 383020 excluded run quality poor - reject
+ Run 383028 excluded run quality poor - reject
+ Run 383053 excluded run quality poor - reject
+ Run 383054 excluded run quality poor - reject
+ Run 383055 excluded run quality poor - reject
+ Run 383069 excluded run quality poor - reject
+ Run 383081 excluded run quality poor - reject
+ Run 383131 excluded run quality poor - reject
+ Run 383163 excluded run quality poor - reject
+ Run 383164 excluded run quality poor - reject
+ Run 383191 excluded run quality poor - reject
+ Run 383200 excluded run quality poor - reject
+ Run 383201 excluded run quality poor - reject
+ Run 383202 excluded run quality poor - reject
+ Run 383203 excluded run quality poor - reject
+ Run 383214 excluded run quality poor - reject
+ Run 383215 excluded run quality poor - reject
+ Run 383216 excluded run quality poor - reject
+ Run 383217 excluded run quality poor - reject
+ Run 383302 excluded run quality poor - reject
+ Run 383361 excluded run quality poor - reject
+ Run 383362 excluded trigger phase below limit - reject
+ Run 383377 excluded run quality poor - reject
+ Run 383380 excluded run quality poor - reject
+ Run 383381 excluded run quality poor - reject
+ Run 383382 excluded run quality poor - reject
+ Run 383383 excluded run quality poor - reject
+ Run 383385 excluded run quality poor - reject
+ Run 383386 excluded run quality poor - reject
+ Run 383387 excluded run quality poor - reject
+ Run 383388 excluded run quality poor - reject
+ Run 383421 excluded run quality poor - reject
+ Run 383422 excluded run quality poor - reject
+ Run 383423 excluded run quality poor - reject
+ Run 383424 excluded run quality poor - reject
+ Run 383425 excluded run quality poor - reject
+ Run 383458 excluded run quality poor - reject
+ Run 383480 excluded run quality poor - reject
+ Run 383486 excluded run quality poor - reject
+ Run 383538 excluded run quality poor - reject
+ Run 383544 excluded run quality poor - reject
+ Run 383553 excluded run quality poor - reject
+ Run 383592 excluded run quality poor - reject
+ Run 383593 excluded run quality poor - reject
+ Run 383601 excluded run quality poor - reject
+ Run 383645 excluded run quality poor - reject
+ Run 383649 excluded run quality poor - reject
+ Run 383660 excluded run quality poor - reject
+ Run 383666 excluded run quality poor - reject
+ Run 383668 excluded run quality poor - reject
+ Run 383669 excluded run quality poor - reject
+ Run 383676 excluded run quality poor - reject
+ Run 383679 excluded run quality poor - reject
+ Run 383680 excluded run quality poor - reject
+ Run 383682 excluded run quality poor - reject
+ Run 383683 excluded run quality poor - reject
+ Run 383684 excluded run quality poor - reject
+ Run 383685 excluded run quality poor - reject
+ Run 383686 excluded run quality poor - reject
+ Run 383687 excluded run quality poor - reject
+ Run 383690 excluded run quality poor - reject
+ Run 383692 excluded run quality poor - reject
+ Run 383701 excluded run quality poor - reject
+ Run 383702 excluded run quality poor - reject
+ Run 383740 excluded run quality poor - reject
+ Run 383742 excluded run quality poor - reject
+ Run 383828 excluded run quality poor - reject
+ Run 383835 excluded run quality poor - reject
+ Run 383939 excluded run quality poor - reject
+ Run 383947 excluded run quality poor - reject
+ Run 383949 excluded run quality poor - reject
+ Run 383950 excluded run quality poor - reject
+ Run 383959 excluded run quality poor - reject
+ Run 383973 excluded run quality poor - reject
+ Run 383974 excluded run quality poor - reject
+ Run 383977 excluded run quality poor - reject
+ Run 383981 excluded run quality poor - reject
+ Run 383982 excluded run quality poor - reject
+ Run 383985 excluded run quality poor - reject
+ Run 383987 excluded run quality poor - reject
+ Run 383988 excluded run quality poor - reject
+ Run 383996 excluded run quality poor - reject
+ Run 384022 excluded run quality poor - reject
+ Run 384027 excluded run quality poor - reject
+ Run 384028 excluded run quality poor - reject
+ Run 384032 excluded run quality poor - reject
+ Run 384076 excluded run quality poor - reject
+ Run 384078 excluded run quality poor - reject
+ Run 384090 excluded trigger phase below limit - reject
+ Run 384091 excluded run quality poor - reject
+ Run 384116 excluded run quality poor - reject
+ Run 384117 excluded run quality poor - reject
+ Run 384119 excluded run quality poor - reject
+ Run 384120 excluded run quality poor - reject
+ Run 384123 excluded run quality poor - reject
+ Run 384138 excluded run quality poor - reject
+ Run 384217 excluded run quality poor - reject
+ Run 384218 excluded run quality poor - reject
+ Run 384219 excluded run quality poor - reject
+ Run 384220 excluded det not in trigger or readout- reject
+ Run 384221 excluded det not in trigger or readout- reject
+ Run 384222 excluded det not in trigger or readout- reject
+ Run 384223 excluded det not in trigger or readout- reject
+ Run 384224 excluded run quality poor - reject
+ Run 384225 excluded lumi only 0.060579 < 0.200000 - reject!
+ Run 384236 excluded run quality poor - reject
+ Run 384242 excluded run quality poor - reject
+ Run 384262 excluded run quality poor - reject
+ Run 384310 excluded run quality poor - reject
+ Run 384319 excluded run quality poor - reject
+ Run 384326 excluded run quality poor - reject
+ Run 384332 excluded run quality poor - reject
+ Run 384338 excluded run quality poor - reject
+ Run 384341 excluded det not in trigger or readout- reject
+ Run 384342 excluded det not in trigger or readout- reject
+ Run 384357 excluded run quality poor - reject
+ Run 384358 excluded run quality poor - reject
+ Run 384362 excluded run quality poor - reject
+ Run 384363 excluded run quality poor - reject
+ Run 384364 excluded run quality poor - reject
+ Run 384399 excluded run quality poor - reject
+ Run 384449 excluded run quality poor - reject
+ Run 384462 excluded run quality poor - reject
+ Run 384550 excluded run quality poor - reject
+ Run 384552 excluded trigger phase below limit - reject
+ Run 384564 excluded run quality poor - reject
+ Run 384565 excluded run quality poor - reject
+ Run 384566 excluded run quality poor - reject
+ Run 384836 excluded excluded by input steering
+ Run 384837 excluded excluded by input steering
+ Run 384838 excluded excluded by input steering
+ Run 384840 excluded excluded by input steering
+ Run 384841 excluded excluded by input steering
+ Run 384842 excluded excluded by input steering
+ Run 384844 excluded excluded by input steering
+ Run 384845 excluded excluded by input steering
+ Run 384846 excluded excluded by input steering
+ Run 384847 excluded excluded by input steering
+ Run 384848 excluded excluded by input steering
+ Run 384849 excluded excluded by input steering
+ Run 384851 excluded excluded by input steering
+ Run 384856 excluded excluded by input steering
+ Run 384859 excluded excluded by input steering
+ Run 384860 excluded excluded by input steering
+ Run 384861 excluded excluded by input steering
+ Run 384862 excluded excluded by input steering
+ Run 384863 excluded excluded by input steering
+ Run 384866 excluded excluded by input steering
+ Run 384867 excluded excluded by input steering
+ Run 384868 excluded excluded by input steering
+ Run 384870 excluded excluded by input steering
+ Run 384871 excluded excluded by input steering
+ Run 384872 excluded excluded by input steering
+ Run 384873 excluded excluded by input steering
+ Run 384964 excluded excluded by input steering
+ Run 384965 excluded excluded by input steering
+ Run 384966 excluded excluded by input steering
+ Run 384967 excluded excluded by input steering
+ Run 384968 excluded excluded by input steering
+ Run 384969 excluded excluded by input steering
+ Run 384970 excluded excluded by input steering
+ Run 384991 excluded excluded by input steering
+ Run 384992 excluded excluded by input steering
+ Run 384994 excluded excluded by input steering
+ Run 384996 excluded excluded by input steering
+ Run 384997 excluded excluded by input steering
+ Run 385001 excluded excluded by input steering
+ Run 385002 excluded excluded by input steering
+ Run 385007 excluded excluded by input steering
+ Run 385008 excluded excluded by input steering
+ Run 385009 excluded excluded by input steering
+ Run 385010 excluded excluded by input steering
+ Run 385011 excluded excluded by input steering
+ Run 385013 excluded excluded by input steering
+ Run 385015 excluded excluded by input steering
+ Run 385016 excluded excluded by input steering
+ Run 385017 excluded excluded by input steering
+ Run 385031 excluded excluded by input steering
+ Run 385032 excluded excluded by input steering
+ Run 385034 excluded excluded by input steering
+ Run 385035 excluded excluded by input steering
+ Run 385036 excluded excluded by input steering
+ Run 385037 excluded excluded by input steering
+ Run 385038 excluded excluded by input steering
+ Run 385039 excluded excluded by input steering
+ Run 385040 excluded excluded by input steering
+ Run 385041 excluded excluded by input steering
+ Run 385044 excluded excluded by input steering
+ Run 385046 excluded excluded by input steering
+ Run 385054 excluded excluded by input steering
+ Run 385055 excluded excluded by input steering
+ Run 385063 excluded excluded by input steering
+ Run 385064 excluded excluded by input steering
+ Run 385065 excluded excluded by input steering
+ Run 385068 excluded excluded by input steering
+ Run 385069 excluded excluded by input steering
+ Run 385071 excluded excluded by input steering
+ Run 385073 excluded excluded by input steering
+ Run 385323 excluded run quality poor - reject
+ Run 385328 excluded run quality poor - reject
+ Run 385329 excluded run quality poor - reject
+ Run 385330 excluded run quality poor - reject
+ Run 385331 excluded run quality poor - reject
+ Run 385378 excluded run quality poor - reject
+ Run 385479 excluded run quality poor - reject
+ Run 385488 excluded run quality poor - reject
+ Run 385489 excluded run quality poor - reject
+ Run 385491 excluded run quality poor - reject
+ Run 385492 excluded run quality poor - reject
+ Run 385495 excluded run quality poor - reject
+ Run 385513 excluded run quality poor - reject
+ Run 385592 excluded run quality poor - reject
+ Run 385594 excluded run quality poor - reject
+ Run 385595 excluded run quality poor - reject
+ Run 385597 excluded trigger phase below limit - reject
+ Run 385623 excluded run quality poor - reject
+ Run 385650 excluded errors during lumi calculation - reject
+ Run 385651 excluded run quality poor - reject
+ Run 385717 excluded run quality poor - reject
+ Run 385718 excluded run quality poor - reject
+ Run 385741 excluded run quality poor - reject
+ Run 385784 excluded run quality poor - reject
+ Run 385785 excluded run quality poor - reject
+ Run 385809 excluded run quality poor - reject
+ Run 385825 excluded run quality poor - reject
+ Run 385826 excluded run quality poor - reject
+ Run 385827 excluded run quality poor - reject
+ Run 385832 excluded run quality poor - reject
+ Run 385841 excluded run quality poor - reject
+ Run 385846 excluded high selected subtrigger prescale - reject
+ Run 385847 excluded high selected subtrigger prescale - reject
+ Run 385848 excluded high selected subtrigger prescale - reject
+ Run 385851 excluded run quality poor - reject
+ Run 385853 excluded run quality poor - reject
+ Run 385855 excluded run quality poor - reject
+ Run 385860 excluded run quality poor - reject
+ Run 385861 excluded run quality poor - reject
+ Run 385864 excluded run quality poor - reject
+ Run 385865 excluded run quality poor - reject
+ Run 385866 excluded run quality poor - reject
+ Run 385867 excluded run quality poor - reject
+ Run 385868 excluded run quality poor - reject
+ Run 385869 excluded run quality poor - reject
+ Run 385870 excluded run quality poor - reject
+ Run 385872 excluded run quality poor - reject
+ Run 385874 excluded high selected subtrigger prescale - reject
+ Run 385875 excluded run quality poor - reject
+ Run 385881 excluded run quality poor - reject
+ Run 385884 excluded high selected subtrigger prescale - reject
+ Run 385885 excluded high selected subtrigger prescale - reject
+ Run 385886 excluded high selected subtrigger prescale - reject
+ Run 385899 excluded run quality poor - reject
+ Run 385954 excluded run quality poor - reject
+ Run 385955 excluded run quality poor - reject
+ Run 385961 excluded run quality poor - reject
+ Run 385962 excluded run quality poor - reject
+ Run 385964 excluded run quality poor - reject
+ Run 385965 excluded errors during lumi calculation - reject
+ Run 386001 excluded run quality poor - reject
+ Run 386003 excluded errors during lumi calculation - reject
+ Run 386030 excluded run quality poor - reject
+ Run 386038 excluded run quality poor - reject
+ Run 386040 excluded trigger phase below limit - reject
+ Run 386045 excluded lumi only 0.000000 < 0.200000 - reject!
+ Run 386046 excluded lumi only 0.000000 < 0.200000 - reject!
+ Run 386050 excluded lumi only 0.000000 < 0.200000 - reject!
+ Run 386060 excluded run quality poor - reject
+ Run 386061 excluded run quality poor - reject
+ Run 386077 excluded run quality poor - reject
+ Run 386089 excluded run quality poor - reject
+ Run 386121 excluded run quality poor - reject
+ Run 386131 excluded run quality poor - reject
+ Run 386132 excluded run quality poor - reject
+ Run 386150 excluded run quality poor - reject
+ Run 386151 excluded run quality poor - reject
+ Run 386152 excluded run quality poor - reject
+ Run 386173 excluded errors during lumi calculation - reject
+ Run 386177 excluded run quality poor - reject
+ Run 386231 excluded run quality poor - reject
+ Run 386232 excluded run quality poor - reject
+ Run 386253 excluded run quality poor - reject
+ Run 386298 excluded run quality poor - reject
+ Run 386308 excluded run quality poor - reject
+ Run 386315 excluded run quality poor - reject
+ Run 386336 excluded run quality poor - reject
+ Run 386337 excluded run quality poor - reject
+ Run 386402 excluded run quality poor - reject
+ Run 386404 excluded run quality poor - reject
+ Run 386417 excluded run quality poor - reject
+ Run 386432 excluded run quality poor - reject
+ Run 386433 excluded run quality poor - reject
+ Run 386434 excluded run quality poor - reject
+ Run 386448 excluded run quality poor - reject
+ Run 386475 excluded run quality poor - reject
+ Run 386485 excluded run quality poor - reject
+ Run 386515 excluded run quality poor - reject
+ Run 386534 excluded run quality poor - reject
+ Run 386546 excluded run quality poor - reject
+ Run 386559 excluded run quality poor - reject
+ Run 386581 excluded run quality poor - reject
+ Run 386583 excluded run quality poor - reject
+ Run 386587 excluded run quality poor - reject
+ Run 386648 excluded run quality poor - reject
+ Run 386649 excluded run quality poor - reject
+ Run 386671 excluded run quality poor - reject
+ Run 386681 excluded run quality poor - reject
+ Run 387537 excluded run quality poor - reject
+ Run 387538 excluded run quality poor - reject
+ Run 387756 excluded run quality poor - reject
+ Run 387938 excluded run quality poor - reject
+ Run 387939 excluded run quality poor - reject
+ Run 387940 excluded run quality poor - reject
+ Run 387942 excluded trigger phase below limit - reject
+ Run 388026 excluded run quality poor - reject
+ Run 388027 excluded run quality poor - reject
+ Run 388028 excluded run quality poor - reject
+ Run 388029 excluded run quality poor - reject
+ Run 388030 excluded run quality poor - reject
+ Run 388033 excluded run quality poor - reject
+ Run 388038 excluded run quality poor - reject
+ Run 388039 excluded run quality poor - reject
+ Run 388042 excluded run quality poor - reject
+ Run 388043 excluded run quality poor - reject
+ Run 388044 excluded run quality poor - reject
+ Run 388047 excluded run quality poor - reject
+ Run 388050 excluded run quality poor - reject
+ Run 388052 excluded run quality poor - reject
+ Run 388053 excluded run quality poor - reject
+ Run 388069 excluded run quality poor - reject
+ Run 388070 excluded run quality poor - reject
+ Run 388072 excluded run quality poor - reject
+ Run 388073 excluded run quality poor - reject
+ Run 388083 excluded run quality poor - reject
+ Run 388145 excluded run quality poor - reject
+ Run 388146 excluded run quality poor - reject
+ Run 388147 excluded run quality poor - reject
+ Run 388149 excluded run quality poor - reject
+ Run 388156 excluded run quality poor - reject
+ Run 388158 excluded run quality poor - reject
+ Run 388159 excluded run quality poor - reject
+ Run 388160 excluded run quality poor - reject
+ Run 388161 excluded run quality poor - reject
+ Run 388162 excluded run quality poor - reject
+ Run 388164 excluded run quality poor - reject
+ Run 388165 excluded run quality poor - reject
+ Run 388166 excluded run quality poor - reject
+ Run 388167 excluded run quality poor - reject
+ Run 388168 excluded run quality poor - reject
+ Run 388170 excluded run quality poor - reject
+ Run 388171 excluded run quality poor - reject
+ Run 388172 excluded run quality poor - reject
+ Run 388173 excluded run quality poor - reject
+ Run 388174 excluded run quality poor - reject
+ Run 388176 excluded run quality poor - reject
+ Run 388177 excluded run quality poor - reject
+ Run 388178 excluded run quality poor - reject
+ Run 388179 excluded run quality poor - reject
+ Run 388182 excluded run quality poor - reject
+ Run 388183 excluded run quality poor - reject
+ Run 388184 excluded run quality poor - reject
+ Run 388185 excluded run quality poor - reject
+ Run 388186 excluded run quality poor - reject
+ Run 388187 excluded run quality poor - reject
+ Run 388189 excluded run quality poor - reject
+ Run 388190 excluded run quality poor - reject
+ Run 388191 excluded run quality poor - reject
+ Run 388192 excluded run quality poor - reject
+ Run 388193 excluded run quality poor - reject
+ Run 388195 excluded run quality poor - reject
+ Run 388197 excluded run quality poor - reject
+ Run 388201 excluded run quality poor - reject
+ Run 388202 excluded run quality poor - reject
+ Run 388204 excluded run quality poor - reject
+ Run 388207 excluded run quality poor - reject
+ Run 388208 excluded run quality poor - reject
+ Run 388211 excluded run quality poor - reject
+ Run 388214 excluded run quality poor - reject
+ Run 388216 excluded run quality poor - reject
+ Run 388218 excluded run quality poor - reject
+ Run 388220 excluded run quality poor - reject
+ Run 388221 excluded run quality poor - reject
+ Run 388222 excluded run quality poor - reject
+ Run 388225 excluded run quality poor - reject
+ Run 388226 excluded run quality poor - reject
+ Run 388227 excluded run quality poor - reject
+ Run 388228 excluded run quality poor - reject
+ Run 388229 excluded run quality poor - reject
+ Run 388232 excluded run quality poor - reject
+ Run 388234 excluded run quality poor - reject
+ Run 388235 excluded run quality poor - reject
+ Run 388236 excluded run quality poor - reject
+ Run 388237 excluded run quality poor - reject
+ Run 388238 excluded run quality poor - reject
+ Run 388239 excluded run quality poor - reject
+ Run 388240 excluded run quality poor - reject
+ Run 388241 excluded run quality poor - reject
+ Run 388242 excluded run quality poor - reject
+ Run 388243 excluded run quality poor - reject
+ Run 388245 excluded det not in trigger or readout- reject
+ Run 388247 excluded run quality poor - reject
+ Run 388256 excluded run quality poor - reject
+ Run 388261 excluded run quality poor - reject
+ Run 388282 excluded run quality poor - reject
+ Run 388283 excluded run quality poor - reject
+ Run 388301 excluded run quality poor - reject
+ Run 388318 excluded run quality poor - reject
+ Run 388345 excluded run quality poor - reject
+ Run 388347 excluded run quality poor - reject
+ Run 388349 excluded run quality poor - reject
+ Run 388351 excluded run quality poor - reject
+ Run 388352 excluded run quality poor - reject
+ Run 388353 excluded run quality poor - reject
+ Run 388355 excluded run quality poor - reject
+ Run 388358 excluded run quality poor - reject
+ Run 388365 excluded run quality poor - reject
+ Run 388367 excluded run quality poor - reject
+ Run 388371 excluded run quality poor - reject
+ Run 388372 excluded run quality poor - reject
+ Run 388377 excluded run quality poor - reject
+ Run 388378 excluded run quality poor - reject
+ Run 388379 excluded run quality poor - reject
+ Run 388380 excluded run quality poor - reject
+ Run 388381 excluded run quality poor - reject
+ Run 388382 excluded run quality poor - reject
+ Run 388383 excluded run quality poor - reject
+ Run 388384 excluded run quality poor - reject
+ Run 388385 excluded run quality poor - reject
+ Run 388386 excluded run quality poor - reject
+ Run 388387 excluded run quality poor - reject
+ Run 388388 excluded run quality poor - reject
+ Run 388389 excluded trigger phase below limit - reject
+ Run 388390 excluded trigger phase below limit - reject
+ Run 388391 excluded trigger phase below limit - reject
+ Run 388399 excluded lumi only 0.000000 < 0.200000 - reject!
+ Run 388455 excluded run quality poor - reject
+ Run 388456 excluded run quality poor - reject
+ Run 388458 excluded run quality poor - reject
+ Run 388459 excluded run quality poor - reject
+ Run 388460 excluded run quality poor - reject
+ Run 388461 excluded run quality poor - reject
+ Run 388468 excluded run quality poor - reject
+ Run 388469 excluded run quality poor - reject
+ Run 388470 excluded run quality poor - reject
+ Run 388471 excluded run quality poor - reject
+ Run 388472 excluded run quality poor - reject
+ Run 388543 excluded run quality poor - reject
+ Run 388545 excluded run quality poor - reject
+ Run 388547 excluded run quality poor - reject
+ Run 388549 excluded run quality poor - reject
+ Run 388551 excluded run quality poor - reject
+ Run 388553 excluded run quality poor - reject
+ Run 388555 excluded run quality poor - reject
+ Run 388556 excluded run quality poor - reject
+ Run 388558 excluded run quality poor - reject
+ Run 388559 excluded run quality poor - reject
+ Run 388560 excluded run quality poor - reject
+ Run 388561 excluded run quality poor - reject
+ Run 388563 excluded run quality poor - reject
+ Run 388564 excluded run quality poor - reject
+ Run 388565 excluded run quality poor - reject
+ Run 388566 excluded run quality poor - reject
+ Run 388569 excluded run quality poor - reject
+ Run 388572 excluded run quality poor - reject
+ Run 388573 excluded run quality poor - reject
+ Run 388574 excluded run quality poor - reject
+ Run 388576 excluded run quality poor - reject
+ Run 388577 excluded run quality poor - reject
+ Run 388579 excluded run quality poor - reject
+ Run 388585 excluded run quality poor - reject
+ Run 388587 excluded run quality poor - reject
+ Run 388588 excluded run quality poor - reject
+ Run 388589 excluded run quality poor - reject
+ Run 388590 excluded run quality poor - reject
+ Run 388592 excluded run quality poor - reject
+ Run 388593 excluded run quality poor - reject
+ Run 388594 excluded run quality poor - reject
+ Run 388599 excluded run quality poor - reject
+ Run 388652 excluded run quality poor - reject
+ Run 388656 excluded run quality poor - reject
+ Run 388660 excluded run quality poor - reject
+ Run 388661 excluded run quality poor - reject
+ Run 388668 excluded run quality poor - reject
+ Run 388673 excluded run quality poor - reject
+ Run 388674 excluded run quality poor - reject
+ Run 388676 excluded run quality poor - reject
+ Run 388677 excluded run quality poor - reject
+ Run 388680 excluded run quality poor - reject
+ Run 388681 excluded run quality poor - reject
+ Run 388682 excluded run quality poor - reject
+ Run 388683 excluded run quality poor - reject
+ Run 388685 excluded run quality poor - reject
+ Run 388701 excluded lumi only 0.073178 < 0.200000 - reject!
+ Run 388705 excluded run quality poor - reject
+ Run 388757 excluded run quality poor - reject
+ Run 388758 excluded run quality poor - reject
+ Run 388759 excluded run quality poor - reject
+ Run 388760 excluded run quality poor - reject
+ Run 388761 excluded run quality poor - reject
+ Run 388763 excluded run quality poor - reject
+ Run 388765 excluded run quality poor - reject
+ Run 388769 excluded trigger phase below limit - reject
+ Run 388772 excluded trigger phase below limit - reject
+ Run 388800 excluded lumi only 0.167819 < 0.200000 - reject!
+ Run 389086 excluded run quality poor - reject
+ Run 389095 excluded run quality poor - reject
+ Run 389100 excluded run quality poor - reject
+ Run 389134 excluded run quality poor - reject
+ Run 389137 excluded run quality poor - reject
+ Run 389190 excluded run quality poor - reject
+ Run 389191 excluded run quality poor - reject
+ Run 389214 excluded run quality poor - reject
+ Run 389215 excluded run quality poor - reject
+ Run 389216 excluded run quality poor - reject
+ Run 389228 excluded run quality poor - reject
+ Run 389249 excluded run quality poor - reject
+ Run 389250 excluded run quality poor - reject
+ Run 389251 excluded run quality poor - reject
+ Run 389252 excluded trigger phase below limit - reject
+ Run 389281 excluded run quality poor - reject
+ Run 389285 excluded run quality poor - reject
+ Run 389292 excluded run quality poor - reject
+ Run 389293 excluded run quality poor - reject
+ Run 389294 excluded run quality poor - reject
+ Run 389297 excluded run quality poor - reject
+ Run 389298 excluded run quality poor - reject
+ Run 389299 excluded run quality poor - reject
+ Run 389301 excluded run quality poor - reject
+ Run 389302 excluded run quality poor - reject
+ Run 389303 excluded run quality poor - reject
+ Run 389304 excluded run quality poor - reject
+ Run 389310 excluded run quality poor - reject
+ Run 389314 excluded run quality poor - reject
+ Run 389341 excluded run quality poor - reject
+ Run 389342 excluded run quality poor - reject
+ Run 389344 excluded run quality poor - reject
+ Run 389345 excluded run quality poor - reject
+ Run 389346 excluded run quality poor - reject
+ Run 389349 excluded run quality poor - reject
+ Run 389351 excluded run quality poor - reject
+ Run 389353 excluded run quality poor - reject
+ Run 389354 excluded run quality poor - reject
+ Run 389355 excluded run quality poor - reject
+ Run 389358 excluded run quality poor - reject
+ Run 389359 excluded run quality poor - reject
+ Run 389360 excluded run quality poor - reject
+ Run 389361 excluded run quality poor - reject
+ Run 389362 excluded run quality poor - reject
+ Run 389420 excluded run quality poor - reject
+ Run 389421 excluded run quality poor - reject
+ Run 389423 excluded run quality poor - reject
+ Run 389424 excluded run quality poor - reject
+ Run 389425 excluded run quality poor - reject
+ Run 389428 excluded run quality poor - reject
+ Run 389503 excluded run quality poor - reject
+ Run 389511 excluded run quality poor - reject
+ Run 389518 excluded errors during lumi calculation - reject
+ Run 389520 excluded run quality poor - reject
+ Run 389600 excluded run quality poor - reject
+ Run 389602 excluded run quality poor - reject
+ Run 389603 excluded run quality poor - reject
+ Run 389604 excluded run quality poor - reject
+ Run 389614 excluded run quality poor - reject
+ Run 389617 excluded run quality poor - reject
+ Run 389649 excluded run quality poor - reject
+ Run 389659 excluded run quality poor - reject
+ Run 389661 excluded run quality poor - reject
+ Run 389664 excluded lumi only 0.000000 < 0.200000 - reject!
+ Run 389670 excluded run quality poor - reject
+ Run 389744 excluded run quality poor - reject
+ Run 389746 excluded run quality poor - reject
+ Run 389748 excluded run quality poor - reject
+ Run 389749 excluded run quality poor - reject
+ Run 389765 excluded run quality poor - reject
+ Run 389767 excluded run quality poor - reject
+ Run 389775 excluded run quality poor - reject
+ Run 389782 excluded run quality poor - reject
+ Run 389783 excluded run quality poor - reject
+ Run 389786 excluded run quality poor - reject
+ Run 389787 excluded run quality poor - reject
+ Run 389796 excluded run quality poor - reject
+ Run 389802 excluded lumi only 0.055256 < 0.200000 - reject!
+ Run 389957 excluded run quality poor - reject
+ Run 390038 excluded run quality poor - reject
+ Run 390044 excluded run quality poor - reject
+ Run 390045 excluded run quality poor - reject
+ Run 390168 excluded run quality poor - reject
+ Run 390169 excluded run quality poor - reject
+ Run 390191 excluded run quality poor - reject
+ Run 390231 excluded run quality poor - reject
+ Run 390285 excluded run quality poor - reject
+ Run 390286 excluded run quality poor - reject
+ Run 390287 excluded run quality poor - reject
+ Run 390288 excluded run quality poor - reject
+ Run 390289 excluded run quality poor - reject
+ Run 390290 excluded run quality poor - reject
+ Run 390291 excluded run quality poor - reject
+ Run 390292 excluded run quality poor - reject
+ Run 390293 excluded run quality poor - reject
+ Run 390294 excluded run quality poor - reject
+ Run 390303 excluded errors during lumi calculation - reject
+ Run 390313 excluded run quality poor - reject
+ Run 390362 excluded run quality poor - reject
+ Run 390371 excluded run quality poor - reject
+ Run 390373 excluded errors during lumi calculation - reject
+ Run 390432 excluded run quality poor - reject
+ Run 390433 excluded run quality poor - reject
+ Run 390434 excluded run quality poor - reject
+ Run 390480 excluded run quality poor - reject
+ Run 390482 excluded run quality poor - reject
+ Run 390496 excluded errors during lumi calculation - reject
+ Run 390541 excluded run quality poor - reject
+ Run 390542 excluded run quality poor - reject
+ Run 390632 excluded run quality poor - reject
+ Run 390633 excluded run quality poor - reject
+ Run 390634 excluded run quality poor - reject
+ Run 390662 excluded run quality poor - reject
+ Run 390678 excluded run quality poor - reject
+ Run 390689 excluded run quality poor - reject
+ Run 390693 excluded run quality poor - reject
+ Run 390697 excluded run quality poor - reject
+ Run 390698 excluded run quality poor - reject
+ Run 390699 excluded run quality poor - reject
+ Run 390723 excluded run quality poor - reject
+ Run 390724 excluded det not in trigger or readout- reject
+ Run 390725 excluded run quality poor - reject
+ Run 390727 excluded run quality poor - reject
+ Run 390785 excluded run quality poor - reject
+ Run 390823 excluded run quality poor - reject
+ Run 390835 excluded run quality poor - reject
+ Run 390892 excluded run quality poor - reject
+ Run 391007 excluded run quality poor - reject
+ Run 391012 excluded run quality poor - reject
+ Run 391013 excluded run quality poor - reject
+ Run 391014 excluded run quality poor - reject
+ Run 391015 excluded run quality poor - reject
+ Run 391016 excluded run quality poor - reject
+ Run 391017 excluded run quality poor - reject
+ Run 391018 excluded run quality poor - reject
+ Run 391020 excluded run quality poor - reject
+ Run 391021 excluded run quality poor - reject
+ Run 391025 excluded run quality poor - reject
+ Run 391026 excluded run quality poor - reject
+ Run 391029 excluded run quality poor - reject
+ Run 391030 excluded run quality poor - reject
+ Run 391031 excluded run quality poor - reject
+ Run 391032 excluded run quality poor - reject
+ Run 391035 excluded run quality poor - reject
+ Run 391036 excluded run quality poor - reject
+ Run 391037 excluded run quality poor - reject
+ Run 391038 excluded run quality poor - reject
+ Run 391046 excluded high selected subtrigger prescale - reject
+ Run 391048 excluded high selected subtrigger prescale - reject
+ Run 391050 excluded high selected subtrigger prescale - reject
+ Run 391052 excluded high selected subtrigger prescale - reject
+ Run 391053 excluded lumi only 0.006485 < 0.200000 - reject!
+ Run 391072 excluded run quality poor - reject
+ Run 391075 excluded run quality poor - reject
+ Run 391130 excluded run quality poor - reject
+ Run 391131 excluded lumi only 0.000000 < 0.200000 - reject!
+ Run 391132 excluded lumi only 0.000000 < 0.200000 - reject!
+ Run 391203 excluded run quality poor - reject
+ Run 391204 excluded run quality poor - reject
+ Run 391215 excluded run quality poor - reject
+ Run 391224 excluded run quality poor - reject
+ Run 391241 excluded run quality poor - reject
+ Run 391242 excluded run quality poor - reject
+ Run 391246 excluded errors during lumi calculation - reject
+ Run 391272 excluded run quality poor - reject
+ Run 391283 excluded run quality poor - reject
+ Run 391290 excluded run quality poor - reject
+ Run 391300 excluded run quality poor - reject
+ Run 391305 excluded run quality poor - reject
+ Run 391307 excluded excluded by input steering
+ Run 391315 excluded run quality poor - reject
+ Run 391320 excluded run quality poor - reject
+ Run 391327 excluded run quality poor - reject
+ Run 391338 excluded run quality poor - reject
+ Run 391340 excluded run quality poor - reject
+ Run 391351 excluded run quality poor - reject
+ Run 391363 excluded run quality poor - reject
+ Run 391376 excluded run quality poor - reject
+ Run 391378 excluded run quality poor - reject
+ Run 391380 excluded run quality poor - reject
+ Run 391384 excluded excluded by input steering
+ Run 391388 excluded run quality poor - reject
+ Run 391393 excluded run quality poor - reject
+ Run 391452 excluded run quality poor - reject
+ Run 391457 excluded excluded by input steering
+ Run 391528 excluded run quality poor - reject
+ Run 391529 excluded run quality poor - reject
+ Run 391530 excluded run quality poor - reject
+ Run 391531 excluded run quality poor - reject
+ Run 391532 excluded run quality poor - reject
+ Run 391537 excluded run quality poor - reject
+ Run 391538 excluded run quality poor - reject
+ Run 391539 excluded run quality poor - reject
+ Run 391540 excluded run quality poor - reject
+ Run 391543 excluded run quality poor - reject
+ Run 391544 excluded run quality poor - reject
+ Run 391545 excluded run quality poor - reject
+ Run 391546 excluded run quality poor - reject
+ Run 391547 excluded run quality poor - reject
+ Run 391548 excluded run quality poor - reject
+ Run 391549 excluded run quality poor - reject
+ Run 391552 excluded run quality poor - reject
+ Run 391553 excluded run quality poor - reject
+ Run 391554 excluded run quality poor - reject
+ Run 391555 excluded run quality poor - reject
+ Run 391556 excluded run quality poor - reject
+ Run 391559 excluded run quality poor - reject
+ Run 391561 excluded run quality poor - reject
+ Run 391562 excluded run quality poor - reject
+ Run 391563 excluded run quality poor - reject
+ Run 391566 excluded run quality poor - reject
+ Run 391574 excluded run quality poor - reject
+ Run 391575 excluded run quality poor - reject
+ Run 391576 excluded run quality poor - reject
+ Run 391582 excluded run quality poor - reject
+ Run 391584 excluded run quality poor - reject
+ Run 391586 excluded run quality poor - reject
+ Run 391589 excluded run quality poor - reject
+ Run 391598 excluded lumi only 0.001565 < 0.200000 - reject!
+ Run 391599 excluded run quality poor - reject
+ Run 391602 excluded lumi only 0.040263 < 0.200000 - reject!
+ Run 391603 excluded run quality poor - reject
+ Run 391604 excluded lumi only 0.129151 < 0.200000 - reject!
+ Run 391649 excluded run quality poor - reject
+ Run 391655 excluded run quality poor - reject
+ Run 391668 excluded run quality poor - reject
+ Run 391678 excluded run quality poor - reject
+ Run 391748 excluded run quality poor - reject
+ Run 391755 excluded run quality poor - reject
+ Run 391759 excluded high selected subtrigger prescale - reject
+ Run 391773 excluded run quality poor - reject
+ Run 391775 excluded run quality poor - reject
+ Run 391783 excluded run quality poor - reject
+ Run 391785 excluded run quality poor - reject
+ Run 391880 excluded run quality poor - reject
+ Run 391885 excluded run quality poor - reject
+ Run 391891 excluded run quality poor - reject
+ Run 391904 excluded run quality poor - reject
+ Run 391916 excluded run quality poor - reject
+ Run 391923 excluded run quality poor - reject
+ Run 391926 excluded trigger phase below limit - reject
+ Run 391981 excluded run quality poor - reject
+ Run 391984 excluded run quality poor - reject
+ Run 391988 excluded run quality poor - reject
+ Run 392052 excluded run quality poor - reject
+ Run 392093 excluded run quality poor - reject
+ Run 392105 excluded lumi only 0.000000 < 0.200000 - reject!
+ Run 392106 excluded lumi only 0.000000 < 0.200000 - reject!
+ Run 392107 excluded lumi only 0.000000 < 0.200000 - reject!
+ Run 392108 excluded lumi only 0.000000 < 0.200000 - reject!
+ Run 392109 excluded lumi only 0.000000 < 0.200000 - reject!
+ Run 392132 excluded run quality poor - reject
+ Run 392133 excluded run quality poor - reject
+ Run 392159 excluded run quality poor - reject
+ Run 392160 excluded trigger phase below limit - reject
+ Run 392207 excluded run quality poor - reject

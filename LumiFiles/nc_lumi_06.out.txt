@@ -1,0 +1,140 @@
+
+====== H1CmdLine: Accepted command line options:
+     Option 'f' (file) was set with value 'nc_lumi_06.steer'
+     Option 's' (selected) was set with value 'nc_lumi_06_selected.txt'
+     Option 'e' (excluded) was set with value 'nc_lumi_06_excluded.txt'
+====== H1CmdLine: End of accepted command line options
+
+Info in <H1ErrorHandler::H1ErrorHandler>: Using H1ErrorHandler
+<H1ErrorHandler::SetMaxCount> Errors printed 1 times
+H1SteerManager: Searching for file /h1wgs/h1mpim15/x02/usr/kogler/jets/JetsAtHighQ2/nc_lumi_06.steer
+H1SteerManager: Searching for file nc_lumi_06.steer
+H1SteerManager: File nc_lumi_06.steer opened for reading
+
+======== H1SteerManager: Reading from file 'nc_lumi_06.steer' =============
+----- H1SteerOolumi()
+----- {
+----- fFirstRun=444312;
+----- fLastRun=466997;
+----- fExcludedRuns="445735";
+----- fMinRunLumi=0.2;
+----- fSubTrigs="67";
+----- fPrescaleLimit=1;
+----- fCJC1=1;
+----- fCJC2=1;
+----- fLAR=1;
+----- fTOF=1;
+----- fLUMI=1;
+----- fCIP=1;
+----- fCaloTrig=1;
+----- fZ0=0.0;
+----- fDZ=35;
+----- fComptonCorrection=1;
+----- }
+====== H1SteerManager: Accepted values from file 'nc_lumi_06.steer' ======
+--H1SteerOolumi values:
+first run 444312
+last run  466997
+Excluded Runs: 445735
+Minimal required lumi per run: 0.2 nb^(-1)
+Runs with TrigPhase < 2 are excluded
+Selected subtriggers:  67
+Prescale Limit: 1
+Z0 = 0, DZ = 35
+Requested detector components: 
+CJC1 CJC2 CIP LAR TOF LUMI CaloTrig ComptonCorrection
+======== H1SteerManager: Done reading from file 'nc_lumi_06.steer' ========
+
+start lumicalc
+
+Connected to FPSERVER on H1DB5
+
+Using run dependent info on file
+  /afs/desy.de/group/h1/root/checkout/oo-releases/releases/4.0.21/share/H1OOSnapshot.root, 
+  which is valid until run 511079.
+
+
+====== H1SteerManager: Using default values for class 'H1SteerDBManager'  ======
+--H1SteerDBManager values: All from snapshot.
+====== H1SteerManager: End of defaults for class 'H1SteerDBManager'  ===========
+
+Info in <H1DBManager::Instance>: Not registered at H1Tree!
+
+====== H1SteerManager: Using default values for class 'H1SteerConstants'  ======
+
+================================================================
+Steering for H1SteerConstants
+================================================================
+
+RunPeriod is set to - Not set!
+================================================================
+
+====== H1SteerManager: End of defaults for class 'H1SteerConstants'  ===========
+
+Warning in <H1NdbBank::GetIndex>: no LH1R bank in default NDB stream, taken from DATA stream
+
+<><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><>
+    SUMMARY OF LUMINOSITY AND POLARISATION INFORMATION FOR RUN RANGE 444312-466997
+<><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><>
+
+Found 3486 sele runs and 1426 excluded runs
+
+Integrated lumi from run 444312 to run 466997 is 57573.093750
+
+Prescale corrected lumi for subtrig 67 is 57573.093750, average prescale 1.0000
+Integrated lumi using lowest prescale trigger is 57573.093750
+
+Correction for the luminosity from the QED Compton analysis was used.
+  Luminosity without QEDC correction : 56875.078125
+  Luminosity with QEDC correction    : 57577.683594 (No trigger prescale correction!)
+  Average correction factor          : 1.012353
+  and stat error                     : 2.251783%
+
+
+<><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><>
+selected runs in text file nc_lumi_06_selected.txt
+excluded runs in text file nc_lumi_06_excluded.txt
+
+________________________________________________________
+H1ErrorHandler Summary
+
+Warning messages:
+   352  <H1NdbBank::GetIndex>: no LH1R bank in default NDB stream, taken from DATA stream
+
+(In total 352 messages at 1 locations logged)
+________________________________________________________
+
+ *NDB('/JOB')* NDBGHO: selecting FPSERVER on H1DB5
+ *NDB('/JOB')* NDB_FILE  ok: File opened for READ
+ *NDB('/JOB')* Database opened at 690705 4454
+ *NDB('/JOB')* H1NDB CMZ version is 1.02/25
+ *NDB('/JOB')* for READ      H1NDB CMZ version >= 1.03/00 is recommended
+ *NDB('/JOB')* using GNU ZIP with level   1
+ *NDB('/JOB')* NDBCDB current DB: H1 Master Database
+ *NDB('/JOB')* NDBCDB DB type: imported, last update 111304 4773
+ *NDB('/JOB')* NDBCDB MTAC set to    11186612
+ *NDB('ZTBU')* --- WARNING ---
+ *NDB('ZTBU')* NDB0: "ZTBU" EQ     444313 not found
+ *NDB('ZTBU')* --- WARNING ---
+ *NDB('ZTBU')* NDB0: "ZTBU" EQ     444315 not found
+ *NDB('ZTBU')* --- WARNING ---
+ *NDB('ZTBU')* NDB0: "ZTBU" EQ     444316 not found
+ *NDB('LH1R')* --- WARNING ---
+ *NDB('LH1R')* NDB0: "LH1R" EQ     444420 not found
+ *NDB('ZTBU')* --- WARNING ---
+ *NDB('ZTBU')* NDB0: "ZTBU" EQ     444444 not found
+ *NDB('ZTBU')* --- WARNING ---
+ *NDB('ZTBU')* NDB0: "ZTBU" EQ     444452 not found
+ *NDB('ZTBU')* --- WARNING ---
+ *NDB('ZTBU')* NDB0: "ZTBU" EQ     444454 not found
+ *NDB('ZTBU')* --- WARNING ---
+ *NDB('ZTBU')* NDB0: "ZTBU" EQ     444458 not found
+ *NDB('ZTBU')* --- WARNING ---
+ *NDB('ZTBU')* NDB0: "ZTBU" EQ     444465 not found
+ *NDB('ZTBU')* --- WARNING (LAST PRINTOUT) ---
+ *NDB('ZTBU')* NDB0: "ZTBU" EQ     444467 not found
+ *NDB('/END')* NDB_FILE  ok: File closed
+ *NDB('/END')* Database closed at 690705 4459
+ *NDB('/END')* total CPUtime of all NDB():      10.83 secs
+ *NDB('/END')* I/O statistics:            user             system      errors
+ *NDB('/END')* banks/words read     19646   3581351  32511   3780520     0

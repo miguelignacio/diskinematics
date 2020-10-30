@@ -1,0 +1,54 @@
+H1SteerOolumi()
+{
+  fFirstRun     = 399629;
+  fLastRun      = 436893;
+
+//    fFirstRun     = 399101;  // RH1 data (+ve helicity)
+//    fLastRun      = 402991;  // RH1 data (+ve helicity)
+
+//    fFirstRun     = 402992;  // LH1 data (-ve helicity)
+//    fLastRun      = 415619;  // LH1 data (-ve helicity)
+
+//    fFirstRun     = 415620;  // RH2 data (+ve helicity)
+//    fLastRun      = 427812;  // RH2 data (+ve helicity)
+
+//    fFirstRun     = 427813;  // LH2 data (-ve helicity)
+//    fLastRun      = 436893;  // LH2 data (-ve helicity)
+
+
+    fExcludedRunRanges = "408903,408927,
+                         404826,404848,
+                         409345, 410185,  // hot cell in had
+                        414908,418000,
+                        424009,424015";
+
+     fExcludedRunRanges = "404826,404848,  // test version of centraltriggercode(from Andrei)
+                           408903,408927,  // malfunction of cip trigger    
+                           409345,410185,  // Lar Hot cells Andrei
+ 		                   409350,409371,  // malfunction of cip trigger
+                           414908,418000,  // LArCalibration HV problems
+                           424009,424015"; // test LAr noise excluding 
+
+    //single runs
+    fExcludedRuns = "423993,423994,432105, 
+                     432105,436178,436179,  // downgraded to poor:missing LAr TEs and LAr
+                                            // HV problem and corrupted SpaCal data
+                     423993,423994";        //----downgraded to poor: LAr noise (J.Gayler)
+
+    fMinRunLumi = 0.2;
+    fSubTrigs   = "67";
+    fPrescaleLimit = 1;
+
+	fCJC1 = 1;
+	fCJC2 = 1;
+	fLAR  = 1;
+	fTOF  = 1;
+	fLUMI = 1;
+	fCIP  = 1;
+    fCaloTrig = 1;
+
+	fZ0   = 0.0;
+	fDZ   = 35;
+
+	fComptonCorrection = 1;
+}

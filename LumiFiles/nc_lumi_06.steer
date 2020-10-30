@@ -1,0 +1,30 @@
+H1SteerOolumi()
+{
+        fFirstRun     = 444312;
+        fLastRun      = 466997;
+
+//  fFirstRun     = 444094;  // RH1 data (+ve helicity)
+//  fLastRun      = 458792;  // RH1 data (+ve helicity)
+
+//  fFirstRun     = 458793;  // LH1 data (+ve helicity)
+//  fLastRun      = 466997;  // LH1 data (+ve helicity)
+
+    fExcludedRuns = "445735";  //Low yield (CJC, CIP off)
+
+    fMinRunLumi = 0.2;
+    fSubTrigs   = "67";
+    fPrescaleLimit = 1;
+
+	fCJC1 = 1;
+	fCJC2 = 1;
+	fLAR  = 1;
+	fTOF  = 1;
+	fLUMI = 1;
+	fCIP  = 1;
+    fCaloTrig = 1;
+
+	fZ0   = 0.0;
+	fDZ   = 35;
+
+    fComptonCorrection = 1;
+}

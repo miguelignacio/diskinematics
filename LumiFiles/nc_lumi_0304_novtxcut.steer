@@ -1,0 +1,48 @@
+H1SteerOolumi()
+{
+        fFirstRun     = 357072;
+        fLastRun      = 392213;
+
+//        fFirstRun     = 357072;    // RH1 data (+ve helicity)
+//        fLastRun      = 368000;
+
+//        fFirstRun     = 376563;    // LH  data (-ve helicity)
+//        fLastRun      = 386696;
+
+//        fFirstRun     = 386697;    // RH2 data (+ve helicity)
+//        fLastRun      = 392213;
+
+
+    // Excluded run ranges
+    fExcludedRunRanges = "360177,360281,    //web: armon not running
+        361882,362486,    //web: cip r/o problems
+        372336,372619,    //cip r/o problems
+        384836,385073";   //cip trigger bad following powerglitch
+
+    //Exclude single runs
+    fExcludedRuns = "367227,                //ORS: scanning calo off (DAQ problems ?)
+        367523,                //ORS: scanning calo off (DAQ problems ?)
+        369371,                 //ORS: scanning LAr noise (FB1E pattern)
+        371477,                 // low yield
+        379709,                 // low yield
+        379720,                 // low yield
+        391307,                 // low yield
+        391384,                 // low yield
+        391457";                // low yield
+
+
+    fMinRunLumi = 0.2;
+    fSubTrigs   = "67, 77";
+    fPrescaleLimit = 1;
+
+	fCJC1 = 1;
+	fCJC2 = 1;
+	fLAR  = 1;
+	fTOF  = 1;
+	fLUMI = 1;
+	fCIP  = 1;
+    fCaloTrig = 1;
+
+    fZ0   = 0.0;
+    fDZ   = 150;
+}

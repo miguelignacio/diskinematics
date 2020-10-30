@@ -1,0 +1,155 @@
+
+====== H1CmdLine: Accepted command line options:
+     Option 'f' (file) was set with value 'nc_lumi_0304.steer'
+     Option 's' (selected) was set with value 'nc_lumi_0304_selected.txt'
+     Option 'e' (excluded) was set with value 'nc_lumi_0304_excluded.txt'
+====== H1CmdLine: End of accepted command line options
+
+Info in <H1ErrorHandler::H1ErrorHandler>: Using H1ErrorHandler
+<H1ErrorHandler::SetMaxCount> Errors printed 1 times
+H1SteerManager: Searching for file /h1wgs/h1mpim15/x02/usr/kogler/jets/JetsAtHighQ2/nc_lumi_0304.steer
+H1SteerManager: Searching for file nc_lumi_0304.steer
+H1SteerManager: File nc_lumi_0304.steer opened for reading
+
+======== H1SteerManager: Reading from file 'nc_lumi_0304.steer' =============
+----- H1SteerOolumi()
+----- {
+----- fFirstRun=357160;
+----- fLastRun=392213;
+----- fExcludedRunRanges="360177,360281,
+----- 361882,362486,
+----- 372336,372619,
+----- 384836,385073";
+----- fExcludedRuns="367227,
+----- 367523,
+----- 369371,
+----- 371477,
+----- 379709,
+----- 379720,
+----- 391307,
+----- 391384,
+----- 391457";
+----- fMinRunLumi=0.2;
+----- fSubTrigs="67";
+----- fPrescaleLimit=1;
+----- fCJC1=1;
+----- fCJC2=1;
+----- fLAR=1;
+----- fTOF=1;
+----- fLUMI=1;
+----- fCIP=1;
+----- fCaloTrig=1;
+----- fZ0=0.0;
+----- fDZ=35;
+----- fComptonCorrection=1;
+----- }
+====== H1SteerManager: Accepted values from file 'nc_lumi_0304.steer' ======
+--H1SteerOolumi values:
+first run 357160
+last run  392213
+Excluded Run Ranges: 360177-360281, 361882-362486, 372336-372619, 384836-385073
+Excluded Runs: 367227, 367523, 369371, 371477, 379709, 379720, 391307, 391384, 391457
+Minimal required lumi per run: 0.2 nb^(-1)
+Runs with TrigPhase < 2 are excluded
+Selected subtriggers:  67
+Prescale Limit: 1
+Z0 = 0, DZ = 35
+Requested detector components: 
+CJC1 CJC2 CIP LAR TOF LUMI CaloTrig ComptonCorrection
+======== H1SteerManager: Done reading from file 'nc_lumi_0304.steer' ========
+
+start lumicalc
+
+Connected to FPSERVER on H1DB5
+
+Using run dependent info on file
+  /afs/desy.de/group/h1/root/checkout/oo-releases/releases/4.0.21/share/H1OOSnapshot.root, 
+  which is valid until run 511079.
+
+
+====== H1SteerManager: Using default values for class 'H1SteerDBManager'  ======
+--H1SteerDBManager values: All from snapshot.
+====== H1SteerManager: End of defaults for class 'H1SteerDBManager'  ===========
+
+Info in <H1DBManager::Instance>: Not registered at H1Tree!
+
+====== H1SteerManager: Using default values for class 'H1SteerConstants'  ======
+
+================================================================
+Steering for H1SteerConstants
+================================================================
+
+RunPeriod is set to - Not set!
+================================================================
+
+====== H1SteerManager: End of defaults for class 'H1SteerConstants'  ===========
+
+Warning in <H1NdbBank::GetIndex>: no LH1R bank in default NDB stream, taken from DATA stream
+Warning in <H1RunQuality::Quality>: 367231 is not in range of validity (367227 to 367230)!
+
+<><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><>
+    SUMMARY OF LUMINOSITY AND POLARISATION INFORMATION FOR RUN RANGE 357160-392213
+<><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><>
+
+Found 4017 sele runs and 2745 excluded runs
+
+Integrated lumi from run 357160 to run 392213 is 53706.105469
+
+Prescale corrected lumi for subtrig 67 is 53706.105469, average prescale 1.0000
+Integrated lumi using lowest prescale trigger is 53706.105469
+
+Correction for the luminosity from the QED Compton analysis was used.
+  Luminosity without QEDC correction : 52141.050781
+  Luminosity with QEDC correction    : 53718.031250 (No trigger prescale correction!)
+  Average correction factor          : 1.030245
+  and stat error                     : 2.507787%
+
+
+<><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><>
+selected runs in text file nc_lumi_0304_selected.txt
+excluded runs in text file nc_lumi_0304_excluded.txt
+
+________________________________________________________
+H1ErrorHandler Summary
+
+Warning messages:
+   684  <H1NdbBank::GetIndex>: no LH1R bank in default NDB stream, taken from DATA stream
+    26  <H1RunQuality::Quality>: 367231 is not in range of validity (367227 to 367230)!
+
+(In total 710 messages at 2 locations logged)
+________________________________________________________
+
+ *NDB('/JOB')* NDBGHO: selecting FPSERVER on H1DB5
+ *NDB('/JOB')* NDB_FILE  ok: File opened for READ
+ *NDB('/JOB')* Database opened at 690705 4419
+ *NDB('/JOB')* H1NDB CMZ version is 1.02/25
+ *NDB('/JOB')* for READ      H1NDB CMZ version >= 1.03/00 is recommended
+ *NDB('/JOB')* using GNU ZIP with level   1
+ *NDB('/JOB')* NDBCDB current DB: H1 Master Database
+ *NDB('/JOB')* NDBCDB DB type: imported, last update 111304 4773
+ *NDB('/JOB')* NDBCDB MTAC set to    11186612
+ *NDB('ZTBU')* --- WARNING ---
+ *NDB('ZTBU')* NDB0: "ZTBU" EQ     357165 not found
+ *NDB('LH1R')* --- WARNING ---
+ *NDB('LH1R')* NDB0: "LH1R" EQ     357174 not found
+ *NDB('LH1R')* --- WARNING ---
+ *NDB('LH1R')* NDB0: "LH1R" EQ     357189 not found
+ *NDB('LH1R')* --- WARNING ---
+ *NDB('LH1R')* NDB0: "LH1R" EQ     357195 not found
+ *NDB('LH1R')* --- WARNING ---
+ *NDB('LH1R')* NDB0: "LH1R" EQ     357196 not found
+ *NDB('LH1R')* --- WARNING ---
+ *NDB('LH1R')* NDB0: "LH1R" EQ     357197 not found
+ *NDB('LH1R')* --- WARNING ---
+ *NDB('LH1R')* NDB0: "LH1R" EQ     357199 not found
+ *NDB('ZTBU')* --- WARNING ---
+ *NDB('ZTBU')* NDB0: "ZTBU" EQ     357202 not found
+ *NDB('ZTBU')* --- WARNING ---
+ *NDB('ZTBU')* NDB0: "ZTBU" EQ     357207 not found
+ *NDB('ZTBU')* --- WARNING (LAST PRINTOUT) ---
+ *NDB('ZTBU')* NDB0: "ZTBU" EQ     357232 not found
+ *NDB('/END')* NDB_FILE  ok: File closed
+ *NDB('/END')* Database closed at 690705 4426
+ *NDB('/END')* total CPUtime of all NDB():      13.40 secs
+ *NDB('/END')* I/O statistics:            user             system      errors
+ *NDB('/END')* banks/words read     24782   5277440  40380   5505292     0
