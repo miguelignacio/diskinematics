@@ -1,0 +1,126 @@
+// -------------------------------------------------- //
+//  General settings for analysis
+//  Most of them can be changed by using command
+//  line arguments.
+// -------------------------------------------------- //
+H1AnalysisSteer("EventShapes") {
+   fNEvents          =  -1;                      // -n <..> Number of events to be analysed, -1 for all
+   fInterval         =  1000;                    // Frequency at which to display progress
+   fOutputFile       =  "evtshp_ep0304.root";    // -o <...>
+   fChains           =  "DjangoEplus0304_1";              // -c <...> chain to be analyzed
+
+   // Analysis chains to analyse
+   ///fChains   = "DataEplus0304, DataEplus0304_1, DjangoEplus0304_test1, RapgapEplus0304_test1"; 
+
+   // use systematics
+   fUsingSystematics = 0;
+
+   // Run selection and lumi calculation
+   fGoodRunFile      = "../LumiFiles/nc_goodruns_0304.root";  // Good run file
+   fRunSelection     = "357072,392213";                      // e+ 03/04 running
+
+   // other parameters
+   fKineRecMethod    =  H1Constants::eKineRecESigma;  // basic reconstruction method
+}
+
+
+// -------------------------------------------------- //
+//  Settings for the different chains
+// -------------------------------------------------- //
+H1AnalysisChainSteer("DataEplus0304") {
+   fApplyRunSelection = true;
+   fChainType         = H1AnalysisChainSteer::eData;
+}
+
+H1AnalysisChainSteer("DjangoEplus0304") {
+   fApplyRunSelection = true;
+   fChainType        = H1AnalysisChainSteer::eModel;
+}
+
+H1AnalysisChainSteer("RapgapEplus0304") {
+   fApplyRunSelection = true;
+   fChainType         = H1AnalysisChainSteer::eModel;
+}
+
+H1AnalysisChainSteer("Pythia") {
+   fApplyRunSelection = true;
+   fChainType         = H1AnalysisChainSteer::eBackground;
+}
+
+H1AnalysisChainSteer("DjBkgd") {
+  fApplyRunSelection = true;
+  fChainType        = H1AnalysisChainSteer::eBackground;
+}
+
+H1AnalysisChainSteer("CCBkgd") {
+  fChainType        = H1AnalysisChainSteer::eBackground;
+  fApplyRunSelection = true;
+}
+H1AnalysisChainSteer("DVCS") {
+  fChainType        = H1AnalysisChainSteer::eBackground;
+  fApplyRunSelection = true;
+}
+
+H1AnalysisChainSteer("Compton") {
+  fChainType        = H1AnalysisChainSteer::eBackground;
+  fApplyRunSelection = true;
+}
+
+H1AnalysisChainSteer("Grape") {
+  fChainType        = H1AnalysisChainSteer::eBackground;
+  fApplyRunSelection = true;
+}
+
+H1AnalysisChainSteer("Pythia") {
+  fChainType        = H1AnalysisChainSteer::eBackground;
+  fApplyRunSelection = true;
+}
+
+
+// -------------------------------------------------- //
+//  Settings for H1SteerTree
+//     fLoadHat, fLoadMod, fLoadODS, fLoadUserTree
+//     are hard-coded in analysis-code.
+// -------------------------------------------------- //
+
+//***********************************************//
+//                      DATA                     //
+//***********************************************//
+H1SteerTree("DataEplus0304") {
+  fPath  = "/nfs/dust/h1/group/britzger/h1mpim13/kogler/files/oo-4.0/ep0304/data";
+  fFileNames = "h1oo4.0.6.data_ep0304_highQ2_sub00-01";
+}
+
+H1SteerTree("DataEplus0304_1") {
+  fPath  = "/nfs/dust/h1/group/britzger/h1mpim13/kogler/files/oo-4.0/ep0304/data";
+  fFileNames = "h1oo4.0.6.data_ep0304_highQ2_sub02-03";
+}
+
+
+//*************************************************//
+//                     DJANGOH                     //
+//*************************************************//
+H1SteerTree("DjangoEplus0304_test"){
+   fPath = "/pnfs/desy.de/dphep/online/h1/mc2/oo-4.0/djangoh14/7093";
+   fFileNames = "4.0.6.DJANGOH14.NC.EPLUSP.04.RAD.Q2GT60.CTEQ6L.A.7093.S39200.R97800.ftt.DST.0052-0053";
+   fLumi = 42.657142; //1493.0 / 70. * 2;
+}
+//*************************************************//
+//                     RAPGAP                      //
+//*************************************************//
+H1SteerTree("RapgapEplus0304_test"){
+   fPath = "/pnfs/desy.de/dphep/online/h1/mc2/oo-4.0/rapgap31/7097";
+   fFileNames = "4.0.6.RAPGAP31.NC.EPLUSP.04.RAD.Q2GT60.CTEQ6L.A.7097.S39200.R97800.ftt.DST.0030-0031";
+   fLumi = 49.577000; //1487.31 / 60 * 2.
+}   
+
+// H1AnalysisSelectionResultsSteer("NCDIS") {
+//   fGenReader = "GenInfo";
+//   fRecReader = "RecInfo";
+// }
+// H1CalcReaderSteer("GenInfo") {
+//   fInfo = "Kine_Q2Gen";
+// }
+// H1CalcReaderSteer("RecInfo") {
+//   fInfo = "Kine_Q2";
+// }
