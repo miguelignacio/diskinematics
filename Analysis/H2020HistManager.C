@@ -14,8 +14,10 @@ using namespace std;
 
 // _______________________________________________________ //
 //! Constructor
-H2020HistManager::H2020HistManager(string HMname) : fHMname(HMname) {
+H2020HistManager::H2020HistManager(const string& HMname, const string& dirname) : fHMname(HMname) {
    TH1::AddDirectory(false);
+   fDirname = dirname;
+   if ( fDirname == "" ) fDirname = fHMname;
 }
 
 // _______________________________________________________ //E
@@ -26,8 +28,9 @@ H2020HistManager::~H2020HistManager() {
 // _______________________________________________________ //
 //! Write histograms to gDirectory
 void H2020HistManager::Write() {
-   // sort by name
    cout<<"H2020HistManager::Write. Writing histograms into "<<gDirectory->GetPath()<<endl;
+
+   // sort by name first
    map<string,TH1*> hmap;
    for ( auto [k1, m1] : fHistmap ) {
       for ( auto [k2,th] : m1 ) {

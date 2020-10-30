@@ -25,11 +25,12 @@ class H2020HistManager {
 public:
 
    //! Constructors
-   H2020HistManager(std::string HMname);
+   H2020HistManager(const std::string& HMname, const std::string& dirname="");
    ~H2020HistManager();
 
    //! Return name
-   const std::string GetName() { return fHMname; }
+   const std::string& GetName() const { return fHMname; }
+   const std::string& GetDirname() const { return fDirname; }
 
    //! Write all histograms into current TDirectory
    void Write();
@@ -55,7 +56,9 @@ public:
 
 
 protected:   
-   std::string fHMname;
+   std::string fHMname;   //!< Name of this HistManager to identify it by a string
+   std::string fDirname;  //!< TDirectory to store the histograms (default: dirname==HMname)
+
    //std::unordered_map<const std::string*,std::unordered_map<int, std::unordered_map<char, std::map<std::string,TH1*> > > > fHistmap;
    //std::unordered_map<const std::string*, std::unordered_map<int, std::map<std::string,TH1*> > > fHistmap;
    //std::unordered_map<const std::string*, std::unordered_map<int, TH1* > > fHistmap;
@@ -208,10 +211,10 @@ public:
    ~HistMaster() { }
 
    //! Write a single histogram manager
-   void WriteHistManager(TDirectory* dir, const std::string& HMname) {
+   void WriteHistManager(TDirectory* dir, const std::string& HMname, const std::string& dirname) {
       if ( fHMs.count(HMname) != 0 ) {
          TDirectory* tmp = gDirectory;
-         if ( HMname != "" ) dir->mkdir(HMname.c_str())->cd();
+         if ( dirname != "" ) dir->mkdir(dirname.c_str())->cd();
          fHMs.at(HMname).Write();
          tmp->cd(); // to back
       }
@@ -221,15 +224,17 @@ public:
    //! write all histogram managers
    void WriteAll(TDirectory* dir) { 
       for ( auto& [HMname, HM] : fHMs ) {
-         WriteHistManager(dir,HMname);
+         auto dirname = HM.GetDirname();
+         WriteHistManager(dir,HMname,dirname);
       }
    }
 
    //! Get a histogram manager
    //! Instantiate a new one, of not yet existent
-   H2020HistManager& GetHistManager(const std::string& HMname) {
+   H2020HistManager& GetHistManager(const std::string& HMname, const std::string& dirname = "") {
       if ( fHMs.count(HMname) == 0 ) 
-         fHMs.insert({HMname, H2020HistManager(HMname)});
+         fHMs.insert({HMname, H2020HistManager(HMname,dirname)});
+      // todo: possibly add a check for different dirnames here (slow?!)
       return fHMs.at(HMname);
    }
    

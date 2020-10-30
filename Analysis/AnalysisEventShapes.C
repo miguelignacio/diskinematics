@@ -236,6 +236,11 @@ void AnalysisEventShapes::DoControlPlotsRec() {
    // put some histogram inside
    hmtracks.Get<TH1D>("N tracks BoostedJets",   ";N tracks Boosedjets;entries", 50, 0, 100)  -> Fill(  H1BoostedJets::Instance()->GetHFSArray()->GetEntries()   , wgt ); 
    hmtracks.Get<TH1D>("N tracks BoostedJets_ly",";N tracks Boosedjets;entries", 50, 0, 100)  -> Fill(  H1BoostedJets::Instance()->GetHFSArray()->GetEntries()   , wgt ); 
+   // put tracks into TDirectory: "DISEvents"
+   H2020HistManager& hmtracks2 = HistMaster::Instance()->GetHistManager("NCDISTracks uniquename1","DISEvent");
+   // put some histogram inside
+   hmtracks2.Get<TH1D>("N tracks BoostedJets",   ";N tracks Boosedjets;entries", 50, 0, 100)  -> Fill(  H1BoostedJets::Instance()->GetHFSArray()->GetEntries()   , wgt ); 
+   hmtracks2.Get<TH1D>("N tracks BoostedJets_ly",";N tracks Boosedjets;entries", 50, 0, 100)  -> Fill(  H1BoostedJets::Instance()->GetHFSArray()->GetEntries()   , wgt ); 
 
    // this is how you make a histogram and fill it...
    double tau_zQ = 0.1;
