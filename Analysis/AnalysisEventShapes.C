@@ -528,13 +528,13 @@ void AnalysisEventShapes::FillBasicNCDISHists(const string& hmname, double Q2, d
    H2020HistManager& hmNCDIS = HistMaster::Instance()->GetHistManager(hmname);
    hmNCDIS.Get<TH1D>("NCDIS 101 Q2",       "Q2;Q2 [GeV^{2}];events",  50, 100., 30000.) ->Fill(Q2, weight); 
    hmNCDIS.Get<TH1D>("NCDIS 101 Q2_lx",    "Q2;Q2 [GeV^{2}];events",  50, 10., 30000.)  ->Fill(Q2, weight); 
-   hmNCDIS.Get<TH1D>("NCDIS 101 Q2_lx_ly", "Q2;Q2 [GeV^{2}];events",  50, 100., 30000.) ->Fill(Q2, weight); 
+   hmNCDIS.Get<TH1D>("NCDIS 101 Q2_lxy", "Q2;Q2 [GeV^{2}];events",  50, 100., 30000.) ->Fill(Q2, weight); 
    hmNCDIS.Get<TH1D>("NCDIS 102 Y",       "Y;Y;events",  60, -0.1, 1.1)  ->Fill(Y, weight); 
    hmNCDIS.Get<TH1D>("NCDIS 102 Y_lx",    "Y;Y;events",  50, 0.0001, 1.) ->Fill(Y, weight); 
-   hmNCDIS.Get<TH1D>("NCDIS 102 Y_lx_ly", "Y;Y;events",  50, 0.001, 1.)  ->Fill(Y, weight); 
+   hmNCDIS.Get<TH1D>("NCDIS 102 Y_lxy", "Y;Y;events",  50, 0.001, 1.)  ->Fill(Y, weight); 
    hmNCDIS.Get<TH1D>("NCDIS 103 X",       "X;X;events",  60, -0.1, 1.1)  ->Fill(X, weight); 
    hmNCDIS.Get<TH1D>("NCDIS 103 X_lx",    "X;X;events",  50, 0.0001, 1.) ->Fill(X, weight); 
-   hmNCDIS.Get<TH1D>("NCDIS 103 X_lx_ly", "X;X;events",  50, 0.001, 1.)  ->Fill(X, weight); 
+   hmNCDIS.Get<TH1D>("NCDIS 103 X_lxy", "X;X;events",  50, 0.001, 1.)  ->Fill(X, weight); 
 
 }
 
@@ -553,13 +553,13 @@ void AnalysisEventShapes::FillTrackPlots(const string& hmname, const std::vector
       sum += lpart;
       hm.Get<TH1D>("Tracks 401 pt",   ";Track p_{T} [GeV];entries",  40,0,6)       -> Fill(part->GetPt(), weight);
       hm.Get<TH1D>("Tracks 401 pt_lx",   ";Track p_{T} [GeV];entries",  40,0.1,10)       -> Fill(part->GetPt(), weight);
-      hm.Get<TH1D>("Tracks 401 pt_lx_ly",";Track p_{T} [GeV];entries",  40,0.1,20)       -> Fill(part->GetPt(), weight);
+      hm.Get<TH1D>("Tracks 401 pt_lxy",";Track p_{T} [GeV];entries",  40,0.1,20)       -> Fill(part->GetPt(), weight);
       hm.Get<TH1D>("Tracks 401 px",   ";Track p_{X} [GeV];entries",  40,0,50)       -> Fill(lpart.Px(), weight);
       hm.Get<TH1D>("Tracks 401 py",   ";Track p_{Y} [GeV];entries",  40,0,50)       -> Fill(lpart.Py(), weight);
       hm.Get<TH1D>("Tracks 401 pz",   ";Track p_{Z} [GeV];entries",  40,0,4)       -> Fill(part->GetPz(), weight);
       hm.Get<TH1D>("Tracks 401 pz2",   ";Track p_{Z} [GeV];entries",  40,0,10)       -> Fill(part->GetPz(), weight);
       hm.Get<TH1D>("Tracks 401 pz_lx",   ";Track p_{Z} [GeV];entries",  40,0.1,10)       -> Fill(part->GetPz(), weight);
-      hm.Get<TH1D>("Tracks 401 pz_lx_ly",";Track p_{Z} [GeV];entries",  40,0.1,20)       -> Fill(part->GetPz(), weight);
+      hm.Get<TH1D>("Tracks 401 pz_lxy",";Track p_{Z} [GeV];entries",  40,0.1,20)       -> Fill(part->GetPz(), weight);
       hm.Get<TH1D>("Tracks 401 eta",  ";Track #eta;entries",         40,-5,5)       -> Fill(part->GetEta(), weight);
       hm.Get<TH1D>("Tracks 401 theta",";Track #theta;entries",       40,-M_PI,M_PI) -> Fill(part->GetTheta(), weight);
       hm.Get<TH1D>("Tracks 401 phi",  ";Track #phi;entries",         40,-M_PI,M_PI) -> Fill(part->GetPhi(), weight);
@@ -567,12 +567,12 @@ void AnalysisEventShapes::FillTrackPlots(const string& hmname, const std::vector
    hm.Get<TH1D>("Tracks 402 pt",   ";Sum-of-Tracks p_{T} [GeV];entries",  40,0,20)       -> Fill(sum.Pt(), weight);
    hm.Get<TH1D>("Tracks 402 pt",   ";Sum-of-Tracks p_{T} [GeV];entries",  40,0,80)       -> Fill(sum.Pt(), weight);
    hm.Get<TH1D>("Tracks 402 pt_lx",   ";Sum-of-Tracks p_{T} [GeV];entries",  40,0.1,80)       -> Fill(sum.Pt(), weight);
-   hm.Get<TH1D>("Tracks 402 pt_lx_ly",   ";Sum-of-Tracks p_{T} [GeV];entries",  40,0.1,80)       -> Fill(sum.Pt(), weight);
+   hm.Get<TH1D>("Tracks 402 pt_lxy",   ";Sum-of-Tracks p_{T} [GeV];entries",  40,0.1,80)       -> Fill(sum.Pt(), weight);
    hm.Get<TH1D>("Tracks 402 px",   ";Sum-of-Tracks p_{X} [GeV];entries",  40,0,20)       -> Fill(sum.Px(), weight);
    hm.Get<TH1D>("Tracks 402 py",   ";Sum-of-Tracks p_{Y} [GeV];entries",  40,0,20)       -> Fill(sum.Py(), weight);
    hm.Get<TH1D>("Tracks 402 pz",   ";Sum-of-Tracks p_{Z} [GeV];entries",  40,-40,120)       -> Fill(sum.Pz(), weight);
    hm.Get<TH1D>("Tracks 402 pz_lx",   ";Sum-of-Tracks p_{Z} [GeV];entries",  40,2,400)       -> Fill(sum.Pz(), weight);
-   hm.Get<TH1D>("Tracks 402 pz_lx_ly",   ";Sum-of-Tracks p_{Z} [GeV];entries",  40,0.1,600)       -> Fill(sum.Pz(), weight);
+   hm.Get<TH1D>("Tracks 402 pz_lxy",   ";Sum-of-Tracks p_{Z} [GeV];entries",  40,0.1,600)       -> Fill(sum.Pz(), weight);
    hm.Get<TH1D>("Tracks 402 eta",  ";Sum-of-Tracks #eta;entries",         40,-5,5)       -> Fill(sum.Eta(), weight);
    hm.Get<TH1D>("Tracks 402 theta",";Sum-of-Tracks #theta;entries",       40,0,M_PI) -> Fill(sum.Theta(), weight);
    hm.Get<TH1D>("Tracks 402 phi",  ";Sum-of-Tracks #phi;entries",         40,-M_PI,M_PI) -> Fill(sum.Phi(), weight);

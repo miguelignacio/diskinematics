@@ -211,7 +211,8 @@ void plot_directory_default(TFile* file, const string& directory, const TString&
       if ( hMain->InheritsFrom("TH1D") || hMain->InheritsFrom("TH1F")  || hMain->InheritsFrom("TH1I")  ) {
          double max = hMain->GetMaximum();
          if ( title.find("_lx")!=string::npos || string(hMain->GetName()).find("_lx") !=string::npos ) gPad->SetLogx();
-         if ( title.find("_ly")!=string::npos || string(hMain->GetName()).find("_ly") !=string::npos ) gPad->SetLogy();
+         if ( title.find("_ly")!=string::npos || string(hMain->GetName()).find("_ly") !=string::npos ||
+              title.find("_lxy")!=string::npos || string(hMain->GetName()).find("_lxy") !=string::npos ) gPad->SetLogy();
          if ( gPad->GetLogy() )  hMain->SetMaximum(max*40);
          else                    hMain->SetMaximum(max*1.4);
          if ( gPad->GetLogy() ) hMain->SetMinimum(0.7);
