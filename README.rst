@@ -3,7 +3,7 @@
 H1 Event Shape Analysis (MPIM, 2020)
 ====================================
 
-.. note::
+.. NOTE::
    Please keep this README file up-to-date
 
 Package structure
