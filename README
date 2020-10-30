@@ -35,8 +35,10 @@ A simple start is obtained by:
     $ ../bin/x86_64-centos7-gcc9-opt/EventShapes -f Steering/es.ep0304dis.steer -n 10000 -o test.root -c DjangoEplus0304_1
     ```
 
-Quck start
-----------
+
+
+Quick start
+-----------
 A complete set of control plots with a limited set of MCs, but with all 0304 data is obtained by running
 
   * `cd Analysis`, make analysis: `make all`
