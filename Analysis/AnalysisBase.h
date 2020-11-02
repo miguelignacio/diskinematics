@@ -64,6 +64,15 @@ protected:
 
    // void SetSystematics();
 
+   //! convert a TObjArray into a std::vector, using proper type_cast
+   template<class TObj, class TArr>
+   std::vector<TObj> to_vector(TArr* array) { 
+      std::vector<TObj> ret(array->GetEntries());
+      for ( int i = 0 ; i<array->GetEntries() ; i++ ) 
+         ret[i] = static_cast<TObj>(array->At(i));
+      return ret;
+   }
+
 protected:   
 
    // --- Run parameters
