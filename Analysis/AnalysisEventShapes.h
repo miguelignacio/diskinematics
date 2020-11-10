@@ -1,6 +1,7 @@
 #ifndef __ANALYSISEVENTSHAPES_H
 #define __ANALYSISEVENTSHAPES_H
 
+#include "H1PhysUtils/H1BoostedJets.h"
 #include "AnalysisBase.h"
 class H1Part;
 
@@ -28,6 +29,7 @@ public:
 
    //! Constructors
    AnalysisEventShapes(TString chain);
+   //AnalysisEventShapes(const TString& chain);
    ~AnalysisEventShapes();
 
    virtual void DoReset() override;
@@ -52,6 +54,14 @@ protected:
    void FillTrackPlots(const string& hm, const std::vector<H1Part*>& parts , double weight);
    void FillTrackPlots(const string& hm, TObjArray* parts , double weight);
 
+
+   //primitive variable einfach so ( bsp weight)
+   //objekte als pointer  ( darf geaendert werden) / reference ( const ref: darf nicht editiert werden)
+   vector<TLorentzVector> BoostParticleArray(const string& hm, const vector<H1PartCand*> partarray, H1Boost& myboost, double Q2, double X, double Y);
+   void ClassicalEventShapes (const string& hm, const vector<TLorentzVector> BoostedHFS);
+   TLorentzVector BoostToBreitFrame ( double Q2, double y, double E0, double Phi );
+
+
 protected:   
 
    // --- event classification
@@ -59,6 +69,7 @@ protected:
    bool fAnalysisCutsRec = false;
 
    struct CrossSectionQuantities {
+     //similar to a class, but all variables are public
       double wgt                = 0 ;     //!<  event weight 
       bool IsGood               = false;  //!<  all cuts are fulfilles
       double Q2                 = 0 ;     //!<  Q2 for cross sections

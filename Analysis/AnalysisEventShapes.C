@@ -31,7 +31,9 @@ using namespace H1CalcGenericInterface;
 // #include "H1PhysUtils/H1MakeKine.h"
 
 #include "JetTools.h"         // JetsAtHighQ2
-
+#include "H1Mods/H1PartSelTrack.h"
+#include "H1JetFinder/H1EventShape.h"
+//#include "UsefulTools.h"
 using namespace std;
 
 
@@ -233,6 +235,13 @@ void AnalysisEventShapes::DoControlPlotsRec() {
    H2020HistManager& hm       = HistMaster::Instance()->GetHistManager("DISEvent");
    // this is is another histmanager
    H2020HistManager& hmtracks = HistMaster::Instance()->GetHistManager("NCDISTracks");
+
+   H2020HistManager& hmtau_zQ_el = HistMaster::Instance()->GetHistManager("tau_zQ_el");
+
+   H2020HistManager& hmtau_zQ_had = HistMaster::Instance()->GetHistManager("tau_zQ_had");
+
+
+
    // put some histogram inside
    hmtracks.Get<TH1D>("N tracks BoostedJets",   ";N tracks Boosedjets;entries", 50, 0, 100)  -> Fill(  H1BoostedJets::Instance()->GetHFSArray()->GetEntries()   , wgt ); 
    hmtracks.Get<TH1D>("N tracks BoostedJets_ly",";N tracks Boosedjets;entries", 50, 0, 100)  -> Fill(  H1BoostedJets::Instance()->GetHFSArray()->GetEntries()   , wgt ); 
@@ -243,24 +252,26 @@ void AnalysisEventShapes::DoControlPlotsRec() {
    // hmtracks2.Get<TH1D>("N tracks BoostedJets_ly",";N tracks Boosedjets;entries", 50, 0, 100)  -> Fill(  H1BoostedJets::Instance()->GetHFSArray()->GetEntries()   , wgt ); 
 
    // this is how you make a histogram and fill it...
+   
+   /*
    double tau_zQ = 0.1;
    hm.Get<TH1D>("tau_zQ",    "tau_zQ;#tau_{zQ};events",  70, -0.3, 1.1)  -> Fill(tau_zQ, wgt); 
-
+   */
 
    // --------------- general kinematics -------------------
    TLorentzVector ebeam, pbeam;
    H1BoostedJets::Instance()->BeamVectors(&pbeam, &ebeam);
    TLorentzVector ScatElec = gH1Calc->Elec()->GetFirstElectron();
    TLorentzVector HFS = gH1Calc->Fs()->GetFullHadFS();
-   TLorentzVector virtualphoton = ebeam - ScatElec;
-   TLorentzVector Pplusq = pbeam + virtualphoton;
-   Float_t W   = Pplusq.Mag();
-   Float_t Q2  = GetKine_Q2();
-   Float_t X   = GetKine_X();
-   Float_t Y   = GetKine_Y();
-   Float_t Ye  = GetKine_Ye();
-   Float_t Yh  = GetKine_Yh();
-   Float_t Empz = gH1Calc->Fs()->GetEmpz();
+   /*
+   cout<<"scat elec"<<endl;
+   ScatElec.Print();
+   cout<<"init elec"<<endl;
+   ebeam.Print();
+   */
+
+   Float_t Empz = gH1Calc->Fs()->GetEmpz(); // = Delta, E-pz for the full final state
+   Float_t Sigma = gH1Calc->Fs()->GetFullHadFsEmpz(); // E-pz for the full hadron final state
    Float_t PtMiss = gH1Calc->Fs()->GetPtMiss();
    Float_t prim_zvtx = gH1Calc->Vertex()->GetHatPrimaryVertexZ();
    Float_t optimal_zvtx = gH1Calc->Vertex()->GetZ(H1CalcVertex::vtOptimalNC);
@@ -268,6 +279,160 @@ void AnalysisEventShapes::DoControlPlotsRec() {
    Float_t gammah_degree = (gH1Calc->Fs()->GetGamma()) * (180.0/TMath::Pi());
 
 
+   TLorentzVector fullHFS = H1BoostedJets::Instance()->FillHFSArray();
+   TObjArray* detectorlevel = H1BoostedJets::Instance()->GetHFSArray();
+
+   vector<H1PartCand*> hfsarray1 = to_vector<H1PartCand*>(H1BoostedJets::Instance()->GetHFSArray());
+
+   TLorentzVector virtualphoton = ebeam - ScatElec;
+   TLorentzVector Pplusq = pbeam + virtualphoton;
+   Float_t W   = Pplusq.Mag();
+   Float_t Q2  = GetKine_Q2();
+   Float_t X   = GetKine_X();
+   Float_t Y   = GetKine_Y();
+ //elelctron method
+   Float_t Ye  = GetKine_Ye();
+   Float_t Q2e = GetKine_Q2e();
+   Float_t Xe = GetKine_Xe();
+ //hadron method
+   Float_t Yh  = GetKine_Yh();
+   Float_t Q2h = GetKine_Q2h();
+   Float_t Xh = gH1Calc->Kine()->GetXh();
+   TLorentzVector virtualphoton_hadron = fullHFS - Xh*pbeam;
+ //eSigma method
+   Float_t Yes = GetKine_Yes();
+   Float_t Q2es = GetKine_Q2es();
+   Float_t Xes = GetKine_Xes();
+ //Sigma method 
+   Float_t Ys = GetKine_Ys();
+   Float_t Q2s = GetKine_Q2s();
+   Float_t Xs = GetKine_Xs();
+ //ISigma method
+   Float_t Yis = Sigma / ( Sigma + ScatElec.E()*( 1-TMath::Cos(ScatElec.Theta()) ) );
+   Float_t Q2is = TMath::Power( ScatElec.E()*TMath::Sin( ScatElec.Theta() ) , 2 ) / ( 1-Yis );
+   Float_t Xis = ( ScatElec.E() / pbeam.E() ) * ( TMath::Power( TMath::Cos(ScatElec.Theta()) , 2 ) / Yis );
+
+
+   hm.Get<TH1D>("RatioY_ly", 50, 0., 2., "Ys / Yis", "Entries")  -> Fill(  Ys/Yis   , wgt );
+   hm.Get<TH1D>("RatioQ2_ly", 50, 0., 2., "Q2s / Q2is", "Entries")  -> Fill(  Q2s/Q2is   , wgt );
+   
+   TLorentzVector ElecInit( 0., 0., -Empz/2, Empz/2); //initial electron, mass neglecte
+   TLorentzVector boostISigma = ElecInit - ScatElec; //virtual photon with final state electron from detector
+   //   TLorentzVector boostISigma = BoostToBreitFrame( Q2is, Yis, Empz/2, ScatElec.Phi() ); //final state elctron calculated
+
+
+   /*
+   //Boost vector defined as b = 2xP + q (=0 is Breit frame)
+   //Different possibilities to calculate b:
+   // 1) b1 = 3 e0 - 3 e' +2 h
+   // 2) b2 = 3 xP -h
+   // 3) b3 = xP -2 ( e0 -e' ) + h
+   // 4) b4 = 2 xP + e0 - e'
+   //Write b = vect?1 + vect?2: 
+
+   TLorentzVector vect11 = 3*virtualphoton;
+   TLorentzVector vect12 = 2*fullHFS;
+   TLorentzVector vect21 = 3*Xes*pbeam;
+   TLorentzVector vect22 = -1*fullHFS;
+   TLorentzVector vect31 = Xes*pbeam + fullHFS;
+   TLorentzVector vect32 = 2*virtualphoton;
+   TLorentzVector vect41 = 2*Xes*pbeam;
+   TLorentzVector vect42 = virtualphoton;
+   */
+
+   //Different options for the boost to Breit frame
+   //electron method
+   H1Boost myboostelectron(2*Xe*pbeam,virtualphoton,ebeam,-1.*pbeam);
+   //hadron method
+   H1Boost myboosthadron(2*Xh*pbeam,virtualphoton_hadron,ebeam,-1.*pbeam);
+   
+   /*
+   //eSigma method with b1
+   H1Boost myboosteS1(vect11, vect12, ebeam,-1.*pbeam);
+   //eSigma method with b2
+   H1Boost myboosteS2(vect21, vect22, ebeam,-1.*pbeam);
+   //eSigma method with b3
+   H1Boost myboosteS3(vect31, vect32, ebeam,-1.*pbeam);
+   //eSigma method with b4
+   H1Boost myboosteS4(vect41, vect42, ebeam,-1.*pbeam);
+   */
+   //ISigma method
+   H1Boost myboostIS(2*Xis*pbeam, boostISigma, ebeam,-1.*pbeam);
+
+   double_t ymin = 0.1;
+   double_t ymax = 0.7;
+   double_t Q2min = 150;
+   double_t Q2max = 40000;
+   Bool_t fillhisto = false;
+   Bool_t valuesarephysical = false;
+   if ( ScatElec.E()>11.) {
+     if ( Y > ymin && Y < ymax ) {
+       if ( Q2 > Q2min && Q2max > Q2 ) {
+	 fillhisto = true;                                                                                                  }
+     }
+   }
+   if ( Yis > 0. && Yis < 1. ) {
+     if ( Xis > 0. && Xis < 1. ) {
+       valuesarephysical = true;
+     }
+   }
+
+   if (fillhisto){
+     vector<TLorentzVector> boosted_e = BoostParticleArray("tau_zQ_el", hfsarray1, myboostelectron, Q2e, Xe, Ye);
+     vector<TLorentzVector> boosted_h = BoostParticleArray("tau_zQ_had", hfsarray1, myboosthadron, Q2h, Xh, Yh);
+     /*
+     vector<TLorentzVector> boosted_es1 = BoostParticleArray("tau_zQ_es1", hfsarray1, myboosteS1, Q2es, Xes, Yes);
+     vector<TLorentzVector> boosted_es2 = BoostParticleArray("tau_zQ_es2", hfsarray1, myboosteS2, Q2es, Xes, Yes);
+     vector<TLorentzVector> boosted_es3 = BoostParticleArray("tau_zQ_es3", hfsarray1, myboosteS3, Q2es, Xes, Yes);
+     vector<TLorentzVector> boosted_es4 = BoostParticleArray("tau_zQ_es4", hfsarray1, myboosteS4, Q2es, Xes, Yes);
+     */
+     if( valuesarephysical ){
+       vector<TLorentzVector> boosted_IS = BoostParticleArray("tau_zQ_iSigma", hfsarray1, myboostIS, Q2s, Xis, Ys);
+       ClassicalEventShapes("testshapes_es1", boosted_IS);
+     }
+     ClassicalEventShapes("testshapes_e", boosted_e);
+     ClassicalEventShapes("testshapes_es1", boosted_h);
+   }
+
+   vector<TLorentzVector> full_event_breit;
+   vector<TLorentzVector> full_event_breit_hadron;
+   double_t energy_breit = 0;
+   double_t current_px_had  = 0;
+   double_t current_py_had  = 0;
+   double_t current_pz_had  = 0;
+   double_t current_px_el  = 0;
+   double_t current_py_el  = 0;
+   double_t current_pz_el  = 0;
+   for (Int_t ipart=0; ipart<detectorlevel->GetEntries(); ++ipart){
+     //H1PartMC* part = allparticles[ipart];
+     //H1PartCand* parttemp = (H1PartCand*) detectorlevel->At(ipart);
+     H1PartCand* part = static_cast<H1PartCand*>(detectorlevel->At(ipart));
+     if (part->IsScatElec()) continue;  // exclude the scattered electron
+     if ( !(part->GetE()>0.) ) continue; // reject zeroed-out part cands (badly measured ones, iron muons...)
+     if ( myboostelectron.IsPhysicalBoost() ) {
+       TLorentzVector breitpart = myboostelectron.Boost(part->GetFourVector());
+       full_event_breit.push_back(TLorentzVector(breitpart.Px(),breitpart.Py(), breitpart.Pz(), breitpart.E()) );
+       //check sign of pz, which eta corresponds to current hemisphere
+       //tau for both hemispheres
+       if(breitpart.Eta()>0){
+	 energy_breit += breitpart.E();
+	 current_px_el += breitpart.Px();
+	 current_py_el += breitpart.Py();
+	 current_pz_el += breitpart.Pz();
+       }
+     }
+     if ( myboosthadron.IsPhysicalBoost() ) {
+       TLorentzVector breitpart = myboosthadron.Boost(part->GetFourVector());
+       full_event_breit_hadron.push_back(TLorentzVector(breitpart.Px(),breitpart.Py(), breitpart.Pz(), breitpart.E()));
+       if(breitpart.Eta()>0){
+	 current_px_had += breitpart.Px();
+	 current_py_had += breitpart.Py();
+	 current_pz_had += breitpart.Pz();
+       }
+     }
+   }
+
+   //UsefulTools Usefultools;
    static JetTools tools;
    auto q2bins  = H2020HistManager::MakeLogBinning(50, 90, 30000.);
    auto xbjbins = H2020HistManager::MakeLogBinning(50, 0.001, 1.);
@@ -370,54 +535,174 @@ void AnalysisEventShapes::DoControlPlotsRec() {
 
 
    // ---------------------- boost to Breit frame --------------------
-
+   /*
    auto BoostBetaArray = H2020HistManager::MakeLogBinning(50, 0.08, 3.0);
-   hm.Get<TH1D>("Boost_Beta_lxy", 50, BoostBetaArray, "Boost: #beta", " Entries")  -> Fill(  14.1   , wgt );
-   hm.Get<TH1D>("Boost_Beta_lx",  50, BoostBetaArray, "Boost: #beta", " Entries")  -> Fill(  14.1   , wgt );
-   hm.Get<TH1D>("Boost_Phi",  50, -3.1415, 3.1415, "Boost: #phi [^{o}]", " Entries")  -> Fill(  14.1   , wgt );
-   hm.Get<TH1D>("Boost_Theta",50, 0, 3.1415, "Boost: #theta [^{o}]", " Entries")  -> Fill(  14.1   , wgt );
+   hmtau_zQ_el.Get<TH1D>("Boost_Beta_el_lxy", 50, BoostBetaArray, "Boost: #beta, el", " Entries")  -> Fill(  myboostelectron.GetBeta()   , wgt );
+   hmtau_zQ_el.Get<TH1D>("Boost_Beta_el_lx",  50, BoostBetaArray, "Boost: #beta, el", " Entries")  -> Fill(  myboostelectron.GetBeta()   , wgt );
+   hmtau_zQ_el.Get<TH1D>("Boost_Phi_el",  50, -3.1415, 3.1415, "Boost: #phi [^{o}], el", " Entries")  -> Fill(  myboostelectron.GetPhi()   , wgt );
+   hmtau_zQ_el.Get<TH1D>("Boost_Theta_el",50, 0, 3.1415, "Boost: #theta [^{o}], el", " Entries")  -> Fill(  myboostelectron.GetTheta()   , wgt );
+   
+   hm.Get<TH1D>("BreitFramePx_el", 50, -15, 15, "Breit frame: P_{x}^{el}", "Entries")  -> Fill(  current_px_el   , wgt );
+   hm.Get<TH1D>("BreitFramePy_el", 50, -15, 15, "Breit frame: P_{y}^{el}", "Entries")  -> Fill(  current_py_el   , wgt );
+   hm.Get<TH1D>("BreitFramePt_el", 50,   0, 10, "Breit frame: P_{T}^{el}", "Entries")  -> Fill(  TMath::Sqrt(TMath::Power(current_px_el,2)+TMath::Power(current_py_el,2)), wgt );
+   Float_t tau_zQ_el = 1-2*current_pz_el/Q2e;
+   hm.Get<TH1D>("tau_zQ_el",    "tau_zQ;#tau_{zQ}, el;events",  70, -0.3, 1.1)  -> Fill(tau_zQ_el, wgt);
+   
+   hmtau_zQ_had.Get<TH1D>("Boost_Beta_had_lxy", 50, BoostBetaArray, "Boost: #beta, had", " Entries")  -> Fill(  myboosthadron.GetBeta()   , wgt );
+   hmtau_zQ_had.Get<TH1D>("Boost_Beta_had_lx",  50, BoostBetaArray, "Boost: #beta, had", " Entries")  -> Fill(  myboosthadron.GetBeta()   , wgt );
+   hmtau_zQ_had.Get<TH1D>("Boost_Phi_had",  50, -3.1415, 3.1415, "Boost: #phi [^{o}], had", " Entries")  -> Fill(  myboosthadron.GetPhi()   , wgt );
+   hmtau_zQ_had.Get<TH1D>("Boost_Theta_had",50, 0, 3.1415, "Boost: #theta [^{o}], had", " Entries")  -> Fill(  myboosthadron.GetTheta()   , wgt );
+   */
+   hm.Get<TH1D>("BreitFramePx_had", 50, -15, 15, "Breit frame: P_{x}^{h}", "Entries")  -> Fill(  current_px_had   , wgt );
+   hm.Get<TH1D>("BreitFramePy_had", 50, -15, 15, "Breit frame: P_{y}^{h}", "Entries")  -> Fill(  current_py_had   , wgt );
+   hm.Get<TH1D>("BreitFramePt_had", 50,   0, 10, "Breit frame: P_{T}^{h}", "Entries")  -> Fill(  TMath::Sqrt(TMath::Power(current_px_had,2)+TMath::Power(current_py_had,2))   , wgt );
+   Float_t tau_zQ_had = 1-2*current_pz_had/Q2h;
+   hm.Get<TH1D>("tau_zQ_had",    "tau_zQ;#tau_{zQ}, had;events.",  70, -0.3, 1.1)  -> Fill(tau_zQ_had, wgt);
 
-   hm.Get<TH1D>("BreitFramePx", 50, -15, 15, "Breit frame: P_{x}^{h}", "Entries")  -> Fill(  14.1   , wgt );
-   hm.Get<TH1D>("BreitFramePy", 50, -15, 15, "Breit frame: P_{y}^{h}", "Entries")  -> Fill(  14.1   , wgt );
-   hm.Get<TH1D>("BreitFramePt", 50,   0, 10, "Breit frame: P_{T}^{h}", "Entries")  -> Fill(  14.1   , wgt );
 
 
    // ---------------------- jet multiplicity --------------------
 
-   hm.Get<TH1D>("N_Jets", 7, -0.5, 6.5, "Jet Multiplicity, P_{T} > 7 GeV", "Entries")  -> Fill(  14.1   , wgt );
-   hm.Get<TH1D>("N_Jets_ly", 7, -0.5, 6.5, "Jet Multiplicity, P_{T} > 7 GeV", "Entries")  -> Fill(  14.1   , wgt );
+   Float_t Ntrackpt3 = 0;
+   Float_t Ntrackpt5 = 0;
+   Float_t Ntrackpt7 = 0;
 
-   hm.Get<TH1D>("N_Jets_ext5", 7, -0.5, 6.5, "Jet Multiplicity, P_{T} > 5 GeV", "Entries")  -> Fill(  14.1   , wgt );
-   hm.Get<TH1D>("N_Jets_ext5_ly", 7, -0.5, 6.5, "Jet Multiplicity, P_{T} > 5 GeV", "Entries")  -> Fill(  14.1   , wgt );
 
-   hm.Get<TH1D>("N_Jets_ext3", 7, -0.5, 6.5, "Jet Multiplicity, P_{T} > 3 GeV", "Entries")  -> Fill(  14.1   , wgt );
-   hm.Get<TH1D>("N_Jets_ext3_ly", 7, -0.5, 6.5, "Jet Multiplicity, P_{T} > 3 GeV", "Entries")  -> Fill(  14.1   , wgt );
+   for (Int_t ipart=0; ipart<detectorlevel->GetEntries(); ++ipart){
+     H1PartCand* parttemp = (H1PartCand*) detectorlevel->At(ipart);
+     H1PartCand* part = static_cast<H1PartCand*>(parttemp);
+     if (part->IsScatElec()) continue;
+     Float_t en = part->GetE();
+     Float_t Delta = -999;
+     if (en>0){
+       Float_t phi = part->GetPhi();
+       Float_t eta = part->GetEta();
+       Float_t Dphi = TMath::Pi()/180 * TMath::Abs(ScatElec.Phi() - phi);       //tools.PhiDiff(ScatElec.Phi() - phi);
+       Float_t Deta = ScatElec.Eta() - eta;
+       Delta = TMath::Sqrt(Dphi*Dphi + Deta*Deta);
+     }
+     //here add delta plot??
+     //FillTH1(Delta, en*Weight, el_hfs_delta_idx);
+     Float_t MultEleTracks = 0;
+     if (Delta<0.05){
+       MultEleTracks = 1;
+     }
+
+     hm.Get<TH1D>("Mult_Ele_Tracks",       2, -0.5, 1.5,    "Multiple electron tracks","Entries")  -> Fill(  MultEleTracks   , wgt );
+
+     if (part->IsHFSChargedCls() || part->IsHFSUnidentifiedCls() || part->IsEm()){
+
+       //  FillTH1(Delta, en*Weight, el_clusters_delta_idx);
+
+       // NNOutput
+       float NNOutput = part->GetEmHadSepClassifier();
+       if (NNOutput < -10) continue;
+
+       // fill histograms
+       Float_t theta = part->GetTheta() * TMath::RadToDeg();
+       Float_t phi = part->GetPhi() * TMath::RadToDeg();
+       Float_t p = part->GetP();
+       /*
+       FillTH2(theta, NNOutput, Weight, nnoutput_idx);
+
+       FillTH1(theta, p*Weight, theta_clusters_idx);
+       FillTH1(phi,   p*Weight, phi_clusters_idx);
+       FillTH1(p,     Weight, p_clusters_idx);
+       */
+     } 
+     else {
+
+       // got a track
+       const H1PartSelTrack* track = part->GetIDTrack();
+       //tracks from boosted jets
+       if (!track){
+	 // got an iron muon
+	 continue;
+       }
+
+       //FillTH1(Delta, en*Weight, el_tracks_delta_idx);
+
+       Float_t theta = track->GetTheta() * TMath::RadToDeg();
+       Float_t phi = track->GetPhi() * TMath::RadToDeg();
+       Float_t p = track->GetP();
+
+       if (track->IsCentralTrk()){
+	 
+	 hm.Get<TH1D>("theta_ctr_tracks", 50, 0, 180, "#theta ctr tracks [^{o}]", "Entries")  -> Fill(  theta   , wgt );
+	 hm.Get<TH1D>("phi_ctr_tracks",   50, 0, 180, "#phi ctr tracks [^{o}]", "Entries")  -> Fill(  phi   , wgt );
+	 hm.Get<TH1D>("p_ctr_tracks_ly",  50, 0,  50, "momentum ctr tracks [GeV]", "Entries")  -> Fill(  p   , wgt );
+       } else if (track->IsCombinedTrk()){
+	 hm.Get<TH1D>("theta_cmb_tracks", 40, 0,  40, "#theta cmb tracks [^{o}]", "Entries")  -> Fill(  theta   , wgt );
+	 hm.Get<TH1D>("phi_cmb_tracks",   50, 0, 180, "#phi cmb tracks [^{o}]", "Entries")  -> Fill(  phi   , wgt );
+	 hm.Get<TH1D>("p_cmb_tracks_ly",  40, 0,  40, "momentum cmb tracks [GeV]", "Entries")  -> Fill(  p   , wgt );
+       } else if (track->IsForwardTrk()){
+	 hm.Get<TH1D>("theta_fwd_tracks", 40, 0,  40, "#theta fwd tracks [^{o}]", "Entries")  -> Fill(  theta   , wgt );
+	 hm.Get<TH1D>("phi_fwd_tracks",   50, 0, 180, "#phi fwd tracks [^{o}]", "Entries")  -> Fill(  phi   , wgt );
+	 hm.Get<TH1D>("p_fwd_tracks_ly",  40, 0,  40, "momentum fwd tracks [GeV]", "Entries")  -> Fill(  p   , wgt );
+       }
+
+       if (track->GetPt()>7){
+	 Ntrackpt7 +=1;
+       } else if (track->GetPt()>5){
+	 Ntrackpt5 +=1;
+       } else if (track->GetPt()>3){
+	 Ntrackpt3 +=1;
+       }
+
+     }
+
+   }
+
+
+   hm.Get<TH1D>("N_Jets", 7, -0.5, 6.5, "Jet Multiplicity, P_{T} > 7 GeV", "Entries")  -> Fill(  Ntrackpt7   , wgt );
+   hm.Get<TH1D>("N_Jets_ly", 7, -0.5, 6.5, "Jet Multiplicity, P_{T} > 7 GeV", "Entries")  -> Fill(  Ntrackpt7   , wgt );
+
+   hm.Get<TH1D>("N_Jets_ext5", 7, -0.5, 6.5, "Jet Multiplicity, P_{T} > 5 GeV", "Entries")  -> Fill(  Ntrackpt5   , wgt );
+   hm.Get<TH1D>("N_Jets_ext5_ly", 7, -0.5, 6.5, "Jet Multiplicity, P_{T} > 5 GeV", "Entries")  -> Fill(  Ntrackpt5   , wgt );
+
+   hm.Get<TH1D>("N_Jets_ext3", 7, -0.5, 6.5, "Jet Multiplicity, P_{T} > 3 GeV", "Entries")  -> Fill(  Ntrackpt3   , wgt );
+   hm.Get<TH1D>("N_Jets_ext3_ly", 7, -0.5, 6.5, "Jet Multiplicity, P_{T} > 3 GeV", "Entries")  -> Fill(  Ntrackpt3   , wgt );
 
    // ---------------------- multiplicities --------------------
 
    hm.Get<TH1D>("N_tracks"  , 51,  -0.5,  50.5, "Number of tracks"  , "Entries")  -> Fill(  14.1   , wgt );
    hm.Get<TH1D>("N_em_parts", 10,  -0.5,   9.5, "Number of em-parts", "Entries")  -> Fill(  14.1   , wgt );
 
+   static H1ShortPtr Nfwdtracks("NumForwardTracks");
+   static H1ShortPtr Ncmbtracks("NumCombinedTracks");
+   static H1ShortPtr Nctrtracks("NumCentralTracks");
+   static H1ShortPtr NemParts("NumEmParts");
    // angle between the electron candidates
-   hm.Get<TH1D>("Els_Delta_Theta", 50, -90, 90,    "#theta^{1}_{e} - #theta^{2}_{e} [^{o}]", "Entries")  -> Fill(  14.1   , wgt );
-   hm.Get<TH1D>("Els_Delta_Phi",   50, 0, 180,    "#phi^{1}_{e} - #phi^{2}_{e} [^{o}]","Entries")  -> Fill(  14.1   , wgt );
-   hm.Get<TH1D>("Els_Delta",       50, 0, 5,      "#Delta(El_{1},El_{2})","Entries")  -> Fill(  14.1   , wgt );
-   hm.Get<TH1D>("El2_Energy",      50, 0, 50,     "2nd Electron Energy / GeV", "Entries")  -> Fill(  14.1   , wgt );
-   hm.Get<TH1D>("Acoplanarity_ly", 50, 0.5, 1,  "Cos(|#pi - #Delta #phi|)", "Entries")  -> Fill(  14.1   , wgt );
+   if (*NemParts>1){
+     TLorentzVector SecElec = gH1Calc->Elec()->GetElectron(H1CalcElec::SecondElectron);
+     Float_t phi1 = ScatElec.Phi();
+     Float_t phi2 = SecElec.Phi();
+     Float_t Dphi = ScatElec.DeltaPhi(SecElec);    //TMath::Pi()/180 * Usefultools.PhiDiff(phi1 - phi2);
+     Float_t Deta = ScatElec.Eta() - SecElec.Eta();
+     Float_t Delta = TMath::Sqrt(Dphi*Dphi + Deta*Deta);
+     Float_t Dtheta = fabs(ScatElec.Theta() - SecElec.Theta());
+     Float_t aco = TMath::Cos( TMath::Pi() - TMath::Abs( phi1-phi2 ) );
 
-   hm.Get<TH1D>("N_fwd_tracks_ly", 16, -0.5, 15.5, "N forward tracks",  "Entries")  -> Fill(  14.1   , wgt );
-   hm.Get<TH1D>("N_cmb_tracks_ly", 11, -0.5, 10.5, "N combined tracks", "Entries")  -> Fill(  14.1   , wgt );
-   hm.Get<TH1D>("N_ctr_tracks",    51, -0.5, 50.5, "N central tracks",  "Entries")  -> Fill(  14.1   , wgt );
+     hm.Get<TH1D>("Els_Delta_Theta", 50, -90, 90,    "#theta^{1}_{e} - #theta^{2}_{e} [^{o}]", "Entries")  -> Fill(  Dtheta*180/TMath::Pi()   , wgt );
+     hm.Get<TH1D>("Els_Delta_Phi",   50, 0, 180,    "#phi^{1}_{e} - #phi^{2}_{e} [^{o}]","Entries")  -> Fill(  (phi1-phi2)*180/TMath::Pi()   , wgt ); //PhiDiff??
+     hm.Get<TH1D>("Els_Delta",       50, 0, 5,      "#Delta(El_{1},El_{2})","Entries")  -> Fill(  14.1   , wgt );
+     hm.Get<TH1D>("El2_Energy",      50, 0, 50,     "2nd Electron Energy / GeV", "Entries")  -> Fill(  SecElec.E()   , wgt );
+     hm.Get<TH1D>("Acoplanarity_ly", 50, 0.5, 1,  "Cos(|#pi - #Delta #phi|)", "Entries")  -> Fill(  aco , wgt );
+   }
+
+   hm.Get<TH1D>("N_fwd_tracks_ly", 16, -0.5, 15.5, "N forward tracks",  "Entries")  -> Fill(  *Nfwdtracks   , wgt );
+   hm.Get<TH1D>("N_cmb_tracks_ly", 11, -0.5, 10.5, "N combined tracks", "Entries")  -> Fill(  *Ncmbtracks   , wgt );
+   hm.Get<TH1D>("N_ctr_tracks",    51, -0.5, 50.5, "N central tracks",  "Entries")  -> Fill(  *Nctrtracks   , wgt );
 
    // electron-track and HFS object relations
    hm.Get<TH1D>("El_HFS_Delta",         20, 0,  0.5,      "#Delta(El_{1},PartCand)","Entries")  -> Fill(  14.1   , wgt );
    hm.Get<TH1D>("El_Tracks_Delta",      20, 0,  0.5,      "#Delta(El_{1},Track)","Entries")  -> Fill(  14.1   , wgt );
    hm.Get<TH1D>("El_Clusters_Delta",    20, 0,  0.5,      "#Delta(El_{1},Cluster)","Entries")  -> Fill(  14.1   , wgt );
-   hm.Get<TH1D>("Mult_Ele_Tracks",       2, -0.5, 1.5,    "Multiple electron tracks","Entries")  -> Fill(  14.1   , wgt );
+   //hm.Get<TH1D>("Mult_Ele_Tracks",       2, -0.5, 1.5,    "Multiple electron tracks","Entries")  -> Fill(  MultEleTracks   , wgt );
 
 
    // ---------------------- track quantities --------------------
-
+   /*
    hm.Get<TH1D>("theta_fwd_tracks", 40, 0,  40, "#theta fwd tracks [^{o}]", "Entries")  -> Fill(  14.1   , wgt );
    hm.Get<TH1D>("phi_fwd_tracks",   50, 0, 180, "#phi fwd tracks [^{o}]", "Entries")  -> Fill(  14.1   , wgt );
    hm.Get<TH1D>("p_fwd_tracks_ly",  40, 0,  40, "momentum fwd tracks [GeV]", "Entries")  -> Fill(  14.1   , wgt );
@@ -425,11 +710,11 @@ void AnalysisEventShapes::DoControlPlotsRec() {
    hm.Get<TH1D>("theta_cmb_tracks", 40, 0,  40, "#theta cmb tracks [^{o}]", "Entries")  -> Fill(  14.1   , wgt );
    hm.Get<TH1D>("phi_cmb_tracks",   50, 0, 180, "#phi cmb tracks [^{o}]", "Entries")  -> Fill(  14.1   , wgt );
    hm.Get<TH1D>("p_cmb_tracks_ly",  40, 0,  40, "momentum cmb tracks [GeV]", "Entries")  -> Fill(  14.1   , wgt );
-
+   
    hm.Get<TH1D>("theta_ctr_tracks", 50, 0, 180, "#theta ctr tracks [^{o}]", "Entries")  -> Fill(  14.1   , wgt );
    hm.Get<TH1D>("phi_ctr_tracks",   50, 0, 180, "#phi ctr tracks [^{o}]", "Entries")  -> Fill(  14.1   , wgt );
    hm.Get<TH1D>("p_ctr_tracks_ly",  50, 0,  50, "momentum ctr tracks [GeV]", "Entries")  -> Fill(  14.1   , wgt );
-
+   */
    hm.Get<TH1D>("theta_clusters_ly",50, 0, 180, "energy weighted #theta clusters [^{o}]", "Entries")  -> Fill(  14.1   , wgt );
    hm.Get<TH1D>("phi_clusters",     50, 0, 180, "energy weighted #phi clusters [^{o}]", "Entries")  -> Fill(  14.1   , wgt );
    auto PClusterArray = H2020HistManager::MakeLogBinning(50, 0.1, 500);
@@ -633,3 +918,153 @@ void AnalysisEventShapes::FillBasicH1CalculatorGen(const string& hm, double weig
 
 }
 
+
+
+
+vector<TLorentzVector> AnalysisEventShapes::BoostParticleArray (const string& hm, const vector<H1PartCand*> partarray, H1Boost& myboost, double Q2, double X, double Y) {
+  //Takes particle list and boost
+  //Returns TLorentzVectors of boosted particles
+  H2020HistManager& hmtau_zQ = HistMaster::Instance()->GetHistManager(hm);
+  const double wgt = fGen.wgt;
+  vector<TLorentzVector> boostedpart_current;
+  TLorentzVector sum_vector(0., 0., 0., 0.);
+  if ( myboost.IsPhysicalBoost() ) {
+    for (long unsigned int ipart=0; ipart<partarray.size(); ++ipart){
+      H1PartCand* part = static_cast<H1PartCand*>(partarray[ipart]);
+      if (part->IsScatElec()) continue;  // exclude the scattered electron
+      if ( !(part->GetE()>0.) ) continue; // reject zeroed-out part cands (badly measured ones, iron muons...)
+      TLorentzVector breitpart = myboost.Boost(part->GetFourVector());
+      boostedpart_current.push_back(TLorentzVector(breitpart.Px(),breitpart.Py(), breitpart.Pz(), breitpart.E()) );
+      if (breitpart.Eta()>0) {
+	sum_vector += breitpart;
+      }
+    }
+    double_t tau = 1-2*sum_vector.Pz()/Q2;
+    auto BoostBetaArray = H2020HistManager::MakeLogBinning(50, 0.08, 3.0);
+    hmtau_zQ.Get<TH1D>("Boost_Beta_lxy", 50, BoostBetaArray, "Boost: #beta", "events" )  -> Fill(  myboost.GetBeta()   , wgt );
+    hmtau_zQ.Get<TH1D>("Boost_Beta_lx" , 50, BoostBetaArray, "Boost: #beta", "events" )  -> Fill(  myboost.GetBeta()   , wgt );
+    hmtau_zQ.Get<TH1D>("Boost_Phi", ";Boost: #phi [^{o}]; events", 60, -180, 180)  -> Fill(  myboost.GetPhi()*180/TMath::Pi()   , wgt );
+    hmtau_zQ.Get<TH1D>("Boost_Theta", ";Boost: #theta [^{o}]; events", 60,    0, 180 )  -> Fill(  myboost.GetTheta()*180/TMath::Pi()   , wgt );
+    hmtau_zQ.Get<TH1D>("current_pt", ";current hem. p_{T}[GeV];events", 50, -5., 30.) -> Fill(sum_vector.Pt(), wgt);
+    hmtau_zQ.Get<TH1D>("current_pz", ";current hem. p_{z}[GeV];events", 51, -1., 50.) -> Fill(sum_vector.Pz(), wgt);
+    hmtau_zQ.Get<TH1D>("current_pz_lxy", ";current hem. p_{z}[GeV];events", 60, 0.9, 50.) -> Fill(sum_vector.Pz(), wgt);
+    hmtau_zQ.Get<TH1D>("tau_zQ", ";#tau_{zQ};events",     70,  -0.2, 1.2) -> Fill(tau, wgt);
+    hmtau_zQ.Get<TH1D>("tau_zQ_lxy", ";#tau_{zQ};events", 70, 0.001, 1.2) -> Fill(tau, wgt);
+    hmtau_zQ.Get<TH1D>("BreitFramePx", 50, -15, 15, "Breit frame: P_{x}", "Entries")  -> Fill(  sum_vector.Px()   , wgt );
+    hmtau_zQ.Get<TH1D>("BreitFramePy", 50, -15, 15, "Breit frame: P_{y}", "Entries")  -> Fill(  sum_vector.Py()   , wgt );
+    hmtau_zQ.Get<TH1D>("BreitFramePt", 50,  -5, 30, "Breit frame: P_{T}", "Entries")  -> Fill(  TMath::Sqrt(TMath::Power(sum_vector.Px(),2)+TMath::Power(sum_vector.Py(),2)), wgt );
+  }
+  /*
+  auto BoostBetaArray = H2020HistManager::MakeLogBinning(50, 0.08, 3.0);
+  if ( hm.compare("tau_zQ_el") ) {
+    if ( myboost.GetTheta() <  0.1 ) {
+      hmtau_zQ.Get<TH1D>("Selected_Beta_lxy", 50, BoostBetaArray, "Boost for #theta<0.1: #beta", " Entries")  -> Fill(  myboost.GetBeta()   , wgt );
+    }
+  }
+  */
+  //if ( hm.compare("tau_zQ_iSigma") ) {
+    if ( myboost.GetBeta() > 0.3 && myboost.GetBeta() < 0.5 ) {
+      hmtau_zQ.Get<TH1D>("SelectBetaY", ";y (0.3 < #beta < 0.5);events", 70,  -0.2, 1.2) -> Fill(Y, wgt);
+      hmtau_zQ.Get<TH1D>("SelectBetaY_lxy", ";y (0.3 < #beta < 0.5);events", 70,  0.001, 1.2) -> Fill(Y, wgt);
+      hmtau_zQ.Get<TH1D>("SelectBetaX", ";x_{Bj} (0.3 < #beta < 0.5);events", 70,  -0.2, 1.2) -> Fill(X, wgt);
+      hmtau_zQ.Get<TH1D>("SelectBetaX_lxy", ";x_{Bj} (0.3 < #beta < 0.5);events", 70,  0.001, 1.2) -> Fill(X, wgt);
+    }
+    //}
+  hmtau_zQ.Get<TH1D>("physicalboost", ";Is physical boost;events", 2, -0.5, 1.5) -> Fill(double( myboost.IsPhysicalBoost() ), wgt);
+  hmtau_zQ.Get<TH1D>("physicalboost_ly", ";Is physical boost;events", 2, -0.5, 1.5) -> Fill(double( myboost.IsPhysicalBoost() ), wgt);
+  return boostedpart_current;
+}
+
+void AnalysisEventShapes::ClassicalEventShapes (const string& hm, const vector<TLorentzVector> BoostedHFS) {
+  //Calculate and plot classical event shape observables
+  //Pass name of HistManager and vector of boosted particles as argument
+  //Boosted particles can be obtained from function BoostParticleArray (Scattered electron already excluded)
+
+  //define hist manager and get weights
+  H2020HistManager& hmshapes = HistMaster::Instance()->GetHistManager(hm);
+  const double wgt = fGen.wgt;
+
+  //get thrust axis
+  TObjArray BoostedHFSThreeVector;
+  TVector3 mypart3;
+  for (long unsigned int ipart=0; ipart<BoostedHFS.size(); ++ipart){
+    TLorentzVector part = BoostedHFS[ipart];
+    mypart3 = part.Vect();
+    BoostedHFSThreeVector.Add(&mypart3);
+  }
+  H1EventShape h1es;
+  h1es.setPartList(&BoostedHFSThreeVector);
+  TVector3 thrustaxis = h1es.thrustAxis();
+
+  //Values for event shape observables will be stored here
+  Float_t pz = 0;
+  Float_t pt = 0;
+  Float_t p = 0;
+  Float_t thrust = 0;
+  Float_t E = 0;
+  TVector3 momentum(0., 0., 0.);
+  for (long unsigned int ipart=0; ipart<BoostedHFS.size(); ++ipart){
+    TLorentzVector part = BoostedHFS[ipart];
+    if ( !(part.E()>0.) ) continue; // reject zeroed-out part cands (badly measured ones, iron muons...)
+    if (part.Eta()>0){   //only particles in current hemisphere
+      pz += std::fabs( part.Pz() );
+      p += std::fabs( part.P());
+      pt += std::fabs( part.Pt());
+      thrust += std::fabs( part.Vect().Dot(thrustaxis));
+      E += part.E();
+      momentum += part.Vect();
+    }
+  }
+
+  //Fill histos
+  hmshapes.Get<TH1D>("Thrust_C", ";Thrust T_{C};events", 60, -.1, 1.1) -> Fill(1-thrust/p, wgt);
+  hmshapes.Get<TH1D>("Thrust_Z", ";Thrust T_{Z};events", 60, -.1, 1.1) -> Fill(1-pz/p, wgt);
+  hmshapes.Get<TH1D>("Broadening", ";Broadening B_{C};events", 60, -.1, 1.1) -> Fill(pt/(2*p), wgt);
+  hmshapes.Get<TH1D>("Jet_mass", ";Jet mass #rho;events", 60, -.1, 10.1) -> Fill((TMath::Power(E,2)-momentum.Dot(momentum))/(2*p), wgt);
+  //add jet mass from 1999
+  //log plots
+
+}
+
+
+
+TLorentzVector AnalysisEventShapes::BoostToBreitFrame ( double Q2, double y, double E0, double Phi ) {
+  
+  //Calculate virtual photon for iSigma method
+  //Independant of initial electron energy -> not sensitive to ISR
+  //Initial electron energy given by E = Sigma/2
+  
+  
+  Double_t px = 0;
+  Double_t py = 0;
+  Double_t pz = 0;
+  Double_t Ee = 0;
+  
+  //Calculate final state electron
+  
+  if ((Q2>0) && (y>0) && (y<1)){
+    
+    Ee = Q2 / (4*E0) + E0*(1-y);
+
+    Double_t b = 4*E0*E0*(1-y)/Q2;
+    Double_t Theta = TMath::ACos( (1-b)/(1+b) );
+  
+    px = Ee*TMath::Sin(Theta)*TMath::Cos(Phi);
+    py = Ee*TMath::Sin(Theta)*TMath::Sin(Phi);
+    pz = Ee*TMath::Cos(Theta);
+    
+  }
+
+  TLorentzVector ElecScat(px, py, pz, Ee);
+  
+  //cout<<"sigma scat"<<endl;
+  //ElecScat.Print();
+  //Double_t Sigma = gH1Calc->Fs()->GetFullHadFsEmpz();
+  Double_t Delta = gH1Calc->Fs()->GetEmpz(); // = Sigma + Ee ( 1-cos(theta) ), equal to full state E - pz
+  TLorentzVector ElecInit( 0., 0., -Delta/2, Delta/2); //initial electron, mass neglecte
+  //cout<<"sigma init"<<endl;
+  //ElecInit.Print();
+
+  return ElecInit - ElecScat;
+
+}
