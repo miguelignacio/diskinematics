@@ -1,0 +1,1020 @@
+// -------------------------------------------------- //
+//  General settings for analysis
+//  Most of them can be changed by using command
+//  line arguments.
+// -------------------------------------------------- //
+H1AnalysisSteer("EventShapes") {
+   fNEvents          =  -1;                      // -n <..> Number of events to be analysed, -1 for all
+   fInterval         =  1000;                    // Frequency at which to display progress
+   fOutputFile       =  "evtshp_em0405.root";    // -o <...>
+   fChains           =  "DjangoEplus0304_1";              // -c <...> chain to be analyzed
+
+   // Analysis chains to analyse
+   ///fChains   = "
+
+   fUsingSystematics = 0;
+   
+   // Run selection and lumi calculation
+   fGoodRunFile      = "../LumiFiles/nc_goodruns_0405.root";  // Good run file
+   fRunSelection     = "399101,436893"; // e- 04/05 running
+
+   // other parameters
+  fKineRecMethod    =  H1Constants::eKineRecESigma;
+  
+}
+
+// -------------------------------------------------- //
+//  Settings for the different chains
+// -------------------------------------------------- //
+H1AnalysisChainSteer("Data") {
+   fApplyRunSelection = true;
+   fChainType         = H1AnalysisChainSteer::eData;
+}
+
+H1AnalysisChainSteer("Django") {
+   fApplyRunSelection = true;
+   fChainType        = H1AnalysisChainSteer::eModel;
+}
+
+H1AnalysisChainSteer("Rapgap") {
+   fApplyRunSelection = true;
+   fChainType         = H1AnalysisChainSteer::eModel;
+}
+
+H1AnalysisChainSteer("Pythia") {
+   fApplyRunSelection = true;
+   fChainType         = H1AnalysisChainSteer::eBackground;
+}
+
+H1AnalysisChainSteer("DjBkgd") {
+   fApplyRunSelection = true;
+   fChainType        = H1AnalysisChainSteer::eBackground;
+}
+
+H1AnalysisChainSteer("CCBkgd") {
+   fChainType        = H1AnalysisChainSteer::eBackground;
+   fApplyRunSelection = true;
+}
+H1AnalysisChainSteer("DVCS") {
+   fChainType        = H1AnalysisChainSteer::eBackground;
+   fApplyRunSelection = true;
+}
+
+H1AnalysisChainSteer("Compton") {
+   fChainType        = H1AnalysisChainSteer::eBackground;
+   fApplyRunSelection = true;
+}
+
+H1AnalysisChainSteer("Grape") {
+   fChainType        = H1AnalysisChainSteer::eBackground;
+   fApplyRunSelection = true;
+}
+
+H1AnalysisChainSteer("Pythia") {
+   fChainType        = H1AnalysisChainSteer::eBackground;
+   fApplyRunSelection = true;
+}
+
+
+//***********************************************//
+//                      DATA                     //
+//***********************************************//
+H1SteerTree("Data_Eminus0405_0")
+{
+  fPath = "/nfs/dust/h1/group/britzger/h1mpim13/kogler/files/oo-4.0/em0405/data";
+  fFileNames = "h1oo4.0.6.data_em0405_highQ2_sub00-01";
+}
+H1SteerTree("Data_Eminus0405_1")
+{
+   fPath = "/nfs/dust/h1/group/britzger/h1mpim13/kogler/files/oo-4.0/em0405/data";
+   fFileNames = "h1oo4.0.6.data_em0405_highQ2_sub02-03";
+}
+H1SteerTree("Data_Eminus0405_2")
+{
+  fPath = "/nfs/dust/h1/group/britzger/h1mpim13/kogler/files/oo-4.0/em0405/data";
+  fFileNames = "h1oo4.0.6.data_em0405_highQ2_sub04-06";
+}
+
+
+
+//*************************************************//
+//                     DJANGOH                     //
+//*************************************************//
+
+H1SteerTree("Django_Eminus0405_1"){
+  fPath = "/pnfs/desy.de/dphep/online/h1/mc2/oo-4.0/djangoh14/7092";
+  fFileNames = "4.0.6.DJANGOH14.NC.EMINUSP.05.RAD.Q2GT60.CTEQ6L.A.7092.S39200.R97800.ftt.DST.0000-0010";
+  fLumi = 11506.59;
+}   
+
+H1SteerTree("Django_Eminus0405_2"){
+  fPath = "/pnfs/desy.de/dphep/online/h1/mc2/oo-4.0/djangoh14/7092";
+  fFileNames = "4.0.6.DJANGOH14.NC.EMINUSP.05.RAD.Q2GT60.CTEQ6L.A.7092.S39200.R97800.ftt.DST.0011-0020";
+  fLumi = 11506.59;
+}   
+
+H1SteerTree("Django_Eminus0405_3"){
+  fPath = "/pnfs/desy.de/dphep/online/h1/mc2/oo-4.0/djangoh14/7092";
+  fFileNames = "4.0.6.DJANGOH14.NC.EMINUSP.05.RAD.Q2GT60.CTEQ6L.A.7092.S39200.R97800.ftt.DST.0021-0030";
+  fLumi = 11506.59;
+}   
+
+H1SteerTree("Django_Eminus0405_4"){
+  fPath = "/pnfs/desy.de/dphep/online/h1/mc2/oo-4.0/djangoh14/7092";
+  fFileNames = "4.0.6.DJANGOH14.NC.EMINUSP.05.RAD.Q2GT60.CTEQ6L.A.7092.S39200.R97800.ftt.DST.0031-0040";
+  fLumi = 11506.59;
+}   
+
+
+H1SteerTree("Django_Eminus0405_5"){
+  fPath = "/pnfs/desy.de/dphep/online/h1/mc2/oo-4.0/djangoh14/7092";
+  fFileNames = "4.0.6.DJANGOH14.NC.EMINUSP.05.RAD.Q2GT60.CTEQ6L.A.7092.S39200.R97800.ftt.DST.0041-0050";
+  fLumi = 11506.59;
+}   
+
+H1SteerTree("Django_Eminus0405_6"){
+  fPath = "/pnfs/desy.de/dphep/online/h1/mc2/oo-4.0/djangoh14/7092";
+  fFileNames = "4.0.6.DJANGOH14.NC.EMINUSP.05.RAD.Q2GT60.CTEQ6L.A.7092.S39200.R97800.ftt.DST.0051-0060";
+  fLumi = 11506.59;
+}   
+
+H1SteerTree("Django_Eminus0405_7"){
+  fPath = "/pnfs/desy.de/dphep/online/h1/mc2/oo-4.0/djangoh14/7092";
+  fFileNames = "4.0.6.DJANGOH14.NC.EMINUSP.05.RAD.Q2GT60.CTEQ6L.A.7092.S39200.R97800.ftt.DST.0061-0070";
+  fLumi = 11506.59;
+}   
+
+H1SteerTree("Django_Eminus0405_8"){
+  fPath = "/pnfs/desy.de/dphep/online/h1/mc2/oo-4.0/djangoh14/7092";
+  fFileNames = "4.0.6.DJANGOH14.NC.EMINUSP.05.RAD.Q2GT60.CTEQ6L.A.7092.S39200.R97800.ftt.DST.0071-0080";
+  fLumi = 11506.59;
+}   
+
+H1SteerTree("Django_Eminus0405_9"){
+  fPath = "/pnfs/desy.de/dphep/online/h1/mc2/oo-4.0/djangoh14/7092";
+  fFileNames = "4.0.6.DJANGOH14.NC.EMINUSP.05.RAD.Q2GT60.CTEQ6L.A.7092.S39200.R97800.ftt.DST.0081-0090";
+  fLumi = 11506.59;
+}   
+
+H1SteerTree("Django_Eminus0405_10"){
+  fPath = "/pnfs/desy.de/dphep/online/h1/mc2/oo-4.0/djangoh14/7092";
+  fFileNames = "4.0.6.DJANGOH14.NC.EMINUSP.05.RAD.Q2GT60.CTEQ6L.A.7092.S39200.R97800.ftt.DST.0090-0100";
+  fLumi = 11506.59;
+}   
+
+H1SteerTree("Django_Eminus0405_11"){
+  fPath = "/pnfs/desy.de/dphep/online/h1/mc2/oo-4.0/djangoh14/7092";
+  fFileNames = "4.0.6.DJANGOH14.NC.EMINUSP.05.RAD.Q2GT60.CTEQ6L.A.7092.S39200.R97800.ftt.DST.0101-0110";
+  fLumi = 11506.59;
+}   
+
+H1SteerTree("Django_Eminus0405_12"){
+  fPath = "/pnfs/desy.de/dphep/online/h1/mc2/oo-4.0/djangoh14/7092";
+  fFileNames = "4.0.6.DJANGOH14.NC.EMINUSP.05.RAD.Q2GT60.CTEQ6L.A.7092.S39200.R97800.ftt.DST.0111-0120";
+  fLumi = 11506.59;
+}   
+
+H1SteerTree("Django_Eminus0405_13"){
+  fPath = "/pnfs/desy.de/dphep/online/h1/mc2/oo-4.0/djangoh14/7092";
+  fFileNames = "4.0.6.DJANGOH14.NC.EMINUSP.05.RAD.Q2GT60.CTEQ6L.A.7092.S39200.R97800.ftt.DST.0121-0131";
+  fLumi = 11506.59;
+}   
+
+H1SteerTree("Django_Eminus0405_14"){
+  fPath = "/pnfs/desy.de/dphep/online/h1/mc2/oo-4.0/djangoh14/7092";
+  fFileNames = "4.0.6.DJANGOH14.NC.EMINUSP.05.RAD.Q2GT60.CTEQ6L.A.7092.S39200.R97800.ftt.DST.0132-0140";
+  fLumi = 11506.59;
+}   
+
+
+//*************************************************//
+//                  DJANGOH MC13                   //
+//*************************************************//
+
+// **** id 8956 **** //
+H1SteerTree("Django_Eminus0405_101"){
+   fPath = "/pnfs/desy.de/dphep/online/h1/mc2/oo-4.0/djangoh14/8956";
+   fFileNames = "4.0.25.DJANGOH14.NC.EMINUSP.05.RAD.Q2GT60.CTEQ6L.A1.8956.S39600.R97905.ftt.DST.0000-0009"; // 0000-0200
+   fLumi = 11506.59;
+}   
+H1SteerTree("Django_Eminus0405_102"){
+   fPath = "/pnfs/desy.de/dphep/online/h1/mc2/oo-4.0/djangoh14/8956";
+   fFileNames = "4.0.25.DJANGOH14.NC.EMINUSP.05.RAD.Q2GT60.CTEQ6L.A1.8956.S39600.R97905.ftt.DST.0010-0019"; // 0000-0200
+   fLumi = 11506.59;
+}   
+H1SteerTree("Django_Eminus0405_103"){
+   fPath = "/pnfs/desy.de/dphep/online/h1/mc2/oo-4.0/djangoh14/8956";
+   fFileNames = "4.0.25.DJANGOH14.NC.EMINUSP.05.RAD.Q2GT60.CTEQ6L.A1.8956.S39600.R97905.ftt.DST.0020-0029"; // 0000-0200
+   fLumi = 11506.59;
+}   
+H1SteerTree("Django_Eminus0405_104"){
+   fPath = "/pnfs/desy.de/dphep/online/h1/mc2/oo-4.0/djangoh14/8956";
+   fFileNames = "4.0.25.DJANGOH14.NC.EMINUSP.05.RAD.Q2GT60.CTEQ6L.A1.8956.S39600.R97905.ftt.DST.0030-0039"; // 0000-0200
+   fLumi = 11506.59;
+}   
+H1SteerTree("Django_Eminus0405_105"){
+   fPath = "/pnfs/desy.de/dphep/online/h1/mc2/oo-4.0/djangoh14/8956";
+   fFileNames = "4.0.25.DJANGOH14.NC.EMINUSP.05.RAD.Q2GT60.CTEQ6L.A1.8956.S39600.R97905.ftt.DST.0040-0049"; // 0000-0200
+   fLumi = 11506.59;
+}   
+H1SteerTree("Django_Eminus0405_106"){
+   fPath = "/pnfs/desy.de/dphep/online/h1/mc2/oo-4.0/djangoh14/8956";
+   fFileNames = "4.0.25.DJANGOH14.NC.EMINUSP.05.RAD.Q2GT60.CTEQ6L.A1.8956.S39600.R97905.ftt.DST.0050-0059"; // 0000-0200
+   fLumi = 11506.59;
+}   
+H1SteerTree("Django_Eminus0405_107"){
+   fPath = "/pnfs/desy.de/dphep/online/h1/mc2/oo-4.0/djangoh14/8956";
+   fFileNames = "4.0.25.DJANGOH14.NC.EMINUSP.05.RAD.Q2GT60.CTEQ6L.A1.8956.S39600.R97905.ftt.DST.0060-0069"; // 0000-0200
+   fLumi = 11506.59;
+}   
+H1SteerTree("Django_Eminus0405_108"){
+   fPath = "/pnfs/desy.de/dphep/online/h1/mc2/oo-4.0/djangoh14/8956";
+   fFileNames = "4.0.25.DJANGOH14.NC.EMINUSP.05.RAD.Q2GT60.CTEQ6L.A1.8956.S39600.R97905.ftt.DST.0070-0079"; // 0000-0200
+   fLumi = 11506.59;
+}   
+H1SteerTree("Django_Eminus0405_109"){
+   fPath = "/pnfs/desy.de/dphep/online/h1/mc2/oo-4.0/djangoh14/8956";
+   fFileNames = "4.0.25.DJANGOH14.NC.EMINUSP.05.RAD.Q2GT60.CTEQ6L.A1.8956.S39600.R97905.ftt.DST.0080-0089"; // 0000-0200
+   fLumi = 11506.59;
+}   
+H1SteerTree("Django_Eminus0405_110"){
+   fPath = "/pnfs/desy.de/dphep/online/h1/mc2/oo-4.0/djangoh14/8956";
+   fFileNames = "4.0.25.DJANGOH14.NC.EMINUSP.05.RAD.Q2GT60.CTEQ6L.A1.8956.S39600.R97905.ftt.DST.0090-0099"; // 0000-0200
+   fLumi = 11506.59;
+}   
+
+H1SteerTree("Django_Eminus0405_111"){
+   fPath = "/pnfs/desy.de/dphep/online/h1/mc2/oo-4.0/djangoh14/8956";
+   fFileNames = "4.0.25.DJANGOH14.NC.EMINUSP.05.RAD.Q2GT60.CTEQ6L.A1.8956.S39600.R97905.ftt.DST.0100-0109"; // 0000-0200
+   fLumi = 11506.59;
+}   
+H1SteerTree("Django_Eminus0405_112"){
+   fPath = "/pnfs/desy.de/dphep/online/h1/mc2/oo-4.0/djangoh14/8956";
+   fFileNames = "4.0.25.DJANGOH14.NC.EMINUSP.05.RAD.Q2GT60.CTEQ6L.A1.8956.S39600.R97905.ftt.DST.0110-0119"; // 0000-0200
+   fLumi = 11506.59;
+}   
+H1SteerTree("Django_Eminus0405_113"){
+   fPath = "/pnfs/desy.de/dphep/online/h1/mc2/oo-4.0/djangoh14/8956";
+   fFileNames = "4.0.25.DJANGOH14.NC.EMINUSP.05.RAD.Q2GT60.CTEQ6L.A1.8956.S39600.R97905.ftt.DST.0120-0129"; // 0000-0200
+   fLumi = 11506.59;
+}   
+H1SteerTree("Django_Eminus0405_114"){
+   fPath = "/pnfs/desy.de/dphep/online/h1/mc2/oo-4.0/djangoh14/8956";
+   fFileNames = "4.0.25.DJANGOH14.NC.EMINUSP.05.RAD.Q2GT60.CTEQ6L.A1.8956.S39600.R97905.ftt.DST.0130-0139"; // 0000-0200
+   fLumi = 11506.59;
+}   
+H1SteerTree("Django_Eminus0405_115"){
+   fPath = "/pnfs/desy.de/dphep/online/h1/mc2/oo-4.0/djangoh14/8956";
+   fFileNames = "4.0.25.DJANGOH14.NC.EMINUSP.05.RAD.Q2GT60.CTEQ6L.A1.8956.S39600.R97905.ftt.DST.0140-0149"; // 0000-0200
+   fLumi = 11506.59;
+}   
+H1SteerTree("Django_Eminus0405_116"){
+   fPath = "/pnfs/desy.de/dphep/online/h1/mc2/oo-4.0/djangoh14/8956";
+   fFileNames = "4.0.25.DJANGOH14.NC.EMINUSP.05.RAD.Q2GT60.CTEQ6L.A1.8956.S39600.R97905.ftt.DST.0150-0159"; // 0000-0200
+   fLumi = 11506.59;
+}   
+H1SteerTree("Django_Eminus0405_117"){
+   fPath = "/pnfs/desy.de/dphep/online/h1/mc2/oo-4.0/djangoh14/8956";
+   fFileNames = "4.0.25.DJANGOH14.NC.EMINUSP.05.RAD.Q2GT60.CTEQ6L.A1.8956.S39600.R97905.ftt.DST.0160-0169"; // 0000-0200
+   fLumi = 11506.59;
+}   
+H1SteerTree("Django_Eminus0405_118"){
+   fPath = "/pnfs/desy.de/dphep/online/h1/mc2/oo-4.0/djangoh14/8956";
+   fFileNames = "4.0.25.DJANGOH14.NC.EMINUSP.05.RAD.Q2GT60.CTEQ6L.A1.8956.S39600.R97905.ftt.DST.0170-0179"; // 0000-0200
+   fLumi = 11506.59;
+}   
+H1SteerTree("Django_Eminus0405_119"){
+   fPath = "/pnfs/desy.de/dphep/online/h1/mc2/oo-4.0/djangoh14/8956";
+   fFileNames = "4.0.25.DJANGOH14.NC.EMINUSP.05.RAD.Q2GT60.CTEQ6L.A1.8956.S39600.R97905.ftt.DST.0180-0189"; // 0000-0200
+   fLumi = 11506.59;
+}   
+H1SteerTree("Django_Eminus0405_120"){
+   fPath = "/pnfs/desy.de/dphep/online/h1/mc2/oo-4.0/djangoh14/8956";
+   fFileNames = "4.0.25.DJANGOH14.NC.EMINUSP.05.RAD.Q2GT60.CTEQ6L.A1.8956.S39600.R97905.ftt.DST.0190-0200";// 0000-0200
+   fLumi = 11506.59; // These are 11 files !
+}   
+
+
+// **** id 8957 **** //
+H1SteerTree("Django_Eminus0405_121"){
+   fPath = "/pnfs/desy.de/dphep/online/h1/mc2/oo-4.0/djangoh14/8957";
+   fFileNames = "4.0.25.DJANGOH14.NC.EMINUSP.05.RAD.Q2GT60.CTEQ6L.A2.8957.S39600.R97905.ftt.DST.0000-0009"; // 0000-0185
+   fLumi = 11506.59;
+}   
+H1SteerTree("Django_Eminus0405_122"){
+   fPath = "/pnfs/desy.de/dphep/online/h1/mc2/oo-4.0/djangoh14/8957";
+   fFileNames = "4.0.25.DJANGOH14.NC.EMINUSP.05.RAD.Q2GT60.CTEQ6L.A2.8957.S39600.R97905.ftt.DST.0010-0019"; // 0000-0185
+   fLumi = 11506.59;
+}   
+H1SteerTree("Django_Eminus0405_123"){
+   fPath = "/pnfs/desy.de/dphep/online/h1/mc2/oo-4.0/djangoh14/8957";
+   fFileNames = "4.0.25.DJANGOH14.NC.EMINUSP.05.RAD.Q2GT60.CTEQ6L.A2.8957.S39600.R97905.ftt.DST.0020-0029"; // 0000-0185
+   fLumi = 11506.59;
+}   
+H1SteerTree("Django_Eminus0405_124"){
+   fPath = "/pnfs/desy.de/dphep/online/h1/mc2/oo-4.0/djangoh14/8957";
+   fFileNames = "4.0.25.DJANGOH14.NC.EMINUSP.05.RAD.Q2GT60.CTEQ6L.A2.8957.S39600.R97905.ftt.DST.0030-0039"; // 0000-0185
+   fLumi = 11506.59;
+}   
+H1SteerTree("Django_Eminus0405_125"){
+   fPath = "/pnfs/desy.de/dphep/online/h1/mc2/oo-4.0/djangoh14/8957";
+   fFileNames = "4.0.25.DJANGOH14.NC.EMINUSP.05.RAD.Q2GT60.CTEQ6L.A2.8957.S39600.R97905.ftt.DST.0040-0049"; // 0000-0185
+   fLumi = 11506.59;
+}   
+H1SteerTree("Django_Eminus0405_126"){
+   fPath = "/pnfs/desy.de/dphep/online/h1/mc2/oo-4.0/djangoh14/8957";
+   fFileNames = "4.0.25.DJANGOH14.NC.EMINUSP.05.RAD.Q2GT60.CTEQ6L.A2.8957.S39600.R97905.ftt.DST.0050-0059"; // 0000-0185
+   fLumi = 11506.59;
+}   
+H1SteerTree("Django_Eminus0405_127"){
+   fPath = "/pnfs/desy.de/dphep/online/h1/mc2/oo-4.0/djangoh14/8957";
+   fFileNames = "4.0.25.DJANGOH14.NC.EMINUSP.05.RAD.Q2GT60.CTEQ6L.A2.8957.S39600.R97905.ftt.DST.0060-0069"; // 0000-0185
+   fLumi = 11506.59;
+}   
+H1SteerTree("Django_Eminus0405_128"){
+   fPath = "/pnfs/desy.de/dphep/online/h1/mc2/oo-4.0/djangoh14/8957";
+   fFileNames = "4.0.25.DJANGOH14.NC.EMINUSP.05.RAD.Q2GT60.CTEQ6L.A2.8957.S39600.R97905.ftt.DST.0070-0079"; // 0000-0185
+   fLumi = 11506.59;
+}   
+H1SteerTree("Django_Eminus0405_129"){
+   fPath = "/pnfs/desy.de/dphep/online/h1/mc2/oo-4.0/djangoh14/8957";
+   fFileNames = "4.0.25.DJANGOH14.NC.EMINUSP.05.RAD.Q2GT60.CTEQ6L.A2.8957.S39600.R97905.ftt.DST.0080-0089"; // 0000-0185
+   fLumi = 11506.59;
+}   
+H1SteerTree("Django_Eminus0405_130"){
+   fPath = "/pnfs/desy.de/dphep/online/h1/mc2/oo-4.0/djangoh14/8957";
+   fFileNames = "4.0.25.DJANGOH14.NC.EMINUSP.05.RAD.Q2GT60.CTEQ6L.A2.8957.S39600.R97905.ftt.DST.0090-0099"; // 0000-0185
+   fLumi = 11506.59;
+}   
+
+H1SteerTree("Django_Eminus0405_131"){
+   fPath = "/pnfs/desy.de/dphep/online/h1/mc2/oo-4.0/djangoh14/8957";
+   fFileNames = "4.0.25.DJANGOH14.NC.EMINUSP.05.RAD.Q2GT60.CTEQ6L.A2.8957.S39600.R97905.ftt.DST.0100-0109"; // 0000-0185
+   fLumi = 11506.59;
+}   
+H1SteerTree("Django_Eminus0405_132"){
+   fPath = "/pnfs/desy.de/dphep/online/h1/mc2/oo-4.0/djangoh14/8957";
+   fFileNames = "4.0.25.DJANGOH14.NC.EMINUSP.05.RAD.Q2GT60.CTEQ6L.A2.8957.S39600.R97905.ftt.DST.0110-0119"; // 0000-0185
+   fLumi = 11506.59;
+}   
+H1SteerTree("Django_Eminus0405_133"){
+   fPath = "/pnfs/desy.de/dphep/online/h1/mc2/oo-4.0/djangoh14/8957";
+   fFileNames = "4.0.25.DJANGOH14.NC.EMINUSP.05.RAD.Q2GT60.CTEQ6L.A2.8957.S39600.R97905.ftt.DST.0120-0129"; // 0000-0185
+   fLumi = 11506.59;
+}   
+H1SteerTree("Django_Eminus0405_134"){
+   fPath = "/pnfs/desy.de/dphep/online/h1/mc2/oo-4.0/djangoh14/8957";
+   fFileNames = "4.0.25.DJANGOH14.NC.EMINUSP.05.RAD.Q2GT60.CTEQ6L.A2.8957.S39600.R97905.ftt.DST.0130-0139"; // 0000-0185
+   fLumi = 11506.59;
+}   
+H1SteerTree("Django_Eminus0405_135"){
+   fPath = "/pnfs/desy.de/dphep/online/h1/mc2/oo-4.0/djangoh14/8957";
+   fFileNames = "4.0.25.DJANGOH14.NC.EMINUSP.05.RAD.Q2GT60.CTEQ6L.A2.8957.S39600.R97905.ftt.DST.0140-0149"; // 0000-0185
+   fLumi = 11506.59;
+}   
+H1SteerTree("Django_Eminus0405_136"){
+   fPath = "/pnfs/desy.de/dphep/online/h1/mc2/oo-4.0/djangoh14/8957";
+   fFileNames = "4.0.25.DJANGOH14.NC.EMINUSP.05.RAD.Q2GT60.CTEQ6L.A2.8957.S39600.R97905.ftt.DST.0150-0159"; // 0000-0185
+   fLumi = 11506.59;
+}   
+H1SteerTree("Django_Eminus0405_137"){
+   fPath = "/pnfs/desy.de/dphep/online/h1/mc2/oo-4.0/djangoh14/8957";
+   fFileNames = "4.0.25.DJANGOH14.NC.EMINUSP.05.RAD.Q2GT60.CTEQ6L.A2.8957.S39600.R97905.ftt.DST.0160-0169"; // 0000-0185
+   fLumi = 11506.59;
+}   
+H1SteerTree("Django_Eminus0405_138"){
+   fPath = "/pnfs/desy.de/dphep/online/h1/mc2/oo-4.0/djangoh14/8957";
+   fFileNames = "4.0.25.DJANGOH14.NC.EMINUSP.05.RAD.Q2GT60.CTEQ6L.A2.8957.S39600.R97905.ftt.DST.0170-0179"; // 0000-0185
+   fLumi = 11506.59;
+}   
+H1SteerTree("Django_Eminus0405_139"){
+   fPath = "/pnfs/desy.de/dphep/online/h1/mc2/oo-4.0/djangoh14/8957";
+   fFileNames = "4.0.25.DJANGOH14.NC.EMINUSP.05.RAD.Q2GT60.CTEQ6L.A2.8957.S39600.R97905.ftt.DST.0180-0185"; // 0000-0185
+   fLumi = 11506.59;
+}   
+
+
+//*************************************************//
+//                     RAPGAP                      //
+//*************************************************//
+
+
+
+H1SteerTree("Rapgap_Eminus0405_1"){
+  fPath = "/pnfs/desy.de/dphep/online/h1/mc2/oo-4.0/rapgap31/7096";
+  fFileNames = "4.0.6.RAPGAP31.NC.EMINUSP.05.RAD.Q2GT60.CTEQ6L.A.7096.S39200.R97800.ftt.DST.0000-0009";
+  fLumi = 12209.99;
+}   
+H1SteerTree("Rapgap_Eminus0405_2"){
+  fPath = "/pnfs/desy.de/dphep/online/h1/mc2/oo-4.0/rapgap31/7096";
+  fFileNames = "4.0.6.RAPGAP31.NC.EMINUSP.05.RAD.Q2GT60.CTEQ6L.A.7096.S39200.R97800.ftt.DST.0010-0019";
+  fLumi = 12209.99;
+}   
+
+
+H1SteerTree("Rapgap_Eminus0405_3"){
+  fPath = "/pnfs/desy.de/dphep/online/h1/mc2/oo-4.0/rapgap31/7096";
+  fFileNames = "4.0.6.RAPGAP31.NC.EMINUSP.05.RAD.Q2GT60.CTEQ6L.A.7096.S39200.R97800.ftt.DST.0020-0029";
+  fLumi = 12209.99;
+}   
+
+
+H1SteerTree("Rapgap_Eminus0405_4"){
+  fPath = "/pnfs/desy.de/dphep/online/h1/mc2/oo-4.0/rapgap31/7096";
+  fFileNames = "4.0.6.RAPGAP31.NC.EMINUSP.05.RAD.Q2GT60.CTEQ6L.A.7096.S39200.R97800.ftt.DST.0030-0039";
+  fLumi = 12209.99;
+}   
+
+H1SteerTree("Rapgap_Eminus0405_5"){
+  fPath = "/pnfs/desy.de/dphep/online/h1/mc2/oo-4.0/rapgap31/7096";
+  fFileNames = "4.0.6.RAPGAP31.NC.EMINUSP.05.RAD.Q2GT60.CTEQ6L.A.7096.S39200.R97800.ftt.DST.0040-0049";
+  fLumi = 12209.99;
+}   
+
+H1SteerTree("Rapgap_Eminus0405_6"){
+  fPath = "/pnfs/desy.de/dphep/online/h1/mc2/oo-4.0/rapgap31/7096";
+  fFileNames = "4.0.6.RAPGAP31.NC.EMINUSP.05.RAD.Q2GT60.CTEQ6L.A.7096.S39200.R97800.ftt.DST.0050-0059";
+  fLumi = 12209.99;
+}   
+
+H1SteerTree("Rapgap_Eminus0405_7"){
+  fPath = "/pnfs/desy.de/dphep/online/h1/mc2/oo-4.0/rapgap31/7096";
+  fFileNames = "4.0.6.RAPGAP31.NC.EMINUSP.05.RAD.Q2GT60.CTEQ6L.A.7096.S39200.R97800.ftt.DST.0060-0069";
+  fLumi = 12209.99;
+}   
+
+H1SteerTree("Rapgap_Eminus0405_8"){
+  fPath = "/pnfs/desy.de/dphep/online/h1/mc2/oo-4.0/rapgap31/7096";
+  fFileNames = "4.0.6.RAPGAP31.NC.EMINUSP.05.RAD.Q2GT60.CTEQ6L.A.7096.S39200.R97800.ftt.DST.0070-0079";
+  fLumi = 12209.99;
+}   
+
+H1SteerTree("Rapgap_Eminus0405_9"){
+  fPath = "/pnfs/desy.de/dphep/online/h1/mc2/oo-4.0/rapgap31/7096";
+  fFileNames = "4.0.6.RAPGAP31.NC.EMINUSP.05.RAD.Q2GT60.CTEQ6L.A.7096.S39200.R97800.ftt.DST.0080-0089";
+  fLumi = 12209.99;
+}   
+
+H1SteerTree("Rapgap_Eminus0405_10"){
+  fPath = "/pnfs/desy.de/dphep/online/h1/mc2/oo-4.0/rapgap31/7096";
+  fFileNames = "4.0.6.RAPGAP31.NC.EMINUSP.05.RAD.Q2GT60.CTEQ6L.A.7096.S39200.R97800.ftt.DST.0090-0099";
+  fLumi = 12209.99;
+}   
+
+H1SteerTree("Rapgap_Eminus0405_11"){
+  fPath = "/pnfs/desy.de/dphep/online/h1/mc2/oo-4.0/rapgap31/7096";
+  fFileNames = "4.0.6.RAPGAP31.NC.EMINUSP.05.RAD.Q2GT60.CTEQ6L.A.7096.S39200.R97800.ftt.DST.0100-0109";
+  fLumi = 12209.99;
+}   
+
+H1SteerTree("Rapgap_Eminus0405_12"){
+  fPath = "/pnfs/desy.de/dphep/online/h1/mc2/oo-4.0/rapgap31/7096";
+  fFileNames = "4.0.6.RAPGAP31.NC.EMINUSP.05.RAD.Q2GT60.CTEQ6L.A.7096.S39200.R97800.ftt.DST.0110-0120";
+  fLumi = 12209.99;
+}   
+
+
+//*************************************************//
+//                   RAPGAP MC13                   //
+//*************************************************//
+
+// **** id 8951 **** //
+H1SteerTree("Rapgap_Eminus0405_101"){
+   fPath = "/pnfs/desy.de/dphep/online/h1/mc2/oo-4.0/rapgap31/8951";
+   fFileNames = "4.0.25.RAPGAP31.NC.EMINUSP.05.RAD.Q2GT60.CTEQ6L.A1.8951.S39600.R97905.ftt.DST.0000-0009"; // 0000-0200
+   fLumi = 12209.99;
+}   
+H1SteerTree("Rapgap_Eminus0405_102"){
+   fPath = "/pnfs/desy.de/dphep/online/h1/mc2/oo-4.0/rapgap31/8951";
+   fFileNames = "4.0.25.RAPGAP31.NC.EMINUSP.05.RAD.Q2GT60.CTEQ6L.A1.8951.S39600.R97905.ftt.DST.0010-0019"; // 0000-0200
+   fLumi = 12209.99;
+}   
+H1SteerTree("Rapgap_Eminus0405_103"){
+   fPath = "/pnfs/desy.de/dphep/online/h1/mc2/oo-4.0/rapgap31/8951";
+   fFileNames = "4.0.25.RAPGAP31.NC.EMINUSP.05.RAD.Q2GT60.CTEQ6L.A1.8951.S39600.R97905.ftt.DST.0020-0029"; // 0000-0200
+   fLumi = 12209.99;
+}   
+H1SteerTree("Rapgap_Eminus0405_104"){
+   fPath = "/pnfs/desy.de/dphep/online/h1/mc2/oo-4.0/rapgap31/8951";
+   fFileNames = "4.0.25.RAPGAP31.NC.EMINUSP.05.RAD.Q2GT60.CTEQ6L.A1.8951.S39600.R97905.ftt.DST.0030-0039"; // 0000-0200
+   fLumi = 12209.99;
+}   
+H1SteerTree("Rapgap_Eminus0405_105"){
+   fPath = "/pnfs/desy.de/dphep/online/h1/mc2/oo-4.0/rapgap31/8951";
+   fFileNames = "4.0.25.RAPGAP31.NC.EMINUSP.05.RAD.Q2GT60.CTEQ6L.A1.8951.S39600.R97905.ftt.DST.0040-0049"; // 0000-0200
+   fLumi = 12209.99;
+}   
+H1SteerTree("Rapgap_Eminus0405_106"){
+   fPath = "/pnfs/desy.de/dphep/online/h1/mc2/oo-4.0/rapgap31/8951";
+   fFileNames = "4.0.25.RAPGAP31.NC.EMINUSP.05.RAD.Q2GT60.CTEQ6L.A1.8951.S39600.R97905.ftt.DST.0050-0059"; // 0000-0200
+   fLumi = 12209.99;
+}   
+H1SteerTree("Rapgap_Eminus0405_107"){
+   fPath = "/pnfs/desy.de/dphep/online/h1/mc2/oo-4.0/rapgap31/8951";
+   fFileNames = "4.0.25.RAPGAP31.NC.EMINUSP.05.RAD.Q2GT60.CTEQ6L.A1.8951.S39600.R97905.ftt.DST.0060-0069"; // 0000-0200
+   fLumi = 12209.99;
+}   
+H1SteerTree("Rapgap_Eminus0405_108"){
+   fPath = "/pnfs/desy.de/dphep/online/h1/mc2/oo-4.0/rapgap31/8951";
+   fFileNames = "4.0.25.RAPGAP31.NC.EMINUSP.05.RAD.Q2GT60.CTEQ6L.A1.8951.S39600.R97905.ftt.DST.0070-0079"; // 0000-0200
+   fLumi = 12209.99;
+}   
+H1SteerTree("Rapgap_Eminus0405_109"){
+   fPath = "/pnfs/desy.de/dphep/online/h1/mc2/oo-4.0/rapgap31/8951";
+   fFileNames = "4.0.25.RAPGAP31.NC.EMINUSP.05.RAD.Q2GT60.CTEQ6L.A1.8951.S39600.R97905.ftt.DST.0080-0089"; // 0000-0200
+   fLumi = 12209.99;
+}   
+H1SteerTree("Rapgap_Eminus0405_110"){
+   fPath = "/pnfs/desy.de/dphep/online/h1/mc2/oo-4.0/rapgap31/8951";
+   fFileNames = "4.0.25.RAPGAP31.NC.EMINUSP.05.RAD.Q2GT60.CTEQ6L.A1.8951.S39600.R97905.ftt.DST.0090-0099"; // 0000-0200
+   fLumi = 12209.99;
+}   
+
+H1SteerTree("Rapgap_Eminus0405_111"){
+   fPath = "/pnfs/desy.de/dphep/online/h1/mc2/oo-4.0/rapgap31/8951";
+   fFileNames = "4.0.25.RAPGAP31.NC.EMINUSP.05.RAD.Q2GT60.CTEQ6L.A1.8951.S39600.R97905.ftt.DST.0100-0109"; // 0000-0200
+   fLumi = 12209.99;
+}   
+H1SteerTree("Rapgap_Eminus0405_112"){
+   fPath = "/pnfs/desy.de/dphep/online/h1/mc2/oo-4.0/rapgap31/8951";
+   fFileNames = "4.0.25.RAPGAP31.NC.EMINUSP.05.RAD.Q2GT60.CTEQ6L.A1.8951.S39600.R97905.ftt.DST.0110-0119"; // 0000-0200
+   fLumi = 12209.99;
+}   
+H1SteerTree("Rapgap_Eminus0405_113"){
+   fPath = "/pnfs/desy.de/dphep/online/h1/mc2/oo-4.0/rapgap31/8951";
+   fFileNames = "4.0.25.RAPGAP31.NC.EMINUSP.05.RAD.Q2GT60.CTEQ6L.A1.8951.S39600.R97905.ftt.DST.0120-0129"; // 0000-0200
+   fLumi = 12209.99;
+}   
+H1SteerTree("Rapgap_Eminus0405_114"){
+   fPath = "/pnfs/desy.de/dphep/online/h1/mc2/oo-4.0/rapgap31/8951";
+   fFileNames = "4.0.25.RAPGAP31.NC.EMINUSP.05.RAD.Q2GT60.CTEQ6L.A1.8951.S39600.R97905.ftt.DST.0130-0139"; // 0000-0200
+   fLumi = 12209.99;
+}   
+H1SteerTree("Rapgap_Eminus0405_115"){
+   fPath = "/pnfs/desy.de/dphep/online/h1/mc2/oo-4.0/rapgap31/8951";
+   fFileNames = "4.0.25.RAPGAP31.NC.EMINUSP.05.RAD.Q2GT60.CTEQ6L.A1.8951.S39600.R97905.ftt.DST.0140-0149"; // 0000-0200
+   fLumi = 12209.99;
+}   
+H1SteerTree("Rapgap_Eminus0405_116"){
+   fPath = "/pnfs/desy.de/dphep/online/h1/mc2/oo-4.0/rapgap31/8951";
+   fFileNames = "4.0.25.RAPGAP31.NC.EMINUSP.05.RAD.Q2GT60.CTEQ6L.A1.8951.S39600.R97905.ftt.DST.0150-0159"; // 0000-0200
+   fLumi = 12209.99;
+}   
+H1SteerTree("Rapgap_Eminus0405_117"){
+   fPath = "/pnfs/desy.de/dphep/online/h1/mc2/oo-4.0/rapgap31/8951";
+   fFileNames = "4.0.25.RAPGAP31.NC.EMINUSP.05.RAD.Q2GT60.CTEQ6L.A1.8951.S39600.R97905.ftt.DST.0160-0169"; // 0000-0200
+   fLumi = 12209.99;
+}   
+H1SteerTree("Rapgap_Eminus0405_118"){
+   fPath = "/pnfs/desy.de/dphep/online/h1/mc2/oo-4.0/rapgap31/8951";
+   fFileNames = "4.0.25.RAPGAP31.NC.EMINUSP.05.RAD.Q2GT60.CTEQ6L.A1.8951.S39600.R97905.ftt.DST.0170-0179"; // 0000-0200
+   fLumi = 12209.99;
+}   
+H1SteerTree("Rapgap_Eminus0405_119"){
+   fPath = "/pnfs/desy.de/dphep/online/h1/mc2/oo-4.0/rapgap31/8951";
+   fFileNames = "4.0.25.RAPGAP31.NC.EMINUSP.05.RAD.Q2GT60.CTEQ6L.A1.8951.S39600.R97905.ftt.DST.0180-0189"; // 0000-0200
+   fLumi = 12209.99;
+}   
+H1SteerTree("Rapgap_Eminus0405_120"){
+   fPath = "/pnfs/desy.de/dphep/online/h1/mc2/oo-4.0/rapgap31/8951";
+   fFileNames = "4.0.25.RAPGAP31.NC.EMINUSP.05.RAD.Q2GT60.CTEQ6L.A1.8951.S39600.R97905.ftt.DST.0190-0200";// 0000-0200
+   fLumi = 12209.99; // These are 11 files !
+}   
+
+// **** id 8952 **** //
+H1SteerTree("Rapgap_Eminus0405_121"){
+   fPath = "/pnfs/desy.de/dphep/online/h1/mc2/oo-4.0/rapgap31/8952";
+   fFileNames = "4.0.25.RAPGAP31.NC.EMINUSP.05.RAD.Q2GT60.CTEQ6L.A2.8952.S39600.R97905.ftt.DST.0000-0009"; // 0000-0165
+   fLumi = 12209.99;
+}   
+H1SteerTree("Rapgap_Eminus0405_122"){
+   fPath = "/pnfs/desy.de/dphep/online/h1/mc2/oo-4.0/rapgap31/8952";
+   fFileNames = "4.0.25.RAPGAP31.NC.EMINUSP.05.RAD.Q2GT60.CTEQ6L.A2.8952.S39600.R97905.ftt.DST.0010-0019"; // 0000-0165
+   fLumi = 12209.99;
+}   
+H1SteerTree("Rapgap_Eminus0405_123"){
+   fPath = "/pnfs/desy.de/dphep/online/h1/mc2/oo-4.0/rapgap31/8952";
+   fFileNames = "4.0.25.RAPGAP31.NC.EMINUSP.05.RAD.Q2GT60.CTEQ6L.A2.8952.S39600.R97905.ftt.DST.0020-0029"; // 0000-0165
+   fLumi = 12209.99;
+}   
+H1SteerTree("Rapgap_Eminus0405_124"){
+   fPath = "/pnfs/desy.de/dphep/online/h1/mc2/oo-4.0/rapgap31/8952";
+   fFileNames = "4.0.25.RAPGAP31.NC.EMINUSP.05.RAD.Q2GT60.CTEQ6L.A2.8952.S39600.R97905.ftt.DST.0030-0039"; // 0000-0165
+   fLumi = 12209.99;
+}   
+H1SteerTree("Rapgap_Eminus0405_125"){
+   fPath = "/pnfs/desy.de/dphep/online/h1/mc2/oo-4.0/rapgap31/8952";
+   fFileNames = "4.0.25.RAPGAP31.NC.EMINUSP.05.RAD.Q2GT60.CTEQ6L.A2.8952.S39600.R97905.ftt.DST.0040-0049"; // 0000-0165
+   fLumi = 12209.99;
+}   
+H1SteerTree("Rapgap_Eminus0405_126"){
+   fPath = "/pnfs/desy.de/dphep/online/h1/mc2/oo-4.0/rapgap31/8952";
+   fFileNames = "4.0.25.RAPGAP31.NC.EMINUSP.05.RAD.Q2GT60.CTEQ6L.A2.8952.S39600.R97905.ftt.DST.0050-0059"; // 0000-0165
+   fLumi = 12209.99;
+}   
+H1SteerTree("Rapgap_Eminus0405_127"){
+   fPath = "/pnfs/desy.de/dphep/online/h1/mc2/oo-4.0/rapgap31/8952";
+   fFileNames = "4.0.25.RAPGAP31.NC.EMINUSP.05.RAD.Q2GT60.CTEQ6L.A2.8952.S39600.R97905.ftt.DST.0060-0069"; // 0000-0165
+   fLumi = 12209.99;
+}   
+H1SteerTree("Rapgap_Eminus0405_128"){
+   fPath = "/pnfs/desy.de/dphep/online/h1/mc2/oo-4.0/rapgap31/8952";
+   fFileNames = "4.0.25.RAPGAP31.NC.EMINUSP.05.RAD.Q2GT60.CTEQ6L.A2.8952.S39600.R97905.ftt.DST.0070-0079"; // 0000-0165
+   fLumi = 12209.99;
+}   
+H1SteerTree("Rapgap_Eminus0405_129"){
+   fPath = "/pnfs/desy.de/dphep/online/h1/mc2/oo-4.0/rapgap31/8952";
+   fFileNames = "4.0.25.RAPGAP31.NC.EMINUSP.05.RAD.Q2GT60.CTEQ6L.A2.8952.S39600.R97905.ftt.DST.0080-0089"; // 0000-0165
+   fLumi = 12209.99;
+}   
+H1SteerTree("Rapgap_Eminus0405_130"){
+   fPath = "/pnfs/desy.de/dphep/online/h1/mc2/oo-4.0/rapgap31/8952";
+   fFileNames = "4.0.25.RAPGAP31.NC.EMINUSP.05.RAD.Q2GT60.CTEQ6L.A2.8952.S39600.R97905.ftt.DST.0090-0099"; // 0000-0165
+   fLumi = 12209.99;
+}   
+
+H1SteerTree("Rapgap_Eminus0405_131"){
+   fPath = "/pnfs/desy.de/dphep/online/h1/mc2/oo-4.0/rapgap31/8952";
+   fFileNames = "4.0.25.RAPGAP31.NC.EMINUSP.05.RAD.Q2GT60.CTEQ6L.A2.8952.S39600.R97905.ftt.DST.0100-0109"; // 0000-0165
+   fLumi = 12209.99;
+}   
+H1SteerTree("Rapgap_Eminus0405_132"){
+   fPath = "/pnfs/desy.de/dphep/online/h1/mc2/oo-4.0/rapgap31/8952";
+   fFileNames = "4.0.25.RAPGAP31.NC.EMINUSP.05.RAD.Q2GT60.CTEQ6L.A2.8952.S39600.R97905.ftt.DST.0110-0119"; // 0000-0165
+   fLumi = 12209.99;
+}   
+H1SteerTree("Rapgap_Eminus0405_133"){
+   fPath = "/pnfs/desy.de/dphep/online/h1/mc2/oo-4.0/rapgap31/8952";
+   fFileNames = "4.0.25.RAPGAP31.NC.EMINUSP.05.RAD.Q2GT60.CTEQ6L.A2.8952.S39600.R97905.ftt.DST.0120-0129"; // 0000-0165
+   fLumi = 12209.99;
+}   
+H1SteerTree("Rapgap_Eminus0405_134"){
+   fPath = "/pnfs/desy.de/dphep/online/h1/mc2/oo-4.0/rapgap31/8952";
+   fFileNames = "4.0.25.RAPGAP31.NC.EMINUSP.05.RAD.Q2GT60.CTEQ6L.A2.8952.S39600.R97905.ftt.DST.0130-0139"; // 0000-0165
+   fLumi = 12209.99;
+}   
+H1SteerTree("Rapgap_Eminus0405_135"){
+   fPath = "/pnfs/desy.de/dphep/online/h1/mc2/oo-4.0/rapgap31/8952";
+   fFileNames = "4.0.25.RAPGAP31.NC.EMINUSP.05.RAD.Q2GT60.CTEQ6L.A2.8952.S39600.R97905.ftt.DST.0140-0149"; // 0000-0165
+   fLumi = 12209.99;
+}   
+H1SteerTree("Rapgap_Eminus0405_136"){
+   fPath = "/pnfs/desy.de/dphep/online/h1/mc2/oo-4.0/rapgap31/8952";
+   fFileNames = "4.0.25.RAPGAP31.NC.EMINUSP.05.RAD.Q2GT60.CTEQ6L.A2.8952.S39600.R97905.ftt.DST.0150-0159"; // 0000-0165
+   fLumi = 12209.99;
+}   
+H1SteerTree("Rapgap_Eminus0405_137"){
+   fPath = "/pnfs/desy.de/dphep/online/h1/mc2/oo-4.0/rapgap31/8952";
+   fFileNames = "4.0.25.RAPGAP31.NC.EMINUSP.05.RAD.Q2GT60.CTEQ6L.A2.8952.S39600.R97905.ftt.DST.0160-0165"; // 0000-0165
+   fLumi = 12209.99;
+}   
+
+
+
+
+//********************************************//
+//               BACKGROUND                   //
+//********************************************//
+
+// Photoproduction
+H1SteerTree("Pythia_Eminus0405_1"){
+  fDirectoryNames = "/pnfs/desy.de/dphep/online/h1/mc2/oo-4.0/pythia62/7283"; // b dir
+  fLumi = 400;
+} 
+
+H1SteerTree("Pythia_Eminus0405_2"){
+  fDirectoryNames = "/pnfs/desy.de/dphep/online/h1/mc2/oo-4.0/pythia62/7282"; // b res
+  fLumi = 400;
+} 
+
+H1SteerTree("Pythia_Eminus0405_3"){
+  fDirectoryNames = "/pnfs/desy.de/dphep/online/h1/mc2/oo-4.0/pythia62/7281"; // c dir
+  fLumi = 400;
+}
+
+H1SteerTree("Pythia_Eminus0405_4"){
+  fDirectoryNames = "/pnfs/desy.de/dphep/online/h1/mc2/oo-4.0/pythia62/7280"; // c res
+  fLumi = 400;
+} 
+
+H1SteerTree("Pythia_Eminus0405_5"){
+  fDirectoryNames = "/pnfs/desy.de/dphep/online/h1/mc2/oo-4.0/pythia62/7279"; // uds dir
+  fLumi = 400;
+} 
+
+H1SteerTree("Pythia_Eminus0405_6"){
+  fDirectoryNames = "/pnfs/desy.de/dphep/online/h1/mc2/oo-4.0/pythia62/7278"; // uds res
+  fLumi = 404.18;
+} 
+
+H1SteerTree("Pythia_Eminus0405_7"){
+  fDirectoryNames = "/pnfs/desy.de/dphep/online/h1/mc2/oo-4.0/pythia62/7277"; // uds res
+  fLumi = 404.18;
+}
+
+H1SteerTree("Pythia_Eminus0405_8"){
+  fPath = "/pnfs/desy.de/dphep/online/h1/mc2/oo-4.0/pythia62/7276"; // uds res
+  fFileNames = "4.0.6.PYTHIA62.p920.EML.UDS.RES.PTH5.7276.S39200.R97800.ftt.DST.0000-0006";
+  fLumi = 404.18;
+} 
+
+H1SteerTree("Pythia_Eminus0405_9"){
+  fPath = "/pnfs/desy.de/dphep/online/h1/mc2/oo-4.0/pythia62/7276"; // uds res
+  fFileNames = "4.0.6.PYTHIA62.p920.EML.UDS.RES.PTH5.7276.S39200.R97800.ftt.DST.0007-0013";
+  fLumi = 404.18;
+}
+
+H1SteerTree("Pythia_Eminus0405_10"){
+  fPath = "/pnfs/desy.de/dphep/online/h1/mc2/oo-4.0/pythia62/7275"; // uds res
+  fFileNames = "4.0.6.PYTHIA62.p920.EML.UDS.RES.PTH5.7275.S39200.R97800.ftt.DST.0000-0006";
+  fLumi = 404.18;
+} 
+
+H1SteerTree("Pythia_Eminus0405_11"){
+  fPath = "/pnfs/desy.de/dphep/online/h1/mc2/oo-4.0/pythia62/7275"; // uds res
+  fFileNames = "4.0.6.PYTHIA62.p920.EML.UDS.RES.PTH5.7275.S39200.R97800.ftt.DST.0007-0013";
+  fLumi = 404.18;
+}
+
+H1SteerTree("Pythia_Eminus0405_12"){
+  fPath = "/pnfs/desy.de/dphep/online/h1/mc2/oo-4.0/pythia62/7274"; // uds res
+  fFileNames = "4.0.6.PYTHIA62.p920.EML.UDS.RES.PTH5.7274.S39200.R97800.ftt.DST.0000-0006";
+  fLumi = 404.18;
+} 
+
+H1SteerTree("Pythia_Eminus0405_13"){
+  fPath = "/pnfs/desy.de/dphep/online/h1/mc2/oo-4.0/pythia62/7274"; // uds res
+  fFileNames = "4.0.6.PYTHIA62.p920.EML.UDS.RES.PTH5.7274.S39200.R97800.ftt.DST.0007-0013";
+  fLumi = 404.18;
+}
+
+H1SteerTree("Pythia_Eminus0405_14"){
+  fDirectoryNames = "/pnfs/desy.de/dphep/online/h1/mc2/oo-4.0/pythia62/7261"; // b dir
+  fLumi = 400;
+} 
+
+H1SteerTree("Pythia_Eminus0405_15"){
+  fDirectoryNames = "/pnfs/desy.de/dphep/online/h1/mc2/oo-4.0/pythia62/7260"; // b res
+  fLumi = 400;
+} 
+
+H1SteerTree("Pythia_Eminus0405_16"){
+  fDirectoryNames = "/pnfs/desy.de/dphep/online/h1/mc2/oo-4.0/pythia62/7259"; // b dir
+  fLumi = 400;
+} 
+
+H1SteerTree("Pythia_Eminus0405_17"){
+  fDirectoryNames = "/pnfs/desy.de/dphep/online/h1/mc2/oo-4.0/pythia62/7258"; // b res
+  fLumi = 400;
+} 
+
+H1SteerTree("Pythia_Eminus0405_18"){
+  fDirectoryNames = "/pnfs/desy.de/dphep/online/h1/mc2/oo-4.0/pythia62/7257"; // uds dir
+  fLumi = 400;
+} 
+
+H1SteerTree("Pythia_Eminus0405_19"){
+  fDirectoryNames = "/pnfs/desy.de/dphep/online/h1/mc2/oo-4.0/pythia62/7256"; // uds res
+  fLumi = 404.18;
+} 
+
+H1SteerTree("Pythia_Eminus0405_20"){
+  fDirectoryNames = "/pnfs/desy.de/dphep/online/h1/mc2/oo-4.0/pythia62/7255"; // uds res
+  fLumi = 404.18;
+}
+
+H1SteerTree("Pythia_Eminus0405_21"){
+  fDirectoryNames = "/pnfs/desy.de/dphep/online/h1/mc2/oo-4.0/pythia62/7254"; // uds res
+  fLumi = 404.18;
+}
+
+H1SteerTree("Pythia_Eminus0405_22"){
+  fDirectoryNames = "/pnfs/desy.de/dphep/online/h1/mc2/oo-4.0/pythia62/7253"; // uds res
+  fLumi = 404.18;
+}
+
+H1SteerTree("Pythia_Eminus0405_23"){
+  fDirectoryNames = "/pnfs/desy.de/dphep/online/h1/mc2/oo-4.0/pythia62/7252"; // uds res
+  fLumi = 404.18;
+}
+
+H1SteerTree("Pythia_Eminus0405_24"){
+  fDirectoryNames = "/pnfs/desy.de/dphep/online/h1/mc2/oo-4.0/pythia62/7251"; // uds res
+  fLumi = 404.18;
+}
+
+// DVCS
+H1SteerTree("DVCS_Eminus0405_1"){
+  fPath = "/pnfs/desy.de/dphep/online/h1/mc2/oo-4.0/tintin/8057";
+  fFileNames = "4.0.6.DVCSMilou_pdis.MCnew.eminus_v3.8057.S39400.R97901.ftt.DST.0000-0010";
+  fLumi = 27173.9;
+} 
+
+H1SteerTree("DVCS_Eminus0405_2"){
+  fPath = "/pnfs/desy.de/dphep/online/h1/mc2/oo-4.0/tintin/8056";
+  fFileNames = "4.0.6.DVCSMilou_elas.MCnew.eminus_v3.8056.S39400.R97901.ftt.DST.0000-0020";
+  fLumi = 28490;
+} 
+
+// QED Compton
+H1SteerTree("Compton_Eminus0405_1"){
+  fPath = "/pnfs/desy.de/dphep/online/h1/mc2/oo-4.0/compton20/8347";
+  fFileNames = "4.0.6.compton23_fsr_eminus_7.8347.S39400.R97901.ftt.DST.0000-0009";
+  fLumi = 1415.22;
+}
+
+H1SteerTree("Compton_Eminus0405_2"){
+  fPath = "/pnfs/desy.de/dphep/online/h1/mc2/oo-4.0/compton20/8347";
+  fFileNames = "4.0.6.compton23_fsr_eminus_7.8347.S39400.R97901.ftt.DST.0010-0019";
+  fLumi = 1415.22;
+}
+
+H1SteerTree("Compton_Eminus0405_3"){
+  fPath = "/pnfs/desy.de/dphep/online/h1/mc2/oo-4.0/compton20/8347";
+  fFileNames = "4.0.6.compton23_fsr_eminus_7.8347.S39400.R97901.ftt.DST.0020-0029";
+  fLumi = 1415.22;
+}
+
+H1SteerTree("Compton_Eminus0405_4"){
+  fPath = "/pnfs/desy.de/dphep/online/h1/mc2/oo-4.0/compton20/8347";
+  fFileNames = "4.0.6.compton23_fsr_eminus_7.8347.S39400.R97901.ftt.DST.0030-0039";
+  fLumi = 1415.22;
+}
+
+H1SteerTree("Compton_Eminus0405_5"){
+  fPath = "/pnfs/desy.de/dphep/online/h1/mc2/oo-4.0/compton20/8347";
+  fFileNames = "4.0.6.compton23_fsr_eminus_7.8347.S39400.R97901.ftt.DST.0040-0049";
+  fLumi = 1415.22;
+}
+
+H1SteerTree("Compton_Eminus0405_6"){
+  fPath = "/pnfs/desy.de/dphep/online/h1/mc2/oo-4.0/compton20/8347";
+  fFileNames = "4.0.6.compton23_fsr_eminus_7.8347.S39400.R97901.ftt.DST.0050-0059";
+  fLumi = 1415.22;
+}
+
+H1SteerTree("Compton_Eminus0405_7"){
+  fPath = "/pnfs/desy.de/dphep/online/h1/mc2/oo-4.0/compton20/8347";
+  fFileNames = "4.0.6.compton23_fsr_eminus_7.8347.S39400.R97901.ftt.DST.0060-0069";
+  fLumi = 1415.22;
+}
+H1SteerTree("Compton_Eminus0405_8"){
+  fPath = "/pnfs/desy.de/dphep/online/h1/mc2/oo-4.0/compton20/8347";
+  fFileNames = "4.0.6.compton23_fsr_eminus_7.8347.S39400.R97901.ftt.DST.0070-0079";
+  fLumi = 1415.22;
+}
+H1SteerTree("Compton_Eminus0405_9"){
+  fPath = "/pnfs/desy.de/dphep/online/h1/mc2/oo-4.0/compton20/8347";
+  fFileNames = "4.0.6.compton23_fsr_eminus_7.8347.S39400.R97901.ftt.DST.0080-0089";
+  fLumi = 1415.22;
+}
+H1SteerTree("Compton_Eminus0405_10"){
+  fPath = "/pnfs/desy.de/dphep/online/h1/mc2/oo-4.0/compton20/8347";
+  fFileNames = "4.0.6.compton23_fsr_eminus_7.8347.S39400.R97901.ftt.DST.0090-0100";
+  fLumi = 1415.22;
+}
+
+// GRAPE for lepton pair production
+H1SteerTree("Grape_Eminus0405"){
+  fDirectoryNames = "/pnfs/desy.de/dphep/online/h1/mc2/oo-4.0/h1grape/7129";
+  fLumi = 4931.28;
+} 
+
+// low Q2 Django for background from low Q2 events
+
+H1SteerTree("DjBkgd_0405_1"){
+  fPath = "/pnfs/desy.de/dphep/online/h1/mc2/oo-4.0/djangoh14/7087";
+  fFileNames = "4.0.6.DJANGOH14.EMINUSP.05.NC.RAD.Q2GT2.CTEQ6L.I.7087.S39200.R97800.ftt.DST.0000-0009";
+  fLumi = 227.88;
+}
+
+H1SteerTree("DjBkgd_0405_2"){
+  fPath = "/pnfs/desy.de/dphep/online/h1/mc2/oo-4.0/djangoh14/7087";
+  fFileNames = "4.0.6.DJANGOH14.EMINUSP.05.NC.RAD.Q2GT2.CTEQ6L.I.7087.S39200.R97800.ftt.DST.0010-0019";
+  fLumi = 227.88;
+}
+
+H1SteerTree("DjBkgd_0405_3"){
+  fPath = "/pnfs/desy.de/dphep/online/h1/mc2/oo-4.0/djangoh14/7087";
+  fFileNames = "4.0.6.DJANGOH14.EMINUSP.05.NC.RAD.Q2GT2.CTEQ6L.I.7087.S39200.R97800.ftt.DST.0020-0029";
+  fLumi = 227.88;
+}
+
+H1SteerTree("DjBkgd_0405_4"){
+  fPath = "/pnfs/desy.de/dphep/online/h1/mc2/oo-4.0/djangoh14/7087";
+  fFileNames = "4.0.6.DJANGOH14.EMINUSP.05.NC.RAD.Q2GT2.CTEQ6L.I.7087.S39200.R97800.ftt.DST.0030-0039";
+  fLumi = 227.88;
+}
+
+H1SteerTree("DjBkgd_0405_5"){
+  fPath = "/pnfs/desy.de/dphep/online/h1/mc2/oo-4.0/djangoh14/7087";
+  fFileNames = "4.0.6.DJANGOH14.EMINUSP.05.NC.RAD.Q2GT2.CTEQ6L.I.7087.S39200.R97800.ftt.DST.0040-0049";
+  fLumi = 227.88;
+}
+
+H1SteerTree("DjBkgd_0405_6"){
+  fPath = "/pnfs/desy.de/dphep/online/h1/mc2/oo-4.0/djangoh14/7087";
+  fFileNames = "4.0.6.DJANGOH14.EMINUSP.05.NC.RAD.Q2GT2.CTEQ6L.I.7087.S39200.R97800.ftt.DST.0050-0059";
+  fLumi = 227.88;
+}
+
+H1SteerTree("DjBkgd_0405_7"){
+  fPath = "/pnfs/desy.de/dphep/online/h1/mc2/oo-4.0/djangoh14/7087";
+  fFileNames = "4.0.6.DJANGOH14.EMINUSP.05.NC.RAD.Q2GT2.CTEQ6L.I.7087.S39200.R97800.ftt.DST.0060-0069";
+  fLumi = 227.88;
+}
+
+H1SteerTree("DjBkgd_0405_8"){
+  fPath = "/pnfs/desy.de/dphep/online/h1/mc2/oo-4.0/djangoh14/7087";
+  fFileNames = "4.0.6.DJANGOH14.EMINUSP.05.NC.RAD.Q2GT2.CTEQ6L.I.7087.S39200.R97800.ftt.DST.0070-0079";
+  fLumi = 227.88;
+}
+
+H1SteerTree("DjBkgd_0405_9"){
+  fPath = "/pnfs/desy.de/dphep/online/h1/mc2/oo-4.0/djangoh14/7087";
+  fFileNames = "4.0.6.DJANGOH14.EMINUSP.05.NC.RAD.Q2GT2.CTEQ6L.I.7087.S39200.R97800.ftt.DST.0080-0089";
+  fLumi = 227.88;
+}
+
+H1SteerTree("DjBkgd_0405_10"){
+  fPath = "/pnfs/desy.de/dphep/online/h1/mc2/oo-4.0/djangoh14/7087";
+  fFileNames = "4.0.6.DJANGOH14.EMINUSP.05.NC.RAD.Q2GT2.CTEQ6L.I.7087.S39200.R97800.ftt.DST.0090-0099";
+  fLumi = 227.88;
+}
+
+H1SteerTree("DjBkgd_0405_11"){
+  fPath = "/pnfs/desy.de/dphep/online/h1/mc2/oo-4.0/djangoh14/7087";
+  fFileNames = "4.0.6.DJANGOH14.EMINUSP.05.NC.RAD.Q2GT2.CTEQ6L.I.7087.S39200.R97800.ftt.DST.0100-0109";
+  fLumi = 227.88;
+}
+H1SteerTree("DjBkgd_0405_12"){
+  fPath = "/pnfs/desy.de/dphep/online/h1/mc2/oo-4.0/djangoh14/7087";
+  fFileNames = "4.0.6.DJANGOH14.EMINUSP.05.NC.RAD.Q2GT2.CTEQ6L.I.7087.S39200.R97800.ftt.DST.0110-0119";
+  fLumi = 227.88;
+}
+H1SteerTree("DjBkgd_0405_13"){
+  fPath = "/pnfs/desy.de/dphep/online/h1/mc2/oo-4.0/djangoh14/7087";
+  fFileNames = "4.0.6.DJANGOH14.EMINUSP.05.NC.RAD.Q2GT2.CTEQ6L.I.7087.S39200.R97800.ftt.DST.0120-0129";
+  fLumi = 227.88;
+}
+H1SteerTree("DjBkgd_0405_14"){
+  fPath = "/pnfs/desy.de/dphep/online/h1/mc2/oo-4.0/djangoh14/7087";
+  fFileNames = "4.0.6.DJANGOH14.EMINUSP.05.NC.RAD.Q2GT2.CTEQ6L.I.7087.S39200.R97800.ftt.DST.0130-0139";
+  fLumi = 227.88;
+}
+H1SteerTree("DjBkgd_0405_15"){
+  fPath = "/pnfs/desy.de/dphep/online/h1/mc2/oo-4.0/djangoh14/7087";
+  fFileNames = "4.0.6.DJANGOH14.EMINUSP.05.NC.RAD.Q2GT2.CTEQ6L.I.7087.S39200.R97800.ftt.DST.0140-0149";
+  fLumi = 227.88;
+}
+H1SteerTree("DjBkgd_0405_16"){
+  fPath = "/pnfs/desy.de/dphep/online/h1/mc2/oo-4.0/djangoh14/7087";
+  fFileNames = "4.0.6.DJANGOH14.EMINUSP.05.NC.RAD.Q2GT2.CTEQ6L.I.7087.S39200.R97800.ftt.DST.0150-0159";
+  fLumi = 227.88;
+}
+H1SteerTree("DjBkgd_0405_17"){
+  fPath = "/pnfs/desy.de/dphep/online/h1/mc2/oo-4.0/djangoh14/7087";
+  fFileNames = "4.0.6.DJANGOH14.EMINUSP.05.NC.RAD.Q2GT2.CTEQ6L.I.7087.S39200.R97800.ftt.DST.0160-0169";
+  fLumi = 227.88;
+}
+H1SteerTree("DjBkgd_0405_18"){
+  fPath = "/pnfs/desy.de/dphep/online/h1/mc2/oo-4.0/djangoh14/7087";
+  fFileNames = "4.0.6.DJANGOH14.EMINUSP.05.NC.RAD.Q2GT2.CTEQ6L.I.7087.S39200.R97800.ftt.DST.0170-0179";
+  fLumi = 227.88;
+}
+H1SteerTree("DjBkgd_0405_19"){
+  fPath = "/pnfs/desy.de/dphep/online/h1/mc2/oo-4.0/djangoh14/7087";
+  fFileNames = "4.0.6.DJANGOH14.EMINUSP.05.NC.RAD.Q2GT2.CTEQ6L.I.7087.S39200.R97800.ftt.DST.0180-0189";
+  fLumi = 227.88;
+}
+H1SteerTree("DjBkgd_0405_20"){
+  fPath = "/pnfs/desy.de/dphep/online/h1/mc2/oo-4.0/djangoh14/7087";
+  fFileNames = "4.0.6.DJANGOH14.EMINUSP.05.NC.RAD.Q2GT2.CTEQ6L.I.7087.S39200.R97800.ftt.DST.0190-0199";
+  fLumi = 227.88;
+}
+
+H1SteerTree("CCBkgd_0405"){
+  fDirectoryNames = "/pnfs/desy.de/dphep/online/h1/mc2/oo-4.0/djangoh14/7412, /pnfs/desy.de/dphep/online/h1/mc2/oo-4.0/djangoh14/7413";
+  fLumi = 5697;
+}
+
+
+
+
+H1AnalysisSelectionResultsSteer("NCDIS")
+{
+  fGenReader = "GenInfo";
+  fRecReader = "RecInfo";
+}
+
+
+H1CalcReaderSteer("GenInfo")
+{
+  fInfo = "Kine_Q2Gen";
+}
+
+
+H1CalcReaderSteer("RecInfo")
+{
+  fInfo = "Kine_Q2";
+}
