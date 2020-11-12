@@ -42,6 +42,6 @@ fi
 
 echo ""
 echo "Now running analysis: $PWD/EventShapes"
-./EventShapes -f $1 -c $2 -o $OUTDIR/$2.root -n 5000
+./EventShapes -f $1 -c $2 -o $OUTDIR/$2.root
 
 
