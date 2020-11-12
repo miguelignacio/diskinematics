@@ -236,6 +236,8 @@ void AnalysisEventShapes::DoControlPlotsRec() {
    // this is is another histmanager
    H2020HistManager& hmtracks = HistMaster::Instance()->GetHistManager("NCDISTracks");
 
+   H2020HistManager& hmGenRatio = HistMaster::Instance()->GetHistManager("GenRatio");
+
    H2020HistManager& hmtau_zQ_el = HistMaster::Instance()->GetHistManager("tau_zQ_el");
 
    H2020HistManager& hmtau_zQ_had = HistMaster::Instance()->GetHistManager("tau_zQ_had");
@@ -263,15 +265,14 @@ void AnalysisEventShapes::DoControlPlotsRec() {
    H1BoostedJets::Instance()->BeamVectors(&pbeam, &ebeam);
    TLorentzVector ScatElec = gH1Calc->Elec()->GetFirstElectron();
    TLorentzVector HFS = gH1Calc->Fs()->GetFullHadFS();
-   /*
-   cout<<"scat elec"<<endl;
-   ScatElec.Print();
-   cout<<"init elec"<<endl;
-   ebeam.Print();
-   */
+   TLorentzVector ScatElecGen = gH1Calc->Elec()->GetFirstElectronGen();
+   
+
 
    Float_t Empz = gH1Calc->Fs()->GetEmpz(); // = Delta, E-pz for the full final state
+   Float_t EmpzGen = gH1Calc->Fs()->GetEmpzGen();
    Float_t Sigma = gH1Calc->Fs()->GetFullHadFsEmpz(); // E-pz for the full hadron final state
+   //Float_t SigmaGen = 0; //Not implemented yet
    Float_t PtMiss = gH1Calc->Fs()->GetPtMiss();
    Float_t prim_zvtx = gH1Calc->Vertex()->GetHatPrimaryVertexZ();
    Float_t optimal_zvtx = gH1Calc->Vertex()->GetZ(H1CalcVertex::vtOptimalNC);
@@ -283,6 +284,19 @@ void AnalysisEventShapes::DoControlPlotsRec() {
    TObjArray* detectorlevel = H1BoostedJets::Instance()->GetHFSArray();
 
    vector<H1PartCand*> hfsarray1 = to_vector<H1PartCand*>(H1BoostedJets::Instance()->GetHFSArray());
+   vector<H1PartCand*> hadronarray = to_vector<H1PartCand*>(H1BoostedJets::Instance()->GetHadronArray());
+
+   //get SigmaGen ( = sum_{hadron final state} (E-pZ) )
+   double SigmaGen = 0;
+   for (long unsigned int ipart=0; ipart<hadronarray.size(); ++ipart){
+     H1PartCand* part = static_cast<H1PartCand*>(hadronarray[ipart]);
+     if (part->IsScatElec()) continue;  // exclude the scattered electron
+     if ( !(part->GetE()>0.) ) continue; // reject zeroed-out part cands (badly measured ones, iron muons...)
+     SigmaGen += (part->GetE() - part->GetPz() );
+   }
+
+
+
 
    TLorentzVector virtualphoton = ebeam - ScatElec;
    TLorentzVector Pplusq = pbeam + virtualphoton;
@@ -290,6 +304,8 @@ void AnalysisEventShapes::DoControlPlotsRec() {
    Float_t Q2  = GetKine_Q2();
    Float_t X   = GetKine_X();
    Float_t Y   = GetKine_Y();
+
+//Detector level
  //elelctron method
    Float_t Ye  = GetKine_Ye();
    Float_t Q2e = GetKine_Q2e();
@@ -312,13 +328,78 @@ void AnalysisEventShapes::DoControlPlotsRec() {
    Float_t Q2is = TMath::Power( ScatElec.E()*TMath::Sin( ScatElec.Theta() ) , 2 ) / ( 1-Yis );
    Float_t Xis = ( ScatElec.E() / pbeam.E() ) * ( TMath::Power( TMath::Cos(ScatElec.Theta()) , 2 ) / Yis );
 
+//Particle level
+ //elelctron method
+   Float_t YeGen  = GetKine_YeGen();
+   Float_t Q2eGen = GetKine_Q2eGen();
+   Float_t XeGen = GetKine_XeGen();
+ //hadron method
+   Float_t YhGen  = GetKine_YhGen();
+   Float_t Q2hGen = GetKine_Q2hGen();
+   Float_t XhGen = gH1Calc->Kine()->GetXhGen();
+ //eSigma method
+   Float_t YesGen = GetKine_YesGen();
+   Float_t Q2esGen = GetKine_Q2esGen();
+   Float_t XesGen = GetKine_XesGen();
+ //Sigma method
+   Float_t YsGen = GetKine_YsGen();
+   Float_t Q2sGen = GetKine_Q2sGen();
+   Float_t XsGen = GetKine_XsGen();
+ //ISigma method
+   Float_t YisGen = SigmaGen / ( SigmaGen + ScatElecGen.E()*( 1-TMath::Cos(ScatElecGen.Theta()) ) );
+   Float_t Q2isGen = TMath::Power( ScatElecGen.E()*TMath::Sin( ScatElecGen.Theta() ) , 2 ) / ( 1-YisGen );  
+   Float_t XisGen = ( ScatElecGen.E() / pbeam.E() ) * ( TMath::Power( TMath::Cos(ScatElecGen.Theta()) , 2 ) / YsGen );
 
-   hm.Get<TH1D>("RatioY_ly", 50, 0., 2., "Ys / Yis", "Entries")  -> Fill(  Ys/Yis   , wgt );
-   hm.Get<TH1D>("RatioQ2_ly", 50, 0., 2., "Q2s / Q2is", "Entries")  -> Fill(  Q2s/Q2is   , wgt );
-   
+   hmGenRatio.Get<TH1D>("RatioYeGen_ly", 50, -0.1, 2., "Ye / YeGen", "Entries")  -> Fill(  Ye/YeGen   , wgt );
+   hmGenRatio.Get<TH1D>("RatioYeGen", 50, -0.1, 2., "Ye / YeGen", "Entries")  -> Fill(  Ye/YeGen   , wgt );
+   hmGenRatio.Get<TH1D>("RatioQ2eGen_ly", 50, -0.1, 2., "Q2e / Q2eGen", "Entries")  -> Fill(  Q2e/Q2eGen   , wgt );
+   hmGenRatio.Get<TH1D>("RatioQ2eGen", 50, -0.1, 2., "Q2e / Q2eGen", "Entries")  -> Fill(  Q2e/Q2eGen   , wgt );
+   hmGenRatio.Get<TH1D>("RatioXeGen_ly", 50, -0.1, 2., "Xe / XeGen", "Entries")  -> Fill(  Xe/XeGen   , wgt );
+   hmGenRatio.Get<TH1D>("RatioXeGen", 50, -0.1, 2., "Xe / XeGen", "Entries")  -> Fill(  Xe/XeGen   , wgt );
+
+   hmGenRatio.Get<TH1D>("RatioYhGen_ly", 50, -0.1, 2., "Yh / YhGen", "Entries")  -> Fill(  Yh/YhGen   , wgt );
+   hmGenRatio.Get<TH1D>("RatioYhGen", 50, -0.1, 2., "Yh / YhGen", "Entries")  -> Fill(  Yh/YhGen   , wgt );
+   hmGenRatio.Get<TH1D>("RatioQ2hGen_ly", 50, -0.1, 2., "Q2h / Q2hGen", "Entries")  -> Fill(  Q2h/Q2hGen   , wgt );
+   hmGenRatio.Get<TH1D>("RatioQ2hGen", 50, -0.1, 2., "Q2h / Q2hGen", "Entries")  -> Fill(  Q2h/Q2hGen   , wgt );
+   hmGenRatio.Get<TH1D>("RatioXhGen_ly", 50, -0.1, 2., "Xh / XhGen", "Entries")  -> Fill(  Xh/XhGen   , wgt );
+   hmGenRatio.Get<TH1D>("RatioXhGen", 50, -0.1, 2., "Xh / XhGen", "Entries")  -> Fill(  Xh/XhGen   , wgt );
+
+   hmGenRatio.Get<TH1D>("RatioYesGen_ly", 50, -0.1, 2., "Yes / YesGen", "Entries")  -> Fill(  Yes/YesGen   , wgt );
+   hmGenRatio.Get<TH1D>("RatioYesGen", 50, -0.1, 2., "Yes / YesGen", "Entries")  -> Fill(  Yes/YesGen   , wgt );
+   hmGenRatio.Get<TH1D>("RatioQ2esGen_ly", 50, -0.1, 2., "Q2es / Q2esGen", "Entries")  -> Fill(  Q2es/Q2esGen   , wgt );
+   hmGenRatio.Get<TH1D>("RatioQ2esGen", 50, -0.1, 2., "Q2es / Q2esGen", "Entries")  -> Fill(  Q2es/Q2esGen   , wgt );
+   hmGenRatio.Get<TH1D>("RatioXesGen_ly", 50, -0.1, 2., "Xes / XesGen", "Entries")  -> Fill(  Xes/XesGen   , wgt );
+   hmGenRatio.Get<TH1D>("RatioXesGen", 50, -0.1, 2., "Xes / XesGen", "Entries")  -> Fill(  Xes/XesGen   , wgt );
+
+   hmGenRatio.Get<TH1D>("RatioYsGen_ly", 50, -0.1, 2., "Ys / YsGen", "Entries")  -> Fill(  Ys/YsGen   , wgt );
+   hmGenRatio.Get<TH1D>("RatioYsGen", 50, -0.1, 2., "Ys / YsGen", "Entries")  -> Fill(  Ys/YsGen   , wgt );
+   hmGenRatio.Get<TH1D>("RatioQ2sGen_ly", 50, -0.1, 2., "Q2s / Q2sGen", "Entries")  -> Fill(  Q2s/Q2sGen   , wgt );   
+   hmGenRatio.Get<TH1D>("RatioQ2sGen", 50, -0.1, 2., "Q2s / Q2sGen", "Entries")  -> Fill(  Q2s/Q2sGen   , wgt );
+   hmGenRatio.Get<TH1D>("RatioXsGen_ly", 50, -0.1, 2., "Xs / XsGen", "Entries")  -> Fill(  Xs/XsGen   , wgt );
+   hmGenRatio.Get<TH1D>("RatioXsGen", 50, -0.1, 2., "Xs / XsGen", "Entries")  -> Fill(  Xs/XsGen   , wgt );
+
+   hmGenRatio.Get<TH1D>("RatioYisGen_ly", 50, -0.1, 2., "Yis / YisGen", "Entries")  -> Fill(  Yis/YisGen   , wgt );
+   hmGenRatio.Get<TH1D>("RatioYisGen", 50, -0.1, 2., "Yis / YisGen", "Entries")  -> Fill(  Yis/YisGen   , wgt );
+   hmGenRatio.Get<TH1D>("RatioQ2isGen_ly", 50, -0.1, 2., "Q2is / Q2isGen", "Entries")  -> Fill(  Q2is/Q2isGen   , wgt );
+   hmGenRatio.Get<TH1D>("RatioQ2isGen", 50, -0.1, 2., "Q2is / Q2isGen", "Entries")  -> Fill(  Q2is/Q2isGen   , wgt );
+   hmGenRatio.Get<TH1D>("RatioXisGen_ly", 50, -0.1, 2., "Xis / XisGen", "Entries")  -> Fill(  Xis/XisGen   , wgt );
+   hmGenRatio.Get<TH1D>("RatioXisGen", 50, -0.1, 2., "Xis / XisGen", "Entries")  -> Fill(  Xis/XisGen   , wgt );
+
+   hmGenRatio.Get<TH1D>("RatioEmpzGen_ly", 50, -0.1, 2., "Empz / EmpzGen", "Entries")  -> Fill(  Empz/EmpzGen   , wgt );
+   hmGenRatio.Get<TH1D>("RatioEmpzGen", 50, -0.1, 2., "Empz / EmpzGen", "Entries")  -> Fill(  Empz/EmpzGen   , wgt );
+   hmGenRatio.Get<TH1D>("RatioSigmaGen_ly", 50, -0.1, 2., "Sigma / SigmaGen", "Entries")  -> Fill(  Sigma/SigmaGen   , wgt );
+   hmGenRatio.Get<TH1D>("RatioSigmaGen", 50, -0.1, 2., "Sigma / SigmaGen", "Entries")  -> Fill(  Sigma/SigmaGen   , wgt );  
+
+
+   //hmGenRatio.Get<TH1D>("RatioYs_ly", 50, 0., 2., "Ys / Yis", "Entries")  -> Fill(  Ys/Yis   , wgt );
+   //hmGenRatio.Get<TH1D>("RatioQ2s_ly", 50, 0., 2., "Q2s / Q2is", "Entries")  -> Fill(  Q2s/Q2is   , wgt );
+
+
    TLorentzVector ElecInit( 0., 0., -Empz/2, Empz/2); //initial electron, mass neglecte
-   TLorentzVector boostISigma = ElecInit - ScatElec; //virtual photon with final state electron from detector
-   //   TLorentzVector boostISigma = BoostToBreitFrame( Q2is, Yis, Empz/2, ScatElec.Phi() ); //final state elctron calculated
+   TLorentzVector photonISigma = ElecInit - ScatElec; //virtual photon with final state electron from detector
+   TLorentzVector ElecInitGen( 0., 0., -EmpzGen/2, EmpzGen/2);   
+   TLorentzVector photonISigmaGen = ElecInitGen - ScatElecGen;
+//   TLorentzVector boostISigma = BoostToBreitFrame( Q2is, Yis, Empz/2, ScatElec.Phi() ); //final state elctron calculated
 
 
    /*
@@ -357,7 +438,8 @@ void AnalysisEventShapes::DoControlPlotsRec() {
    H1Boost myboosteS4(vect41, vect42, ebeam,-1.*pbeam);
    */
    //ISigma method
-   H1Boost myboostIS(2*Xis*pbeam, boostISigma, ebeam,-1.*pbeam);
+   H1Boost myboostIS(2*Xis*pbeam, photonISigma, ebeam,-1.*pbeam);
+   H1Boost myboostISGen(2*XisGen*pbeam, photonISigmaGen, ebeam, -1.*pbeam);//ebeam oder ScatElecGen??
 
    double_t ymin = 0.1;
    double_t ymax = 0.7;
@@ -365,8 +447,10 @@ void AnalysisEventShapes::DoControlPlotsRec() {
    double_t Q2max = 40000;
    Bool_t fillhisto = false;
    Bool_t valuesarephysical = false;
+   Bool_t valuesarephysicalGen = false;
    if ( ScatElec.E()>11.) {
      if ( Y > ymin && Y < ymax ) {
+
        if ( Q2 > Q2min && Q2max > Q2 ) {
 	 fillhisto = true;                                                                                                  }
      }
@@ -375,11 +459,15 @@ void AnalysisEventShapes::DoControlPlotsRec() {
      if ( Xis > 0. && Xis < 1. ) {
        valuesarephysical = true;
      }
+     if ( XisGen > 0. && XisGen < 1. ) {
+       valuesarephysicalGen = true;
+     }
    }
-
    if (fillhisto){
      vector<TLorentzVector> boosted_e = BoostParticleArray("tau_zQ_el", hfsarray1, myboostelectron, Q2e, Xe, Ye);
+     ClassicalEventShapes("testshapes_e", boosted_e);
      vector<TLorentzVector> boosted_h = BoostParticleArray("tau_zQ_had", hfsarray1, myboosthadron, Q2h, Xh, Yh);
+     ClassicalEventShapes("testshapes_h", boosted_h);
      /*
      vector<TLorentzVector> boosted_es1 = BoostParticleArray("tau_zQ_es1", hfsarray1, myboosteS1, Q2es, Xes, Yes);
      vector<TLorentzVector> boosted_es2 = BoostParticleArray("tau_zQ_es2", hfsarray1, myboosteS2, Q2es, Xes, Yes);
@@ -388,10 +476,12 @@ void AnalysisEventShapes::DoControlPlotsRec() {
      */
      if( valuesarephysical ){
        vector<TLorentzVector> boosted_IS = BoostParticleArray("tau_zQ_iSigma", hfsarray1, myboostIS, Q2s, Xis, Ys);
-       ClassicalEventShapes("testshapes_es1", boosted_IS);
+       ClassicalEventShapes("testshapes_is", boosted_IS);
      }
-     ClassicalEventShapes("testshapes_e", boosted_e);
-     ClassicalEventShapes("testshapes_es1", boosted_h);
+     if( valuesarephysicalGen ){ 
+       vector<TLorentzVector> boosted_ISGen = BoostParticleArray("tau_zQ_iSigmaGen", hadronarray, myboostISGen, Q2sGen, XisGen, YsGen);
+       ClassicalEventShapes("testshapes_isGen", boosted_ISGen);
+     }
    }
 
    vector<TLorentzVector> full_event_breit;
@@ -939,20 +1029,28 @@ vector<TLorentzVector> AnalysisEventShapes::BoostParticleArray (const string& hm
 	sum_vector += breitpart;
       }
     }
-    double_t tau = 1-2*sum_vector.Pz()/Q2;
+    double_t tau = 1-2*sum_vector.Pz()/TMath::Sqrt(Q2);
+    if ( tau < 0 ) {
+      hmtau_zQ.Get<TH1D>("taucurrent_pz", ";current hem. p_{z}[GeV], #tau<0;events", 51, -1., 80.) -> Fill(sum_vector.Pz(), wgt);
+      hmtau_zQ.Get<TH1D>("taucurrent_pz_lxy", ";current hem. p_{z}[GeV], #tau<0;events", 60, 0.9, 80.) -> Fill(sum_vector.Pz(), wgt);
+      hmtau_zQ.Get<TH1D>("tauSqrtQ2", ";Q [GeV], #tau<0; events", 50, 0, 80) -> Fill ( TMath::Sqrt(Q2), wgt);
+      hmtau_zQ.Get<TH1D>("tauSqrtQ2_lxy", ";Q [GeV], #tau<0; events", 50, 0.01, 80) -> Fill ( TMath::Sqrt(Q2), wgt);
+    }
+
     auto BoostBetaArray = H2020HistManager::MakeLogBinning(50, 0.08, 3.0);
     hmtau_zQ.Get<TH1D>("Boost_Beta_lxy", 50, BoostBetaArray, "Boost: #beta", "events" )  -> Fill(  myboost.GetBeta()   , wgt );
     hmtau_zQ.Get<TH1D>("Boost_Beta_lx" , 50, BoostBetaArray, "Boost: #beta", "events" )  -> Fill(  myboost.GetBeta()   , wgt );
     hmtau_zQ.Get<TH1D>("Boost_Phi", ";Boost: #phi [^{o}]; events", 60, -180, 180)  -> Fill(  myboost.GetPhi()*180/TMath::Pi()   , wgt );
     hmtau_zQ.Get<TH1D>("Boost_Theta", ";Boost: #theta [^{o}]; events", 60,    0, 180 )  -> Fill(  myboost.GetTheta()*180/TMath::Pi()   , wgt );
-    hmtau_zQ.Get<TH1D>("current_pt", ";current hem. p_{T}[GeV];events", 50, -5., 30.) -> Fill(sum_vector.Pt(), wgt);
-    hmtau_zQ.Get<TH1D>("current_pz", ";current hem. p_{z}[GeV];events", 51, -1., 50.) -> Fill(sum_vector.Pz(), wgt);
-    hmtau_zQ.Get<TH1D>("current_pz_lxy", ";current hem. p_{z}[GeV];events", 60, 0.9, 50.) -> Fill(sum_vector.Pz(), wgt);
-    hmtau_zQ.Get<TH1D>("tau_zQ", ";#tau_{zQ};events",     70,  -0.2, 1.2) -> Fill(tau, wgt);
+    hmtau_zQ.Get<TH1D>("SqrtQ2", ";Q [GeV]; events", 50, 0, 80) -> Fill ( TMath::Sqrt(Q2), wgt);
+    hmtau_zQ.Get<TH1D>("current_pt", ";current hem. p_{T}[GeV];events", 50, -1., 30.) -> Fill(sum_vector.Pt(), wgt);
+    hmtau_zQ.Get<TH1D>("current_pz", ";current hem. p_{z}[GeV];events", 50, -1., 80.) -> Fill(sum_vector.Pz(), wgt);
+    hmtau_zQ.Get<TH1D>("current_pz_lxy", ";current hem. p_{z}[GeV];events", 60, 0.9, 80.) -> Fill(sum_vector.Pz(), wgt);
+    hmtau_zQ.Get<TH1D>("tau_zQ", ";#tau_{zQ};events",     70,  -3., 1.) -> Fill(tau, wgt);
     hmtau_zQ.Get<TH1D>("tau_zQ_lxy", ";#tau_{zQ};events", 70, 0.001, 1.2) -> Fill(tau, wgt);
     hmtau_zQ.Get<TH1D>("BreitFramePx", 50, -15, 15, "Breit frame: P_{x}", "Entries")  -> Fill(  sum_vector.Px()   , wgt );
     hmtau_zQ.Get<TH1D>("BreitFramePy", 50, -15, 15, "Breit frame: P_{y}", "Entries")  -> Fill(  sum_vector.Py()   , wgt );
-    hmtau_zQ.Get<TH1D>("BreitFramePt", 50,  -5, 30, "Breit frame: P_{T}", "Entries")  -> Fill(  TMath::Sqrt(TMath::Power(sum_vector.Px(),2)+TMath::Power(sum_vector.Py(),2)), wgt );
+    hmtau_zQ.Get<TH1D>("BreitFramePt", 50,  -1, 30, "Breit frame: P_{T}", "Entries")  -> Fill(  TMath::Sqrt(TMath::Power(sum_vector.Px(),2)+TMath::Power(sum_vector.Py(),2)), wgt );
   }
   /*
   auto BoostBetaArray = H2020HistManager::MakeLogBinning(50, 0.08, 3.0);
@@ -963,12 +1061,14 @@ vector<TLorentzVector> AnalysisEventShapes::BoostParticleArray (const string& hm
   }
   */
   //if ( hm.compare("tau_zQ_iSigma") ) {
+  /*
     if ( myboost.GetBeta() > 0.3 && myboost.GetBeta() < 0.5 ) {
       hmtau_zQ.Get<TH1D>("SelectBetaY", ";y (0.3 < #beta < 0.5);events", 70,  -0.2, 1.2) -> Fill(Y, wgt);
       hmtau_zQ.Get<TH1D>("SelectBetaY_lxy", ";y (0.3 < #beta < 0.5);events", 70,  0.001, 1.2) -> Fill(Y, wgt);
       hmtau_zQ.Get<TH1D>("SelectBetaX", ";x_{Bj} (0.3 < #beta < 0.5);events", 70,  -0.2, 1.2) -> Fill(X, wgt);
       hmtau_zQ.Get<TH1D>("SelectBetaX_lxy", ";x_{Bj} (0.3 < #beta < 0.5);events", 70,  0.001, 1.2) -> Fill(X, wgt);
     }
+  */
     //}
   hmtau_zQ.Get<TH1D>("physicalboost", ";Is physical boost;events", 2, -0.5, 1.5) -> Fill(double( myboost.IsPhysicalBoost() ), wgt);
   hmtau_zQ.Get<TH1D>("physicalboost_ly", ";Is physical boost;events", 2, -0.5, 1.5) -> Fill(double( myboost.IsPhysicalBoost() ), wgt);
@@ -1017,8 +1117,9 @@ void AnalysisEventShapes::ClassicalEventShapes (const string& hm, const vector<T
   }
 
   //Fill histos
-  hmshapes.Get<TH1D>("Thrust_C", ";Thrust T_{C};events", 60, -.1, 1.1) -> Fill(1-thrust/p, wgt);
-  hmshapes.Get<TH1D>("Thrust_Z", ";Thrust T_{Z};events", 60, -.1, 1.1) -> Fill(1-pz/p, wgt);
+  hmshapes.Get<TH1D>("Thrust_C", ";#tau = 1-T_{C};events", 60, -.1, 1.1) -> Fill(1-thrust/p, wgt);
+  hmshapes.Get<TH1D>("LogThrust_C", ";log(#tau) = log(1-T_{C});events", 60, -10, 0.1) -> Fill(TMath::Log(1-thrust/p), wgt);
+  hmshapes.Get<TH1D>("Thrust_Z", ";#tau = 1-T_{Z};events", 60, -.1, 1.1) -> Fill(1-pz/p, wgt);
   hmshapes.Get<TH1D>("Broadening", ";Broadening B_{C};events", 60, -.1, 1.1) -> Fill(pt/(2*p), wgt);
   hmshapes.Get<TH1D>("Jet_mass", ";Jet mass #rho;events", 60, -.1, 10.1) -> Fill((TMath::Power(E,2)-momentum.Dot(momentum))/(2*p), wgt);
   //add jet mass from 1999
