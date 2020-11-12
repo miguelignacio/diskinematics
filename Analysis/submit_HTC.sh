@@ -23,9 +23,9 @@ fi
 
 QUEUEFILE=$2
 if [[ -f $QUEUEFILE ]] ; then
-    echo "OK! QUEUE-file found. Staring with:"
+    echo "OK! QUEUE-file found. QUEUE-file is:"
     head -2 $QUEUEFILE
-    echo "..."
+    echo "[...]"
     tail -2 $QUEUEFILE
 else
     echo "ERROR! QUEUE-file NOT found!"
@@ -70,7 +70,7 @@ arguments                = \$(STEERING) \$(CHAIN) \$(OUT) ${PWD}
 output                   = log/\$(CHAIN).out
 error                    = log/\$(CHAIN).error
 log                      = log/\$(CHAIN).log
-RequestMemory            = 2048
+RequestMemory            = 3072
 should_transfer_files    = Yes
 getenv                   = False
 when_to_transfer_output  = ON_EXIT
@@ -85,4 +85,7 @@ queue STEERING  CHAIN OUT from ${QUEUEFILE}
 EOF
 
 echo "Submitting jobs for runperiod: all"
-condor_submit HTC.condor
+condor_submit HTC.condor -batch-name $1
+echo "Check job status with '$ condor_q'"
+echo "Once done, merge all output root-files with"
+echo "  $ hadd $1.root $JOBNAME/out_*/*root"

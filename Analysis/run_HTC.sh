@@ -1,9 +1,9 @@
 #!/bin/zsh
 
 echo "Running EventShape analysis"
-echo "Repeat execution, by running:
+echo "Repeat execution, by running:"
 echo " ------------------------------------------------------------------------ "
-echo "$0 $@"
+echo "run_HTC.sh  $@"
 echo " ------------------------------------------------------------------------ "
 echo "  STEERING:   $1"
 echo "  CHAIN:      $2"
@@ -15,6 +15,16 @@ echo "Setting up environment"
 if [[ -n $4 ]]; then
     cd $4
 fi
+
+
+echo " ------------------------------------------------------------------------ "
+echo "This node:"
+uname -a
+echo "HOST=$HOST"
+echo "HOSTNAME=$HOSTNAME"
+echo " ------------------------------------------------------------------------ "
+env
+echo " ------------------------------------------------------------------------ "
 
 THISDIR=$PWD
 export H1ANALYSISIDR=$PWD
@@ -32,6 +42,6 @@ fi
 
 echo ""
 echo "Now running analysis: $PWD/EventShapes"
-./EventShapes -f $1 -c $2 -o $OUTDIR/$2.root
+./EventShapes -f $1 -c $2 -o $OUTDIR/$2.root -n 5000
 
 
