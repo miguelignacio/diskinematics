@@ -43,6 +43,15 @@ fi
 
 # compile executable and library
 make all
+status=$?
+if [ $status -eq 0 ]; then
+    echo "Compilation completed."
+else
+    echo ""
+    echo "ERROR! make failed. Please check source code and run $0 again."
+    exit 1;
+fi
+
 
 # copy all files to job directory
 echo "Now copying files to work directory $JOBNAME"
