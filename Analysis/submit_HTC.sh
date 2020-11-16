@@ -79,12 +79,13 @@ arguments                = \$(STEERING) \$(CHAIN) \$(OUT) ${PWD}
 output                   = log/\$(CHAIN).out
 error                    = log/\$(CHAIN).error
 log                      = log/\$(CHAIN).log
-RequestMemory            = 3072
+#RequestMemory            = 3072
+RequestMemory            = 2048
 should_transfer_files    = Yes
 getenv                   = False
 when_to_transfer_output  = ON_EXIT
 requirements             = OpSysAndVer == "CentOS7"
-+RequestRuntime          = 3600
++RequestRuntime          = 3500
 #+RequestRuntime         = 86399
 #+RequestRuntime         = 604800
 #+RequestRuntime         = 259200
