@@ -57,10 +57,14 @@ protected:
 
    //primitive variable einfach so ( bsp weight)
    //objekte als pointer  ( darf geaendert werden) / reference ( const ref: darf nicht editiert werden)
-   vector<TLorentzVector> BoostParticleArray(const string& hm, const vector<H1PartCand*> partarray, H1Boost& myboost, double Q2, double X, double Y);
+   //   vector<TLorentzVector> BoostParticleArray(const string& hm, const vector<H1PartCand*> partarray, H1Boost& myboost, double Q2, double X, double Y);
+
+   vector<TLorentzVector> BoostParticleArray (const string& hm, const vector<H1PartCand*> partarray, H1Boost& myboost, double Q2, double X, double Y);
+   vector<TLorentzVector> CalculateEventShape_tauzQ (const string& hm, const vector<TLorentzVector> partarray, H1Boost& myboost, double Q2);
+   void PlotKinematicVaribles( const string& hm,double Q2, double X, double Y);
    void ClassicalEventShapes (const string& hm, const vector<TLorentzVector> BoostedHFS);
    TLorentzVector BoostToBreitFrame ( double Q2, double y, double E0, double Phi );
-
+   H1Boost CalcBoost(double q2, double y, double x, double phi, double Ep);   
 
 protected:   
 
