@@ -499,4 +499,46 @@ void   AnalysisBase::DoWriteHistograms(){
 // }
 
 
+// _______________________________________________________ //
+//!
+//!  AnalysisBase::InitMiniTree
+//!
+//!  Initialize mini tree
+//!  
+void AnalysisBase::InitMiniTree() {
+   fMiniTree = new TTree("minitree","minitree");
+   static H1FloatPtr Q2e("Q2e");
+   static H1FloatPtr Q2sGen("Q2sGen");
+   //static double acht = 8;
+   // fMiniTree->Branch("eight", &acht);
+   fMiniTree->Branch("Q2e", &(*Q2e), "Q2e/F");
+   fMiniTree->Branch("Q2sGen", &(*Q2sGen), "Q2sGen/F");
+   fMiniTree->Branch("test", &fLumiMC, "test/F");
+   fMiniTree->Branch("test2", &fLumiMC, "test2/F");
+   fMiniTree->Branch("test3", &fLumiMC, "test3/F");
+   fMiniTree->Branch("test4", &fLumiMC, "test4/F");
+   fMiniTree->Branch("test5", &fLumiMC, "test5/F");
+   //fMiniTree->Branch("acht", &acht, "acht/F");
 
+}
+
+
+// _______________________________________________________ //
+//!
+//!  AnalysisBase::InitMiniTree
+//!
+//!  Fill the minitree
+//!  
+void AnalysisBase::FillMiniTree() {
+   fMiniTree->Fill();
+}
+
+// _______________________________________________________ //
+//!
+//!  AnalysisBase::InitMiniTree
+//!
+//!  Write mini tree to file
+//!  
+void AnalysisBase::WriteMiniTree() {
+   fMiniTree->Write();
+}

@@ -12,7 +12,7 @@ class  H1RunList;
 #include "Alignment.h"
 #include "H2020HistManager.h"
 class  FidVolCut;
-
+class TTree;
 using namespace std;
 
 
@@ -54,6 +54,9 @@ public:
    virtual void DoControlPlotsGenRec() = 0;
    virtual void DoCrossSectionsGenRec() = 0;
    
+   void InitMiniTree(); //!< init mini tree for azimuthal correlation analysis
+   void FillMiniTree();  //!< fil mini tree for azimuthal correlation analysis
+   void WriteMiniTree(); //!< wrie mini tree for azimuthal correlation analysis
    //void PrintEventInfo();
 
    void DoWriteHistograms();
@@ -97,6 +100,9 @@ protected:
    bool fBasicCutsRec = false;
    bool fBasicCutsGen = false;
    Double_t f_VtxZMin, f_VtxZMax;
+
+   // --- mini tree
+   TTree* fMiniTree = NULL;
 
 };
 
