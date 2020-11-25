@@ -105,6 +105,7 @@ int main(int argc, char **argv)
 
    
    // --- initialize EventShape analysis object
+   TFile file(opts.GetOutput(), "RECREATE"); // make TFile before makein TTree for minitree
    AnalysisEventShapes esanalysis(chain);
 
    // --- event loop
@@ -119,7 +120,10 @@ int main(int argc, char **argv)
          //H1Tree::Instance()->Reset();
          esanalysis.DoBaseInitialSettings();
          esanalysis.DoInitialSettings();
-         if ( cmd_write_minitree ) esanalysis.InitMiniTree();
+         if ( cmd_write_minitree ) {
+            file.mkdir(esanalysis.GetChainName().Data())->cd();
+            esanalysis.InitMiniTree();
+         }
       }
 
       // --- reset at beginning of event loop
@@ -155,10 +159,13 @@ int main(int argc, char **argv)
    } // *** end event loop ***
 
    // --- write histograms
-   TFile file(opts.GetOutput(), "RECREATE");
+   //TFile file(opts.GetOutput(), "RECREATE");
    esanalysis.DoWriteHistograms(); 
    file.Write();	
-   if ( cmd_write_minitree ) esanalysis.WriteMiniTree();
+   //if ( cmd_write_minitree ) {
+      //file.cd(esanalysis.GetChainName().Data());
+      //esanalysis.WriteMiniTree();
+   //}
    file.Close();
    cout << "\nHistogram written to " << opts.GetOutput() << endl;
 

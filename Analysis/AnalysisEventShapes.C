@@ -176,6 +176,12 @@ void AnalysisEventShapes::DoCrossSectionObservablesRec() {
    fRec.tau1a    = 3.1;
    fRec.tau_zP   = 3.1;
 
+   // mini-tree
+   fTreeVar.event_Q2 = gH1Calc->Kine()->GetQ2e();
+   fTreeVar.event_y  = gH1Calc->Kine()->GetYes();
+   fTreeVar.event_x  = gH1Calc->Kine()->GetXes();
+   fTreeVar.Empz     = gH1Calc->Fs()->GetEmpz();
+   //...more
 }
 
 

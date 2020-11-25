@@ -91,12 +91,14 @@ public:
    virtual void DoCrossSectionsGenRec() = 0;
    
    void InitMiniTree(); //!< init mini tree for azimuthal correlation analysis
-   void FillMiniTree();  //!< fil mini tree for azimuthal correlation analysis
+   void FillMiniTree();  //!< fill mini tree for azimuthal correlation analysis
    void WriteMiniTree(); //!< wrie mini tree for azimuthal correlation analysis
    //void PrintEventInfo();
 
    void DoWriteHistograms();
 
+   const TString& GetChainName() const { return fChainName;} //!< get chain name
+   
 protected:   
 
    double CalcDist( const TLorentzVector& jet1, const TLorentzVector& jet2 );
