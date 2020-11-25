@@ -79,10 +79,11 @@ protected:
       double Q2                 = 0 ;     //!<  Q2 for cross sections
       double Y                  = 0 ;     //!<  y for cross sections 
       double X                  = 0 ;     //!<  x for cross sections
-      double tau_zQ             = 99;     //!<
-      double tau1a              = 99;     //!<
+      double tau_zQ             = 99;     //!<  Definition of tau_zQ from ...
+      double tau1b              = 99;     //!<  Definition of tau_1^b from https://arxiv.org/pdf/1303.6952.pdf
       double tau_zP             = 99;     //!<
       double sumpz              = 0;      //!<
+      vector<TLorentzVector> breit_current; //!<
    };
 
    CrossSectionQuantities   fRec;

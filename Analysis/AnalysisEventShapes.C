@@ -135,15 +135,46 @@ void AnalysisEventShapes::DoCrossSectionObservablesGen() {
    // event weight
    fGen.wgt      = gH1Calc->Weight()->GetWeightGen(); // gH1Calc->GetFloatVariable(Weight_Weight);
 
-   // basic DIS quantites
-   fGen.Q2       = gH1Calc->Kine()->GetQ2Gen();
-   fGen.Y        = gH1Calc->Kine()->GetYGen();
-   fGen.X        = gH1Calc->Kine()->GetXGen();
+   // initial and final electron and quark
+   TLorentzVector ebeam, pbeam;
+   H1BoostedJets::Instance()->BeamVectors(&pbeam, &ebeam);
+   TLorentzVector ScatElecGen = gH1Calc->Elec()->GetFirstElectronGen();
+   vector<H1PartMC*> hadronarray = to_vector<H1PartMC*>(H1BoostedJets::Instance()->GetHadronArray());
 
+   // basic DIS observables, iSigma method
+   fGen.Q2       = gH1Calc->Kine()->GetQ2sGen();
+   fGen.Y        = gH1Calc->Kine()->GetYsGen();
+   fGen.X        = ( ScatElecGen.E() / pbeam.E() ) * ( TMath::Power( TMath::Cos(ScatElecGen.Theta()/2) , 2 ) / fGen.Y );
+
+   // boost to Breit Frame
+   H1Boost Boost_iSigma_Gen = CalcBoost(fGen.Q2, fGen.Y, fGen.X, ScatElecGen.Phi(), pbeam.E());
+
+   // calculate sum of current hem. 4vectors
+   TLorentzVector sum_vector(0., 0., 0., 0.);
+   TLorentzVector nz(0., 0., 1., 1.);
+   TLorentzVector nzbar(0., 0., -1., 1.);
+   for (long unsigned int ipart=0; ipart<hadronarray.size(); ++ipart){
+      H1PartMC* part = static_cast<H1PartMC*>(hadronarray[ipart]);
+      TLorentzVector breitpart = Boost_iSigma_Gen.Boost(part->GetFourVector());
+      if (breitpart.Eta()<0) {
+         sum_vector -= breitpart;
+      }
+      if ( breitpart.Dot(nz) < breitpart.Dot(nzbar)) {
+         fGen.tau1b += breitpart.Dot(nz)/TMath::Sqrt(fGen.Q2);
+      }
+      else{
+         fGen.tau1b += breitpart.Dot(nzbar)/TMath::Sqrt(fGen.Q2);
+      }
+   }
+   
    // event shapes
-   fGen.tau_zQ   = 3.1;
-   fGen.tau1a    = 3.1;
+   fGen.tau_zQ   = 1-2*sum_vector.Pz()/TMath::Sqrt(fGen.Q2);
+   //fGen.tau1b    = 3.1;
    fGen.tau_zP   = 3.1;
+   
+
+   //add boost
+   //add more variables (in struct ...)
 
 }
 
@@ -164,14 +195,33 @@ void AnalysisEventShapes::DoCrossSectionObservablesRec() {
    // event weight
    fRec.wgt      = gH1Calc->Weight()->GetWeight();
    
-   // basic DIS observables
-   fRec.Q2       = gH1Calc->Kine()->GetQ2();
-   fRec.Y        = gH1Calc->Kine()->GetY();
-   fRec.X        = gH1Calc->Kine()->GetX();
+   // initial and final electron and quark
+   TLorentzVector ebeam, pbeam;
+   H1BoostedJets::Instance()->BeamVectors(&pbeam, &ebeam);
+   TLorentzVector ScatElec = gH1Calc->Elec()->GetFirstElectron();
+   vector<H1PartCand*> particlearray = to_vector<H1PartCand*>(H1BoostedJets::Instance()->GetHFSArray());
+   // basic DIS observables, iSigma method
+   fRec.Q2       = gH1Calc->Kine()->GetQ2s();
+   fRec.Y        = gH1Calc->Kine()->GetYs();
+   fRec.X        = ( ScatElec.E() / pbeam.E() ) * ( TMath::Power( TMath::Cos(ScatElec.Theta()/2) , 2 ) / fRec.Y );
+
+   // boost to Breit Frame
+   H1Boost Boost_iSigma = CalcBoost(fRec.Q2, fRec.Y, fRec.X, ScatElec.Phi(), pbeam.E());
+   
+   // calculate sum of current hem. 4vectors
+   TLorentzVector sum_vector(0., 0., 0., 0.);
+   for (long unsigned int ipart=0; ipart<particlearray.size(); ++ipart){
+      H1PartCand* part = static_cast<H1PartCand*>(particlearray[ipart]);
+      if(part->IsScatElec()) continue;
+      TLorentzVector breitpart = Boost_iSigma.Boost(part->GetFourVector());
+      if (breitpart.Eta()<0) {
+         sum_vector -= breitpart;
+      }
+   }
    
    // event shapes
-   fRec.tau_zQ   = 3.1;
-   fRec.tau1a    = 3.1;
+   fRec.tau_zQ   = 1-2*sum_vector.Pz()/TMath::Sqrt(fRec.Q2);
+   fRec.tau1b    = 3.1;
    fRec.tau_zP   = 3.1;
 
 }
@@ -199,10 +249,10 @@ void AnalysisEventShapes::DoControlPlotsGen() {
    vector<TLorentzVector> particlelist;
    vector<H1PartMC*> hadronarray = to_vector<H1PartMC*>(H1BoostedJets::Instance()->GetHadronArray());
    for (long unsigned int ipart=0; ipart<hadronarray.size(); ++ipart){
-     H1PartMC* part = static_cast<H1PartMC*>(hadronarray[ipart]);
-     if ( !(part->GetE()>0.) ) continue; // reject zeroed-out part cands (badly measured ones, iron muons...)
-     particlelist.push_back(TLorentzVector(part->GetPx(),part->GetPy(), part->GetPz(), part->GetE()) );
-     SigmaGen += (part->GetE() - std::fabs(part->GetPz()) );
+      H1PartMC* part = static_cast<H1PartMC*>(hadronarray[ipart]);
+      if ( !(part->GetE()>0.) ) continue; // reject zeroed-out part cands (badly measured ones, iron muons...)
+      particlelist.push_back(TLorentzVector(part->GetPx(),part->GetPy(), part->GetPz(), part->GetE()) );
+      SigmaGen += (part->GetE() - std::fabs(part->GetPz()) );
    }
    TLorentzVector virtualphotonGen = ebeam - ScatElecGen;
    TLorentzVector photonISigmaGen = ElecInitGen - ScatElecGen;
@@ -235,26 +285,26 @@ void AnalysisEventShapes::DoControlPlotsGen() {
    Float_t Q2min = 150;
    Float_t Q2max = 20000;
 
-   H1Boost myboostelectronGen(2*XeGen*pbeam,virtualphotonGen,ebeam,-1.*pbeam);
+   //H1Boost myboostelectronGen(2*XeGen*pbeam,virtualphotonGen,ebeam,-1.*pbeam);
    H1Boost myboostISGen(2*XisGen*pbeam, photonISigmaGen, ebeam, -1.*pbeam);
-   H1Boost test_isigma_boost = CalcBoost(Q2sGen, YsGen, XisGen, ScatElecGen.Phi(), pbeam.E());
-   H1Boost test_el_boost = CalcBoost(Q2eGen, YeGen, XeGen, ScatElecGen.Phi(), pbeam.E());
+   H1Boost CalcBoost_iSigma = CalcBoost(Q2sGen, YsGen, XisGen, ScatElecGen.Phi(), pbeam.E());
+   H1Boost CalcBoot_el = CalcBoost(Q2eGen, YeGen, XeGen, ScatElecGen.Phi(), pbeam.E());
    if ( YeGen > Ymin && YeGen < Ymax ) {
      if ( Q2eGen > Q2min && Q2eGen < Q2max ){
-       vector<TLorentzVector> boosted_eGen = CalculateEventShape_tauzQ("Gen_tau_zQ_el", particlelist, myboostelectronGen, Q2eGen);
-       vector<TLorentzVector> myboost_eGen = CalculateEventShape_tauzQ("Gen_tau_zQ_el_myboost", particlelist, test_el_boost, Q2eGen);
-       PlotKinematicVaribles( "Gen_tau_zQ_el_ycut", Q2eGen, XeGen, YeGen);
-       ClassicalEventShapes("eventshapes_eGen", boosted_eGen);
+       vector<TLorentzVector> PartArray_eGen = CalculateEventShape_tauzQ("Gen_tau_zQ_el", particlelist, CalcBoot_el, Q2eGen);
+       PlotKinematicVaribles( "Gen_tau_zQ_el", Q2eGen, XeGen, YeGen);
+       ClassicalEventShapes("Gen_Eventshapes_el", PartArray_eGen);
      }
    }
    if ( YsGen > Ymin && YsGen < Ymax ) {
      if ( Q2sGen > Q2min && Q2sGen < Q2max ){
-       vector<TLorentzVector> boosted_isGen = CalculateEventShape_tauzQ("Gen_tau_zQ_iSigma", particlelist, myboostISGen, Q2sGen);
-       vector<TLorentzVector> myboost_isGen = CalculateEventShape_tauzQ("Gen_tau_zQ_iSigma_myboost", particlelist, test_isigma_boost, Q2sGen);
-       PlotKinematicVaribles( "Gen_tau_zQ_iSigma_ycut", Q2sGen, XsGen, YsGen);
-       ClassicalEventShapes("eventshapes_isGen", boosted_isGen);
+       vector<TLorentzVector> boosted_isGen = CalculateEventShape_tauzQ("Gen_tau_zQ_iSigma_oldboost", particlelist, myboostISGen, Q2sGen);
+       vector<TLorentzVector> PartArray_isGen = CalculateEventShape_tauzQ("Gen_tau_zQ_iSigma", particlelist, CalcBoost_iSigma, Q2sGen);
+       PlotKinematicVaribles( "Gen_tau_zQ_iSigma", Q2sGen, XsGen, YsGen);
+       ClassicalEventShapes("Gen_Eventshapes_is", PartArray_isGen);
      }
    }
+   /*
    if ( YsGen > Ymin && YsGen < 1 ) {
      if ( Q2sGen > Q2min && Q2sGen < Q2max ){
        vector<TLorentzVector> boosted_isGen = CalculateEventShape_tauzQ("Gen_tau_zQ_iSigma_highy", particlelist, myboostISGen, Q2sGen);
@@ -267,13 +317,13 @@ void AnalysisEventShapes::DoControlPlotsGen() {
        PlotKinematicVaribles( "Gen_tau_zQ_iSigma_lowy", Q2sGen, XsGen, YsGen);
      }
    }
+   */
    //no kinematic cuts
    //vector<TLorentzVector> boosted_eGen_nocut = CalculateEventShape_tauzQ("Gen_tau_zQ_el", particlelist, myboostelectronGen, Q2eGen);
    //vector<TLorentzVector> boosted_isGen_nocut = CalculateEventShape_tauzQ("Gen_tau_zQ_iSigma", particlelist, myboostISGen, Q2sGen);
 
-
-   TLorentzVector breitpart = myboostelectronGen.Boost(ScatElecGen);
    /*
+   TLorentzVector breitpart = myboostelectronGen.Boost(ScatElecGen);
    cout<<"scat elec"<<endl;
    breitpart.Print();
    cout<<"init elec"<<endl;
@@ -577,8 +627,8 @@ void AnalysisEventShapes::DoControlPlotsRec() {
      if ( Ye > Ymin && Ye < Ymax ) {
        if ( Xe > 0. && Xe < 1. ) {
 	 if ( Q2e > Q2min && Q2e < Q2max ) {
-	   vector<TLorentzVector> test = CalculateEventShape_tauzQ ("tau_zQ_el_new", particlelist, myboostelectron, Q2e);
-	   vector<TLorentzVector> boosted_e = BoostParticleArray("tau_zQ_el", hfsarray, myboostelectron, Q2e, Xe, Ye);
+	   vector<TLorentzVector> boosted_e = CalculateEventShape_tauzQ ("tau_zQ_el", particlelist, myboostelectron, Q2e);
+	   //vector<TLorentzVector> boosted_e = BoostParticleArray("tau_zQ_el", hfsarray, myboostelectron, Q2e, Xe, Ye);
 	   ClassicalEventShapes("testshapes_e", boosted_e);
 	   //	   hmGenRatio.Get<TH1D>("SigmaGenSelected_ly", 50, -0.1, 2., "Sigma / SigmaGen, el method cuts", "Entries")  -> Fill(  Sigma/SigmaGen   , wgt );
 	   //hmGenRatio.Get<TH1D>("SigmaGenSelected", 50, -0.1, 2., "Sigma / SigmaGen, el method cuts", "Entries")  -> Fill(  Sigma/SigmaGen   , wgt );
@@ -588,9 +638,9 @@ void AnalysisEventShapes::DoControlPlotsRec() {
      if ( Ys > Ymin && Ys < Ymax ) {
        if ( Xis > 0. && Xis < 1. ) {
 	 if ( Q2s > Q2min && Q2s < Q2max ) {
-	   vector<TLorentzVector> test_is = CalculateEventShape_tauzQ ("tau_zQ_iSigma_new", particlelist, myboostIS, Q2s);
-	   vector<TLorentzVector> boosted_IS = BoostParticleArray("tau_zQ_iSigma", hfsarray, myboostIS, Q2is, Xis, Ys);
-	   ClassicalEventShapes("testshapes_is", boosted_IS);
+	   vector<TLorentzVector> boosted_is = CalculateEventShape_tauzQ ("tau_zQ_iSigma", particlelist, myboostIS, Q2s);
+	   //vector<TLorentzVector> boosted_IS = BoostParticleArray("tau_zQ_iSigma", hfsarray, myboostIS, Q2is, Xis, Ys);
+	   ClassicalEventShapes("testshapes_is", boosted_is);
 	 }
        }
      }
@@ -1141,37 +1191,62 @@ vector<TLorentzVector> AnalysisEventShapes::CalculateEventShape_tauzQ (const str
   const double wgt = fGen.wgt;
   vector<TLorentzVector> boostedpart_current; //do I need to reset this vector?
   TLorentzVector sum_vector(0., 0., 0., 0.);
-
+  Int_t particle_multi = 0;
   if ( myboost.IsPhysicalBoost() ) {
-    for (long unsigned int ipart=0; ipart<partarray.size(); ++ipart){
-      TLorentzVector part = static_cast<TLorentzVector>(partarray[ipart]);
-      TLorentzVector breitpart = myboost.Boost(part);
-      boostedpart_current.push_back(TLorentzVector(breitpart.Px(),breitpart.Py(), breitpart.Pz(), breitpart.E()) );
-      if (breitpart.Eta()<0) {
-        sum_vector -= breitpart;
-      }
-    }
-    double_t tau = 1-2*sum_vector.Pz()/TMath::Sqrt(Q2);
-    auto BoostBetaArray = H2020HistManager::MakeLogBinning(50, 0.08, 3.0);
-    hmtau_zQ.Get<TH1D>("Boost_Beta_lxy", 50, BoostBetaArray, "Boost: #beta", "events" )  -> Fill(  myboost.GetBeta()   , wgt );
-    hmtau_zQ.Get<TH1D>("Boost_Beta_lx" , 50, BoostBetaArray, "Boost: #beta", "events" )  -> Fill(  myboost.GetBeta()   , wgt );
-    hmtau_zQ.Get<TH1D>("Boost_Phi", ";Boost: #phi [^{o}]; events", 60, -180, 180)  -> Fill(  myboost.GetPhi()*180/TMath::Pi()   , wgt );
-    hmtau_zQ.Get<TH1D>("Boost_Theta", ";Boost: #theta [^{o}]; events", 60,    0, 180 )  -> Fill(  myboost.GetTheta()*180/TMath::Pi()   , wgt );
-    hmtau_zQ.Get<TH1D>("SqrtQ2", ";Q [GeV]; events", 50, 10, 100) -> Fill ( TMath::Sqrt(Q2), wgt);
-    hmtau_zQ.Get<TH1D>("SqrtQ2_lxy", ";Q [GeV]; events", 50, 10, 200) -> Fill ( TMath::Sqrt(Q2), wgt);
-    hmtau_zQ.Get<TH1D>("current_pz", ";current hem. p_{z}[GeV];events", 50, -1., 80.) -> Fill( sum_vector.Pz(), wgt);
-    hmtau_zQ.Get<TH1D>("current_pz_lxy", ";current hem. p_{z}[GeV];events", 60, 0.9, 80.) -> Fill( sum_vector.Pz(), wgt);
-    hmtau_zQ.Get<TH1D>("tau_zQ", ";#tau_{zQ};events",     50,  -.1, 1.) -> Fill(tau, wgt);
-    hmtau_zQ.Get<TH1D>("tau_zQ_lxy", ";#tau_{zQ};events", 70, 0.001, 1.2) -> Fill(tau, wgt);
-    hmtau_zQ.Get<TH1D>("current_sum_px", 50, -15, 15, "Breit frame: P_{x}, #eta<0", "Entries")  -> Fill(  sum_vector.Px()   , wgt );
-    hmtau_zQ.Get<TH1D>("current_sum_py", 50, -15, 15, "Breit frame: P_{y}, #eta<0", "Entries")  -> Fill(  sum_vector.Py()   , wgt );
-    hmtau_zQ.Get<TH1D>("current_sum_pt", 50,  -1, 30, "Breit frame: P_{T}, #eta<0", "Entries")  -> Fill(sum_vector.Pt(), wgt);
-    hmtau_zQ.Get<TH1D>("current_sum_pt_lxy", 50,  0.1, 40, "Breit frame: P_{T}, #eta<0", "Entries")  -> Fill(sum_vector.Pt(), wgt);
+     for (long unsigned int ipart=0; ipart<partarray.size(); ++ipart){
+        TLorentzVector part = static_cast<TLorentzVector>(partarray[ipart]);
+        TLorentzVector breitpart = myboost.Boost(part);
+        boostedpart_current.push_back(TLorentzVector(breitpart.Px(),breitpart.Py(), breitpart.Pz(), breitpart.E()) );
+        if (breitpart.Eta()<0) {
+           sum_vector -= breitpart;
+           particle_multi += 1;
+        }
+     }
+     double_t tau = 1-2*sum_vector.Pz()/TMath::Sqrt(Q2);
+     auto BoostBetaArray = H2020HistManager::MakeLogBinning(50, 0.08, 3.0);
+     auto BoostTauzQ = H2020HistManager::MakeLogBinning(50, 0.005, 2.0);
+     hmtau_zQ.Get<TH1D>("Boost_Beta_lxy", 50, BoostBetaArray, "Boost: #beta", "events" )  -> Fill(  myboost.GetBeta()   , wgt );
+     hmtau_zQ.Get<TH1D>("Boost_Beta_lx" , 50, BoostBetaArray, "Boost: #beta", "events" )  -> Fill(  myboost.GetBeta()   , wgt );
+     hmtau_zQ.Get<TH1D>("Boost_Phi", ";Boost: #phi [^{o}]; events", 60, -180, 180)  -> Fill(  myboost.GetPhi()*180/TMath::Pi()   , wgt );
+     hmtau_zQ.Get<TH1D>("Boost_Theta", ";Boost: #theta [^{o}]; events", 60,    0, 180 )  -> Fill(  myboost.GetTheta()*180/TMath::Pi()   , wgt );
+     hmtau_zQ.Get<TH1D>("SqrtQ2", ";Q [GeV]; events", 50, 10, 100) -> Fill ( TMath::Sqrt(Q2), wgt);
+     hmtau_zQ.Get<TH1D>("SqrtQ2_lxy", ";Q [GeV]; events", 50, 10, 200) -> Fill ( TMath::Sqrt(Q2), wgt);
+     hmtau_zQ.Get<TH1D>("current_pz", ";current hem. p_{z}[GeV];events", 50, -1., 80.) -> Fill( sum_vector.Pz(), wgt);
+     hmtau_zQ.Get<TH1D>("current_pz_lxy", ";current hem. p_{z}[GeV];events", 60, 0.9, 80.) -> Fill( sum_vector.Pz(), wgt);
+     hmtau_zQ.Get<TH1D>("tau_zQ", ";#tau_{zQ};events",     50,  -.1, 1.1) -> Fill(tau, wgt);
+     hmtau_zQ.Get<TH1D>("tau_zQ_lxy",50, BoostTauzQ, "#tau_{zQ}", "events") -> Fill(tau, wgt);
+     hmtau_zQ.Get<TH1D>("tau_zQ_ratio", ";#tau_{zQ}/#tau_{zQGen};events", 20, 0.5, 1.5) -> Fill(tau/fGen.tau_zQ, wgt);
+     hmtau_zQ.Get<TH1D>("tau_zQ_ratio_ly", ";#tau_{zQ}/#tau_{zQGen};events", 20, 0.5, 1.5) -> Fill(tau/fGen.tau_zQ, wgt);
+     hmtau_zQ.Get<TH1D>("current_sum_px", 50, -15, 15, "Breit frame: P_{x}, #eta<0", "Entries")  -> Fill(  sum_vector.Px()   , wgt );
+     hmtau_zQ.Get<TH1D>("current_sum_py", 50, -15, 15, "Breit frame: P_{y}, #eta<0", "Entries")  -> Fill(  sum_vector.Py()   , wgt );
+     hmtau_zQ.Get<TH1D>("current_sum_pt", 50,  -1, 30, "Breit frame: P_{T}, #eta<0", "Entries")  -> Fill(sum_vector.Pt(), wgt);
+     hmtau_zQ.Get<TH1D>("current_sum_pt_lxy", 50,  0.1, 40, "Breit frame: P_{T}, #eta<0", "Entries")  -> Fill(sum_vector.Pt(), wgt);
+     hmtau_zQ.Get<TH1D>("tau_1b", ";#tau_{1}^{b};events",     50,  -.1, 1.1) -> Fill(fGen.tau1b, wgt);
+     hmtau_zQ.Get<TH1D>("tau_1b_lxy",50, BoostTauzQ, "#tau_{1}^{b}", "events") -> Fill(fGen.tau1b, wgt);
+//hmtau_zQ.Get<TH2D>("multiplicity_tauzQ_ly",";particle multiplicity;#tau_{zQ}", 50,  1, 50, 50, 0.005, 1)  -> Fill(particle_multi, fGen.tau_zQ);
+     hmtau_zQ.Get<TH2D>("multiplicity_tauzQ",";particle multiplicity;#tau_{zQ}", 51,  -0.5, 50.5, 50, -0.05, 1.05)  -> Fill(particle_multi, fGen.tau_zQ);
+     hmtau_zQ.Get<TH2D>("multiplicity_tauzQ_cutout",";particle multiplicity;#tau_{zQ}", 5,  -0.5, 4.5, 11, 0.9, 1.01)  -> Fill(particle_multi, fGen.tau_zQ);
+     if( particle_multi == 1 || particle_multi == 0 ){
+        hmtau_zQ.Get<TH1D>("One_Boost_Beta_lxy", 50, BoostBetaArray, "Boost: #beta", "events" )  -> Fill(  myboost.GetBeta()   , wgt );
+        hmtau_zQ.Get<TH1D>("One_Boost_Phi", ";Boost: #phi [^{o}]; events", 60, -180, 180)  -> Fill(  myboost.GetPhi()*180/TMath::Pi()   , wgt );
+        hmtau_zQ.Get<TH1D>("One_Boost_Theta", ";Boost: #theta [^{o}]; events", 60,    0, 180 )  -> Fill(  myboost.GetTheta()*180/TMath::Pi()   , wgt );
+        hmtau_zQ.Get<TH1D>("One_SqrtQ2_lxy", ";Q [GeV]; events", 50, 10, 200) -> Fill ( TMath::Sqrt(Q2), wgt);
+        hmtau_zQ.Get<TH1D>("One_current_pz_lxy", ";current hem. p_{z}[GeV];events", 60, 0.9, 80.) -> Fill( sum_vector.Pz(), wgt);
+        hmtau_zQ.Get<TH1D>("One_current_pz_ly", ";current hem. p_{z}[GeV];events", 60, -1., 30.) -> Fill( sum_vector.Pz(), wgt);
+        hmtau_zQ.Get<TH1D>("One_tau_zQ", ";#tau_{zQ};events",     50,  -.1, 1.1) -> Fill(tau, wgt);
+        hmtau_zQ.Get<TH1D>("One_tau_zQ_ratio", ";#tau_{zQ}/#tau_{zQGen};events", 20, 0.5, 1.5) -> Fill(tau/fGen.tau_zQ, wgt);
+
+     }
+     else {
+        hmtau_zQ.Get<TH1D>("More_tau_zQ", ";#tau_{zQ};events", 50, -.1, 1.1) -> Fill(tau, wgt);
+     }
   }
   hmtau_zQ.Get<TH1D>("physicalboost", ";Is physical boost;events", 2, -0.5, 1.5) -> Fill(double( myboost.IsPhysicalBoost() ), wgt);
   hmtau_zQ.Get<TH1D>("physicalboost_ly", ";Is physical boost;events", 2, -0.5, 1.5) -> Fill(double( myboost.IsPhysicalBoost() ), wgt);
   return boostedpart_current; 
 }
+
+
 vector<TLorentzVector> AnalysisEventShapes::BoostParticleArray (const string& hm, const vector<H1PartCand*> partarray, H1Boost& myboost, double Q2, double X, double Y){
   //Takes particle list and boost
   //Returns TLorentzVectors of boosted particles
