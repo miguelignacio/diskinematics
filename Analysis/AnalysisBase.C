@@ -500,4 +500,79 @@ void   AnalysisBase::DoWriteHistograms(){
 // }
 
 
+// _______________________________________________________ //
+//!
+//!  AnalysisBase::InitMiniTree
+//!
+//!  Initialize mini tree
+//!  
+void AnalysisBase::InitMiniTree() {
+   fMiniTree = new TTree("minitree","minitree");
+   static H1FloatPtr Q2e("Q2e");
+   static H1FloatPtr Q2sGen("Q2sGen");
+   //static double acht = 8;
+   // fMiniTree->Branch("eight", &acht);
+   TTree* T = fMiniTree; // rename
+   // fMiniTree->Branch("Q2e", &(*Q2e), "Q2e/F");
+   // fMiniTree->Branch("Q2sGen", &(*Q2sGen), "Q2sGen/F");
+   // fMiniTree->Branch("test", &fLumiMC, "test/F");
+   // fMiniTree->Branch("test2", &fLumiMC, "test2/F");
+   // fMiniTree->Branch("test3", &fLumiMC, "test3/F");
+   // fMiniTree->Branch("test4", &fLumiMC, "test4/F");
+   // fMiniTree->Branch("test5", &fLumiMC, "test5/F");
+   // //fMiniTree->Branch("acht", &acht, "acht/F");
 
+   T->Branch("x", &fTreeVar.event_x, "event_x/F");
+   T->Branch("y", &fTreeVar.event_y, "event_y/F");
+   T->Branch("Q2", &fTreeVar.event_Q2, "event_Q2/F");
+   T->Branch("vertex_z", &fTreeVar.vertex_z, "vertex_z/F");
+   T->Branch("ptmiss", &fTreeVar.ptmiss, "ptmiss/F");
+   T->Branch("ptratio", &fTreeVar.ptratio, "ptratio/F");
+   T->Branch("acoplanarity", &fTreeVar.acoplanarity, "acoplanarity/F");
+   T->Branch("Empz", &fTreeVar.Empz, "Empz/F");
+   T->Branch("e_pt", &fTreeVar.e_pt, "e_pt/F");
+   T->Branch("e_phi", &fTreeVar.e_phi, "e_phi/F");
+   T->Branch("e_rap",&fTreeVar.e_rap, "e_rap/F");
+   T->Branch("e_eta", &fTreeVar.e_eta, "e_eta/F");
+   T->Branch("e_p", &fTreeVar.e_p, "e_p/F");
+   T->Branch("e_theta", &fTreeVar.e_theta, "e_theta/F");
+   T->Branch("njets", &fTreeVar.njets, "njets/F");
+   T->Branch("n_total",&fTreeVar.nconstituents);
+   T->Branch("jet_pt", &fTreeVar.jet_pt);
+   T->Branch("jet_qt", &fTreeVar.jet_qt);
+   T->Branch("jet_phi", &fTreeVar.jet_phi);
+   T->Branch("jet_rap",&fTreeVar.jet_rap);
+   T->Branch("jet_eta", &fTreeVar.jet_eta);
+   T->Branch("jet_theta", &fTreeVar.jet_theta);
+   T->Branch("jet_dphi", &fTreeVar.jet_dphi);
+   T->Branch("jet_p", &fTreeVar.jet_p);
+   T->Branch("jet_z", &fTreeVar.jet_z);
+   // //   qT and z, defined below:
+   // TVector2 jet2(jet.px(),jet.py());
+   // TVector2 electron2(ElecPx,ElecPy);
+   // TVector2 qT = jet2 + electron2;
+   // // z variable (Lorentz invariant).                      
+   // double z = proton.Dot(jet_vec)/proton.Dot(virtual_photon);
+
+}
+
+
+// _______________________________________________________ //
+//!
+//!  AnalysisBase::InitMiniTree
+//!
+//!  Fill the minitree
+//!  
+void AnalysisBase::FillMiniTree() {
+   fMiniTree->Fill();
+}
+
+// _______________________________________________________ //
+//!
+//!  AnalysisBase::InitMiniTree
+//!
+//!  Write mini tree to file
+//!  
+void AnalysisBase::WriteMiniTree() {
+   fMiniTree->Write();
+}

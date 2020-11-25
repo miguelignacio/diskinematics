@@ -75,8 +75,10 @@ void AnalysisEventShapes::DoInitialSettings() {
 //!
 void AnalysisEventShapes::DoReset() {
    // -- reset event quantites
-   fGen = CrossSectionQuantities();
-   fRec = CrossSectionQuantities();
+   fGen     = CrossSectionQuantities();
+   fRec     = CrossSectionQuantities();
+   fTreeVar = TreeVariables();
+
 }
 
 
@@ -224,6 +226,12 @@ void AnalysisEventShapes::DoCrossSectionObservablesRec() {
    fRec.tau1b    = 3.1;
    fRec.tau_zP   = 3.1;
 
+   // mini-tree
+   fTreeVar.event_Q2 = gH1Calc->Kine()->GetQ2e();
+   fTreeVar.event_y  = gH1Calc->Kine()->GetYes();
+   fTreeVar.event_x  = gH1Calc->Kine()->GetXes();
+   fTreeVar.Empz     = gH1Calc->Fs()->GetEmpz();
+   //...more
 }
 
 
