@@ -15,6 +15,42 @@ class  FidVolCut;
 class TTree;
 using namespace std;
 
+// ________________________________________________________________ //
+//!
+//!  TreeVariables
+//!
+//!  Helper class to keep the variables to be stored into the mini-tree
+//!
+//!  
+class TreeVariables {
+public:
+   float event_x = 0;        //  x            
+   float event_y = 0;        //  y            
+   float event_Q2 = 0;       //  Q2           
+   float vertex_z = 0;       //  vertex_z     
+   float ptmiss = 0;         //  ptmiss       
+   float ptratio = 0;        //  ptratio      
+   float acoplanarity = 0;   //  acoplanarity 
+   float Empz = 0;           //  Empz         
+   float e_pt = 0;           //  e_pt         
+   float e_phi = 0;          //  e_phi        
+   float e_rap = 0;          //  e_rap        
+   float e_eta = 0;          //  e_eta        
+   float e_p = 0;            //  e_p          
+   float e_theta = 0;        //  e_theta      
+   float njets = 0;          //  njets        
+   float nconstituents = 0;  //  n_total      
+   float jet_pt = 0;         //  jet_pt       
+   float jet_qt = 0;         //  jet_qt       
+   float jet_phi = 0;        //  jet_phi      
+   float jet_rap = 0;        //  jet_rap      
+   float jet_eta = 0;        //  jet_eta      
+   float jet_theta = 0;      //  jet_theta    
+   float jet_dphi = 0;       //  jet_dphi     
+   float jet_p = 0;          //  jet_p        
+   float jet_z = 0;          //  jet_z        
+};
+
 
 // ________________________________________________________________ //
 //!
@@ -103,7 +139,9 @@ protected:
 
    // --- mini tree
    TTree* fMiniTree = NULL;
+   TreeVariables fTreeVar;
 
 };
+
 
 #endif

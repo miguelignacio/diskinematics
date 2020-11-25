@@ -75,8 +75,10 @@ void AnalysisEventShapes::DoInitialSettings() {
 //!
 void AnalysisEventShapes::DoReset() {
    // -- reset event quantites
-   fGen = CrossSectionQuantities();
-   fRec = CrossSectionQuantities();
+   fGen     = CrossSectionQuantities();
+   fRec     = CrossSectionQuantities();
+   fTreeVar = TreeVariables();
+
 }
 
 
