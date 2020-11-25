@@ -487,10 +487,8 @@ bool AnalysisBase::DoBasicCutsGen() {
 
 // _______________________________________________________ //
 void   AnalysisBase::DoWriteHistograms(){
-   TDirectory* thisdir = gDirectory;
-   thisdir->mkdir(fChainName)->cd();
+   Info("DoWriteHistograms","Write histograms to directory: %s",gDirectory->GetName());
    HistMaster::Instance()->WriteAll(gDirectory);
-   thisdir->cd(); // go back
 }
 
 

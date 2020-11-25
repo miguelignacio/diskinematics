@@ -160,7 +160,7 @@ int main(int argc, char **argv)
 
    // --- write histograms
    //TFile file(opts.GetOutput(), "RECREATE");
-   file.cd();
+   file.mkdir(esanalysis.GetChainName().Data(),esanalysis.GetChainName().Data(),true)->cd();
    esanalysis.DoWriteHistograms(); 
    file.Write();	
    //if ( cmd_write_minitree ) {
