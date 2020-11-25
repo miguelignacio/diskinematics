@@ -54,13 +54,20 @@ int main(int argc, char **argv)
    // -------------------------------------------- //
    H1OptionString   cmd_chain("");
    opts.AddOption("chain",'c',cmd_chain);
+   H1OptionBool     cmd_write_minitree(false);
+   opts.AddOption("tree",'t',cmd_write_minitree);
    opts.Parse(&argc, argv);
+   cout<<"Write mini tree: " << cmd_write_minitree<<endl;
 
    // --- read main steering
    H1AnalysisSteer* AnaSteer = static_cast<H1AnalysisSteer*>
       (gH1SteerManager->GetSteer( H1AnalysisSteer::Class() , "EventShapes" ));
+   if ( !AnaSteer ) {
+      Error("main","Cannot open steering. Please pass steering file with flag -f <file.steer>.");
+      exit(1);
+   }
    //AnaSteer->Print();
-
+   
    
    // --- define chain (e.g. "Django_8")
    TString chain = string(cmd_chain);
@@ -98,6 +105,7 @@ int main(int argc, char **argv)
 
    
    // --- initialize EventShape analysis object
+   TFile file(opts.GetOutput(), "RECREATE"); // make TFile before makein TTree for minitree
    AnalysisEventShapes esanalysis(chain);
 
    // --- event loop
@@ -112,6 +120,10 @@ int main(int argc, char **argv)
          //H1Tree::Instance()->Reset();
          esanalysis.DoBaseInitialSettings();
          esanalysis.DoInitialSettings();
+         if ( cmd_write_minitree ) {
+            file.mkdir(esanalysis.GetChainName().Data())->cd();
+            esanalysis.InitMiniTree();
+         }
       }
 
       // --- reset at beginning of event loop
@@ -137,7 +149,8 @@ int main(int argc, char **argv)
       esanalysis.DoControlPlotsGenRec();
 
       esanalysis.DoCrossSectionsGenRec();
-      
+      if ( cmd_write_minitree ) esanalysis.FillMiniTree();
+
       // break event loop (if requested)
       if ( opts.IsMaxEvent(ievent+1) ) break; // if command-line option -n is set
       if ( AnaSteer->GetNEvents() > 0 && ievent+1 >= AnaSteer->GetNEvents() ) break; // if steering is set
@@ -146,9 +159,13 @@ int main(int argc, char **argv)
    } // *** end event loop ***
 
    // --- write histograms
-   TFile file(opts.GetOutput(), "RECREATE");
+   //TFile file(opts.GetOutput(), "RECREATE");
    esanalysis.DoWriteHistograms(); 
    file.Write();	
+   //if ( cmd_write_minitree ) {
+      //file.cd(esanalysis.GetChainName().Data());
+      //esanalysis.WriteMiniTree();
+   //}
    file.Close();
    cout << "\nHistogram written to " << opts.GetOutput() << endl;
 

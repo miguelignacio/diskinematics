@@ -21,18 +21,21 @@ How to run
 ----------
 A simple start is obtained by:
  
-  * Set up H1 software release 4.1.1:  `cd $H1DIST/lcg_releases/releases/4.1.1; . thish1.sh`. 
-    Then go back to your work directory
+  * Set up H1 software release 4.1.1:  
+   ```
+   desygroupset h1
+   h1lcg
+   ```
 
   * Check out repository `git clone https://<user>@stash.desy.de/scm/h1ana/eventshapesmpim.git`
 
   * Go to analysis directory `cd eventshapesmpim/Analysis`
 
-  * Compile analysis code `make all`
+  * Compile analysis code `make all` (two times?)
 
   * Run a first example with
     ```
-    $ ../bin/x86_64-centos7-gcc9-opt/EventShapes -f Steering/es.ep0304dis.steer -n 10000 -o test.root -c DjangoEplus0304_1
+    $ ../bin/x86_64-centos7-gcc9-opt/EventShapes -f Steering/es.em0405disMC13.steer  -c Data_Eminus0405_0  -n 10000 -o test.root 
     ```
 
 
@@ -55,4 +58,11 @@ A complete set of control plots with a limited set of MCs, but with all 0304 dat
    selected runs, but not the entire run period. Therefore, correct control plots are only obtained
    when processing all MCs for a given runperiod (or alternatively performing a corresponding data selection).
 
+Run full HERA-II analysis
+-------------------------
+  * Full HERA-II analysis: Run
+    `./submit_HTC.sh jobname QUEUE_all.txt`
+
+   * Full HERA-II analysis: Merge
+    `hadd -f heraII.root jobname*/out*/*root`
 
