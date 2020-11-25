@@ -272,6 +272,7 @@ void AnalysisBase::DoBaseReset() {
    if ( tools.GenElecPhotDist()  > 0.15 ) { // (~5 deg in theta and phi) 
       gH1Calc->Elec()->UseGenElecUncombined(true);
       H1BoostedJets::Instance()->UseGenElecGammaCombined(false);
+      H1BoostedJets::Instance()->ExcludeGenGamma(true);
    } else {
       gH1Calc->Elec()->UseGenElecUncombined(false);
       H1BoostedJets::Instance()->UseGenElecGammaCombined(true);
