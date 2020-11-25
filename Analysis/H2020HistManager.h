@@ -214,7 +214,10 @@ public:
    void WriteHistManager(TDirectory* dir, const std::string& HMname, const std::string& dirname) {
       if ( fHMs.count(HMname) != 0 ) {
          TDirectory* tmp = gDirectory;
-         if ( dirname != "" ) dir->mkdir(dirname.c_str())->cd();
+         if ( dirname != "" ) {
+            dir->mkdir(dirname.c_str(),dirname.c_str(),true);
+            dir->cd(dirname.c_str());
+         }  
          fHMs.at(HMname).Write();
          tmp->cd(); // to back
       }

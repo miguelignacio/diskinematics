@@ -121,6 +121,7 @@ int main(int argc, char **argv)
          esanalysis.DoBaseInitialSettings();
          esanalysis.DoInitialSettings();
          if ( cmd_write_minitree ) {
+            Info("main","Preparing to write out minitree.");
             file.mkdir(esanalysis.GetChainName().Data())->cd();
             esanalysis.InitMiniTree();
          }
@@ -162,6 +163,7 @@ int main(int argc, char **argv)
    //TFile file(opts.GetOutput(), "RECREATE");
    file.mkdir(esanalysis.GetChainName().Data(),esanalysis.GetChainName().Data(),true)->cd();
    esanalysis.DoWriteHistograms(); 
+   Info("main","Histograms written to file %s.",file.GetName());
    file.Write();	
    //if ( cmd_write_minitree ) {
       //file.cd(esanalysis.GetChainName().Data());
