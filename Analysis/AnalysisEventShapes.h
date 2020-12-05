@@ -63,7 +63,8 @@ protected:
    vector<TLorentzVector> CalculateEventShape_tauzQ (const string& hm, const vector<TLorentzVector> partarray, H1Boost& myboost, double Q2);
    void PlotKinematicVaribles( const string& hm,double Q2, double X, double Y);
    void ClassicalEventShapes (const string& hm, const vector<TLorentzVector> BoostedHFS);
-   TLorentzVector BoostToBreitFrame ( double Q2, double y, double E0, double Phi );
+   void PlotTauResolution(const string& hm);
+   //TLorentzVector BoostToBreitFrame ( double Q2, double y, double E0, double Phi );
    H1Boost CalcBoost(double q2, double y, double x, double phi, double Ep);   
 
 protected:   
@@ -79,11 +80,14 @@ protected:
       double Q2                 = 0 ;     //!<  Q2 for cross sections
       double Y                  = 0 ;     //!<  y for cross sections 
       double X                  = 0 ;     //!<  x for cross sections
-      double tau_zQ             = 99;     //!<  Definition of tau_zQ from ...
-      double tau1b              = 99;     //!<  Definition of tau_1^b from https://arxiv.org/pdf/1303.6952.pdf
-      double tau_zP             = 99;     //!<
-      double sumpz              = 0;      //!<
-      vector<TLorentzVector> breit_current; //!<
+      double tau_zQ             = 0 ;     //!<  Definition of tau_zQ from ...
+      double tau1b              = 0 ;     //!<  Definition of tau_1^b from https://arxiv.org/pdf/1303.6952.pdf
+      double tau_zP             = 0 ;     //!<
+      double sumpz              = 0 ;     //!<
+      vector<TLorentzVector> breit_current; //!< 4-vectors of all particles in the current hem. in the Breit frame
+      
+      //H1Boost BoostToBreit;                 //!< Lorentz boost to breit frame ( q + 2*x*P = 0 )
+      //H1Boost BoostToLab;                   //!< Lorentz boost back to the lab frame
    };
 
    CrossSectionQuantities   fRec;
