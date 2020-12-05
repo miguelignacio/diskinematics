@@ -300,6 +300,12 @@ bool AnalysisBase::DoBasicCutsRec() {
    // ---------------- Run list -------------------------
    // --- set return value
    //     and initialize with basic run selection cut
+   
+//insert q2-x plot
+   H2020HistManager& hm       = HistMaster::Instance()->GetHistManager("DISEvent");
+   auto betabins = H2020HistManager::MakeLogBinning(50, 0.001, 1.);
+   hm.Get<TH2D>("13_1_before_cuts",";X_{es};Q2_{es} [GeV^2]", 50, -0.05, 1.05, 50, 5, 10000)  -> Fill(gH1Calc->Kine()->GetXes(), gH1Calc->Kine()->GetQ2es());
+   hm.Get<TH2D>("13_1_before_cuts_lxy",";X_{es};Q2_{es} [GeV^2]", H2020HistManager::MakeLogBinning(50, 0.001, 1.), H2020HistManager::MakeLogBinning(50, 5, 10000)) -> Fill(gH1Calc->Kine()->GetXes(), gH1Calc->Kine()->GetQ2es());
    fBasicCutsRec   = fRunList ->IsSelected( H1Calculator::Instance()->GetRunNumber()) && fDectStatus->IsOn();
 
    
@@ -448,6 +454,13 @@ bool AnalysisBase::DoBasicCutsRec() {
    
    // --- apply background cuts
    fBasicCutsRec &= BkgCuts;
+
+//x and q2 from calculator
+   if(fBasicCutsRec){
+      hm.Get<TH2D>("13_2_detector_cuts",";X_{es};Q2_{es} [GeV^2]", 50, -0.05, 1.05, 50, 5, 10000)  -> Fill(gH1Calc->Kine()->GetXes(), gH1Calc->Kine()->GetQ2es());
+      hm.Get<TH2D>("13_2_detector_cuts_lxy",";X_{es};Q2_{es} [GeV^2]", H2020HistManager::MakeLogBinning(50, 0.001, 1.), H2020HistManager::MakeLogBinning(50, 5, 10000.)) -> Fill(gH1Calc->Kine()->GetXes(), gH1Calc->Kine()->GetQ2es());
+   }
+
 
    return fBasicCutsRec;
 }
