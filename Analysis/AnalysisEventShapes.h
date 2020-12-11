@@ -64,7 +64,7 @@ protected:
    void PlotKinematicVaribles( const string& hm,double Q2, double X, double Y);
    void ClassicalEventShapes (const string& hm, const vector<TLorentzVector> BoostedHFS);
    void PlotTauResolution(const string& hm);
-   //TLorentzVector BoostToBreitFrame ( double Q2, double y, double E0, double Phi );
+   void PlotTauQ2Bins(const string& hm, long unsigned int i);
    H1Boost CalcBoost(double q2, double y, double x, double phi, double Ep);   
 
 protected:   
@@ -86,8 +86,8 @@ protected:
       double sumpz              = 0 ;     //!<
       vector<TLorentzVector> breit_current; //!< 4-vectors of all particles in the current hem. in the Breit frame
       
-      //H1Boost BoostToBreit;                 //!< Lorentz boost to breit frame ( q + 2*x*P = 0 )
-      //H1Boost BoostToLab;                   //!< Lorentz boost back to the lab frame
+      H1Boost BoostToBreit;                 //!< Lorentz boost to breit frame ( q + 2*x*P = 0 )
+      H1Boost BoostToLab;                   //!< Lorentz boost back to the lab frame
    };
 
    CrossSectionQuantities   fRec;
