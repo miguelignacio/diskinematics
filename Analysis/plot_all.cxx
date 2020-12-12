@@ -9,6 +9,7 @@ enum kCHAIN {
    kCompton,
    kCCBkgd,
    kDjBkgd,
+   kGrape,
    kUndefined = 99,
 };
 map<kCHAIN,string> gChainMap{
@@ -20,6 +21,7 @@ map<kCHAIN,string> gChainMap{
    { kCompton, "Compton" },
    { kCCBkgd,  "CCBkgd" },
    { kDjBkgd,  "DjBkgd" }, 
+   { kGrape,   "Grape" },
       };
 
 // ___________________________________________________________ //
@@ -133,6 +135,9 @@ vector<string> get_directories(TFile* file) {
    cout<<"\nDirectories: "<<endl;
    vector<string> ret;
    for ( int iO = 0 ; iO<nEntries ; iO++ ){
+      if ( gDirectory->GetListOfKeys()->At(iO)->InheritsFrom( "TTree" ) ) { 
+         continue;
+      }
       ret.push_back(gDirectory->GetListOfKeys()->At(iO)->GetName());
       cout<<"  - "<<ret.back()<<endl;
    }
@@ -185,8 +190,21 @@ void plot_directory_default(TFile* file, const string& directory, const TString&
       TH1* hData   = chains.count(kData)   ? get_hist_from_file(file,chains[kData],directory,histname)   :  NULL;
       TH1* hRapgap = chains.count(kRapgap) ? get_hist_from_file(file,chains[kRapgap],directory,histname) :  NULL;
       TH1* hDjango = chains.count(kDjango) ? get_hist_from_file(file,chains[kDjango],directory,histname) :  NULL;
-
-      TH1* hBackground = NULL;// todo, get all background, and also add them to Django and Rapgap
+      TH1* hCCBkgd = chains.count(kCCBkgd) ? get_hist_from_file(file,chains[kCCBkgd],directory,histname) :  NULL;
+      TH1* hDjBkgd = chains.count(kDjBkgd) ? get_hist_from_file(file,chains[kDjBkgd],directory,histname) :  NULL;
+      TH1* hBackground = chains.count(kPythia) ? get_hist_from_file(file,chains[kPythia],directory,histname) :NULL;// todo, get all background, and also add them to Django and Rapgap
+/*
+      if(hBackground && hCCBkgd){
+         hBackground->Add(hCCBkgd);
+      }
+      if(hBackground && hDjBkgd){
+         hBackground->Add(hDjBkgd);
+      }
+*/
+      if(hBackground){
+         hDjango->Add(hBackground);
+         hRapgap->Add(hBackground);
+      }
 
       // get main-histogram
       TH1* hMain = NULL;
@@ -210,6 +228,7 @@ void plot_directory_default(TFile* file, const string& directory, const TString&
       // plot a 1D-histogram
       if ( hMain->InheritsFrom("TH1D") || hMain->InheritsFrom("TH1F")  || hMain->InheritsFrom("TH1I")  ) {
          double max = hMain->GetMaximum();
+
          if ( title.find("_lx")!=string::npos || string(hMain->GetName()).find("_lx") !=string::npos ) gPad->SetLogx();
          if ( title.find("_ly")!=string::npos || string(hMain->GetName()).find("_ly") !=string::npos ||
               title.find("_lxy")!=string::npos || string(hMain->GetName()).find("_lxy") !=string::npos ) gPad->SetLogy();
@@ -218,12 +237,12 @@ void plot_directory_default(TFile* file, const string& directory, const TString&
          if ( gPad->GetLogy() ) hMain->SetMinimum(0.7);
          else                   hMain->SetMinimum(0.);
          
-
          hMain->DrawClone("hist");
-         if ( hBackground ) hBackground->DrawClone("histsame");
+         //if ( hBackground ) hBackground->DrawClone("histsame");
          if ( hRapgap ) hRapgap->DrawClone("histsame");
          if ( hDjango ) hDjango->DrawClone("histsame");
          if ( hData   ) hData->DrawClone("PEsame");
+         if ( hBackground ) hBackground->DrawClone("histsame");
 
          TLegend* l = new TLegend(0.65,0.70,0.98,0.93,"","brNDC");
          l->SetTextSize(0.04);
@@ -242,11 +261,46 @@ void plot_directory_default(TFile* file, const string& directory, const TString&
          gPad->RedrawAxis();
          
       }
-      // plot a 1D-histogram
+      // plot a 2D-histogram
       else if ( hMain->InheritsFrom("TH2D") || hMain->InheritsFrom("TH2F")  || hMain->InheritsFrom("TH2I")  ) {
+
          gPad->SetLogz();
-         cout<<"not yet implemented."<<endl;
-         exit(1);
+
+         double max = hMain->GetMaximum();
+         if ( title.find("_lx")!=string::npos || string(hMain->GetName()).find("_lx") !=string::npos ) gPad->SetLogx();
+         if ( title.find("_ly")!=string::npos || string(hMain->GetName()).find("_ly") !=string::npos ||
+              title.find("_lxy")!=string::npos || string(hMain->GetName()).find("_lxy") !=string::npos ) gPad->SetLogy();
+         if ( gPad->GetLogy() )  hMain->SetMaximum(max*40);
+         else                    hMain->SetMaximum(max*1.4);
+         if ( gPad->GetLogy() ) hMain->SetMinimum(0.7);
+         else                   hMain->SetMinimum(0.);
+
+
+         hMain->DrawClone();
+         //if ( hBackground ) hBackground->DrawClone("histsame");
+         //if ( hRapgap ) hRapgap->DrawClone("histsame");
+         if ( hDjango ) hDjango->DrawClone("COLZ");
+         //if ( hData   ) hData->DrawClone("PEsame");
+         //if ( hBackground ) hBackground->DrawClone("histsame");
+/*
+         TLegend* l = new TLegend(0.65,0.70,0.98,0.93,"","brNDC");
+         l->SetTextSize(0.04);
+         if ( hData   )     l->AddEntry(hData,  "Data","PE");
+         if ( hDjango )     l->AddEntry(hDjango,"Django","L");
+         if ( hRapgap )     l->AddEntry(hRapgap,"Rapgap","L");
+         if ( hBackground ) l->AddEntry(hBackground,"Backgrounds","L");
+         l->SetFillStyle(0);
+         l->SetBorderSize(0);
+         l->DrawClone();
+*/
+         // if ( histname.Contains("_den") ) {
+         //    TString numname = histname.ReplaceAll("_den","_num");
+         //    ...
+         //       }
+         gPad->RedrawAxis();
+         gPad->SaveAs("test.pdf");
+
+
       }
       else {
          cout<<"Warning. Object not recognized! Name: "<<hMain->GetName()<<endl;
@@ -286,6 +340,7 @@ void plot_all(){
    // loop over all directories and plot them
    vector<string> directories = get_directories(file);
    for ( string directory : directories ) {
+      if ( directory == "minitree" ) continue;
       cout<<" -------------------------------------------------- "<<endl;
       cout<<" [main]  Plotting directory:  "<<directory<<endl;
       cout<<"         using:    plot_directory_default"<<endl;

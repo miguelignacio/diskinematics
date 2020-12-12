@@ -1024,6 +1024,47 @@ void AnalysisEventShapes::DoControlPlotsGenRec() {
 //! 
 void AnalysisEventShapes::DoCrossSectionsGenRec() {
    
+
+   //Determine acceptance and purity
+   //Create 3D Histos with bins in Q2, X and tau_zQ
+   
+   H2020HistManager& hm = HistMaster::Instance()->GetHistManager("Acceptance");
+
+   //Define bins
+   vector<double> taubins= {0.0, 0.2, 0.4, 0.6, 0.8, 1.0};
+   vector<double> q2bins = {1.6500, 1.8500, 2.0500, 2.2500, 2.4500, 2.6500, 2.8500, 3.0500, 3.2500, 3.5500, 4.0000, 4.4437, 4.8881};
+   vector<double> xbins  = {-2.8000, -2.4000, -2.0000, -1.6000, -1.2000, -0.8386};  // x bins depend on Q2
+   if (TMath::Log10(fGen.Q2) < 2.65){
+      xbins.push_back(-0.7670);
+      xbins.push_back( 0.0000);
+   }
+   else{
+      xbins.push_back(-0.5000);
+      xbins.push_back( 0.0000);
+   }
+
+   //Histo for all gen events -> N_Gen
+   hm.Get<TH3D>("All_Events_Gen", ";log_{10}(Q2); log_{10}(X);#tau_{zQ}",  q2bins, xbins, taubins) ->Fill(TMath::Log10(fGen.Q2), TMath::Log10(fGen.X), fGen.tau_zQ);
+   //Histo for all rec events -> N_Rec
+   hm.Get<TH3D>("All_Events_Rec", ";log_{10}(Q2); log_{10}(X);#tau_{zQ}",  q2bins, xbins, taubins) ->Fill(TMath::Log10(fRec.Q2), TMath::Log10(fRec.X), fRec.tau_zQ);
+   //Histo for all events where the bin is the same -> N_Stay
+   for ( long unsigned int i = 0; i<q2bins.size()-1; i++){
+      if ( TMath::Log10(fGen.Q2) > q2bins[i] && TMath::Log10(fGen.Q2) < q2bins[i+1] && 
+           TMath::Log10(fRec.Q2) > q2bins[i] && TMath::Log10(fRec.Q2) < q2bins[i+1]){
+         for ( long unsigned int j = 0; j<xbins.size()-1; j++){
+            if ( TMath::Log10(fGen.X) > xbins[j] && TMath::Log10(fGen.X) < xbins[j+1] && 
+                 TMath::Log10(fRec.X) > xbins[j] && TMath::Log10(fRec.X) < xbins[j+1]){
+               for ( long unsigned int k = 0; k<xbins.size()-1; k++){
+                  if ( TMath::Log10(fGen.tau_zQ) > taubins[k] && TMath::Log10(fGen.tau_zQ) < taubins[k+1] && 
+                       TMath::Log10(fRec.tau_zQ) > taubins[k] && TMath::Log10(fRec.tau_zQ) < taubins[k+1]){
+                     hm.Get<TH3D>("All_Events_Stay", ";log_{10}(Q2); log_{10}(X);#tau_{zQ}",  q2bins, xbins, taubins) ->Fill(TMath::Log10(fRec.Q2), TMath::Log10(fRec.X), fRec.tau_zQ);
+                  }
+               }
+            }
+         }
+      }
+   }
+
 }
 
 

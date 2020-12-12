@@ -46,6 +46,12 @@ public:
    template<class TH>
    TH* Get(const std::string& histname, const std::string& title, const std::vector<double>& xbins, const std::vector<double>& ybins, int id=9999);
 
+   // 3D
+   template<class TH>
+      TH* Get(const std::string& histname, const std::string& title, int nbinsx, double xlow, double xup, int nbinsy, double ylow, double yup, int nbinsz, double zlow, double zup, int id=9999);
+   template<class TH>
+      TH* Get(const std::string& histname, const std::string& title, const std::vector<double>& xbins, const std::vector<double>& ybins, const std::vector<double>& zbins,int id=9999);
+
    // compatibility with h1oo
    template<class TH>
    TH* Get(const std::string& histname, int nbins, const double* xbins, const std::string& xtitle, const std::string& ytitle);
@@ -192,6 +198,38 @@ TH* H2020HistManager::Get (const std::string& histname, const std::string& title
    }
    return ((TH*)hptr);
 }
+
+// ________________________________________ TH3 ______________________________________________ //
+//! return histogram pointer from fHistmap;
+//! Make new histogram if not existent.
+template <class TH>
+TH* H2020HistManager::Get (const std::string& histname, const std::string& title, int nbinsx, double xlow, double xup, int nbinsy, double ylow, double yup, int nbinsz, double zlow, double zup, int id) {
+   TH1* hptr = fHistmap[&histname][id];
+   if ( hptr == nullptr ) {
+      std::string newhistname = histname;
+      if ( id!=9999 ) newhistname += "_"+std::to_string(id);
+      printf("New histogram: %s  %s\n",newhistname.c_str(), title.c_str());
+      fHistmap[&histname][id] = new TH(histname.c_str(),title.c_str(),nbinsx,xlow,xup, nbinsy, ylow, yup, nbinsz, zlow, zup);
+      hptr = fHistmap[&histname][id];
+   }
+   return ((TH*)hptr);
+}
+
+//! return histogram pointer from fHistmap;
+//! Make new histogram if not existent.
+template <class TH>
+TH* H2020HistManager::Get (const std::string& histname, const std::string& title, const std::vector<double>& xbins, const std::vector<double>& ybins, const std::vector<double>& zbins, int id) {
+   TH1* hptr = fHistmap[&histname][id];
+   if ( hptr == nullptr ) {
+      std::string newhistname = histname;
+      if ( id!=9999 ) newhistname += "_"+std::to_string(id);
+      printf("New histogram: %s  %s\n",newhistname.c_str(), title.c_str());
+      fHistmap[&histname][id] = new TH(histname.c_str(),title.c_str(),xbins.size()-1,&xbins[0],ybins.size()-1,&ybins[0],zbins.size()-1,&zbins[0]);
+      hptr = fHistmap[&histname][id];
+   }
+   return ((TH*)hptr);
+}
+
 
 
 

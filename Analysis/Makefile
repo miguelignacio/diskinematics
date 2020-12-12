@@ -43,6 +43,7 @@ OBJS += FidVolCut.o
 OBJS += TDetectQedc.o
 OBJS += elecCut.o
 OBJS += JetTools.o
+OBJS += EventshapeTools.o
 OBJS += LumiFillList.o
 OBJS += SpacLinearity.o
 OBJS += Alignment.o
