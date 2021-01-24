@@ -60,6 +60,76 @@ AnalysisBase::~AnalysisBase() {
 }
 
 
+// _______________________________________________________ //
+//!
+//!  AnalysisBase::SetSysShift
+//!
+//!  Apply a systematic shift to the entire analysis
+//!  Use:  
+//!        0   =  no shift
+//!        >0  =  systematic shift, as defined in H1CalcSystematic
+//!
+//!  See: https://www-h1.desy.de/icas/oop/roothtml/4.0.25/src/H1CalcSystematic.h.html#20
+//!
+//!  Note: this method is called in 'main' to set fSys
+//!        and the for each event to re-initialize the
+//!        systematic shift.
+//!        It also serves for documentation.
+//!  
+//!  Useful: name        enum 
+//!          eHadEn         0   (shift: 0.01)  "JES"         (clusters inside calibrated jets). Thesis R. Kogler & high-Q2 jets paper
+//!          eHadEnCor      1   (shift: 0.01)  "RCES","HFS"  (clusters outside of jets)         Thesis R. Kogler & high-Q2 jets paper
+//!          eElecEn        6   (shift 0.005)  "electron energy" arXiv:0904.3513: 0.5 [2000]
+//!          eElecTh        9   (shift 0.0005) "electron theta"  arXiv:0904.3513: 0.2mrad, 0.09 [2000], 0.5mrad [low-Q2 FL]
+//!
+//! //fSystematics["ElEnUnc"] = make_pair(H1CalcSystematic::eElecEnUnc,0.005);
+void AnalysisBase::SetSysShift(int sys) {
+   
+  if ( fSys != -9999 ) {
+    gH1Calc->Systematic()->ShiftUp(fSys);
+    if ( fSys == H1CalcSystematic::eHadEn )    H1BoostedJets::Instance()->SysShiftJetEnergy(0.01);
+    if ( fSys == H1CalcSystematic::eHadEnCor ) H1BoostedJets::Instance()->SysShiftHFSEnergy(0.01);
+  }
+  // fThisSys = it->second.first;
+  // gH1Calc->Systematic()->ShiftUp(it->second.first);
+  // if ( it->second.first == H1CalcSystematic::eHadEn )        H1BoostedJets::Instance()->SysShiftJetEnergy(it->second.second);
+  // if ( it->second.first == H1CalcSystematic::eHadEnCor )     H1BoostedJets::Instance()->SysShiftHFSEnergy(it->second.second);
+      
+  // gH1Calc->Systematic()->SetShift(H1CalcSystematic::eElecEn, 0.005);
+  // gH1Calc->Systematic()->SetShift(H1CalcSystematic::eElecEnUnc, 0.005);
+  //   gH1Calc->Systematic()->SetShift(H1CalcSystematic::eElecTh, 0.001);
+      
+  //   gH1Calc->Systematic()->SetShiftElecEnWheel(0, 0.005);
+  //   gH1Calc->Systematic()->SetShiftElecEnWheel(1, 0.005);
+  //   gH1Calc->Systematic()->SetShiftElecEnWheel(2, 0.005);
+  //   gH1Calc->Systematic()->SetShiftElecEnWheel(3, 0.01);
+  //   gH1Calc->Systematic()->SetShiftElecEnWheel(4, 0.01);
+
+  //    gH1Calc->Systematic()->SetShiftElecTheta(0, 0.001);
+  //    gH1Calc->Systematic()->SetShiftElecTheta(1, 0.001);
+  //    gH1Calc->Systematic()->SetShiftElecTheta(2, 0.002);
+
+  //    gH1Calc->Systematic()->SetShift(H1CalcSystematic::eHadEn, 0.01);
+
+  fSys = sys; // set sys shift.
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // _______________________________________________________ //
 //!
@@ -213,22 +283,7 @@ void AnalysisBase::DoBaseInitialSettings() {
    // --- vertex settings
    H1Calculator::Instance()->Vertex()->DoNotUseCIPForOptimalVertex();
    H1Calculator::Instance()->Vertex()->SetTrackClusterDistance(8.0); //  03.16
-
-   // --- systematic shifts for uncertainties
-   // gH1Calc->Systematic()->SetShift(H1CalcSystematic::eHadEn, 0.01);
-   // gH1Calc->Systematic()->SetShift(H1CalcSystematic::eElecEn, 0.005);
-   // gH1Calc->Systematic()->SetShift(H1CalcSystematic::eElecEnUnc, 0.005);
-   // gH1Calc->Systematic()->SetShift(H1CalcSystematic::eElecTh, 0.001);
-
-   // gH1Calc->Systematic()->SetShiftElecEnWheel(0, 0.005);
-   // gH1Calc->Systematic()->SetShiftElecEnWheel(1, 0.005);
-   // gH1Calc->Systematic()->SetShiftElecEnWheel(2, 0.005);
-   // gH1Calc->Systematic()->SetShiftElecEnWheel(3, 0.01);
-   // gH1Calc->Systematic()->SetShiftElecEnWheel(4, 0.01);
-
-   // gH1Calc->Systematic()->SetShiftElecTheta(0, 0.001);
-   // gH1Calc->Systematic()->SetShiftElecTheta(1, 0.001);
-   // gH1Calc->Systematic()->SetShiftElecTheta(2, 0.002);
+   SetSysShift(fSys);
 
    // -------------------------------------------------------------------
    // see: h1oo/H1Analysis/H1AnalysisChain.C::SteerCalculator()
@@ -267,6 +322,7 @@ void AnalysisBase::DoBaseReset() {
    gH1Calc->Vertex()->SetPrimaryVertexType(H1CalcVertex::vtOptimalNC); // use optimal NC vertex
    H1BoostedJets::Instance()->Reset();
    H1BoostedJets::Instance()->ResetSysShifts();
+   SetSysShift(fSys);
 
    static JetTools tools;
    if ( tools.GenElecPhotDist()  > 0.15 ) { // (~5 deg in theta and phi) 
@@ -536,28 +592,65 @@ void AnalysisBase::InitMiniTree() {
    T->Branch("x", &fTreeVar.event_x, "event_x/F");
    T->Branch("y", &fTreeVar.event_y, "event_y/F");
    T->Branch("Q2", &fTreeVar.event_Q2, "event_Q2/F");
+   T->Branch("gen_x", &fTreeVar.gen_event_x, "gen_event_x/F");
+   T->Branch("gen_y", &fTreeVar.gen_event_y, "gen_event_y/F");
+   T->Branch("gen_Q2", &fTreeVar.gen_event_Q2, "gen_event_Q2/F");
+
+   T->Branch("tau1b", &fTreeVar.tau1b, "tau1b/F");
+   T->Branch("gen_tau1b", &fTreeVar.gen_tau1b, "gen_tau1b/F");
+   T->Branch("tauzQ", &fTreeVar.tauzQ, "tauzQ/F");
+   T->Branch("gen_tauzQ", &fTreeVar.gen_tauzQ, "gen_tauzQ/F");
+
    T->Branch("vertex_z", &fTreeVar.vertex_z, "vertex_z/F");
    T->Branch("ptmiss", &fTreeVar.ptmiss, "ptmiss/F");
    T->Branch("ptratio", &fTreeVar.ptratio, "ptratio/F");
    T->Branch("acoplanarity", &fTreeVar.acoplanarity, "acoplanarity/F");
    T->Branch("Empz", &fTreeVar.Empz, "Empz/F");
-   T->Branch("e_pt", &fTreeVar.e_pt, "e_pt/F");
-   T->Branch("e_phi", &fTreeVar.e_phi, "e_phi/F");
-   T->Branch("e_rap",&fTreeVar.e_rap, "e_rap/F");
-   T->Branch("e_eta", &fTreeVar.e_eta, "e_eta/F");
-   T->Branch("e_p", &fTreeVar.e_p, "e_p/F");
-   T->Branch("e_theta", &fTreeVar.e_theta, "e_theta/F");
+   T->Branch("e_px", &fTreeVar.e_px, "e_px/F");
+   T->Branch("e_py", &fTreeVar.e_py, "e_py/F");
+   T->Branch("e_pz",&fTreeVar.e_pz, "e_pz/F");
+
+   T->Branch("gene_px", &fTreeVar.gene_px, "gene_px/F");
+   T->Branch("gene_py", &fTreeVar.gene_py, "gene_py/F");
+   T->Branch("gene_pz",&fTreeVar.gene_pz, "gene_pz/F");
+
+   
    T->Branch("njets", &fTreeVar.njets, "njets/F");
    T->Branch("n_total",&fTreeVar.nconstituents);
    T->Branch("jet_pt", &fTreeVar.jet_pt);
-   T->Branch("jet_qt", &fTreeVar.jet_qt);
+   T->Branch("genjet_pt", &fTreeVar.gen_jet_pt);
    T->Branch("jet_phi", &fTreeVar.jet_phi);
-   T->Branch("jet_rap",&fTreeVar.jet_rap);
+   T->Branch("genjet_phi",&fTreeVar.gen_jet_phi);
    T->Branch("jet_eta", &fTreeVar.jet_eta);
-   T->Branch("jet_theta", &fTreeVar.jet_theta);
+   T->Branch("genjet_eta", &fTreeVar.gen_jet_eta);
    T->Branch("jet_dphi", &fTreeVar.jet_dphi);
-   T->Branch("jet_p", &fTreeVar.jet_p);
-   T->Branch("jet_z", &fTreeVar.jet_z);
+
+   T->Branch("jet_charge", &fTreeVar.jet_charge);
+   T->Branch("genjet_charge", &fTreeVar.gen_jet_charge);
+   T->Branch("track_z", &fTreeVar.track_z);
+   T->Branch("track_jt", &fTreeVar.track_jt);
+   T->Branch("track_phi", &fTreeVar.track_phi);
+   T->Branch("track_px", &fTreeVar.track_px);
+   T->Branch("track_py", &fTreeVar.track_py);
+   T->Branch("track_pz", &fTreeVar.track_pz);
+   T->Branch("track_charge", &fTreeVar.track_charge); 
+   T->Branch("track_jetpx", &fTreeVar.track_jetpx);
+   T->Branch("track_jetpy", &fTreeVar.track_jetpy);
+   T->Branch("track_jetpz", &fTreeVar.track_jetpz);
+   
+
+   T->Branch("gen_track_z",  &fTreeVar.gen_track_z);
+   T->Branch("gen_track_jt", &fTreeVar.gen_track_jt);
+   T->Branch("gen_track_phi", &fTreeVar.gen_track_phi);
+   T->Branch("gen_track_px", &fTreeVar.gen_track_px);
+   T->Branch("gen_track_py", &fTreeVar.gen_track_py);
+   T->Branch("gen_track_pz", &fTreeVar.gen_track_pz);
+   T->Branch("gen_track_charge", &fTreeVar.gen_track_charge);
+   T->Branch("gen_track_jetpx", &fTreeVar.gen_track_jetpx);
+   T->Branch("gen_track_jetpy", &fTreeVar.gen_track_jetpy);
+   T->Branch("gen_track_jetpz", &fTreeVar.gen_track_jetpz);
+
+
    // //   qT and z, defined below:
    // TVector2 jet2(jet.px(),jet.py());
    // TVector2 electron2(ElecPx,ElecPy);

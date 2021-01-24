@@ -4,7 +4,7 @@
 // // C++ includes
 // #include <map>
 // #include <set>
-// #include <vector>
+#include <vector>
 
 // Root includes
 // #include <TH1.h>
@@ -28,15 +28,24 @@ using namespace H1CalcGenericInterface;
 #include "H1Calculator/H1CalcHad.h"
 #include "H1Calculator/H1CalcTrack.h"
 #include "H1Calculator/H1CalcSystematic.h"
+#include "H1Mods/H1PartCandArrayPtr.h"
+
 // #include "H1PhysUtils/H1MakeKine.h"
 #include "EventshapeTools.h"
 #include "JetTools.h"         // JetsAtHighQ2
 #include "H1Mods/H1PartSelTrack.h"
 #include "H1JetFinder/H1EventShape.h"
 //#include "UsefulTools.h"
+
+
+// fjcontrib
+#include "fastjet/PseudoJet.hh"
+#include "fastjet/contrib/Centauro.hh"
+
+
+
 using namespace std;
-
-
+using namespace fastjet;
 
 // _______________________________________________________ //
 //! Constructor
@@ -296,13 +305,414 @@ void AnalysisEventShapes::DoCrossSectionObservablesRec() {
    fRec.tau_zQ   = 1-2*sum_vector.Pz()/TMath::Sqrt(fRec.Q2);
    fRec.tau_zP   = 3.1; //not implemented yet
 
-   // mini-tree
-   fTreeVar.event_Q2 = gH1Calc->Kine()->GetQ2e();
+   //mini-tree
+   TLorentzVector ScatElecGen = gH1Calc->Elec()->GetFirstElectronGen();
+
+
+
+   fTreeVar.event_Q2 = gH1Calc->Kine()->GetQ2es();
    fTreeVar.event_y  = gH1Calc->Kine()->GetYes();
    fTreeVar.event_x  = gH1Calc->Kine()->GetXes();
    fTreeVar.Empz     = gH1Calc->Fs()->GetEmpz();
+   fTreeVar.e_px = ScatElec.Px();
+   fTreeVar.e_py = ScatElec.Py();
+   fTreeVar.e_pz = ScatElec.Pz();
+   fTreeVar.gene_px = ScatElecGen.Px();
+   fTreeVar.gene_py = ScatElecGen.Py();
+   fTreeVar.gene_pz = ScatElecGen.Pz();   
+
+   fTreeVar.tau1b = fRec.tau1b;
+   fTreeVar.gen_tau1b = fGen.tau1b;
+   fTreeVar.tauzQ = fRec.tau_zQ;
+   fTreeVar.gen_tauzQ = fGen.tau_zQ;
+
+   fTreeVar.gen_event_Q2 =  gH1Calc->Kine()->GetQ2esGen();
+   fTreeVar.gen_event_x  =  gH1Calc->Kine()->GetXesGen();
+   fTreeVar.gen_event_y  =  gH1Calc->Kine()->GetYesGen();
    //...more
-}
+
+   const double etamin = -1.5;
+   const double etamax = 2.75;
+   // -- define fastjet vectors                                                                                                                                                                           
+  
+   vector<PseudoJet> hadron_event_lab;
+   vector<PseudoJet> full_event_lab;
+   //H1BoostedJets* boostedjets = H1BoostedJets::Instance();                                                                                                                                              
+  
+   TObjArray* hadrons_lab = H1BoostedJets::Instance()->GetHadronArray();
+   for (int ipart=0; ipart<hadrons_lab->GetEntries(); ++ipart){
+     H1PartMC* part = (H1PartMC*)hadrons_lab->At(ipart);
+     // cut on eta-lab                                                                                                                                                                                    
+  
+     if ( part->GetEta() < etamin || part->GetEta() > etamax ) continue;
+     fastjet::PseudoJet particle(part->GetPx(),part->GetPy(), part->GetPz(), part->GetE());
+     //     hadron_event_lab.push_back(PseudoJet(part->GetPx(),part->GetPy(), part->GetPz(), part->GetE()));
+     particle.set_user_index(part->GetCharge());
+     //std::cout << part->GetCharge() << " " << particle.user_index() << std::endl;
+     hadron_event_lab.push_back(particle);
+   }
+   // 3) PartCands on detector-level in lab and breit frame                                                                                                                                               
+  
+   //loop over HFS array
+   for (long unsigned int ipart=0; ipart<particlearray.size(); ++ipart){
+     H1PartCand* part = static_cast<H1PartCand*>(particlearray[ipart]);
+     //   static H1PartCandArrayPtr allpartcands;
+     //H1Boost* breitboost = H1BoostedJets::Instance()->GetRecBoost();
+     //for ( H1PartCand* part : allpartcands ) { // (int ipart=0; ipart<allpartcands.GetEntries(); ++ipart){ H1PartCand* part = (H1PartCand*)p; ...                                                       
+     if (part->IsScatElec()) continue;  // exclude the scattered electron                                                                                                                                 
+     if ( part->GetEta() < etamin || part->GetEta() > etamax ) continue; // cut on eta, both for lab and breit frame                                                                                      
+     fastjet::PseudoJet reco_particle(part->GetPx(),part->GetPy(), part->GetPz(), part->GetE()); 
+     reco_particle.set_user_index(part->GetCharge());
+     // lab frame                                                                                                                                                                                         
+     full_event_lab.push_back( reco_particle);
+   }
+   // --- define fastjet contrib module Centauro                                                                                                                                                          
+  
+   //fastjet::contrib::CentauroPlugin * centauro_plugin = new fastjet::contrib::CentauroPlugin(1.0);                                                                                                     
+   
+   //fastjet::JetDefinition jet_def(centauro_plugin);                                                                                                                                                     
+  
+   fastjet::JetDefinition jet_def(fastjet::genkt_algorithm, 1.0,1);
+
+   // --- jets in lab-frame particles (reco level)                                                                                                                                                        
+  
+   ClusterSequence clust_seq_lab(full_event_lab, jet_def);
+   vector<PseudoJet> jets_lab = clust_seq_lab.inclusive_jets(5.0);
+   vector<PseudoJet> sortedLabJets   = sorted_by_pt(jets_lab);
+   ClusterSequence clust_seq_hadlab(hadron_event_lab, jet_def);
+   vector<PseudoJet> hadronJetsLab = sorted_by_pt(clust_seq_hadlab.inclusive_jets(3.0));
+   //...more                                                                                                                                                                                               
+   // clear up vectors before filling them                                                                                                                                                                
+   //  std::cout << "CLEARING VECTOR  !!! " << std::endl;
+   // fTreeVar.jet_pt.clear();                                                                                                                                                                            
+ //   fTreeVar.jet_eta.clear();                                                                                                                                                                            
+  
+   //fTreeVar.gen_jet_pt.clear();                                                                                                                                                                         
+  
+   //fTreeVar.gen_jet_eta.clear();                                                                                                                                                                        
+  
+
+   std::vector<float> v_jetpt; 
+   std::vector<float> v_gen_jetpt; 
+   std::vector<float> v_jeteta;
+   std::vector<float> v_gen_jeteta;
+   std::vector<float> v_jetphi;
+   std::vector<float> v_gen_jetphi;
+
+   std::vector<float> v_jetcharge;
+   std::vector<float> v_gen_jetcharge;
+
+   std::vector<float> v_hjt;
+   std::vector<float> v_hz;
+   std::vector<float> v_hr;
+   std::vector<float> v_hphi;
+   std::vector<float> v_hpx;
+   std::vector<float> v_hpy;
+   std::vector<float> v_hpz;
+   std::vector<int>   v_hcharge;
+   std::vector<float> v_hjetpx;
+   std::vector<float> v_hjetpy;
+   std::vector<float> v_hjetpz;   
+
+   std::vector<float> v_gen_hjt;
+   std::vector<float> v_gen_hz;
+   std::vector<float> v_gen_hr;
+   std::vector<float> v_gen_hphi;
+   std::vector<float> v_gen_hpx;
+   std::vector<float> v_gen_hpy;
+   std::vector<float> v_gen_hpz;
+   std::vector<int>   v_gen_hcharge;
+   std::vector<float> v_gen_hjetpx;
+   std::vector<float> v_gen_hjetpy;
+   std::vector<float> v_gen_hjetpz;
+
+   if( not(fGen.Q2>0)){ //if real data, just fill the reco jets
+   for (unsigned ijet= 0; ijet < sortedLabJets.size();ijet++) {
+     fastjet::PseudoJet jet = sortedLabJets[ijet];
+           
+     v_jetpt.push_back(jet.perp());
+     v_jeteta.push_back(jet.eta());
+     v_jetphi.push_back(jet.phi());
+
+     vector<PseudoJet> constituents = jet.constituents();
+     //int ncharged_constituents = fastjet::SelectorIsCharged().count(constituents);
+     //std::cout << "Number of charged constituents" << ncharged_constituents << std::endl;
+     int ncharged = 0;
+     float jet_charge = 0;
+     for (unsigned j = 0; j < constituents.size(); j++) {
+       if(!(constituents[j].user_index()!=0)) continue;
+       ncharged = ncharged +1;
+       //std::cout << constituents[j].user_index() << std::endl;
+
+       TVector3 jetvector(jet.px(), jet.py(), jet.pz());
+       TVector3 hvector(constituents[j].px(), constituents[j].py(), constituents[j].pz());
+       double z = jetvector.Dot( hvector )/(jetvector.Mag2());
+       double r = TMath::Sqrt( pow(jet.phi() - constituents[j].phi(),2.0) + pow(jet.eta() - constituents[j].eta(),2.0));
+       TVector3 zaxis(0,0,1);
+       TVector3 N = zaxis.Cross(jetvector);
+       TVector3 S = N.Cross(jetvector);
+       N = N.Unit();
+       S = S.Unit();
+       TVector3 jt  = hvector.Dot(N)*N + hvector.Dot(S)*S;
+       v_hz.push_back(z);
+       v_hjt.push_back(jt.Mag());
+       v_hr.push_back(r);
+
+       v_hphi.push_back(TMath::ATan(hvector.Dot(N)/hvector.Dot(S)));
+       v_hpx.push_back(constituents[j].px());
+       v_hpy.push_back(constituents[j].py());
+       v_hpz.push_back(constituents[j].pz());
+       v_hcharge.push_back(constituents[j].user_index());
+       v_hjetpx.push_back(jet.px());
+       v_hjetpy.push_back(jet.py());
+       v_hjetpz.push_back(jet.pz());
+
+       jet_charge += constituents[j].user_index() *pow( hvector.Perp()/jet.perp(), 0.3); 
+     }// end loop over jet constituents
+     v_jetcharge.push_back(jet_charge);
+     
+     //fTreeVar.jet_pt.push_back(jet.perp());                                                                                                                                                              
+     //fTreeVar.jet_eta.push_back(jet.eta());                                                                                                                                                             
+     //v_jetpt.push_back(jet.perp());  
+     //std::cout << " jet pt " << jet.perp() << std::endl;
+     //std::cout << "jet eta " << jet.rap() << " jet e " << jet.e() << std::endl;                                                                                                                         
+     }
+   }
+
+   //MC
+   // Loop over generated jets
+   for (unsigned ijet= 0; ijet < hadronJetsLab.size();ijet++) {       
+                                                                                                                                    
+     fastjet::PseudoJet genjet = hadronJetsLab[ijet];                                                                                                                                                    
+     float deltaR = 999;                                                                                                                                                                                  
+     int matched_index = -999;                                                                                                                                                                            
+     //matching generated jets with reconstructed jets                                                                                                                                                    
+     for (unsigned kjet= 0; kjet < sortedLabJets.size();kjet++) {                                                                                                                                         
+         fastjet::PseudoJet jet = sortedLabJets[kjet];                                                                                                                                                    
+         if(genjet.delta_R(jet) < deltaR)                                                                                                                                                                 
+          {                                                                                                                                                                                             
+            deltaR = genjet.delta_R(jet);                                                                                                                                                                
+            matched_index = kjet;                                                                                                                                                                        
+            }                                                                                                                                                                                              
+      }//end loop over reconstructed jets                                                                                                                                                                  
+  
+     v_gen_jetpt.push_back(genjet.perp());
+     v_gen_jeteta.push_back(genjet.eta());
+     v_gen_jetphi.push_back(genjet.phi());
+
+     if( not(matched_index>-999 and deltaR<0.5)){
+       v_jetpt.push_back(-9999);
+       v_jeteta.push_back(-9999);
+       v_jetphi.push_back(-9999);
+       v_jetcharge.push_back(-9999);
+     }
+
+     double gen_jetcharge = 0 ;
+     //Loop over constituents
+     vector<PseudoJet> genconstituents = genjet.constituents();
+     for (unsigned j = 0; j < genconstituents.size(); j++) {
+       if( not(genconstituents[j].user_index()!=0)) continue;
+       //std::cout<< genconstituents[j].user_index() << std::endl;
+
+
+       TVector3 jetvector(genjet.px(), genjet.py(), genjet.pz());
+       TVector3 hvector(genconstituents[j].px(), genconstituents[j].py(), genconstituents[j].pz());
+       double z = jetvector.Dot( hvector )/(jetvector.Mag2());
+       double r = TMath::Sqrt( pow(genjet.phi() - genconstituents[j].phi(),2.0) + pow(genjet.eta() - genconstituents[j].eta(),2.0));
+       TVector3 zaxis(0,0,1);
+       TVector3 N = zaxis.Cross(jetvector);
+       TVector3 S = N.Cross(jetvector);
+       N = N.Unit();
+       S = S.Unit();
+       TVector3 jt  = hvector.Dot(N)*N + hvector.Dot(S)*S;
+       v_gen_hz.push_back(z);
+       v_gen_hjt.push_back(jt.Mag());
+       v_gen_hr.push_back(r);
+       v_gen_hphi.push_back(TMath::ATan(hvector.Dot(N)/hvector.Dot(S)));
+       v_gen_hpx.push_back(genconstituents[j].px());
+       v_gen_hpy.push_back(genconstituents[j].py());
+       v_gen_hpz.push_back(genconstituents[j].pz());
+       v_gen_hcharge.push_back(genconstituents[j].user_index());
+
+       v_gen_hjetpx.push_back(genjet.px());
+       v_gen_hjetpy.push_back(genjet.py());
+       v_gen_hjetpz.push_back(genjet.pz());
+
+       gen_jetcharge += genconstituents[j].user_index() *pow( hvector.Perp()/genjet.perp(), 0.3);
+       if( not(matched_index>-999 and deltaR<0.5)){
+	   v_hz.push_back(-9999);
+	   v_hjt.push_back(-9999);
+	   v_hr.push_back(-9999);
+           v_hphi.push_back(-9999);
+	   v_hpx.push_back(-9999);
+	   v_hpy.push_back(-9999);
+	   v_hpz.push_back(-9999);
+	   v_hcharge.push_back(-9999);
+	   v_hjetpx.push_back(-9999);
+	   v_hjetpy.push_back(-9999);
+	   v_hjetpz.push_back(-9999);
+
+	 }
+
+  
+     } //end loop over generator-level constituents
+     v_gen_jetcharge.push_back(gen_jetcharge);
+
+     //IF Generator level jet is matched
+     if( not (matched_index>-999 and deltaR<0.5)) continue; //only continue if gen level jet is matched
+                                                                                                                                                              
+     fastjet::PseudoJet matchedjet = sortedLabJets[matched_index];                                                                                                                                      
+     v_jetpt.push_back(matchedjet.perp());
+     v_jeteta.push_back(matchedjet.eta());
+     v_jetphi.push_back(matchedjet.phi()); 
+       
+     vector<PseudoJet> matchedconstituents = matchedjet.constituents();
+     vector<int> matched_indices;
+     //if (std::binary_search(v.begin(), v.end(), key))
+ 
+     //std::cout << " Gen constituents " << genconstituents.size() << std::endl;
+     //std::cout <<  " Matched constituents " << matchedconstituents.size() << std::endl;
+
+     //LOOP OVER GENERATED CONSTITUENTS
+     float jet_charge = 0 ;
+     for (unsigned i = 0; i < genconstituents.size(); i++) {
+        if( not(genconstituents[i].user_index()!=0)) continue;
+	    fastjet::PseudoJet gentrack = genconstituents[i];
+            float dRmin =999;
+            int matchtrack_index = -999; 
+	 //LOOP OVER RECONSTRUCTED CONSTITUENTS
+	for (unsigned j = 0; j < matchedconstituents.size(); j++) {
+	    if( not(matchedconstituents[j].user_index()!=0)) continue;//eliminate neutral particles
+            if( not(matchedconstituents[j].user_index()==genconstituents[i].user_index())) continue;
+             // skip if the reconstructed track has already been matched
+	    if (std::find(matched_indices.begin(), matched_indices.end(), j)!=matched_indices.end()){
+             //if(std::binary_search(matched_indices.begin(), matched_indices.end(), j)){ 
+	     // std::cout << "ELEMENT " << j << " already matched, next one" << std::endl;
+             continue;
+	  }  
+    	  fastjet::PseudoJet recotrack = matchedconstituents[j];
+          float delta = gentrack.delta_R(recotrack);
+          if(delta<dRmin){
+	    dRmin = delta;
+            matchtrack_index = j;
+	  }
+	}//end loop over reco tracks
+	 //std::cout << " dRMIN " << dRmin << std::endl;
+	if(dRmin<0.2 and matchtrack_index>-1){
+	    matched_indices.push_back(matchtrack_index);
+	    fastjet::PseudoJet matchedtrack = matchedconstituents[matchtrack_index];
+   	    TVector3 jetvector(matchedjet.px(), matchedjet.py(), matchedjet.pz());
+	    TVector3 hvector(matchedtrack.px(), matchedtrack.py(), matchedtrack.pz());
+	    double z = jetvector.Dot( hvector )/(jetvector.Mag2());
+	    double r = TMath::Sqrt( pow(matchedjet.phi() - matchedtrack.phi(),2.0) + pow(matchedjet.eta() - matchedtrack.eta(),2.0));
+	    TVector3 zaxis(0,0,1);
+	    TVector3 N = zaxis.Cross(jetvector);
+	    TVector3 S = N.Cross(jetvector);
+	    N = N.Unit();
+	    S = S.Unit();
+	    TVector3 jt  = hvector.Dot(N)*N + hvector.Dot(S)*S;
+	    v_hz.push_back(z);
+	    v_hjt.push_back(jt.Mag());
+	    v_hr.push_back(r);
+            v_hphi.push_back(TMath::ATan(hvector.Dot(N)/hvector.Dot(S)));
+
+	    v_hpx.push_back(matchedtrack.px());
+	    v_hpy.push_back(matchedtrack.py());
+	    v_hpz.push_back(matchedtrack.pz());
+	    v_hcharge.push_back(matchedtrack.user_index());
+	    v_hjetpx.push_back(matchedjet.px());
+	    v_hjetpy.push_back(matchedjet.py());
+	    v_hjetpz.push_back(matchedjet.pz());
+            jet_charge += matchedtrack.user_index() *pow( hvector.Perp()/jetvector.Perp(), 0.3);
+
+	   //	   std::cout << i << "--" << matchtrack_index <<  " gen || " << gentrack.perp() << " " << gentrack.eta() << " " << gentrack.phi() << " matched-reco: " << matchedtrack.perp() << " " << matchedtrack.eta()<< " " << matchedtrack.phi() << " CHARGE " << gentrack.user_index() << " " << matchedtrack.user_index() << std::endl; 
+	} // end of if track was matched successfully
+        else{ //if track was not matched successfully
+	    v_hz.push_back(-9999);
+            v_hjt.push_back(-9999);
+            v_hr.push_back(-9999);
+            v_hphi.push_back(-9999);
+            v_hpx.push_back(-9999);
+            v_hpy.push_back(-9999);
+            v_hpz.push_back(-9999);
+            v_hcharge.push_back(-9999);
+            v_hjetpx.push_back(-9999);
+            v_hjetpy.push_back(-9999);
+            v_hjetpz.push_back(-9999);
+	   //std::cout << i <<  " gen ||" << gentrack.perp() << " " << gentrack.eta() << " " << gentrack.phi() << " NO MATCHED RECO " <<std::endl;
+	 }
+     } //end loop over constituents of generated jet  
+     v_jetcharge.push_back(jet_charge);      
+       //std::cout << " ################## "  << std::endl;
+   
+   } //end loop over TRUTH level jets
+  
+            
+   fTreeVar.jet_pt = v_jetpt;
+   fTreeVar.gen_jet_pt = v_gen_jetpt;
+   fTreeVar.jet_eta = v_jeteta;
+   fTreeVar.gen_jet_eta = v_gen_jeteta;
+   fTreeVar.jet_phi = v_jetphi;
+   fTreeVar.gen_jet_phi = v_gen_jetphi;
+   fTreeVar.jet_charge = v_jetcharge;
+   fTreeVar.gen_jet_charge = v_gen_jetcharge;
+
+   fTreeVar.track_z = v_hz;
+   fTreeVar.track_jt = v_hjt;
+   fTreeVar.track_phi = v_hphi;
+   fTreeVar.track_px = v_hpx; 
+   fTreeVar.track_py = v_hpy;
+   fTreeVar.track_pz = v_hpz;
+   fTreeVar.track_charge = v_hcharge;
+   fTreeVar.track_jetpx = v_hjetpx;
+   fTreeVar.track_jetpy = v_hjetpy;
+   fTreeVar.track_jetpz = v_hjetpz;
+
+   fTreeVar.gen_track_z = v_gen_hz;
+   fTreeVar.gen_track_jt = v_gen_hjt;
+   fTreeVar.gen_track_phi = v_gen_hphi;
+   fTreeVar.gen_track_px = v_gen_hpx;
+   fTreeVar.gen_track_py = v_gen_hpy;
+   fTreeVar.gen_track_pz = v_gen_hpz; 
+   fTreeVar.gen_track_charge = v_gen_hcharge;
+   fTreeVar.gen_track_jetpx = v_gen_hjetpx;
+   fTreeVar.gen_track_jetpy = v_gen_hjetpy; 
+   fTreeVar.gen_track_jetpz = v_gen_hjetpz;
+   v_jetpt.clear();
+   v_gen_jetpt.clear();
+   v_jeteta.clear();
+   v_gen_jeteta.clear();
+   v_jetphi.clear();
+   v_gen_jetphi.clear();
+
+   v_jetcharge.clear();
+   v_gen_jetcharge.clear();
+
+   v_hz.clear();
+   v_hjt.clear();
+   v_hphi.clear();
+   v_hpx.clear();
+   v_hpy.clear();
+   v_hpz.clear();
+   v_hcharge.clear();
+   v_hjetpx.clear();
+   v_hjetpy.clear();
+   v_hjetpz.clear();
+
+   v_gen_hz.clear();
+   v_gen_hjt.clear();
+   v_gen_hphi.clear();
+   v_gen_hpx.clear();
+   v_gen_hpy.clear();
+   v_gen_hpz.clear();
+   v_gen_hcharge.clear();
+
+   v_gen_hjetpx.clear();
+   v_gen_hjetpy.clear();
+   v_gen_hjetpz.clear();
+
+   
+}//end main function
 
 
 

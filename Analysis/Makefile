@@ -50,6 +50,7 @@ OBJS += Alignment.o
 #OBJS += H1Boostedjets.o
 OBJS += JetReweight.o
 OBJS += Interpolate2d.o
+OBJS += EventshapeTools.o
 
 # OBJS += UserEvent.o UserFiller.o
 
@@ -70,6 +71,14 @@ CXX_FLAGS= -g -Wall -fPIC -std=gnu++17
 #extra files to be removed when calling 'make clean' or 'make clobber'
 EXTRA_CLEAN_RULES=
 EXTRA_DISTCLEAN_RULES=
+
+
+#extra files for fjcontrib for H1Example 'centauro'
+#FASTJET_VERS = $(FASTJET__HOME)/lib 
+ifdef FJCONTRIB__HOME
+  EXTRA_INCLUDEDIRS = $(FASTJET__HOME)/include $(FJCONTRIB__HOME)/include
+endif
+
 
 # defines LIBS
 # defines Rules for .c .C .cpp .f Dict.C .so
@@ -100,6 +109,8 @@ EventShapes: outputdirs $(BUILDDIR)/main.o
 		\
 		-L$(H1_LIBS) -L$(CERN_LIBS) \
 		$(ROOTLIBS) -lEG -l${FORTRANLIB} \
+		-L$(FJCONTRIB__HOME)/lib -lCentauro \
+		-L$(FASTJET__HOME)/lib -lfastjet \
 		\
 		-o $(BINDIR)/$@
 	@echo ""

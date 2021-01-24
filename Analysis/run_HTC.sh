@@ -41,7 +41,14 @@ if [[ -n $3 ]]; then
 fi
 
 echo ""
-echo "Now running analysis: $PWD/EventShapes"
-./EventShapes -f $1 -c $2 -o $OUTDIR/$2.root
-
+#echo "Now running analysis: $PWD/EventShapes"
+#./EventShapes -t -f $1 -c $2 -o $OUTDIR/$2.nominal.root
+#echo "Now running analysis: $PWD/EventShapes. SYSTEMATIC VARIATION 0 (Jet energy scale)"
+#./EventShapes -t -f $1 -c $2 -o $OUTDIR/$2.sys_0.root -s 0
+#echo "Now running analysis: $PWD/EventShapes. SYSTEMATIC VARIATION 1 (cluster energy scale)"
+#./EventShapes -t -f $1 -c $2 -o $OUTDIR/$2.sys_1.root -s 1
+#echo "Now running analysis: $PWD/EventShapes. SYSTEMATIC VARIATION 6 (electron energy)"
+#./EventShapes -t -f $1 -c $2 -o $OUTDIR/$2.sys_6.root -s 6
+echo "Now running analysis: $PWD/EventShapes. SYSTEMATIC VARIATION 9 (electron angle)"
+./EventShapes -t -f $1 -c $2 -o $OUTDIR/$2.sys_9.root -s 9
 

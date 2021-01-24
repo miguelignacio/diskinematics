@@ -11,6 +11,7 @@ class  H1RunList;
 #include "SpacLinearity.h"
 #include "Alignment.h"
 #include "H2020HistManager.h"
+#include<vector>
 class  FidVolCut;
 class TTree;
 using namespace std;
@@ -27,28 +28,56 @@ public:
    float event_x = 0;        //  x            
    float event_y = 0;        //  y            
    float event_Q2 = 0;       //  Q2           
+   float gen_event_x =0;     // gen x
+   float gen_event_y =0;     // gen y
+   float gen_event_Q2 =0;    // gen Q2
+   float tau1b = 0;         // tau1b
+   float gen_tau1b =0;      //tau 1b
+   float tauzQ = 0;         // tau ZQ
+   float gen_tauzQ =0;       // gen tau ZQ
+
    float vertex_z = 0;       //  vertex_z     
    float ptmiss = 0;         //  ptmiss       
    float ptratio = 0;        //  ptratio      
    float acoplanarity = 0;   //  acoplanarity 
    float Empz = 0;           //  Empz         
-   float e_pt = 0;           //  e_pt         
-   float e_phi = 0;          //  e_phi        
-   float e_rap = 0;          //  e_rap        
-   float e_eta = 0;          //  e_eta        
-   float e_p = 0;            //  e_p          
-   float e_theta = 0;        //  e_theta      
+   float e_px = 0;           //  e_pt         
+   float e_py = 0;          //  e_phi        
+   float e_pz = 0;          //  e_rap        
+   float gene_px = 0;          //  e_eta        
+   float gene_py = 0;            //  e_p          
+   float gene_pz = 0;        //  e_theta      
    float njets = 0;          //  njets        
    float nconstituents = 0;  //  n_total      
-   float jet_pt = 0;         //  jet_pt       
-   float jet_qt = 0;         //  jet_qt       
-   float jet_phi = 0;        //  jet_phi      
-   float jet_rap = 0;        //  jet_rap      
-   float jet_eta = 0;        //  jet_eta      
-   float jet_theta = 0;      //  jet_theta    
+   std::vector<float> jet_pt;         //  jet_pt       
+   std::vector<float> gen_jet_pt;         //  jet_qt       
+   std::vector<float> jet_phi;        //  jet_phi      
+   std::vector<float> gen_jet_phi;        //  jet_rap      
+   std::vector<float> jet_eta;        //  jet_eta      
+   std::vector<float> gen_jet_eta;      //  jet_theta    
    float jet_dphi = 0;       //  jet_dphi     
-   float jet_p = 0;          //  jet_p        
-   float jet_z = 0;          //  jet_z        
+   std::vector<float> jet_charge; //jet charge
+   std::vector<float> gen_jet_charge; // gen jet charge
+   std::vector<float> track_z; // track z
+   std::vector<float> track_jt; // track jt
+   std::vector<float> track_phi; //track phi
+   std::vector<float> track_px; // track px
+   std::vector<float> track_py; // track py
+   std::vector<float> track_pz; // track pz 
+   std::vector<int>   track_charge; //tarck charge
+   std::vector<float> track_jetpx; //px of jet 
+   std::vector<float> track_jetpy; //py of jet
+   std::vector<float> track_jetpz; //pz of jet
+   std::vector<float> gen_track_z; // track z                                                                                                                                                            
+   std::vector<float> gen_track_jt; // track jt
+   std::vector<float> gen_track_phi; //track phi                                                                                                                                                           
+   std::vector<float> gen_track_px; // track px                                                                                                                                                           
+   std::vector<float> gen_track_py; // track py                                                                                                                                                           
+   std::vector<float> gen_track_pz; // track pz   
+   std::vector<int>   gen_track_charge; //track charge 
+   std::vector<float> gen_track_jetpx; //generated px of jet
+   std::vector<float> gen_track_jetpy; //generated py of jet
+   std::vector<float> gen_track_jetpz; //generated pz of jet   
 };
 
 
@@ -76,6 +105,7 @@ public:
    virtual ~AnalysisBase();
 
    void DoBaseReset();
+   void SetSysShift(int sys = -9999);
    virtual void DoReset() = 0;
    void DoBaseInitialSettings();
    virtual void DoInitialSettings() = 0;
@@ -138,7 +168,7 @@ protected:
    bool fBasicCutsRec = false;
    bool fBasicCutsGen = false;
    Double_t f_VtxZMin, f_VtxZMax;
-
+   int fSys = -9999; 
    // --- mini tree
    TTree* fMiniTree = NULL;
    TreeVariables fTreeVar;

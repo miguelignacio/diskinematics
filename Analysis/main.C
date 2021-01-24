@@ -52,12 +52,26 @@ int main(int argc, char **argv)
    // AddOption("nevents", 'n', fNevents);
    // AddOption("Errors", 'E', fNerrors)
    // -------------------------------------------- //
+
+   // ---- options for Event shapes
+   // AddOption("chain",'c',cmd_chain);         -> select anaysis-chain (e.g. djangoh, data, etc...). Must match a name from the steer-file
+   // AddOption("tree",'t',cmd_write_minitree); -> write mini-tree to file
+   // AddOption("sys",'s',cmd_sys);             -> process events with a systematic shift
+   // -------------------------------------------- //
+
    H1OptionString   cmd_chain("");
    opts.AddOption("chain",'c',cmd_chain);
    H1OptionBool     cmd_write_minitree(false);
    opts.AddOption("tree",'t',cmd_write_minitree);
+   H1OptionInt      cmd_sys(-9999);
+   opts.AddOption("sys",'s',cmd_sys);
+
    opts.Parse(&argc, argv);
-   cout<<"Write mini tree: " << cmd_write_minitree<<endl;
+   cout<<"Process chain:          " << cmd_chain<<endl;
+   cout<<"Write mini tree:        " << cmd_write_minitree<<endl;
+   cout<<"Apply systematic shift: " << cmd_sys<<endl;
+   // -------------------------------------------- //
+
 
    // --- read main steering
    H1AnalysisSteer* AnaSteer = static_cast<H1AnalysisSteer*>
@@ -107,7 +121,7 @@ int main(int argc, char **argv)
    // --- initialize EventShape analysis object
    TFile file(opts.GetOutput(), "RECREATE"); // make TFile before makein TTree for minitree
    AnalysisEventShapes esanalysis(chain);
-
+   esanalysis.SetSysShift(cmd_sys);
    // --- event loop
    int ievent = 0;
    while (H1Tree::Instance()->Next() ) {
@@ -150,7 +164,7 @@ int main(int argc, char **argv)
       esanalysis.DoControlPlotsGenRec();
 
       esanalysis.DoCrossSectionsGenRec();
-      if ( cmd_write_minitree ) esanalysis.FillMiniTree();
+      if ( cmd_write_minitree and RecBaseCuts ) esanalysis.FillMiniTree();
 
       // break event loop (if requested)
       if ( opts.IsMaxEvent(ievent+1) ) break; // if command-line option -n is set
