@@ -166,8 +166,8 @@ void AnalysisEventShapes::DoCrossSectionObservablesGen() {
    vector<H1PartMC*> hadronarray = to_vector<H1PartMC*>(H1BoostedJets::Instance()->GetHadronArray());
 
    // basic DIS observables, iSigma method
-   fGen.Q2       = gH1Calc->Kine()->GetQ2sGen();
-   fGen.Y        = gH1Calc->Kine()->GetYsGen();
+   fGen.Q2       = gH1Calc->Kine()->GetQ2esGen();
+   fGen.Y        = gH1Calc->Kine()->GetYesGen();
    fGen.X        = ( ScatElecGen.E() / pbeam.E() ) * ( TMath::Power( TMath::Cos(ScatElecGen.Theta()/2) , 2 ) / fGen.Y );
 
    // boost to Breit Frame
@@ -261,8 +261,8 @@ void AnalysisEventShapes::DoCrossSectionObservablesRec() {
    TLorentzVector ScatElec = gH1Calc->Elec()->GetFirstElectron();
    vector<H1PartCand*> particlearray = to_vector<H1PartCand*>(H1BoostedJets::Instance()->GetHFSArray());
    // basic DIS observables, iSigma method
-   fRec.Q2       = gH1Calc->Kine()->GetQ2s();
-   fRec.Y        = gH1Calc->Kine()->GetYs();
+   fRec.Q2       = gH1Calc->Kine()->GetQ2es();
+   fRec.Y        = gH1Calc->Kine()->GetYes();
    fRec.X        = ( ScatElec.E() / pbeam.E() ) * ( TMath::Power( TMath::Cos(ScatElec.Theta()/2) , 2 ) / fRec.Y );
 
    // boost to Breit Frame
