@@ -159,12 +159,12 @@ int main(int argc, char **argv)
       esanalysis.DoCrossSectionObservablesGen();
       if ( RecBaseCuts ) esanalysis.DoCrossSectionObservablesRec();
 
-      esanalysis.DoControlPlotsGen();
-      if ( RecBaseCuts ) esanalysis.DoControlPlotsRec();
-      esanalysis.DoControlPlotsGenRec();
 
-      esanalysis.DoCrossSectionsGenRec();
-      if ( cmd_write_minitree and RecBaseCuts ) esanalysis.FillMiniTree();
+      //esanalysis.DoCrossSectionsGenRec();
+      if ( cmd_write_minitree){
+	if(gH1Tree ->IsMC()) esanalysis.FillMiniTree();
+        else if(RecBaseCuts) esanalysis.FillMiniTree();
+      }
 
       // break event loop (if requested)
       if ( opts.IsMaxEvent(ievent+1) ) break; // if command-line option -n is set

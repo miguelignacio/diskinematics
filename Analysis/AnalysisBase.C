@@ -561,13 +561,6 @@ void   AnalysisBase::DoWriteHistograms(){
 }
 
 
-// _______________________________________________________ //
-// void AnalysisBase::SetSystematics() {
-//
-// }
-
-
-// _______________________________________________________ //
 //!
 //!  AnalysisBase::InitMiniTree
 //!
@@ -575,20 +568,9 @@ void   AnalysisBase::DoWriteHistograms(){
 //!  
 void AnalysisBase::InitMiniTree() {
    fMiniTree = new TTree("minitree","minitree");
-   static H1FloatPtr Q2e("Q2e");
-   static H1FloatPtr Q2sGen("Q2sGen");
-   //static double acht = 8;
-   // fMiniTree->Branch("eight", &acht);
    TTree* T = fMiniTree; // rename
-   // fMiniTree->Branch("Q2e", &(*Q2e), "Q2e/F");
-   // fMiniTree->Branch("Q2sGen", &(*Q2sGen), "Q2sGen/F");
-   // fMiniTree->Branch("test", &fLumiMC, "test/F");
-   // fMiniTree->Branch("test2", &fLumiMC, "test2/F");
-   // fMiniTree->Branch("test3", &fLumiMC, "test3/F");
-   // fMiniTree->Branch("test4", &fLumiMC, "test4/F");
-   // fMiniTree->Branch("test5", &fLumiMC, "test5/F");
-   // //fMiniTree->Branch("acht", &acht, "acht/F");
 
+   T->Branch("wgt", &fTreeVar.event_weight, "event_weight/F");
    T->Branch("x", &fTreeVar.event_x, "event_x/F");
    T->Branch("y", &fTreeVar.event_y, "event_y/F");
    T->Branch("Q2", &fTreeVar.event_Q2, "event_Q2/F");
@@ -625,30 +607,11 @@ void AnalysisBase::InitMiniTree() {
    T->Branch("genjet_eta", &fTreeVar.gen_jet_eta);
    T->Branch("jet_dphi", &fTreeVar.jet_dphi);
 
-   T->Branch("jet_charge", &fTreeVar.jet_charge);
-   T->Branch("genjet_charge", &fTreeVar.gen_jet_charge);
-   T->Branch("track_z", &fTreeVar.track_z);
-   T->Branch("track_jt", &fTreeVar.track_jt);
-   T->Branch("track_phi", &fTreeVar.track_phi);
-   T->Branch("track_px", &fTreeVar.track_px);
-   T->Branch("track_py", &fTreeVar.track_py);
-   T->Branch("track_pz", &fTreeVar.track_pz);
-   T->Branch("track_charge", &fTreeVar.track_charge); 
-   T->Branch("track_jetpx", &fTreeVar.track_jetpx);
-   T->Branch("track_jetpy", &fTreeVar.track_jetpy);
-   T->Branch("track_jetpz", &fTreeVar.track_jetpz);
-   
-
-   T->Branch("gen_track_z",  &fTreeVar.gen_track_z);
-   T->Branch("gen_track_jt", &fTreeVar.gen_track_jt);
-   T->Branch("gen_track_phi", &fTreeVar.gen_track_phi);
-   T->Branch("gen_track_px", &fTreeVar.gen_track_px);
-   T->Branch("gen_track_py", &fTreeVar.gen_track_py);
-   T->Branch("gen_track_pz", &fTreeVar.gen_track_pz);
-   T->Branch("gen_track_charge", &fTreeVar.gen_track_charge);
-   T->Branch("gen_track_jetpx", &fTreeVar.gen_track_jetpx);
-   T->Branch("gen_track_jetpy", &fTreeVar.gen_track_jetpy);
-   T->Branch("gen_track_jetpz", &fTreeVar.gen_track_jetpz);
+   T->Branch("jet_z", &fTreeVar.jet_z);
+   T->Branch("genjet_z", &fTreeVar.gen_jet_z);
+   //   T->Branch("jet_charge", &fTreeVar.jet_charge);
+   //T->Branch("genjet_charge", &fTreeVar.gen_jet_charge);
+  
 
 
    // //   qT and z, defined below:

@@ -3,10 +3,11 @@
 
 #include "H1PhysUtils/H1BoostedJets.h"
 #include "AnalysisBase.h"
+#include "fastjet/PseudoJet.hh"
 class H1Part;
 
 using namespace std;
-
+//using namespace fastjet;
 
 // ________________________________________________________________ //
 //!
@@ -47,24 +48,8 @@ protected:
 
    // void SetSystematics();
 
-   // histogram fillers
-   void FillBasicNCDISHists(const string& hm, double Q2, double Y, double X, double weight);
-   void FillBasicH1CalculatorGen(const string& hm, double weight);
-   void FillBasicH1CalculatorRec(const string& hm, double weight);
-   void FillTrackPlots(const string& hm, const std::vector<H1Part*>& parts , double weight);
-   void FillTrackPlots(const string& hm, TObjArray* parts , double weight);
-
-
-   //primitive variable einfach so ( bsp weight)
-   //objekte als pointer  ( darf geaendert werden) / reference ( const ref: darf nicht editiert werden)
-   //   vector<TLorentzVector> BoostParticleArray(const string& hm, const vector<H1PartCand*> partarray, H1Boost& myboost, double Q2, double X, double Y);
-
-   vector<TLorentzVector> BoostParticleArray (const string& hm, const vector<H1PartCand*> partarray, H1Boost& myboost, double Q2, double X, double Y);
-   vector<TLorentzVector> CalculateEventShape_tauzQ (const string& hm, const vector<TLorentzVector> partarray, H1Boost& myboost, double Q2);
-   void PlotKinematicVaribles( const string& hm,double Q2, double X, double Y);
-   void ClassicalEventShapes (const string& hm, const vector<TLorentzVector> BoostedHFS);
-   void PlotTauResolution(const string& hm);
-   void PlotTauQ2Bins(const string& hm, long unsigned int i);
+    void ClassicalEventShapes (const string& hm, const vector<TLorentzVector> BoostedHFS);
+   
    H1Boost CalcBoost(double q2, double y, double x, double phi, double Ep);   
 
 protected:   
@@ -85,7 +70,7 @@ protected:
       double tau_zP             = 0 ;     //!<
       double sumpz              = 0 ;     //!<
       vector<TLorentzVector> breit_current; //!< 4-vectors of all particles in the current hem. in the Breit frame
-      
+      std::vector<fastjet::PseudoJet>     genjets;      
       H1Boost BoostToBreit;                 //!< Lorentz boost to breit frame ( q + 2*x*P = 0 )
       H1Boost BoostToLab;                   //!< Lorentz boost back to the lab frame
    };

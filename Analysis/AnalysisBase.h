@@ -25,6 +25,7 @@ using namespace std;
 //!  
 class TreeVariables {
 public:
+   float event_weight =1 ; //weight
    float event_x = 0;        //  x            
    float event_y = 0;        //  y            
    float event_Q2 = 0;       //  Q2           
@@ -58,26 +59,8 @@ public:
    float jet_dphi = 0;       //  jet_dphi     
    std::vector<float> jet_charge; //jet charge
    std::vector<float> gen_jet_charge; // gen jet charge
-   std::vector<float> track_z; // track z
-   std::vector<float> track_jt; // track jt
-   std::vector<float> track_phi; //track phi
-   std::vector<float> track_px; // track px
-   std::vector<float> track_py; // track py
-   std::vector<float> track_pz; // track pz 
-   std::vector<int>   track_charge; //tarck charge
-   std::vector<float> track_jetpx; //px of jet 
-   std::vector<float> track_jetpy; //py of jet
-   std::vector<float> track_jetpz; //pz of jet
-   std::vector<float> gen_track_z; // track z                                                                                                                                                            
-   std::vector<float> gen_track_jt; // track jt
-   std::vector<float> gen_track_phi; //track phi                                                                                                                                                           
-   std::vector<float> gen_track_px; // track px                                                                                                                                                           
-   std::vector<float> gen_track_py; // track py                                                                                                                                                           
-   std::vector<float> gen_track_pz; // track pz   
-   std::vector<int>   gen_track_charge; //track charge 
-   std::vector<float> gen_track_jetpx; //generated px of jet
-   std::vector<float> gen_track_jetpy; //generated py of jet
-   std::vector<float> gen_track_jetpz; //generated pz of jet   
+   std::vector<float> jet_z;          //jet z
+   std::vector<float> gen_jet_z;      // genjet z
 };
 
 
