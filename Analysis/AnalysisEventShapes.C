@@ -181,7 +181,7 @@ void AnalysisEventShapes::DoCrossSectionObservablesGen() {
    fTreeVar.gene_pz = ScatElecGen.Pz();
    fGen.Q2 = gH1Calc->Kine()->GetQ2esGen();
 
-   const double etamin = -1.5;
+   //const double etamin = -2.5;
    const double etamax = 2.75;
 
    vector<PseudoJet> hadron_event_lab;
@@ -189,7 +189,7 @@ void AnalysisEventShapes::DoCrossSectionObservablesGen() {
    TObjArray* hadrons_lab = H1BoostedJets::Instance()->GetHadronArray();
    for (int ipart=0; ipart<hadrons_lab->GetEntries(); ++ipart){
      H1PartMC* part = (H1PartMC*)hadrons_lab->At(ipart);
-     if ( part->GetEta() < etamin || part->GetEta() > etamax ) continue;
+     if ( part->GetEta() > etamax ) continue;
      fastjet::PseudoJet particle(part->GetPx(),part->GetPy(), part->GetPz(), part->GetE());
      particle.set_user_index(part->GetCharge());
      hadron_event_lab.push_back(particle);
@@ -304,13 +304,17 @@ void AnalysisEventShapes::DoCrossSectionObservablesRec() {
    fTreeVar.e_px = ScatElec.Px();
    fTreeVar.e_py = ScatElec.Py();
    fTreeVar.e_pz = ScatElec.Pz();
-
+   fTreeVar.ptmiss =  gH1Calc->Fs()->GetPtMiss();
+   fTreeVar.pth    =  gH1Calc->Fs()->GetPtCalo();
+   fTreeVar.vertex_z = gH1Calc->Vertex()->GetZ();
+   fTreeVar.ptratio = gH1Calc->Fs()->GetHadPtHadPtDaRatio();
+   // fTreeVar.pth    = gH1Calc->Fs()->GetPt();
    fTreeVar.tau1b = -9;//fRec.tau1b;
    //fTreeVar.gen_tau1b = fGen.tau1b;
    fTreeVar.tauzQ = -9;//fRec.tau_zQ;
    //fTreeVar.gen_tauzQ = fGen.tau_zQ;
 
-   const double etamin = -1.5;
+   //const double etamin = -1.5;
    const double etamax = 2.75;
    // -- define fastjet vectors                                                                                                                                                                           
   
@@ -319,7 +323,7 @@ void AnalysisEventShapes::DoCrossSectionObservablesRec() {
    for (long unsigned int ipart=0; ipart<particlearray.size(); ++ipart){
      H1PartCand* part = static_cast<H1PartCand*>(particlearray[ipart]);
      if (part->IsScatElec()) continue;  // exclude the scattered electron                                                                                                                                 
-     if ( part->GetEta() < etamin || part->GetEta() > etamax ) continue; // cut on eta, both for lab and breit frame                                                                                      
+     if ( part->GetEta() > etamax ) continue; // cut on eta, both for lab and breit frame                                                                                      
      fastjet::PseudoJet reco_particle(part->GetPx(),part->GetPy(), part->GetPz(), part->GetE()); 
      reco_particle.set_user_index(part->GetCharge());
      full_event_lab.push_back( reco_particle);
