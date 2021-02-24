@@ -38,6 +38,7 @@
 #include "FidVolCut.h"          // JetsAtHighQ2
 #include "JetTools.h"           // JetsAtHighQ2
 #include "TDetectQedc.h"        // JetsAtHighQ2
+#include "EventshapeTools.h"
 
 using namespace std;
 
@@ -209,6 +210,7 @@ void AnalysisBase::DoBaseInitialSettings() {
       H1Calculator::Instance()->Weight()->SetDataLumi(fLumiData);
       H1Calculator::Instance()->Weight()->SetMCLumi(fLumiMC);
       H1Calculator::Instance()->Weight()->ApplyLumiRatio(true); // fSteer->GetApplyLumiWeight()
+      H1Calculator::Instance()->Weight()->ApplyVertexWeight(true);
    }
 
    /*
@@ -323,6 +325,8 @@ void AnalysisBase::DoBaseReset() {
    H1BoostedJets::Instance()->Reset();
    H1BoostedJets::Instance()->ResetSysShifts();
    SetSysShift(fSys);
+   static EventshapeTools ESTools;
+   ESTools.ApplyNCTrackClusterWeight();
 
    static JetTools tools;
    if ( tools.GenElecPhotDist()  > 0.15 ) { // (~5 deg in theta and phi) 
@@ -585,6 +589,7 @@ void AnalysisBase::InitMiniTree() {
 
    T->Branch("vertex_z", &fTreeVar.vertex_z, "vertex_z/F");
    T->Branch("ptmiss", &fTreeVar.ptmiss, "ptmiss/F");
+   T->Branch("pth", &fTreeVar.pth, "pth/F");
    T->Branch("ptratio", &fTreeVar.ptratio, "ptratio/F");
    T->Branch("acoplanarity", &fTreeVar.acoplanarity, "acoplanarity/F");
    T->Branch("Empz", &fTreeVar.Empz, "Empz/F");

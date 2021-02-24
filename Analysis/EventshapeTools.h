@@ -14,7 +14,7 @@ public:
   TLorentzVector CalcScatElec(double q2, double y, double x, double phi, double Ep);
   H1Boost BoostToBreitFrame(double q2, double y, double x, double phi);
   H1Boost BoostToLabFrame(H1Boost boost);
-
+  void ApplyNCTrackClusterWeight();
 /*
   H1ArrayI MatchModsJets(Float_t R0);
   H1ArrayD UnmatchedRecJetsPt( H1ArrayI MatchedGenJets );

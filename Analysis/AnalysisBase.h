@@ -38,7 +38,8 @@ public:
    float gen_tauzQ =0;       // gen tau ZQ
 
    float vertex_z = 0;       //  vertex_z     
-   float ptmiss = 0;         //  ptmiss       
+   float ptmiss = 0;         //  ptmiss   
+   float pth   = 0;           // pth    
    float ptratio = 0;        //  ptratio      
    float acoplanarity = 0;   //  acoplanarity 
    float Empz = 0;           //  Empz         
