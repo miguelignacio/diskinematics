@@ -40,7 +40,8 @@ public:
    float vertex_z = 0;       //  vertex_z     
    float ptmiss = 0;         //  ptmiss   
    float pth   = 0;           // pth    
-   float ptratio = 0;        //  ptratio      
+   float ptratio_da = 0;        //  ptratio with respect to double angle
+   float ptratio_ele = 0;      // ptratio with respect to electron      
    float acoplanarity = 0;   //  acoplanarity 
    float Empz = 0;           //  Empz         
    float e_px = 0;           //  e_pt         

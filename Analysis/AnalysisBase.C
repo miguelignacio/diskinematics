@@ -590,7 +590,9 @@ void AnalysisBase::InitMiniTree() {
    T->Branch("vertex_z", &fTreeVar.vertex_z, "vertex_z/F");
    T->Branch("ptmiss", &fTreeVar.ptmiss, "ptmiss/F");
    T->Branch("pth", &fTreeVar.pth, "pth/F");
-   T->Branch("ptratio", &fTreeVar.ptratio, "ptratio/F");
+   T->Branch("ptratio_da", &fTreeVar.ptratio_da, "ptratio_da/F");
+   T->Branch("ptratio_ele", &fTreeVar.ptratio_ele, "ptratio_ele/F");
+
    T->Branch("acoplanarity", &fTreeVar.acoplanarity, "acoplanarity/F");
    T->Branch("Empz", &fTreeVar.Empz, "Empz/F");
    T->Branch("e_px", &fTreeVar.e_px, "e_px/F");

@@ -297,6 +297,10 @@ void AnalysisEventShapes::DoCrossSectionObservablesRec() {
    fRec.tau_zP   = -9;
    //minitree
 
+   Float_t hadptda = gH1Calc->Fs()->GetHadPtDa();
+   TLorentzVector HFS = gH1Calc->Fs()->GetAllFsLessElectron();
+
+
    fTreeVar.event_Q2 = gH1Calc->Kine()->GetQ2es();
    fTreeVar.event_y  = gH1Calc->Kine()->GetYes();
    fTreeVar.event_x  = gH1Calc->Kine()->GetXes();
@@ -307,7 +311,9 @@ void AnalysisEventShapes::DoCrossSectionObservablesRec() {
    fTreeVar.ptmiss =  gH1Calc->Fs()->GetPtMiss();
    fTreeVar.pth    =  gH1Calc->Fs()->GetPtCalo();
    fTreeVar.vertex_z = gH1Calc->Vertex()->GetZ();
-   fTreeVar.ptratio = gH1Calc->Fs()->GetHadPtHadPtDaRatio();
+   fTreeVar.ptratio_da = HFS.Pt()/hadptda;
+   fTreeVar.ptratio_ele = HFS.Pt()/ScatElec.Pt();
+
    // fTreeVar.pth    = gH1Calc->Fs()->GetPt();
    fTreeVar.tau1b = -9;//fRec.tau1b;
    //fTreeVar.gen_tau1b = fGen.tau1b;
