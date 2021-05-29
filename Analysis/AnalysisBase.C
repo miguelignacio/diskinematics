@@ -165,7 +165,33 @@ void AnalysisBase::DoBaseInitialSettings() {
    // --- set run period 
    // ------------------------------------------------------------------------ //
    gH1Constants->SetConstants(gH1Calc->GetRunNumber()); // SetConstants takes either period or run
-   const int RunPeriod = gH1Constants->GetRunPeriod();
+   int RunPeriod = gH1Constants->GetRunPeriod();
+
+
+
+
+   if ( gH1Calc->GetRunNumber() >0 &&  gH1Calc->GetRunNumber()<=12 && RunPeriod == gH1Calc->GetRunNumber()) {
+     Warning("AnalysisBase","RunPerdiod is %d. So RunNumber can be misinterpreted as RunPeriod. Changing to 0.",gH1Calc->GetRunNumber());
+     RunPeriod=0;
+   }
+   Info("AnalysisBase","First RunNumber is %d, and corresponding RunPerdiod %d",gH1Calc->GetRunNumber(),RunPeriod);
+   if ( RunPeriod < H1Constants::eEplus9900 ) {
+     Info("AnalysisBase","RunPeriod not recognized from RunNumber %d",gH1Calc->GetRunNumber());
+     TObjArray* runsel = AnaSteer->GetRunSelection();
+     TObjString* run1= (TObjString*)runsel->First();
+     TObjString* run2= (TObjString*)runsel->At(1);
+     gH1Constants->SetConstants(run1->GetString().Atoi());
+     RunPeriod = gH1Constants->GetRunPeriod();
+     // test, if last run is consistent.
+     gH1Constants->SetConstants(run2->GetString().Atoi());
+     int RunPeriod2 = gH1Constants->GetRunPeriod();
+     if ( RunPeriod != RunPeriod2 ) {
+       Error("AnalysisBase::InitialSettings","Run Period not consistent from first and last run in Steering 'fRunSelection'.");
+       exit(1);
+     }
+   }
+   RunPeriod = gH1Constants->GetRunPeriod();
+
    cout << "Run Period                          = ";
    if      ( RunPeriod == H1Constants::eEplus9900 )  cout << "e+ 99/00" << endl; 
    else if ( RunPeriod == H1Constants::eEplus0304 )  cout << "e+ 03/04" << endl; 
