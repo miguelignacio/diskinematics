@@ -42,21 +42,21 @@ fi
 
 echo ""
 #echo "Now running analysis: $PWD/EventShapes"
-#./EventShapes -t -f $1 -c $2 -o $OUTDIR/$2.nominal.root
+./EventShapes -t -f $1 -c $2 -o $OUTDIR/$2.nominal.root
 #echo "Now running analysis: $PWD/EventShapes. SYSTEMATIC VARIATION 0 (eHadEn)"
 #./EventShapes -t -f $1 -c $2 -o $OUTDIR/$2.sys_0.root -s 0
-#echo "Now running analysis: $PWD/EventShapes. SYSTEMATIC VARIATION 1 (eHadEnRCES)"
+#echo "Now running analysis: $PWD/EventShapes. SYSTEMATIC VARIATION 1 (eHadEnCor)"
 #./EventShapes -t -f $1 -c $2 -o $OUTDIR/$2.sys_1.root -s 1
 #echo "Now running analysis: $PWD/EventShapes. SYSTEMATIC VARIATION 4 (eHadTh)"
-#./EventShapes -t -f $1 -c $2 -o $OUTDIR/$2.sys_6.root -s 4
-echo "Now running analysis: $PWD/EventShapes. SYSTEMATIC VARIATION 5 (eHadPh)"
-./EventShapes -t -f $1 -c $2 -o $OUTDIR/$2.sys_5.root -s 5
-echo "Now running analysis: $PWD/EventShapes. SYSTEMATIC VARIATION 7 (eElecEn)"
-./EventShapes -t -f $1 -c $2 -o $OUTDIR/$2.sys_7.root -s 7
-echo "Now running analysis: $PWD/EventShapes. SYSTEMATIC VARIATION 7 (eElecTh)"
-./EventShapes -t -f $1 -c $2 -o $OUTDIR/$2.sys_10.root -s 10
-echo "Now running analysis: $PWD/EventShapes. SYSTEMATIC VARIATION 7 (eElecPh)"
-./EventShapes -t -f $1 -c $2 -o $OUTDIR/$2.sys_11.root -s 11
+#./EventShapes -t -f $1 -c $2 -o $OUTDIR/$2.sys_4.root -s 4
+#echo "Now running analysis: $PWD/EventShapes. SYSTEMATIC VARIATION 5 (eHadPh)"
+#./EventShapes -t -f $1 -c $2 -o $OUTDIR/$2.sys_5.root -s 5
+#echo "Now running analysis: $PWD/EventShapes. SYSTEMATIC VARIATION 7 (eElecEn)"
+#./EventShapes -t -f $1 -c $2 -o $OUTDIR/$2.sys_7.root -s 7
+#echo "Now running analysis: $PWD/EventShapes. SYSTEMATIC VARIATION 10 (eElecTh)"
+#./EventShapes -t -f $1 -c $2 -o $OUTDIR/$2.sys_10.root -s 10
+#echo "Now running analysis: $PWD/EventShapes. SYSTEMATIC VARIATION 11 (eElecPh)"
+#./EventShapes -t -f $1 -c $2 -o $OUTDIR/$2.sys_11.root -s 11
 
 
 
