@@ -50,7 +50,7 @@ protected:
 
     void ClassicalEventShapes (const string& hm, const vector<TLorentzVector> BoostedHFS);
    
-   H1Boost CalcBoost(double q2, double y, double x, double phi, double Ep);   
+ 
 
 protected:   
 

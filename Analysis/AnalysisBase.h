@@ -26,16 +26,21 @@ using namespace std;
 class TreeVariables {
 public:
    float event_weight =1 ; //weight
-   float event_x = 0;        //  x            
-   float event_y = 0;        //  y            
-   float event_Q2 = 0;       //  Q2           
+
+   float event_y_e = 0;        //  y            
+   float event_Q2_e = 0;       //  Q2           
+   float event_y_sigma = 0;        //  y                                                                                                                                                                
+      
+   float event_Q2_sigma = 0;       //  Q2
+
+   float event_y_da = 0;        // 
+   float event_Q2_da = 0;        // 
+   float event_y_esigma = 0;   //
+   float event_Q2_esigma = 0;   //
+         
    float gen_event_x =0;     // gen x
    float gen_event_y =0;     // gen y
    float gen_event_Q2 =0;    // gen Q2
-   float tau1b = 0;         // tau1b
-   float gen_tau1b =0;      //tau 1b
-   float tauzQ = 0;         // tau ZQ
-   float gen_tauzQ =0;       // gen tau ZQ
 
    float vertex_z = 0;       //  vertex_z     
    float ptmiss = 0;         //  ptmiss   
@@ -47,22 +52,13 @@ public:
    float e_px = 0;           //  e_pt         
    float e_py = 0;          //  e_phi        
    float e_pz = 0;          //  e_rap        
+   float HFS_px = 0;         //
+   float HFS_py = 0;         //
+   float HFS_pz = 0;         //
    float gene_px = 0;          //  e_eta        
    float gene_py = 0;            //  e_p          
    float gene_pz = 0;        //  e_theta      
-   float njets = 0;          //  njets        
-   float nconstituents = 0;  //  n_total      
-   std::vector<float> jet_pt;         //  jet_pt       
-   std::vector<float> gen_jet_pt;         //  jet_qt       
-   std::vector<float> jet_phi;        //  jet_phi      
-   std::vector<float> gen_jet_phi;        //  jet_rap      
-   std::vector<float> jet_eta;        //  jet_eta      
-   std::vector<float> gen_jet_eta;      //  jet_theta    
-   float jet_dphi = 0;       //  jet_dphi     
-   std::vector<float> jet_charge; //jet charge
-   std::vector<float> gen_jet_charge; // gen jet charge
-   std::vector<float> jet_z;          //jet z
-   std::vector<float> gen_jet_z;      // genjet z
+  
 };
 
 

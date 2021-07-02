@@ -601,17 +601,21 @@ void AnalysisBase::InitMiniTree() {
    TTree* T = fMiniTree; // rename
 
    T->Branch("wgt", &fTreeVar.event_weight, "event_weight/F");
-   T->Branch("x", &fTreeVar.event_x, "event_x/F");
-   T->Branch("y", &fTreeVar.event_y, "event_y/F");
-   T->Branch("Q2", &fTreeVar.event_Q2, "event_Q2/F");
+  
+   T->Branch("y_e", &fTreeVar.event_y_e, "event_y_e/F");
+   T->Branch("Q2_e", &fTreeVar.event_Q2_e, "event_Q2_e/F");
+  
+   T->Branch("y_sigma", &fTreeVar.event_y_sigma, "event_y_sigma/F");
+   T->Branch("Q2_sigma", &fTreeVar.event_Q2_sigma, "event_Q2_sigma/F");
+   T->Branch("y_esigma", &fTreeVar.event_y_esigma, "event_y_esigma/F");
+   T->Branch("Q2_esigma", &fTreeVar.event_Q2_esigma, "event_Q2_esigma/F");
+   T->Branch("y_da", &fTreeVar.event_y_da, "event_y_da/F");
+   T->Branch("Q2_da", &fTreeVar.event_Q2_da, "event_Q2_da/F");
+
+
    T->Branch("gen_x", &fTreeVar.gen_event_x, "gen_event_x/F");
    T->Branch("gen_y", &fTreeVar.gen_event_y, "gen_event_y/F");
    T->Branch("gen_Q2", &fTreeVar.gen_event_Q2, "gen_event_Q2/F");
-
-   T->Branch("tau1b", &fTreeVar.tau1b, "tau1b/F");
-   T->Branch("gen_tau1b", &fTreeVar.gen_tau1b, "gen_tau1b/F");
-   T->Branch("tauzQ", &fTreeVar.tauzQ, "tauzQ/F");
-   T->Branch("gen_tauzQ", &fTreeVar.gen_tauzQ, "gen_tauzQ/F");
 
    T->Branch("vertex_z", &fTreeVar.vertex_z, "vertex_z/F");
    T->Branch("ptmiss", &fTreeVar.ptmiss, "ptmiss/F");
@@ -624,30 +628,16 @@ void AnalysisBase::InitMiniTree() {
    T->Branch("e_px", &fTreeVar.e_px, "e_px/F");
    T->Branch("e_py", &fTreeVar.e_py, "e_py/F");
    T->Branch("e_pz",&fTreeVar.e_pz, "e_pz/F");
+   T->Branch("HFS_px", &fTreeVar.HFS_px, "HFS_px/F");
+   T->Branch("HFS_py", &fTreeVar.HFS_py, "HFS_py/F");
+   T->Branch("HFS_pz",&fTreeVar.HFS_pz, "HFS_pz/F");
+
 
    T->Branch("gene_px", &fTreeVar.gene_px, "gene_px/F");
    T->Branch("gene_py", &fTreeVar.gene_py, "gene_py/F");
    T->Branch("gene_pz",&fTreeVar.gene_pz, "gene_pz/F");
 
    
-   T->Branch("njets", &fTreeVar.njets, "njets/F");
-   T->Branch("n_total",&fTreeVar.nconstituents);
-   T->Branch("jet_pt", &fTreeVar.jet_pt);
-   T->Branch("genjet_pt", &fTreeVar.gen_jet_pt);
-   T->Branch("jet_phi", &fTreeVar.jet_phi);
-   T->Branch("genjet_phi",&fTreeVar.gen_jet_phi);
-   T->Branch("jet_eta", &fTreeVar.jet_eta);
-   T->Branch("genjet_eta", &fTreeVar.gen_jet_eta);
-   T->Branch("jet_dphi", &fTreeVar.jet_dphi);
-
-   T->Branch("jet_z", &fTreeVar.jet_z);
-   T->Branch("genjet_z", &fTreeVar.gen_jet_z);
-   //   T->Branch("jet_charge", &fTreeVar.jet_charge);
-   //T->Branch("genjet_charge", &fTreeVar.gen_jet_charge);
-  
-
-
-   // //   qT and z, defined below:
    // TVector2 jet2(jet.px(),jet.py());
    // TVector2 electron2(ElecPx,ElecPy);
    // TVector2 qT = jet2 + electron2;
