@@ -612,6 +612,8 @@ void AnalysisBase::InitMiniTree() {
    T->Branch("y_da", &fTreeVar.event_y_da, "event_y_da/F");
    T->Branch("Q2_da", &fTreeVar.event_Q2_da, "event_Q2_da/F");
 
+   T->Branch("y_h", &fTreeVar.event_y_h, "event_y_h/F");
+   T->Branch("Q2_h", &fTreeVar.event_Q2_h, "event_Q2_h/F");
 
    T->Branch("gen_x", &fTreeVar.gen_event_x, "gen_event_x/F");
    T->Branch("gen_y", &fTreeVar.gen_event_y, "gen_event_y/F");
@@ -631,6 +633,7 @@ void AnalysisBase::InitMiniTree() {
    T->Branch("HFS_px", &fTreeVar.HFS_px, "HFS_px/F");
    T->Branch("HFS_py", &fTreeVar.HFS_py, "HFS_py/F");
    T->Branch("HFS_pz",&fTreeVar.HFS_pz, "HFS_pz/F");
+   T->Branch("HFS_E", &fTreeVar.HFS_E, "HFS_E/F");
 
 
    T->Branch("gene_px", &fTreeVar.gene_px, "gene_px/F");

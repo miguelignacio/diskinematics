@@ -224,6 +224,9 @@ void AnalysisEventShapes::DoCrossSectionObservablesRec() {
    fTreeVar.event_Q2_esigma = gH1Calc->Kine()->GetQ2es();
    fTreeVar.event_y_esigma  = gH1Calc->Kine()->GetYes();
 
+   fTreeVar.event_y_h = gH1Calc->Kine()->GetYh();
+   fTreeVar.event_Q2_h = gH1Calc->Kine()->GetQ2h();
+
    fTreeVar.Empz     = gH1Calc->Fs()->GetEmpz();
    fTreeVar.e_px = ScatElec.Px();
    fTreeVar.e_py = ScatElec.Py();
@@ -231,6 +234,7 @@ void AnalysisEventShapes::DoCrossSectionObservablesRec() {
    fTreeVar.HFS_px = HFS.Px();
    fTreeVar.HFS_py = HFS.Py();
    fTreeVar.HFS_pz = HFS.Pz();
+   fTreeVar.HFS_E = HFS.E();
 
    fTreeVar.ptmiss =  gH1Calc->Fs()->GetPtMiss();
    fTreeVar.pth    =  gH1Calc->Fs()->GetPtCalo();

@@ -37,6 +37,9 @@ public:
    float event_Q2_da = 0;        // 
    float event_y_esigma = 0;   //
    float event_Q2_esigma = 0;   //
+
+   float event_Q2_h = 0 ; //
+   float event_y_h  = 0; //
          
    float gen_event_x =0;     // gen x
    float gen_event_y =0;     // gen y
@@ -52,6 +55,7 @@ public:
    float e_px = 0;           //  e_pt         
    float e_py = 0;          //  e_phi        
    float e_pz = 0;          //  e_rap        
+   float HFS_E =0;
    float HFS_px = 0;         //
    float HFS_py = 0;         //
    float HFS_pz = 0;         //
